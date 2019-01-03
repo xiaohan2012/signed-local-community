@@ -97,7 +97,7 @@ def make_and_dump_batch(
 
         for i in range(n_rep):
             params = dict(
-                n=4, k=16,
+                n=n, k=k,
                 internal_density=p1,
                 internal_negative_ratio=p2,
                 external_edge_proba=p3,
@@ -126,5 +126,5 @@ if __name__ == '__main__':
         internal_negative_ratio_list,
         external_edge_proba_list,
         external_neg_ratio_list,
-        output_dir="/home/cloud-user/code/signed/graphs/community_graphs"
+        output_dir="/home/cloud-user/code/signed/graphs/community_graphs-n16-k4"
     )

@@ -1,1 +1,2 @@
 from .pagerank_on_pos_graph import run as get_comunity_using_pos_pagerank
+from .sweep_on_true_community import run as sweep_on_true_community
