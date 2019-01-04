@@ -145,3 +145,11 @@ def evaluate_performance(g, pred_comm, true_comm):
 
 def get_now():
     return datetime.date.today().strftime("%Y-%m-%d %H:%M:%s")
+
+
+def make_range(start, end, step=0.1):
+    return np.arange(start, end + 0.1 * step, step)
+
+
+def random_str(N=8):
+    return ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(N))

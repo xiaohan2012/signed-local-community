@@ -5,6 +5,12 @@ import itertools as it
 import pickle as pkl
 from tqdm import tqdm
 
+module_path = os.path.abspath(os.path.join('..'))
+if module_path not in sys.path:
+    sys.path.append(module_path
+
+from helpers import make_range
+
 
 def make_random_signed_graph(N, density=0.9, negatives_ratio=0.5):
     G = nx.Graph()
@@ -109,10 +115,7 @@ def make_and_dump_batch(
             pkl.dump((g, comm, params), open(output_path, 'wb'))
 
             
-if __name__ == '__main__':
-        
-    def make_range(start, end, step=0.1):
-        return np.arange(start, end + 0.1 * step, step)
+if __name__ == '__main__':    
 
     internal_density_list = make_range(0.5, 1.0)
     internal_negative_ratio_list = make_range(0, 0.5)

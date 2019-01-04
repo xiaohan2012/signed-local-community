@@ -64,6 +64,7 @@ def init_db(debug=False):
 
 
 def record_exists(cursor, table, record):
+    """record: dict"""
     cursor.execute(
         """
     SELECT 1 FROM

@@ -1,7 +1,7 @@
 DEBUG = True
 
 DATA_DIR = "/scratch/work/xiaoh1/data/signed-local-community/"
-
+TMP_DIR = "/scratch/work/xiaoh1/data/signed-local-community/tmp"
 
 class DetectionMethods:
     SWEEP_ON_TRUE = 'sweep_on_true'
