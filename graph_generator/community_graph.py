@@ -118,13 +118,15 @@ if __name__ == '__main__':
     internal_negative_ratio_list = make_range(0, 0.5)
     external_edge_proba_list = make_range(0.0, 0.5)
     external_neg_ratio_list = make_range(0.6, 1.0)
-    
+
+    n_reps  = 10
+    n, k = 16, 4
     make_and_dump_batch(
-        1,
-        16, 4,
+        n_reps,
+        n, k,
         internal_density_list,
         internal_negative_ratio_list,
         external_edge_proba_list,
         external_neg_ratio_list,
-        output_dir="/home/cloud-user/code/signed/graphs/community_graphs-n16-k4"
+        output_dir="/scratch/work/xiaoh1/data/signed-local-community/community_graphs-n{}-k{}".format(n, k)
     )
