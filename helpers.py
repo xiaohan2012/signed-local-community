@@ -1,6 +1,10 @@
 import numpy as np
 import random
+import datetime
+
 import networkx as nx
+
+
 from scipy.sparse import diags
 from scipy.sparse.linalg import eigs
 from matplotlib import pyplot as plt
@@ -127,3 +131,17 @@ def show_result(g, pos, query, scores):
     nx.draw_networkx_labels(g, pos)
     draw_edges(g, pos)
     ax.set_title('query node {}'.format(query))
+
+
+def evaluate_performance(g, pred_comm, true_comm):
+    prec = len(pred_comm.intersection(true_comm)) / len(true_comm)
+    recall = len(pred_comm.intersection(true_comm)) / len(true_comm)
+    f1 = 2 * prec * recall / (prec + recall)
+
+    c = signed_conductance(g, pred_comm)
+
+    return dict(prec=prec, recall=recall, f1=f1, conductance=c)
+
+
+def get_now():
+    return datetime.date.today().strftime("%Y-%m-%d %H:%M:%s")
