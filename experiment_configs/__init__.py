@@ -1,1 +1,1 @@
-from .community_graphs import iter_configs as community_graphs
+from .community_graphs_internal_neg_ratio import iter_configs as cg_internal_neg_ratio

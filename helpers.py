@@ -1,5 +1,6 @@
 import numpy as np
 import random
+import string
 import datetime
 
 import networkx as nx
@@ -153,3 +154,8 @@ def make_range(start, end, step=0.1):
 
 def random_str(N=8):
     return ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(N))
+
+
+def round_up(n, decimals=0):
+    multiplier = 10 ** decimals
+    return round(n * multiplier) / multiplier

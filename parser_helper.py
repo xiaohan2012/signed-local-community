@@ -42,13 +42,13 @@ def add_pagerank_args(parser):
                         type=int,
                         help='the query node')
 
-    parser.add_argument('--alpha',
+    parser.add_argument('--teleport_alpha',
                         type=float,
                         help='probability to teleport')
 
 
 def add_detection_methods_args(parser):
-    parser.add_argument('-m', '--detection_method',
+    parser.add_argument('-m', '--method',
                         choices=(
                             DetectionMethods.SWEEP_ON_TRUE,
                             DetectionMethods.PR_ON_POS

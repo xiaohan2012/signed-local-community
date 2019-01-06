@@ -58,8 +58,8 @@ def main():
     # if runs already, exit
     filter_value = dict(
         graph_path=get_graph_path(args),
-        method=args.detection_method,
-        teleport_alpha=args.alpha,
+        method=args.method,
+        teleport_alpha=args.teleport_alpha,
         query_node=args.query_node
         
     )
@@ -72,10 +72,10 @@ def main():
 
     # run detection alforithm
     stime = time.time()
-    if args.detection_method == DetectionMethods.SWEEP_ON_TRUE:
+    if args.method == DetectionMethods.SWEEP_ON_TRUE:
         pred_comm = get_community_by_sweeping_on_true_community(g, args.query_node, ground_truth)
-    elif args.detection_method == DetectionMethods.PR_ON_POS:
-        pred_comm = get_comunity_using_pos_pagerank(g, args.query_node, args.alpha)
+    elif args.method == DetectionMethods.PR_ON_POS:
+        pred_comm = get_comunity_using_pos_pagerank(g, args.query_node, args.teleport_alpha)
 
     time_elapsed = time.time() - stime
     print("community detection done")
@@ -89,9 +89,9 @@ def main():
     ans['graph_path'] = get_graph_path(args)
     ans['graph_params'] = graph_params
 
-    ans['method'] = args.detection_method
+    ans['method'] = args.method
     ans['query_node'] = args.query_node
-    ans['teleport_alpha'] = args.alpha
+    ans['teleport_alpha'] = args.teleport_alpha
 
     ans['true_comm'] = true_comm
     ans['pred_comm'] = pred_comm
