@@ -89,7 +89,8 @@ def draw_edges(g, pos):
 
 
 def show_result(g, pos, query, scores):
-    order = np.argsort(scores)[::-1]
+    normalized_scores = scores / degree_array(g)
+    order = np.argsort(normalized_scores)[::-1]
     sorted_scores = scores[order]
 
     print('nodes sorted by PR score', order)
@@ -97,7 +98,7 @@ def show_result(g, pos, query, scores):
 
     fig, ax = plt.subplots(1, 1)    
     nx.draw_networkx_nodes(
-        g, pos, node_color=np.log2((scores + 1e-5) * 1e5), cmap='Blues')
+        g, pos, node_color=np.log2((normalized_scores + 1e-5) * 1e5), cmap='Blues')
     nx.draw_networkx_labels(g, pos)
     draw_edges(g, pos)
     ax.set_title('query node {}'.format(query))
@@ -106,7 +107,7 @@ def show_result(g, pos, query, scores):
     sweep_positions = []
     sweep_scores = []
     for i in range(1, len(order)+1):
-        if scores[order[i-1]] == 0:
+        if normalized_scores[order[i-1]] == 0:
             break
         sweep_positions.append(i)
         s = signed_conductance(g, order[:i])
