@@ -1,2 +1,3 @@
 from .pagerank_on_pos_graph import run as get_comunity_using_pos_pagerank
 from .sweep_on_true_community import run as get_community_by_sweeping_on_true_community
+from .hesitating_random_walker import run as hesitating_random_walk
