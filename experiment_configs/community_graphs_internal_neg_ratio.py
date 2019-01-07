@@ -10,12 +10,12 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from helpers import make_range
-from const import DetectionMethods
+from const import ALL_DETECTION_METHODS
 
 config_dimensions = [
     [dict(graph_id=v) for v in range(10)],
     [dict(internal_negative_ratio=v) for v in make_range(0, 0.5)],
-    [dict(method=m) for m in [DetectionMethods.SWEEP_ON_TRUE, DetectionMethods.PR_ON_POS]],
+    [dict(method=m) for m in ALL_DETECTION_METHODS],
     [dict(query_node=v) for v in np.random.permutation(4 * 16)[:8]],
     [dict(teleport_alpha=v) for v in make_range(0.1, 0.9)],
 ]
