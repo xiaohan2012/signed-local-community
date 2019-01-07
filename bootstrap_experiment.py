@@ -20,7 +20,7 @@ def gen_sbatch_string(
         logfile_name,
         params_file_name,
         n_jobs_at_a_time=10,
-        chunk_size=250,
+        chunk_size=500,
         mem=5
 ):
     return """#!/bin/zsh

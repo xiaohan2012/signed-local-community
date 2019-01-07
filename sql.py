@@ -1,4 +1,5 @@
 import psycopg2
+import json
 import numpy as np
 import pickle as pkl
 
@@ -20,7 +21,7 @@ class TableCreation:
     CREATE TABLE IF NOT EXISTS {schema}.{table_name}
     (
         graph_path TEXT,
-        graph_params BYTEA,
+        graph_params JSONB,
 
         method TEXT,
         query_node INTEGER,
@@ -86,7 +87,10 @@ def record_exists(cursor, table, record):
 def insert_record(cursor, schema, table, record):
     # convert complex type to pickle
     for k, v in record.items():
-        if isinstance(v, (list, tuple, dict, set, np.ndarray)):
+        if isinstance(v, dict):
+            record[k] = json.dumps(v)
+
+        if isinstance(v, (list, tuple, set, np.ndarray)):
             record[k] = pkl.dumps(v)
 
     cursor.execute(

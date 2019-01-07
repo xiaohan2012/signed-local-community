@@ -10,6 +10,6 @@ python3 experiment_on_community_graph.py  \
 	-e 0.9 \
 	-g ./graphs \
 	-q 0 \
-	--alpha 0.6 \
+	--teleport_alpha 0.6 \
 	-m sweep_on_true
 

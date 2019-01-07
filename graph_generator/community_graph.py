@@ -1,4 +1,5 @@
 import os
+import sys
 import networkx as nx
 import numpy as np
 import itertools as it
@@ -7,9 +8,9 @@ from tqdm import tqdm
 
 module_path = os.path.abspath(os.path.join('..'))
 if module_path not in sys.path:
-    sys.path.append(module_path
+    sys.path.append(module_path)
 
-from helpers import make_range
+from helpers import make_range, round_up
 
 
 def make_random_signed_graph(N, density=0.9, negatives_ratio=0.5):
@@ -96,8 +97,10 @@ def make_and_dump_batch(
             it.product(*params),
             total=np.prod(list(map(len, params)))
     ):
+        rounded_values = list(map(lambda v: round_up(v, 1), [p1, p2, p3, p4]))
+        p1, p2, p3, p4 = rounded_values
         outer_dir = "{}/id{:.1f}-in{:.1f}-ep{:.1f}-en{:.1f}".format(
-            output_dir, p1, p2, p3, p4
+            output_dir, *rounded_values
         )
         makedir_if_not_there(outer_dir)
 
@@ -109,6 +112,7 @@ def make_and_dump_batch(
                 external_edge_proba=p3,
                 external_neg_ratio=p4
             )
+
             g, comm = make(**params)
             output_path = '{}/{}.pkl'.format(outer_dir, i)
             

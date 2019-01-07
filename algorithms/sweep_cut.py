@@ -6,16 +6,18 @@ module_path = os.path.abspath(os.path.join('..'))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from helpers import signed_conductance
+from helpers import signed_conductance, degree_array
 
 
-def get_community(g, scores):
-    order = np.argsort(scores)[::-1]
+def get_community(g, pr_scores):
+    degree_normalized_pr_scores = pr_scores / degree_array(g)
+    
+    order = np.argsort(degree_normalized_pr_scores)[::-1]
 
     sweep_positions = []
     sweep_scores = []
     for i in range(1, len(order)+1):
-        if scores[order[i-1]] == 0:
+        if degree_normalized_pr_scores[order[i-1]] == 0:
             break
         sweep_positions.append(i)
         s = signed_conductance(g, order[:i])

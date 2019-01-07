@@ -159,3 +159,10 @@ def random_str(N=8):
 def round_up(n, decimals=0):
     multiplier = 10 ** decimals
     return round(n * multiplier) / multiplier
+
+
+def degree_array(g):
+    return np.array(
+        [g.degree[v]
+         for v in np.arange(g.number_of_nodes())]
+    )
