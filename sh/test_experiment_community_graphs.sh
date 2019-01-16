@@ -11,5 +11,5 @@ python3 experiment_on_community_graph.py  \
 	-g ./graphs \
 	-q 0 \
 	--teleport_alpha 0.6 \
-	-m sweep_on_true
+	-m hesitating_random_walk
 

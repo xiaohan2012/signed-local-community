@@ -1,4 +1,4 @@
-from const import DetectionMethods
+from const import ALL_DETECTION_METHODS
 
 
 def add_community_graph_args(parser):
@@ -49,9 +49,6 @@ def add_pagerank_args(parser):
 
 def add_detection_methods_args(parser):
     parser.add_argument('-m', '--method',
-                        choices=(
-                            DetectionMethods.SWEEP_ON_TRUE,
-                            DetectionMethods.PR_ON_POS
-                        ),
+                        choices=ALL_DETECTION_METHODS,
                         required=True,
                         help='')
