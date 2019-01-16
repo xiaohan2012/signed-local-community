@@ -9,6 +9,7 @@ import networkx as nx
 from scipy.sparse import diags
 from scipy.sparse.linalg import eigs
 from matplotlib import pyplot as plt
+from tqdm import tqdm
 
 
 def walk(g, s0, beta, n_steps, verbose=0):
@@ -76,9 +77,9 @@ def signed_layout(g):
     return {i: pos_array[i, :] for i in range(g.number_of_nodes())}
 
 
-def draw_nodes(g, pos):
+def draw_nodes(g, pos, labels=None):
     nx.draw_networkx_nodes(g, pos)
-    nx.draw_networkx_labels(g, pos)
+    nx.draw_networkx_labels(g, pos, labels=labels)
 
 
 def draw_edges(g, pos):
@@ -167,3 +168,71 @@ def degree_array(g):
         [g.degree[v]
          for v in np.arange(g.number_of_nodes())]
     )
+
+
+def make_pair(u, v):
+    return tuple(sorted([u, v]))
+
+
+def _one_step_for_incremental_conductance(
+        g, prev_nodes, new_node, prev_vol, prev_pos_cut, prev_neg_cut, verbose=2
+):
+    if verbose > 1:
+        print('prev_nodes', prev_nodes)
+        print('new_node', new_node)
+        
+    new_vol = prev_vol + g.degree(new_node)
+    pos_cut_to_remove = {make_pair(u, new_node)
+                         for u in g.neighbors(new_node)
+                         if g[new_node][u]['sign'] > 0
+                         and u in prev_nodes}
+    pos_cut_to_add = {make_pair(u, new_node)
+                      for u in g.neighbors(new_node)
+                      if g[new_node][u]['sign'] > 0
+                      and u not in prev_nodes}
+    assert len(pos_cut_to_remove.intersection(pos_cut_to_add)) == 0
+    new_pos_cut = prev_pos_cut - pos_cut_to_remove | pos_cut_to_add
+
+    if verbose > 1:
+        print('prev_pos_cut', prev_pos_cut)
+        print('pos_cut_to_remove', pos_cut_to_remove)
+        print('pos_cut_to_add', pos_cut_to_add)
+        print('new_pos_cut', new_pos_cut)
+        
+    neg_cut_to_add = {make_pair(u, new_node)
+                      for u in g.neighbors(new_node)
+                      if g[new_node][u]['sign'] < 0
+                      and u in prev_nodes}
+    new_neg_cut = prev_neg_cut | neg_cut_to_add
+    
+    if verbose > 1:
+        print('prev_neg_cut', prev_neg_cut)
+        print('neg_cut_to_add', neg_cut_to_add)
+        print('new_neg_cut', new_neg_cut)
+        
+    conductance = (2 * len(new_neg_cut) + len(new_pos_cut)) / new_vol
+    return new_vol, new_pos_cut, new_neg_cut, conductance
+
+
+def incremental_conductance(g, nodes_in_order, verbose=0, show_progress=False):
+    """incremental implementation of conductance computation"""
+    conductance_list = []
+    prev_nodes = set()
+    prev_vol = 0
+    prev_pos_cut = set()
+    prev_neg_cut = set()
+    iter_obj = range(0, len(nodes_in_order))
+    if show_progress:
+        iter_obj = tqdm(iter_obj)
+        
+    for i in iter_obj:
+        new_node = nodes_in_order[i]
+        prev_vol, prev_pos_cut, prev_neg_cut, c = _one_step_for_incremental_conductance(
+            g, prev_nodes, new_node, prev_vol,
+            prev_pos_cut, prev_neg_cut, verbose=verbose
+        )
+        prev_nodes |= {new_node}
+        if verbose > 1:
+            print('-' * 10)
+        conductance_list.append(c)
+    return conductance_list

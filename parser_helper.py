@@ -1,6 +1,13 @@
 from const import ALL_DETECTION_METHODS
 
 
+def add_real_graph_args(parser):
+    parser.add_argument('-g', '--graph_path',
+                        required=True,
+                        type=str,
+                        help='path of graph')
+
+    
 def add_community_graph_args(parser):
     parser.add_argument('-i', '--graph_id',
                         required=True,
@@ -44,6 +51,7 @@ def add_pagerank_args(parser):
 
     parser.add_argument('--teleport_alpha',
                         type=float,
+                        default=0.5,
                         help='probability to teleport')
 
 
@@ -52,3 +60,13 @@ def add_detection_methods_args(parser):
                         choices=ALL_DETECTION_METHODS,
                         required=True,
                         help='')
+
+
+def add_misc_args(parser):
+    parser.add_argument('--verbose',
+                        type=int,
+                        default=0,
+                        help='verbose level')
+    parser.add_argument('--show_progress',
+                        action='store_true',
+                        help='show progress bar or not')

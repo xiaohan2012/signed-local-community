@@ -1,4 +1,5 @@
 
+
 import os
 import time
 import sys
@@ -48,7 +49,6 @@ def main():
     add_detection_methods_args(parser)
     
     args = parser.parse_args()
-
     
     for arg in vars(args):
         print(arg, getattr(args, arg))

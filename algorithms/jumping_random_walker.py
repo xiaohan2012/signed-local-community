@@ -42,11 +42,41 @@ def transform_graph(g, beta, gamma, relabel=True):
         return gp
 
 
-def run(g, query, alpha, beta=10, gamma=0, return_sorted_nodes=False):
+def run(
+        g, query, alpha,
+        beta=10, gamma=0,
+        truncate_percentile=0,
+        return_sorted_nodes=False,
+        verbose=0, show_progress=False
+):
+    """
+    - `alpha`: probability to teleport
+    - `beta` ([0, \infty]): amplification factor to positive edges against negative ones
+    - `gamma` ([0, 1]): deamplification factor to negative edges against non edges
+    - `truncate_percentile` specifies the maximum number of nodes to consider in the sweep sets
+
+    """
     N = g.number_of_nodes()
+    if verbose > 0:
+        print('transforming graph')
     gp = transform_graph(g, beta, gamma)
+
+    if verbose > 0:
+        print('running pagerank')
     scores = pr_score(gp, query, alpha)[:N]
+
+    assert truncate_percentile >= 0 and truncate_percentile <= 100
+    score_threshold = np.percentile(scores, truncate_percentile)
+    if verbose > 0:
+        print('score_threshold {} (percentile={})'.format(
+            score_threshold, truncate_percentile)
+        )
+    
+    if verbose > 0:
+        print('running sweep cut')
+    comm = get_community(g, scores, pr_threshold=score_threshold, show_progress=show_progress)
+
     if not return_sorted_nodes:
-        return get_community(g, scores)
+        return comm
     else:
-        return get_community(g, scores), np.argsort(scores)[::-1]
+        return comm, np.argsort(scores)[::-1]
