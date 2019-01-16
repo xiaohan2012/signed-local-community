@@ -1,4 +1,5 @@
 import networkx as nx
+import numpy as np
 from .pagerank import pr_score
 from .sweep_cut import get_community
 
@@ -11,7 +12,10 @@ def extract_pos_graph(g):
     return pos_g
 
 
-def run(g, query, alpha):
+def run(g, query, alpha, return_sorted_nodes=False):
     pos_g = extract_pos_graph(g)
     scores = pr_score(pos_g, query, alpha)
-    return get_community(g, scores)
+    if not return_sorted_nodes:
+        return get_community(g, scores)
+    else:
+        return get_community(g, scores), np.argsort(scores)[::-1]

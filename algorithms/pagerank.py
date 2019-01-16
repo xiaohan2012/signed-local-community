@@ -49,7 +49,7 @@ def pagerank_for_multi_graph(g, seeds=None, max_iter=100, tol=1.0e-6, alpha=0.15
 
         err = np.sum(np.absolute((prev_p - p).todense()))
         if err <= tol:
-            break    
+            break
         if verbose >= 2:
             print('error', err)
         prev_p = p
