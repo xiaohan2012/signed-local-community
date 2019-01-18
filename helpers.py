@@ -59,6 +59,7 @@ def signed_conductance(g, S, verbose=0):
             denum += 1
     if verbose >= 1:
         print('{} / {}'.format(numer, denum))
+    denum = min(denum, 2 * g.number_of_edges() - denum)
     return numer / denum
 
 
@@ -209,8 +210,9 @@ def _one_step_for_incremental_conductance(
         print('prev_neg_cut', prev_neg_cut)
         print('neg_cut_to_add', neg_cut_to_add)
         print('new_neg_cut', new_neg_cut)
-        
-    conductance = (2 * len(new_neg_cut) + len(new_pos_cut)) / new_vol
+
+    denom = min(new_vol, 2 * g.number_of_edges() - new_vol)
+    conductance = (2 * len(new_neg_cut) + len(new_pos_cut)) / denom
     return new_vol, new_pos_cut, new_neg_cut, conductance
 
 
