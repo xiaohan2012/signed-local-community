@@ -236,3 +236,16 @@ def incremental_conductance(g, nodes_in_order, verbose=0, show_progress=False):
             print('-' * 10)
         conductance_list.append(c)
     return conductance_list
+
+
+def purity(g, nodes):
+    """
+
+    let g' = g.subgraph(nodes)
+    purtiy(g, nodes) = #pos edges in g' / #edges in g'
+    """
+    subg = g.subgraph(nodes)
+    signs = np.array([subg[u][v]['sign'] for u, v in subg.edges()])
+    signs[signs < 0] = 0
+    return signs.sum() / signs.shape[0]
+    

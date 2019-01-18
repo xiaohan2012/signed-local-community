@@ -34,11 +34,11 @@ def gen_sbatch_string(
 
 params_file={params_file_name}
 
-arrayID=$SLURM_ARRAY_TASK_ID
+arrayID=$SLURM_ARRAY_TASK_ID  # starting from 0
 
 CHUNKSIZE={chunk_size}
-(( lower = $arrayID * $CHUNKSIZE + 1 ))
-(( upper = ($arrayID + 1) * $CHUNKSIZE ))
+(( lower = ($arrayID - 1) * $CHUNKSIZE + 1 ))
+(( upper = $arrayID  * $CHUNKSIZE ))
 
 for idx in $(seq $lower $upper); do
     params=`sed "${{idx}}q;d" ${{params_file}}`
@@ -77,7 +77,7 @@ if __name__ == '__main__':
         default='experiment_on_community_graph.py',
         help='the script name'
     )
-    
+
     parser.add_argument(
         '-d',
         '--debug',
@@ -92,9 +92,17 @@ if __name__ == '__main__':
         type=int,
         default=128,
         help="number of parallel jobs"
-    )    
+    )
     
 
+    parser.add_argument(
+        '-c',
+        '--chunk_size',
+        type=int,
+        default=50,
+        help="number of tasks inside one job"
+    )
+    
     args = parser.parse_args()
     iter_configs = getattr(__import__('experiment_configs'), args.name)
     
@@ -131,7 +139,8 @@ if __name__ == '__main__':
             n_jobs,
             log_file.name,
             params_file.name,
-            n_jobs_at_a_time=args.n_parallel
+            n_jobs_at_a_time=args.n_parallel,
+            chunk_size=args.chunk_size
         )
         print("sbatch commands as follows\n{}\n".format('='*10))
         print(sbatch_string)

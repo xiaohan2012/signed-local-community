@@ -42,6 +42,29 @@ class TableCreation:
         schema=schema
     )
 
+    query_result_table = 'query_result'
+    query_result_table_creation = """
+    CREATE TABLE IF NOT EXISTS {schema}.{table_name}
+    (
+        graph_path             TEXT,
+
+        method                 TEXT,
+        query_node             INTEGER,
+        teleport_alpha         NUMERIC,
+        other_params           JSONB,
+
+        community              BYTEA,
+
+        size                   INTEGER,
+        conductance            REAL,
+        purity                 REAL,
+        time_elapsed           REAL
+    )
+    """.format(
+        table_name=query_result_table,
+        schema=schema
+    )
+    
 
 def init_db(debug=False):
     """
@@ -55,6 +78,7 @@ def init_db(debug=False):
     )
     sqls_to_execute = (
         TableCreation.comm_graph_exp_table_creation,
+        TableCreation.query_result_table_creation
     )
     for sql in sqls_to_execute:
         cursor.execute(sql)

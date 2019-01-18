@@ -16,7 +16,6 @@ from const import DATA_DIR, DetectionMethods
 from algorithms import (
     get_comunity_using_pos_pagerank,
     get_community_by_sweeping_on_true_community,
-    get_community_by_hesitating_random_walk
 )
 from helpers import evaluate_performance
 from sql import TableCreation, init_db, insert_record, record_exists
@@ -77,8 +76,6 @@ def main():
         pred_comm = get_community_by_sweeping_on_true_community(g, args.query_node, ground_truth)
     elif args.method == DetectionMethods.PR_ON_POS:
         pred_comm = get_comunity_using_pos_pagerank(g, args.query_node, args.teleport_alpha)
-    elif args.method == DetectionMethods.HESITATING_RW:
-        pred_comm = get_community_by_hesitating_random_walk(g, args.query_node, args.teleport_alpha)
 
     time_elapsed = time.time() - stime
     print("community detection done")
