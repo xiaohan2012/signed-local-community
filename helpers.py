@@ -5,7 +5,6 @@ import datetime
 
 import networkx as nx
 
-
 from scipy.sparse import diags
 from scipy.sparse.linalg import eigs
 from matplotlib import pyplot as plt
@@ -98,7 +97,7 @@ def show_result(g, pos, query, scores):
     print('nodes sorted by PR score', order)
     print('PR scores after sorting', sorted_scores)
 
-    fig, ax = plt.subplots(1, 1)    
+    fig, ax = plt.subplots(1, 1)
     nx.draw_networkx_nodes(
         g, pos, node_color=np.log2((normalized_scores + 1e-5) * 1e5), cmap='Blues')
     nx.draw_networkx_labels(g, pos)
@@ -114,7 +113,6 @@ def show_result(g, pos, query, scores):
         sweep_positions.append(i)
         s = signed_conductance(g, order[:i])
         sweep_scores.append(s)
-
 
     fig, ax = plt.subplots(1, 1)
     ax.plot(sweep_positions, sweep_scores)
@@ -211,6 +209,8 @@ def _one_step_for_incremental_conductance(
         print('neg_cut_to_add', neg_cut_to_add)
         print('new_neg_cut', new_neg_cut)
 
+    print('vol', new_vol)
+    print('2m - vol', 2 * g.number_of_edges() - new_vol)
     denom = min(new_vol, 2 * g.number_of_edges() - new_vol)
     conductance = (2 * len(new_neg_cut) + len(new_pos_cut)) / denom
     return new_vol, new_pos_cut, new_neg_cut, conductance
