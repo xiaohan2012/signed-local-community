@@ -1,6 +1,5 @@
 import numpy as np
 import networkx as nx
-import matplotlib as mpl
 
 
 from numpy.linalg import eigh as numpy_eigh
