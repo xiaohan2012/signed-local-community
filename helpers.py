@@ -175,7 +175,7 @@ def make_pair(u, v):
     return tuple(sorted([u, v]))
 
 
-def _one_step_for_incremental_conductance(
+def _one_step_for_incremental_signed_conductance(
         g, prev_nodes, new_node, prev_vol, prev_pos_cut, prev_neg_cut, verbose=2
 ):
     if verbose > 1:
@@ -218,7 +218,7 @@ def _one_step_for_incremental_conductance(
     return new_vol, new_pos_cut, new_neg_cut, conductance
 
 
-def incremental_conductance(g, nodes_in_order, verbose=0, show_progress=False):
+def incremental_signed_conductance(g, nodes_in_order, verbose=0, show_progress=False):
     """incremental implementation of conductance computation"""
     conductance_list = []
     prev_nodes = set()
@@ -231,7 +231,7 @@ def incremental_conductance(g, nodes_in_order, verbose=0, show_progress=False):
         
     for i in iter_obj:
         new_node = nodes_in_order[i]
-        prev_vol, prev_pos_cut, prev_neg_cut, c = _one_step_for_incremental_conductance(
+        prev_vol, prev_pos_cut, prev_neg_cut, c = _one_step_for_incremental_signed_conductance(
             g, prev_nodes, new_node, prev_vol,
             prev_pos_cut, prev_neg_cut, verbose=verbose
         )
@@ -315,15 +315,18 @@ def conductance(g, S, weight=None, verbose=False):
     denum = 0
     S = set(S)
     vol = sum(d for _, d in g.degree(weight='weight'))
+    vol -= sum(g[u][u]['weight'] for u, u in g.selfloop_edges())
+    if verbose >= 1:
+        print('total vol', vol)
     for u in S:
         for v in g.neighbors(u):
             w = g[u][v].get('weight', 1)
             if v not in S:
                 numer += w
             denum += w
-    denum = min(denum,  vol - denum)
     if verbose >= 1:
-        print('{} / {}'.format(numer, denum))
+        print('{} / min({}, {})'.format(numer, denum, vol - denum))
+    denum = min(denum,  vol - denum)
     return numer / denum
 
 
