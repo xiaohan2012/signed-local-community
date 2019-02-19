@@ -116,3 +116,5 @@ core1.cpp
 si.cpp
 *.prof
 logs/
+
+graphs/
