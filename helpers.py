@@ -357,7 +357,6 @@ def signed_group_conductance(g, groups, verbose=0):
                 denum += 1
         if verbose >= 1:
             print('{} / {}'.format(numer, denum))
-        denum = min(denum, 2 * g.number_of_edges() - denum)
         numer_sum += numer
         denum_sum += denum
     if verbose >= 1:
@@ -365,3 +364,10 @@ def signed_group_conductance(g, groups, verbose=0):
 
     return numer_sum / denum_sum
 
+
+def get_borderless_fig():
+    fig, ax = plt.subplots(1, 1)
+    for spine in plt.gca().spines.values():
+        spine.set_visible(False)
+        ax.tick_params(top='off', bottom='off', left='off', right='off', labelleft='off', labelbottom='off')
+    return fig, ax
