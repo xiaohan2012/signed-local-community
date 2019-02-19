@@ -3,10 +3,12 @@ import random
 import string
 import datetime
 
+import pandas as pd
 import networkx as nx
 
 from scipy.sparse import diags
 from scipy.sparse.linalg import eigs
+from scipy import sparse as sp
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 
@@ -251,3 +253,115 @@ def purity(g, nodes):
     signs[signs < 0] = 0
     return signs.sum() / signs.shape[0]
     
+
+def flatten(stuff):
+    return np.asarray(stuff).flatten()
+
+
+def normalized_laplacian_dense(A):
+    deg = A.sum(axis=0)
+    D_neg_half = np.diag(flatten(1 / np.sqrt(deg)))
+    L_norm = np.eye(A.shape[0]) - D_neg_half.dot(A).dot(D_neg_half)
+    return L_norm
+
+
+def parse_graph_in_csv(path, sep=' ', verbose=0):
+    df = pd.read_csv(
+        path,
+        sep=sep,
+        header=None,
+        names=['u', 'v', 'sign'],
+        comment='%'
+    )
+    g = nx.Graph()
+
+    for _, (u, v, sign) in df.iterrows():
+        if g.has_edge(u, v):
+            if g[u][v]['sign'] != sign:
+                if verbose > 0:
+                    print('conflicting sign for edge ({}, {}), remove it'.format(u, v))
+                g.remove_edge(u, v)
+        g.add_edge(u, v)
+        g[u][v]['sign'] = sign
+    g.remove_edges_from(nx.selfloop_edges(g))
+    return nx.convert_node_labels_to_integers(g)
+
+
+def get_lcc(g):
+    """get largest connected component"""
+    cc_list = nx.connected_component_subgraphs(g)
+    lcc = max(cc_list, key=lambda cc: cc.number_of_nodes())
+    return lcc
+
+
+def normalized_laplacian(A):
+    deg = A.sum(axis=0)
+    D_neg_half = sp.diags(flatten(1 / np.sqrt(deg)))
+    L_norm = sp.eye(A.shape[0]) - D_neg_half @ A @ D_neg_half
+    return L_norm
+
+
+def signed_normalized_laplacian(A):
+    deg = abs(A).sum(axis=0)
+    D_neg_half = sp.diags(flatten(1 / np.sqrt(deg)))
+
+    L_norm = sp.eye(A.shape[0]) - D_neg_half @ A @ D_neg_half
+    return L_norm
+    
+
+def conductance(g, S, weight=None, verbose=False):
+    """unsigned conductance, taking into account edge weight"""
+    numer = 0
+    denum = 0
+    S = set(S)
+    vol = sum(d for _, d in g.degree(weight='weight'))
+    for u in S:
+        for v in g.neighbors(u):
+            w = g[u][v].get('weight', 1)
+            if v not in S:
+                numer += w
+            denum += w
+    denum = min(denum,  vol - denum)
+    if verbose >= 1:
+        print('{} / {}'.format(numer, denum))
+    return numer / denum
+
+
+def dict2array(d):
+    a = np.zeros(len(d), dtype=float)
+    for i, v in d.items():
+        a[i] = v
+    return a
+
+
+def signed_group_conductance(g, groups, verbose=0):
+    """
+    conductance generlized to a bag of node sets
+
+    groups: a bag of node sets, denoted as S
+
+    ( \sum_{i \neq j} \partial^{+}(S_i, S_j) + \sum_i \partial^{-}(S_i) ) / \sum_i vol(S_i)
+    """
+    numer_sum = 0
+    denum_sum = 0
+    for S in groups:
+        numer = 0
+        denum = 0
+        S = set(S)
+        for u in S:
+            for v in g.neighbors(u):
+                if v in S and g[u][v]['sign'] == -1:
+                    numer += 1
+                elif v not in S and g[u][v]['sign'] == 1:
+                    numer += 1
+                denum += 1
+        if verbose >= 1:
+            print('{} / {}'.format(numer, denum))
+        denum = min(denum, 2 * g.number_of_edges() - denum)
+        numer_sum += numer
+        denum_sum += denum
+    if verbose >= 1:
+        print('total: {} / {}'.format(numer_sum, denum_sum))
+
+    return numer_sum / denum_sum
+
