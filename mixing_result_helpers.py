@@ -105,18 +105,18 @@ def plot_Ct_list(Wl, sock, p0, alpha, ax, log=False, k=100, step=10):
     return lines
 
 
-def Ut(x, t, m, phi, alpha):
+def Ut(x, t, m, phi, alpha, **kwargs):
     return (x / 4 / m + alpha * t
             + np.minimum(np.sqrt(x), np.sqrt(4 * m - x)) * ((1 - np.power(phi, 2) / 8) ** t))
 
 
-def plot_Ut_list(m, phi_G, alpha, ax, k=100, step=10, log=False):
+def plot_Ut_list(m, phi_G, alpha, ax, Ut_func=Ut, k=100, step=10, log=False, **Ut_kwargs):
     x = np.arange(0, 4 * m+1)
 
     lines = []
     
     for t in range(0, k, step):
-        Ui = Ut(x, t, m, phi_G, alpha)
+        Ui = Ut_func(x, t, m, phi_G, alpha, **Ut_kwargs)
         if log:
             Ui = np.log2(Ui)
         
@@ -176,7 +176,7 @@ def plot_Ct_list_in_order(Wl, sock, p0, alpha, ax, log=False, k=100, step=10, cm
 
 
 def plot_Ut_list_in_order(
-    m, phi_G, alpha, ax, k=100, step=10, log=False, cm_name='Blues'
+    m, phi_G, alpha, ax, Ut_func=Ut, k=100, step=10, log=False, cm_name='Blues', **Ut_kwargs
 ):
     """
     add different colors to the lines
@@ -188,7 +188,7 @@ def plot_Ut_list_in_order(
     lines = []
     
     for t in range(0, k, step):
-        Ui = Ut(x, t, m, phi_G, alpha)
+        Ui = Ut_func(x, t, m, phi_G, alpha, **Ut_kwargs)
         if log:
             Ui = np.log2(Ui)
         
