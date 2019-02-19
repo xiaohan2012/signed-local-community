@@ -79,16 +79,16 @@ def signed_layout(g):
     return {i: pos_array[i, :] for i in range(g.number_of_nodes())}
 
 
-def draw_nodes(g, pos, labels=None):
-    nx.draw_networkx_nodes(g, pos)
-    nx.draw_networkx_labels(g, pos, labels=labels)
+def draw_nodes(g, pos, labels=None, ax=None):
+    nx.draw_networkx_nodes(g, pos, ax=ax)
+    nx.draw_networkx_labels(g, pos, labels=labels, ax=ax)
 
 
-def draw_edges(g, pos):
+def draw_edges(g, pos, ax=None):
     pos_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] == 1.0]
     neg_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] == -1.0]
-    nx.draw_networkx_edges(g, pos, pos_edges, style='solid', edge_color='blue')
-    nx.draw_networkx_edges(g, pos, neg_edges, style='dashed', edge_color='red')
+    nx.draw_networkx_edges(g, pos, pos_edges, style='solid', edge_color='blue', ax=ax)
+    nx.draw_networkx_edges(g, pos, neg_edges, style='dashed', edge_color='red', ax=ax)
 
 
 def show_result(g, pos, query, scores):
