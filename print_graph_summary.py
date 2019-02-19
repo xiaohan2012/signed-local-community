@@ -11,7 +11,14 @@ g = nx.read_gpickle((sys.argv[1]))
 data = []
 
 data.append(('nodes', g.number_of_nodes()))
-data.append(('edges', g.number_of_edges()))
+n_edges = g.number_of_edges()
+data.append(('edges', n_edges))
+num_pos_edges = sum((g[u][v]['sign'] == 1) for u, v in g.edges())
+num_neg_edges = n_edges - num_pos_edges
+data.append(('frac. + edges', num_pos_edges / n_edges))
+data.append(('frac. - edges', num_neg_edges / n_edges))
+data.append(('num. CCs', len(list(nx.connected_components(g)))))
+
 
 # data.append(('is_directed?', g.is_directed()))
 
