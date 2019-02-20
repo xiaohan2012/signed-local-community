@@ -315,7 +315,7 @@ def conductance(g, S, weight=None, verbose=False):
     denum = 0
     S = set(S)
     vol = sum(d for _, d in g.degree(weight='weight'))
-    vol -= sum(g[u][u]['weight'] for u, u in g.selfloop_edges())
+    # vol -= sum(g[u][u]['weight'] for u, u in g.selfloop_edges())
     if verbose >= 1:
         print('total vol', vol)
     for u in S:
@@ -374,3 +374,52 @@ def get_borderless_fig():
         spine.set_visible(False)
         ax.tick_params(top='off', bottom='off', left='off', right='off', labelleft='off', labelbottom='off')
     return fig, ax
+
+
+def conductance_vectorized(C, S, self_degree, verbose=0):
+    """
+    get incidence matrix C using:
+        C = nx.incidence_matrix(g, weight=weight).T
+    get self_degree using:
+        A = nx.adjacency_matrix(g, weight='weight')
+        self_degree = A.diagonal()
+    """
+    total_vol = C.sum() + self_degree.sum()
+    if verbose > 0:
+        print('vol_by_self', self_degree.sum())
+        print('total_vol', total_vol)
+    
+    C_S = C[:, S]
+    weights = flatten(C_S.sum(axis=1))
+    vol = weights.sum()
+    vol += self_degree[S].sum()
+    
+    C_S = C_S[weights > 0, :]
+    cut_mask = (flatten(C_S.astype('bool').sum(axis=1)) == 1)
+    cut_size = C_S[cut_mask, :].sum()
+    if verbose > 0:
+        print('{} / min({}, {})'.format(cut_size, vol, total_vol - vol))
+    return cut_size / min(vol, total_vol - vol)
+
+
+def conductance_by_sweeping(A, order):
+    """return n conductance scores
+    where the ith entry considers the conductance of the subgraph of nodes order_0...order_i"""
+    B = A[order, :][:, order]  # permuate the matrix
+    B_lower = sp.tril(B)
+    B_sums = flatten(B.sum(axis=1))
+    B_lower_sums = flatten(B_lower.sum(axis=1))
+    volumes = np.cumsum(B_sums)
+
+    # distinguish diagonal entries and non-diagonal ones
+    self_degree = B.diagonal()
+    B_lower_off_diag = B_lower - sp.diags(self_degree)
+    B_lower_off_diag_sums = flatten(B_lower_off_diag.sum(axis=1))
+
+    num_cut = np.cumsum(B_sums - 2 * B_lower_off_diag_sums - self_degree)  # to fix
+
+    total_vol = A.sum()
+    volumes_other = total_vol * np.ones(len(order)) - volumes
+    vols = np.minimum(volumes, volumes_other)
+    scores = num_cut / vols
+    return scores
