@@ -4,6 +4,7 @@
 
 for d in $(ls -d *); do
     if [ -d $d ]; then
+	echo "processing" $d
 	pdftk $d/graph.pdf \
 	      $d/motif-graph.pdf \
 	      $d/sweep-profile-plot.pdf \
