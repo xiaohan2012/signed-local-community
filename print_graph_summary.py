@@ -5,6 +5,7 @@ import os
 import numpy as np
 import pandas as pd
 import networkx as nx
+from helpers import get_lcc
 
 g = nx.read_gpickle((sys.argv[1]))
 
@@ -18,6 +19,8 @@ num_neg_edges = n_edges - num_pos_edges
 data.append(('frac. + edges', num_pos_edges / n_edges))
 data.append(('frac. - edges', num_neg_edges / n_edges))
 data.append(('num. CCs', len(list(nx.connected_components(g)))))
+lcc = get_lcc(g)
+data.append(('frac. LCC', lcc.number_of_nodes() / g.number_of_nodes()))
 
 
 # data.append(('is_directed?', g.is_directed()))
