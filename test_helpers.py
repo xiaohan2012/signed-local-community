@@ -1,6 +1,6 @@
 import pytest
 import networkx as nx
-from helpers import signed_conductance, incremental_conductance, purity
+from helpers import purity
 
 
 @pytest.fixture
@@ -13,17 +13,6 @@ def test_graph():
         g.add_edge(u, v, sign=s)
     return g
 
-
-def test_conductance_and_incremental_version(test_graph):
-    nodes = ['a', 'b', 'c',  'd']
-    actual = incremental_conductance(test_graph, nodes, show_progress=True)
-
-    expected = []
-    for i in range(len(nodes)):
-        c = signed_conductance(test_graph, nodes[:i+1])
-        expected.append(c)
-
-    assert actual == expected
 
 def test_purity(test_graph):
     actual = purity(test_graph, ['a', 'b', 'c', 'd', 'e'])
