@@ -12,7 +12,6 @@ from scipy.sparse.linalg import eigs
 from scipy import sparse as sp
 from matplotlib import pyplot as plt
 from tqdm import tqdm
-from algorithms.pagerank import pr_score
 
 
 def walk(g, s0, beta, n_steps, verbose=0):
@@ -86,11 +85,13 @@ def draw_nodes(g, pos, labels=None, ax=None):
     nx.draw_networkx_labels(g, pos, labels=labels, ax=ax)
 
 
-def draw_edges(g, pos, ax=None):
-    pos_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] == 1.0]
-    neg_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] == -1.0]
-    nx.draw_networkx_edges(g, pos, pos_edges, style='solid', edge_color='blue', ax=ax)
-    nx.draw_networkx_edges(g, pos, neg_edges, style='dashed', edge_color='red', ax=ax)
+def draw_edges(g, pos, ax=None, draw_pos=True, draw_neg=True):
+    if draw_pos:
+        pos_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] == 1.0]
+        nx.draw_networkx_edges(g, pos, pos_edges, style='solid', edge_color='blue', ax=ax)
+    if draw_neg:
+        neg_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] == -1.0]
+        nx.draw_networkx_edges(g, pos, neg_edges, style='dashed', edge_color='red', ax=ax)
 
 
 def show_result(g, pos, query, scores):
@@ -432,3 +433,11 @@ def labels2groups(labels):
     for i, l in enumerate(labels):
         groups[l].append(i)
     return groups
+
+
+def n_neg_edges(g):
+    return sum((g[u][v]['sign'] < 0) for u, v in g.edges())
+
+
+def n_pos_edges(g):
+    return sum((g[u][v]['sign'] > 0) for u, v in g.edges())

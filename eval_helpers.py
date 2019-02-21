@@ -55,3 +55,11 @@ def avg_opposition(g, groups):
         [opposition(g, grp1, grp2) for grp1, grp2 in combinations(groups, 2)]
     )
 
+
+def summary(g, groups):
+    return dict(
+        agree_ratio=edge_agreement_ratio(g, groups),
+        cc=avg_cc(g, groups),
+        coh=avg_cohesion(g, groups),
+        opp=avg_opposition(g, groups)
+    )
