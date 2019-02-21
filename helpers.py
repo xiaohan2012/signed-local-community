@@ -6,6 +6,7 @@ import datetime
 import pandas as pd
 import networkx as nx
 
+from collections import defaultdict
 from scipy.sparse import diags
 from scipy.sparse.linalg import eigs
 from scipy import sparse as sp
@@ -426,24 +427,8 @@ def conductance_by_sweeping(A, order):
     return scores
 
 
-def sweeping_scores_using_ppr(g, query, alpha, weight='weight', A=None):
-    """
-    run ppr and returns sweeping positions as well as scores
-    """
-    z_vect = pr_score(g, query, alpha)
-
-    if A is None:
-        A = nx.adjacency_matrix(g, weight=weight)
-
-    deg = flatten(A.sum(axis=1))
-    node_scores = z_vect / deg
-    node_scores[np.isnan(node_scores)] = 0  # nan due to singleton nodes
-
-    order = np.argsort(node_scores)[::-1]
-    sweep_scores = conductance_by_sweeping(A, order)
-
-    # only consider non-nan scores
-    sweep_scores = sweep_scores[np.logical_not(np.isnan(sweep_scores))]
-    sweep_positions = np.arange(1, len(sweep_scores)+1)
-    
-    return sweep_positions, sweep_scores
+def labels2groups(labels):
+    groups = defaultdict(list)
+    for i, l in enumerate(labels):
+        groups[l].append(i)
+    return groups
