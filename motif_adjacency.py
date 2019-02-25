@@ -63,5 +63,4 @@ def motif_ff(A):
     """
     pos_A = A.copy()
     pos_A[pos_A < 0] = 0  # only + edges
-    return pos_A.multiply(pos_A)  # do not materialize the 0 entries
-    
+    return pos_A.multiply(pos_A)  # do not materialize the 0 entries    

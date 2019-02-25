@@ -444,3 +444,11 @@ def n_neg_edges(g):
 
 def n_pos_edges(g):
     return sum((g[u][v]['sign'] > 0) for u, v in g.edges())
+
+
+def num_ccs(g):
+    return len(list(nx.connected_components(g)))
+
+
+def cc_sizes(g):
+    return list(sorted(map(len, nx.connected_components(g)), reverse=True))

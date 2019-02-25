@@ -3,7 +3,7 @@ import networkx as nx
 
 from itertools import chain, combinations
 from helpers import n_neg_edges, n_pos_edges
-
+from collections import OrderedDict
 
 def edge_agreement_ratio(g, groups):
     nodes = list(chain(*groups))
@@ -86,7 +86,12 @@ def frac_inter_pos_edges(subg, A):
 
 def community_summary(subg, g):
     A = nx.adj_matrix(g, weight='sign')
-    return dict(
-        intra_neg_edges=frac_intra_neg_edges(subg, A),
-        inter_pos_edges=frac_inter_pos_edges(subg, A)
-    )
+    neg_frac = 1 - frac_intra_neg_edges(subg, A)
+    pos_frac = 1 - frac_inter_pos_edges(subg, A)
+    res = OrderedDict()
+    res['size'] = subg.number_of_nodes()
+    res['inter_neg_edges'] = neg_frac
+    res['intra_pos_edges'] = pos_frac
+    res['f1_pos_neg'] = 2 * (pos_frac * neg_frac) / (pos_frac + neg_frac)
+    res['avg_cc'] = np.mean(list(nx.clustering(subg).values())),
+    return res

@@ -15,10 +15,13 @@ def sweeping_scores_using_ppr(g, query, alpha, weight='weight', A=None):
 
     deg = flatten(A.sum(axis=1))
     node_scores = z_vect / deg
-    node_scores[np.isnan(node_scores)] = 0  # nan due to singleton nodes
+    node_scores[np.isnan(node_scores)] = 0  # nan due to degree-0 nodes
+    # print('len(node_scores)', len(node_scores))
 
     order = np.argsort(node_scores)[::-1]
     sweep_scores = conductance_by_sweeping(A, order)
+    # print('len(sweep_scores)', len(sweep_scores))
+    # print('sweep_scores', sweep_scores)
 
     # only consider non-nan scores
     sweep_scores = sweep_scores[np.logical_not(np.isnan(sweep_scores))]
