@@ -411,7 +411,6 @@ def conductance_by_sweeping(A, order):
     B = A[order, :][:, order]  # permuate the matrix
     B_lower = sp.tril(B)
     B_sums = flatten(B.sum(axis=1))
-    B_lower_sums = flatten(B_lower.sum(axis=1))
     volumes = np.cumsum(B_sums)
 
     # distinguish diagonal entries and non-diagonal ones
@@ -424,6 +423,10 @@ def conductance_by_sweeping(A, order):
     total_vol = A.sum()
     volumes_other = total_vol * np.ones(len(order)) - volumes
     vols = np.minimum(volumes, volumes_other)
+
+    # print('num_cut', num_cut)
+    # print('vols', vols)
+
     scores = num_cut / vols
     return scores
 

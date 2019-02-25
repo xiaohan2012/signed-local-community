@@ -2,6 +2,7 @@ import numpy as np
 import networkx as nx
 
 from itertools import chain, combinations
+from helpers import n_neg_edges, n_pos_edges
 
 
 def edge_agreement_ratio(g, groups):
@@ -24,7 +25,7 @@ def avg_cc(g, groups):
         subg = g.subgraph(grp).copy()
         subg.remove_edges_from([(u, v) for u, v in subg.edges() if subg[u][v]['sign'] < 0])
         cc_list += list(nx.clustering(subg).values())
-    return np.mean(cc_list)    
+    return np.mean(cc_list)
 
 
 def cohesion(g, grp):
@@ -56,10 +57,36 @@ def avg_opposition(g, groups):
     )
 
 
-def summary(g, groups):
+def opposing_groups_summary(g, groups):
     return dict(
         agree_ratio=edge_agreement_ratio(g, groups),
         cc=avg_cc(g, groups),
         coh=avg_cohesion(g, groups),
         opp=avg_opposition(g, groups)
+    )
+
+
+def frac_intra_neg_edges(subg, A):
+    nodes = list(subg.nodes())
+    neg_A = A.copy()
+    neg_A[neg_A > 0] = 0
+    n_neg_edges_total = np.absolute(neg_A[nodes, :].sum()) / 2
+    n_neg_edges_inside = n_neg_edges(subg)
+    return n_neg_edges_inside / n_neg_edges_total
+
+
+def frac_inter_pos_edges(subg, A):
+    nodes = list(subg.nodes())
+    pos_A = A.copy()
+    pos_A[pos_A < 0] = 0
+    n_pos_edges_total = pos_A[nodes, :].sum() / 2
+    n_pos_edges_inside = n_pos_edges(subg)
+    return 1 - n_pos_edges_inside / n_pos_edges_total
+
+
+def community_summary(subg, g):
+    A = nx.adj_matrix(g, weight='sign')
+    return dict(
+        intra_neg_edges=frac_intra_neg_edges(subg, A),
+        inter_pos_edges=frac_inter_pos_edges(subg, A)
     )
