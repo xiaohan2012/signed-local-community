@@ -54,6 +54,11 @@ def add_pagerank_args(parser):
                         default=0.5,
                         help='probability to teleport')
 
+    parser.add_argument('--max_iter',
+                        type=int,
+                        default=10,
+                        help='maximum number of iterations')
+
 
 def add_detection_methods_args(parser):
     parser.add_argument('-m', '--method',
@@ -70,3 +75,6 @@ def add_misc_args(parser):
     parser.add_argument('--show_progress',
                         action='store_true',
                         help='show progress bar or not')
+    parser.add_argument('--save_db',
+                        action='store_true',
+                        help='store to db or not')
