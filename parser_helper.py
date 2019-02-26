@@ -84,3 +84,6 @@ def add_misc_args(parser):
     parser.add_argument('--save_db',
                         action='store_true',
                         help='store to db or not')
+    parser.add_argument('-experiment_id',
+                        type=str,
+                        help='the unique experiment id')

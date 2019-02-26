@@ -43,6 +43,12 @@ class TableCreation:
     (
         id                     TEXT,
 
+        graph_path             TEXT,
+        method                 TEXT,
+        query_node             INTEGER,
+        teleport_alpha         NUMERIC,
+        other_params           JSONB,
+
         key                    TEXT,
         value                  REAL
     )

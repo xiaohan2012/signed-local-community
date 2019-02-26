@@ -25,11 +25,10 @@ from parser_helper import (
     add_misc_args
 )
 from sql import TableCreation, init_db, insert_record, record_exists
+from eval_helpers import community_summary
 
 
-def find_local_cluster(graph_path, motif_ids, query, alpha):
-    g = nx.read_gpickle(graph_path)
-
+def find_local_cluster(g, motif_ids, query, alpha):
     A = nx.adj_matrix(g, weight='sign')
 
     W = reduce(
@@ -101,15 +100,17 @@ if __name__ == "__main__":
     if record_exists(cursor, TableCreation.query_result_table, filter_value):
         print('record exists, skip')
     else:
+        g = nx.read_gpickle(graph_path)
+
         stime = time.time()
-        community = find_local_cluster(graph_path, motif_ids, query, alpha)
-        print(community)
+        community = find_local_cluster(g, motif_ids, query, alpha)
         time_elapsed = time.time() - stime
-        
+
+        method_name = 'motif-{}'.format(''.join(motif_ids))
         ans = OrderedDict()
         ans['id'] = experiment_id
         ans['graph_path'] = graph_path
-        ans['method'] = 'motif-{}'.format(''.join(motif_ids))
+        ans['method'] = method_name
         ans['query_node'] = query
         ans['teleport_alpha'] = alpha
         ans['other_params'] = {}
@@ -118,10 +119,30 @@ if __name__ == "__main__":
 
         print(ans)
 
+        summary = community_summary(g.subgraph(community), g)
+        print('summary', summary)
+
         if args.save_db:
+            # community result
             insert_record(
                 cursor, TableCreation.schema, TableCreation.query_result_table, ans
             )
+
+            # evaluation result
+            eval_ans = dict(
+                id=experiment_id,
+                graph_path=graph_path,
+                method=method_name,
+                query_node=query,
+                teleport_alpha=alpha,
+                other_params={}
+            )
+            for k, v in summary.items():
+                eval_ans['key'] = k
+                eval_ans['value'] = float(v)
+                insert_record(
+                    cursor, TableCreation.schema, TableCreation.eval_result_table, eval_ans
+                )
             conn.commit()
             print('inserted to db')
     conn.close()    

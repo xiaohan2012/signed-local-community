@@ -94,6 +94,6 @@ def community_summary(subg, g):
     res['inter_neg_edges'] = neg_frac
     res['intra_pos_edges'] = pos_frac
     res['f1_pos_neg'] = 2 * (pos_frac * neg_frac) / (pos_frac + neg_frac)
-    res['avg_cc'] = np.mean(list(nx.clustering(subg).values())),
+    res['avg_cc'] = np.mean(list(nx.clustering(subg).values()))
     res['diameter'] = nx.diameter(subg)
     return res
