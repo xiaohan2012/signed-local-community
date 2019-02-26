@@ -84,6 +84,7 @@ if __name__ == "__main__":
     print('-' * 25)
 
     motif_ids = list(sorted(args.motifs))
+    assert len(motif_ids) > 0, 'no motifs given'
     for m in motif_ids:
         assert m in MOTIF2F, '{} is not a valid motif id'.format(m)
     graph_path = args.graph_path
