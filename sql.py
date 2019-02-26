@@ -14,50 +14,22 @@ class TableCreation:
     if DEBUG:
         schema = 'signed_local_comm_dbg'
     else:
-        schema = 'signed_local_comm'
-        
-    comm_graph_exp_table = 'community_graph_experiment'
-    comm_graph_exp_table_creation = """
-    CREATE TABLE IF NOT EXISTS {schema}.{table_name}
-    (
-        graph_path TEXT,
-        graph_params JSONB,
-
-        method TEXT,
-        query_node INTEGER,
-        teleport_alpha NUMERIC,
-
-        true_comm BYTEA,
-        pred_comm BYTEA,
-
-        prec REAL,
-        recall REAL,
-        f1 REAL,
-        conductance REAL,
-
-        time_elapsed REAL
-    )
-    """.format(
-        table_name=comm_graph_exp_table,
-        schema=schema
-    )
+        schema = 'signed_local_comm'        
 
     query_result_table = 'query_result'
     query_result_table_creation = """
     CREATE TABLE IF NOT EXISTS {schema}.{table_name}
     (
-        graph_path             TEXT,
+        id                     TEXT,
 
+        graph_path             TEXT,
         method                 TEXT,
         query_node             INTEGER,
         teleport_alpha         NUMERIC,
         other_params           JSONB,
 
-        community              BYTEA,
-
-        size                   INTEGER,
-        conductance            REAL,
-        purity                 REAL,
+        community              BYTEA
+,
         time_elapsed           REAL
     )
     """.format(
@@ -65,6 +37,20 @@ class TableCreation:
         schema=schema
     )
     
+    eval_result_table = 'eval_result'
+    eval_result_table_creation = """
+    CREATE TABLE IF NOT EXISTS {schema}.{table_name}
+    (
+        id                     TEXT,
+
+        key                    TEXT,
+        value                  REAL
+    )
+    """.format(
+        table_name=eval_result_table,
+        schema=schema
+    )
+
 
 def init_db(debug=False):
     """
@@ -77,8 +63,8 @@ def init_db(debug=False):
         """CREATE SCHEMA IF NOT EXISTS {}""".format(TableCreation.schema)
     )
     sqls_to_execute = (
-        TableCreation.comm_graph_exp_table_creation,
-        TableCreation.query_result_table_creation
+        TableCreation.query_result_table_creation,
+        TableCreation.eval_result_table_creation
     )
     for sql in sqls_to_execute:
         cursor.execute(sql)

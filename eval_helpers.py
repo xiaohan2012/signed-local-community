@@ -89,9 +89,11 @@ def community_summary(subg, g):
     neg_frac = 1 - frac_intra_neg_edges(subg, A)
     pos_frac = 1 - frac_inter_pos_edges(subg, A)
     res = OrderedDict()
-    res['size'] = subg.number_of_nodes()
+    res['n'] = subg.number_of_nodes()
+    res['m'] = subg.number_of_edges()
     res['inter_neg_edges'] = neg_frac
     res['intra_pos_edges'] = pos_frac
     res['f1_pos_neg'] = 2 * (pos_frac * neg_frac) / (pos_frac + neg_frac)
     res['avg_cc'] = np.mean(list(nx.clustering(subg).values())),
+    res['diameter'] = nx.diameter(subg)
     return res

@@ -66,7 +66,13 @@ def add_detection_methods_args(parser):
                         required=True,
                         help='')
 
-
+def add_motif_args(parser):
+    parser.add_argument('-m', '--motifs',
+                        required=True,
+                        nargs='+',
+                        type=str,
+                        help='the list of motifs separated by space')
+    
 def add_misc_args(parser):
     parser.add_argument('--verbose',
                         type=int,

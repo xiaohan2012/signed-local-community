@@ -2,6 +2,7 @@ import numpy as np
 import random
 import string
 import datetime
+import hashlib
 
 import pandas as pd
 import networkx as nx
@@ -452,3 +453,17 @@ def num_ccs(g):
 
 def cc_sizes(g):
     return list(sorted(map(len, nx.connected_components(g)), reverse=True))
+
+
+def motif_primary_key_value(graph_path, motif_ids, teleport_alpha, query_node):
+    """get hash as value of primary key"""
+    msg = "{},{},{},{}".format(graph_path, ''.join(motif_ids), teleport_alpha, query_node)
+    return hashlib.sha224(msg.encode('utf8')).hexdigest()
+
+
+def node2connected_component(cc_list):
+    n2cc = {}
+    for i, cc in enumerate(cc_list):
+        for n in cc:
+            n2cc[n] = i
+    return n2cc
