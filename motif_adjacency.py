@@ -64,3 +64,11 @@ def motif_ff(A):
     pos_A = A.copy()
     pos_A[pos_A < 0] = 0  # only + edges
     return pos_A.multiply(pos_A)  # do not materialize the 0 entries    
+
+
+M1, M2, M3 = 'm1', 'm2', "m3"
+MOTIF2F = {
+    M1: motif_eef_anchored,
+    M2: motif_fff,
+    M3: motif_ff
+}

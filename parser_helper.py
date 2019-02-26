@@ -66,7 +66,13 @@ def add_detection_methods_args(parser):
                         required=True,
                         help='')
 
-
+def add_motif_args(parser):
+    parser.add_argument('-m', '--motifs',
+                        required=True,
+                        nargs='+',
+                        type=str,
+                        help='the list of motifs separated by space')
+    
 def add_misc_args(parser):
     parser.add_argument('--verbose',
                         type=int,
@@ -78,3 +84,6 @@ def add_misc_args(parser):
     parser.add_argument('--save_db',
                         action='store_true',
                         help='store to db or not')
+    parser.add_argument('-experiment_id',
+                        type=str,
+                        help='the unique experiment id')

@@ -42,8 +42,9 @@ CHUNKSIZE={chunk_size}
 
 for idx in $(seq $lower $upper); do
     params=`sed "${{idx}}q;d" ${{params_file}}`
-
-    eval "srun python3 {script_name} ${{params}}"
+    if [ ! -z "${{params}}" ]; then
+        eval "srun python3 {script_name} ${{params}}"
+    fi
 done
 """.format(
     job_name=job_name,
@@ -73,8 +74,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '-s',
         '--script_name',
-        # required=True,
-        default='experiment_on_community_graph.py',
+        required=True,
         help='the script name'
     )
 
@@ -106,7 +106,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     iter_configs = getattr(__import__('experiment_configs'), args.name)
     
-    configs = iter_configs()
+    configs = iter_configs(show_progress=(not args.debug))
 
     conn, cursor = init_db()
     

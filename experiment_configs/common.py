@@ -5,9 +5,13 @@ from tqdm import tqdm
 
 
 def make_iter_configs(config_dimensions, config_class):
-    def aux():
-        total = np.prod([len(c) for c in config_dimensions])
-        for dict_list in tqdm(product(*config_dimensions), total=total):
+    def aux(show_progress=False):
+        if show_progress:
+            total = np.prod([len(c) for c in config_dimensions])
+            iters = tqdm(product(*config_dimensions))
+        else:
+            iters = product(*config_dimensions)
+        for dict_list in iters:
             params = {}
             for d in dict_list:
                 params.update(d)
