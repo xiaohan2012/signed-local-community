@@ -467,3 +467,11 @@ def node2connected_component(cc_list):
         for n in cc:
             n2cc[n] = i
     return n2cc
+
+
+def approx_diameter(g):
+    """factor-2 approximation of diameter"""
+    n = random.choice(list(g.nodes()))
+    dist = nx.shortest_path_length(g, source=n)
+    return max(list(dist.values()))
+    

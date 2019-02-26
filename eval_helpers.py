@@ -2,8 +2,9 @@ import numpy as np
 import networkx as nx
 
 from itertools import chain, combinations
-from helpers import n_neg_edges, n_pos_edges
+from helpers import n_neg_edges, n_pos_edges, approx_diameter
 from collections import OrderedDict
+
 
 def edge_agreement_ratio(g, groups):
     nodes = list(chain(*groups))
@@ -94,6 +95,12 @@ def community_summary(subg, g):
     res['inter_neg_edges'] = neg_frac
     res['intra_pos_edges'] = pos_frac
     res['f1_pos_neg'] = 2 * (pos_frac * neg_frac) / (pos_frac + neg_frac)
+
     res['avg_cc'] = np.mean(list(nx.clustering(subg).values()))
-    res['diameter'] = nx.diameter(subg)
+
+    if g.number_of_nodes() <= 1000:
+        # for small graphs, compute diameter exactly
+        res['diameter'] = nx.diameter(subg)
+    else:
+        res['diameter'] = approx_diameter(g)
     return res
