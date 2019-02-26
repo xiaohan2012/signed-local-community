@@ -20,9 +20,9 @@ ALL_DETECTION_METHODS = tuple([a[1]
 DB_CONNECTION_STRING = 'dbname=postgres user=xiaoh1 host=10.10.254.21'
 
 ALL_GRAPHS_AND_NUM_NODES = [
-    ('graphs/tribe.pkl', 16),
-    ('graphs/cloister.pkl', 18),
-    ('graphs/congress.pkl', 219),
-    # ('graphs/thesaurus.pkl', 15670),
-    ('graphs/slashdot1/graph.pkl', 77268)
+    # ('graphs/tribe.pkl', 16),
+    # ('graphs/cloister.pkl', 18),
+    # ('graphs/congress.pkl', 219),
+    ('graphs/thesaurus.pkl', 15670),
+    # ('graphs/slashdot1/graph.pkl', 77268)
 ]

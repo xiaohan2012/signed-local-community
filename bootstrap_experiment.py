@@ -20,7 +20,7 @@ def gen_sbatch_string(
         logfile_name,
         params_file_name,
         n_jobs_at_a_time=10,
-        chunk_size=500,
+        chunk_size=50,
         mem=5
 ):
     return """#!/bin/zsh
@@ -42,8 +42,11 @@ CHUNKSIZE={chunk_size}
 
 for idx in $(seq $lower $upper); do
     params=`sed "${{idx}}q;d" ${{params_file}}`
+    echo "srun python3 {script_name} ${{params}}"
     if [ ! -z "${{params}}" ]; then
         eval "srun python3 {script_name} ${{params}}"
+    else
+        echo "idx=${{idx}} has empty params"
     fi
 done
 """.format(
