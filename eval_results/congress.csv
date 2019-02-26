@@ -1,5069 +1,725 @@
-method,key,value
-motif-m1,n,2
-motif-m1,m,1
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.333333
-motif-m1,f1_pos_neg,0.5
-motif-m1,avg_cc,0
-motif-m1,diameter,1
-motif-m1,n,1
-motif-m1,m,0
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0
-motif-m1,f1_pos_neg,0
-motif-m1,avg_cc,0
-motif-m1,diameter,0
-motif-m1,n,4
-motif-m1,m,4
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.153846
-motif-m1,f1_pos_neg,0.266667
-motif-m1,avg_cc,0.583333
-motif-m1,diameter,2
-motif-m1,n,14
-motif-m1,m,21
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.47191
-motif-m1,f1_pos_neg,0.641221
-motif-m1,avg_cc,0.47381
-motif-m1,diameter,4
-motif-m2,n,2
-motif-m2,m,1
-motif-m2,inter_neg_edges,1
-motif-m2,intra_pos_edges,0.117647
-motif-m2,f1_pos_neg,0.210526
-motif-m2,avg_cc,0
-motif-m2,diameter,1
-motif-m2,n,61
-motif-m2,m,160
-motif-m2,inter_neg_edges,0.714286
-motif-m2,intra_pos_edges,0.730479
-motif-m2,f1_pos_neg,0.722291
-motif-m2,avg_cc,0.52963
-motif-m2,diameter,5
-motif-m1,n,6
-motif-m1,m,6
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.193548
-motif-m1,f1_pos_neg,0.324324
-motif-m1,avg_cc,0.277778
-motif-m1,diameter,4
-motif-m2,n,57
-motif-m2,m,143
-motif-m2,inter_neg_edges,0.727273
-motif-m2,intra_pos_edges,0.757225
-motif-m2,f1_pos_neg,0.741947
-motif-m2,avg_cc,0.511681
-motif-m2,diameter,5
-motif-m3,n,101
-motif-m3,m,202
-motif-m3,inter_neg_edges,0.516129
-motif-m3,intra_pos_edges,0.8
-motif-m3,f1_pos_neg,0.627451
-motif-m3,avg_cc,0.24964
-motif-m3,diameter,5
-motif-m3,n,103
-motif-m3,m,217
-motif-m3,inter_neg_edges,0.695238
-motif-m3,intra_pos_edges,0.919908
-motif-m3,f1_pos_neg,0.791947
-motif-m3,avg_cc,0.286039
-motif-m3,diameter,6
-motif-m3,n,104
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.891892
-motif-m3,intra_pos_edges,0.964029
-motif-m3,f1_pos_neg,0.926558
-motif-m3,avg_cc,0.231911
-motif-m3,diameter,6
-motif-m1,n,1
-motif-m1,m,0
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0
-motif-m1,f1_pos_neg,0
-motif-m1,avg_cc,0
-motif-m1,diameter,0
-motif-m3,n,104
-motif-m3,m,219
-motif-m3,inter_neg_edges,0.691057
-motif-m3,intra_pos_edges,0.923788
-motif-m3,f1_pos_neg,0.790652
-motif-m3,avg_cc,0.216286
-motif-m3,diameter,6
-motif-m3,n,98
-motif-m3,m,173
-motif-m3,inter_neg_edges,0.663366
-motif-m3,intra_pos_edges,0.751807
-motif-m3,f1_pos_neg,0.704823
-motif-m3,avg_cc,0.22632
-motif-m3,diameter,7
-motif-m3,n,104
-motif-m3,m,206
-motif-m3,inter_neg_edges,0.705263
-motif-m3,intra_pos_edges,0.945813
-motif-m3,f1_pos_neg,0.808015
-motif-m3,avg_cc,0.259926
-motif-m3,diameter,6
-motif-m3,n,102
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.850467
-motif-m3,intra_pos_edges,0.934579
-motif-m3,f1_pos_neg,0.890542
-motif-m3,avg_cc,0.217768
-motif-m3,diameter,6
-motif-m3,n,114
-motif-m3,m,218
-motif-m3,inter_neg_edges,0.895833
-motif-m3,intra_pos_edges,0.955157
-motif-m3,f1_pos_neg,0.924545
-motif-m3,avg_cc,0.242412
-motif-m3,diameter,7
-motif-m3,n,118
-motif-m3,m,238
-motif-m3,inter_neg_edges,0.680672
-motif-m3,intra_pos_edges,0.960526
-motif-m3,f1_pos_neg,0.796739
-motif-m3,avg_cc,0.256106
-motif-m3,diameter,7
-motif-m3,n,110
-motif-m3,m,219
-motif-m3,inter_neg_edges,0.826087
-motif-m3,intra_pos_edges,0.954338
-motif-m3,f1_pos_neg,0.885593
-motif-m3,avg_cc,0.194696
-motif-m3,diameter,6
-motif-m3,n,123
-motif-m3,m,245
-motif-m3,inter_neg_edges,0.672131
-motif-m3,intra_pos_edges,0.957447
-motif-m3,f1_pos_neg,0.789812
-motif-m3,avg_cc,0.244393
-motif-m3,diameter,7
-motif-m3,n,102
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.850467
-motif-m3,intra_pos_edges,0.934579
-motif-m3,f1_pos_neg,0.890542
-motif-m3,avg_cc,0.217768
-motif-m3,diameter,6
-motif-m2,n,62
-motif-m2,m,162
-motif-m2,inter_neg_edges,0.711538
-motif-m2,intra_pos_edges,0.738693
-motif-m2,f1_pos_neg,0.724862
-motif-m2,avg_cc,0.502553
-motif-m2,diameter,5
-motif-m3,n,123
-motif-m3,m,245
-motif-m3,inter_neg_edges,0.672131
-motif-m3,intra_pos_edges,0.957447
-motif-m3,f1_pos_neg,0.789812
-motif-m3,avg_cc,0.244393
-motif-m3,diameter,7
-motif-m1m2,n,59
-motif-m1m2,m,142
-motif-m1m2,inter_neg_edges,0.877551
-motif-m1m2,intra_pos_edges,0.77937
-motif-m1m2,f1_pos_neg,0.825551
-motif-m1m2,avg_cc,0.429537
-motif-m1m2,diameter,5
-motif-m2,n,41
-motif-m2,m,90
-motif-m2,inter_neg_edges,0.794118
-motif-m2,intra_pos_edges,0.601449
-motif-m2,f1_pos_neg,0.684484
-motif-m2,avg_cc,0.576671
-motif-m2,diameter,5
-motif-m1m2,n,2
-motif-m1m2,m,1
-motif-m1m2,inter_neg_edges,1
-motif-m1m2,intra_pos_edges,0.133333
-motif-m1m2,f1_pos_neg,0.235294
-motif-m1m2,avg_cc,0
-motif-m1m2,diameter,1
-motif-m2,n,61
-motif-m2,m,159
-motif-m2,inter_neg_edges,0.666667
-motif-m2,intra_pos_edges,0.737113
-motif-m2,f1_pos_neg,0.700122
-motif-m2,avg_cc,0.548029
-motif-m2,diameter,5
-motif-m1m2,n,64
-motif-m1m2,m,165
-motif-m1m2,inter_neg_edges,0.688073
-motif-m1m2,intra_pos_edges,0.738155
-motif-m1m2,f1_pos_neg,0.712235
-motif-m1m2,avg_cc,0.532131
-motif-m1m2,diameter,5
-motif-m1m2,n,61
-motif-m1m2,m,139
-motif-m1m2,inter_neg_edges,0.950617
-motif-m1m2,intra_pos_edges,0.796512
-motif-m1m2,f1_pos_neg,0.866768
-motif-m1m2,avg_cc,0.457241
-motif-m1m2,diameter,5
-motif-m3,n,95
-motif-m3,m,193
-motif-m3,inter_neg_edges,0.862069
-motif-m3,intra_pos_edges,0.946835
-motif-m3,f1_pos_neg,0.902466
-motif-m3,avg_cc,0.24194
-motif-m3,diameter,6
-motif-m1m2m3,n,99
-motif-m1m2m3,m,211
-motif-m1m2m3,inter_neg_edges,0.708738
-motif-m1m2m3,intra_pos_edges,0.920188
-motif-m1m2m3,f1_pos_neg,0.800739
-motif-m1m2m3,avg_cc,0.300053
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,90
-motif-m1m2m3,m,182
-motif-m1m2m3,inter_neg_edges,0.431193
-motif-m1m2m3,intra_pos_edges,0.751244
-motif-m1m2m3,f1_pos_neg,0.547904
-motif-m1m2m3,avg_cc,0.257979
-motif-m1m2m3,diameter,5
-motif-m1m2m3,n,105
-motif-m1m2m3,m,213
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.962085
-motif-m1m2m3,f1_pos_neg,0.888915
-motif-m1m2m3,avg_cc,0.220918
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,99
-motif-m1m2m3,m,212
-motif-m1m2m3,inter_neg_edges,0.716667
-motif-m1m2m3,intra_pos_edges,0.909091
-motif-m1m2m3,f1_pos_neg,0.801491
-motif-m1m2m3,avg_cc,0.201762
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,85
-motif-m1m2m3,m,158
-motif-m1m2m3,inter_neg_edges,0.673469
-motif-m1m2m3,intra_pos_edges,0.697789
-motif-m1m2m3,f1_pos_neg,0.685413
-motif-m1m2m3,avg_cc,0.216683
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,94
-motif-m1m2m3,m,192
-motif-m1m2m3,inter_neg_edges,0.903846
-motif-m1m2m3,intra_pos_edges,0.905569
-motif-m1m2m3,f1_pos_neg,0.904707
-motif-m1m2m3,avg_cc,0.20596
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,118
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.560606
-motif-m1m2m3,intra_pos_edges,0.922449
-motif-m1m2m3,f1_pos_neg,0.697385
-motif-m1m2m3,avg_cc,0.237474
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,96
-motif-m1m2m3,m,180
-motif-m1m2m3,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.9375
-motif-m1m2m3,f1_pos_neg,0.967742
-motif-m1m2m3,avg_cc,0.27185
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,106
-motif-m1m2m3,m,209
-motif-m1m2m3,inter_neg_edges,0.708333
-motif-m1m2m3,intra_pos_edges,0.951219
-motif-m1m2m3,f1_pos_neg,0.812002
-motif-m1m2m3,avg_cc,0.27206
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,112
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.877551
-motif-m1m2m3,intra_pos_edges,0.950673
-motif-m1m2m3,f1_pos_neg,0.91265
-motif-m1m2m3,avg_cc,0.24733
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,109
-motif-m1m2m3,m,211
-motif-m1m2m3,inter_neg_edges,0.914894
-motif-m1m2m3,intra_pos_edges,0.949541
-motif-m1m2m3,f1_pos_neg,0.931895
-motif-m1m2m3,avg_cc,0.256122
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,118
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.560606
-motif-m1m2m3,intra_pos_edges,0.922449
-motif-m1m2m3,f1_pos_neg,0.697385
-motif-m1m2m3,avg_cc,0.237474
-motif-m1m2m3,diameter,6
-motif-m1m2,n,69
-motif-m1m2,m,177
-motif-m1m2,inter_neg_edges,0.684211
-motif-m1m2,intra_pos_edges,0.75895
-motif-m1m2,f1_pos_neg,0.719645
-motif-m1m2,avg_cc,0.477597
-motif-m1m2,diameter,6
-motif-m1,n,14
-motif-m1,m,21
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.47191
-motif-m1,f1_pos_neg,0.641221
-motif-m1,avg_cc,0.47381
-motif-m1,diameter,4
-motif-m1m2m3,n,112
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.877551
-motif-m1m2m3,intra_pos_edges,0.950673
-motif-m1m2m3,f1_pos_neg,0.91265
-motif-m1m2m3,avg_cc,0.24733
-motif-m1m2m3,diameter,6
-motif-m3,n,76
-motif-m3,m,132
-motif-m3,inter_neg_edges,0.868132
-motif-m3,intra_pos_edges,0.732558
-motif-m3,f1_pos_neg,0.794604
-motif-m3,avg_cc,0.230525
-motif-m3,diameter,5
-motif-m1,n,6
-motif-m1,m,7
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.27451
-motif-m1,f1_pos_neg,0.430769
-motif-m1,avg_cc,0.416667
-motif-m1,diameter,3
-motif-m1,n,2
-motif-m1,m,1
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.333333
-motif-m1,f1_pos_neg,0.5
-motif-m1,avg_cc,0
-motif-m1,diameter,1
-motif-m3,n,91
-motif-m3,m,184
-motif-m3,inter_neg_edges,0.868132
-motif-m3,intra_pos_edges,0.954424
-motif-m3,f1_pos_neg,0.909235
-motif-m3,avg_cc,0.226521
-motif-m3,diameter,6
-motif-m1,n,14
-motif-m1,m,21
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.47191
-motif-m1,f1_pos_neg,0.641221
-motif-m1,avg_cc,0.47381
-motif-m1,diameter,4
-motif-m1,n,5
-motif-m1,m,6
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.315789
-motif-m1,f1_pos_neg,0.48
-motif-m1,avg_cc,0.6
-motif-m1,diameter,2
-motif-m1,n,14
-motif-m1,m,21
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.47191
-motif-m1,f1_pos_neg,0.641221
-motif-m1,avg_cc,0.47381
-motif-m1,diameter,4
-motif-m3,n,95
-motif-m3,m,187
-motif-m3,inter_neg_edges,0.539823
-motif-m3,intra_pos_edges,0.766667
-motif-m3,f1_pos_neg,0.633552
-motif-m3,avg_cc,0.199938
-motif-m3,diameter,6
-motif-m2,n,1
-motif-m2,m,0
-motif-m2,inter_neg_edges,NaN
-motif-m2,intra_pos_edges,0
-motif-m2,f1_pos_neg,NaN
-motif-m2,avg_cc,0
-motif-m2,diameter,0
-motif-m1m2m3,n,107
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.773913
-motif-m1m2m3,intra_pos_edges,0.955711
-motif-m1m2m3,f1_pos_neg,0.855258
-motif-m1m2m3,avg_cc,0.213423
-motif-m1m2m3,diameter,6
-motif-m1,n,14
-motif-m1,m,21
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.47191
-motif-m1,f1_pos_neg,0.641221
-motif-m1,avg_cc,0.47381
-motif-m1,diameter,4
-motif-m2,n,63
-motif-m2,m,165
-motif-m2,inter_neg_edges,0.698113
-motif-m2,intra_pos_edges,0.735802
-motif-m2,f1_pos_neg,0.716463
-motif-m2,avg_cc,0.513383
-motif-m2,diameter,5
-motif-m2,n,79
-motif-m2,m,216
-motif-m2,inter_neg_edges,0.508197
-motif-m2,intra_pos_edges,0.748491
-motif-m2,f1_pos_neg,0.60537
-motif-m2,avg_cc,0.541732
-motif-m2,diameter,5
-motif-m2,n,54
-motif-m2,m,135
-motif-m2,inter_neg_edges,0.869565
-motif-m2,intra_pos_edges,0.754386
-motif-m2,f1_pos_neg,0.807891
-motif-m2,avg_cc,0.461217
-motif-m2,diameter,5
-motif-m2,n,54
-motif-m2,m,136
-motif-m2,inter_neg_edges,0.869565
-motif-m2,intra_pos_edges,0.762463
-motif-m2,f1_pos_neg,0.8125
-motif-m2,avg_cc,0.478124
-motif-m2,diameter,5
-motif-m2,n,61
-motif-m2,m,161
-motif-m2,inter_neg_edges,0.711538
-motif-m2,intra_pos_edges,0.737374
-motif-m2,f1_pos_neg,0.724226
-motif-m2,avg_cc,0.511388
-motif-m2,diameter,5
-motif-m2,n,55
-motif-m2,m,143
-motif-m2,inter_neg_edges,0.662921
-motif-m2,intra_pos_edges,0.727273
-motif-m2,f1_pos_neg,0.693608
-motif-m2,avg_cc,0.528972
-motif-m2,diameter,5
-motif-m2,n,58
-motif-m2,m,151
-motif-m2,inter_neg_edges,0.666667
-motif-m2,intra_pos_edges,0.712401
-motif-m2,f1_pos_neg,0.688776
-motif-m2,avg_cc,0.55503
-motif-m2,diameter,5
-motif-m1m2,n,44
-motif-m1m2,m,95
-motif-m1m2,inter_neg_edges,0.810811
-motif-m1m2,intra_pos_edges,0.621908
-motif-m1m2,f1_pos_neg,0.703906
-motif-m1m2,avg_cc,0.548227
-motif-m1m2,diameter,5
-motif-m2,n,57
-motif-m2,m,143
-motif-m2,inter_neg_edges,0.727273
-motif-m2,intra_pos_edges,0.757225
-motif-m2,f1_pos_neg,0.741947
-motif-m2,avg_cc,0.511681
-motif-m2,diameter,5
-motif-m3,n,98
-motif-m3,m,203
-motif-m3,inter_neg_edges,0.795918
-motif-m3,intra_pos_edges,0.936893
-motif-m3,f1_pos_neg,0.860671
-motif-m3,avg_cc,0.225724
-motif-m3,diameter,6
-motif-m3,n,104
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.714286
-motif-m3,intra_pos_edges,0.946078
-motif-m3,f1_pos_neg,0.814003
-motif-m3,avg_cc,0.25778
-motif-m3,diameter,6
-motif-m3,n,102
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.850467
-motif-m3,intra_pos_edges,0.934579
-motif-m3,f1_pos_neg,0.890542
-motif-m3,avg_cc,0.217768
-motif-m3,diameter,6
-motif-m3,n,111
-motif-m3,m,221
-motif-m3,inter_neg_edges,0.810345
-motif-m3,intra_pos_edges,0.954545
-motif-m3,n,75
-motif-m3,f1_pos_neg,0.876554
-motif-m3,m,131
-motif-m3,avg_cc,0.201951
-motif-m3,inter_neg_edges,0.868132
-motif-m3,diameter,6
-motif-m3,intra_pos_edges,0.733138
-motif-m3,f1_pos_neg,0.794945
-motif-m3,avg_cc,0.233642
-motif-m3,diameter,5
-motif-m3,n,123
-motif-m3,m,245
-motif-m3,inter_neg_edges,0.672131
-motif-m3,intra_pos_edges,0.957447
-motif-m3,f1_pos_neg,0.789812
-motif-m3,avg_cc,0.244393
-motif-m3,diameter,7
-motif-m3,n,100
-motif-m3,m,204
-motif-m3,inter_neg_edges,0.628319
-motif-m3,intra_pos_edges,0.88835
-motif-m3,f1_pos_neg,0.736043
-motif-m3,avg_cc,0.246082
-motif-m3,diameter,6
-motif-m3,n,104
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.891892
-motif-m3,intra_pos_edges,0.964029
-motif-m3,f1_pos_neg,0.926558
-motif-m3,avg_cc,0.231911
-motif-m3,diameter,6
-motif-m3,n,104
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.891892
-motif-m3,intra_pos_edges,0.964029
-motif-m3,f1_pos_neg,0.926558
-motif-m3,avg_cc,0.231911
-motif-m3,diameter,6
-motif-m3,n,106
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.875
-motif-m3,intra_pos_edges,0.933025
-motif-m3,f1_pos_neg,0.903082
-motif-m3,avg_cc,0.233621
-motif-m3,diameter,6
-motif-m3,n,121
-motif-m3,m,246
-motif-m3,inter_neg_edges,0.645161
-motif-m3,intra_pos_edges,0.935282
-motif-m3,f1_pos_neg,0.763593
-motif-m3,avg_cc,0.249727
-motif-m3,diameter,6
-motif-m2,n,63
-motif-m2,m,165
-motif-m2,inter_neg_edges,0.698113
-motif-m2,intra_pos_edges,0.735802
-motif-m2,f1_pos_neg,0.716463
-motif-m2,avg_cc,0.513383
-motif-m2,diameter,5
-motif-m3,n,123
-motif-m3,m,245
-motif-m3,inter_neg_edges,0.672131
-motif-m3,intra_pos_edges,0.957447
-motif-m3,f1_pos_neg,0.789812
-motif-m3,avg_cc,0.244393
-motif-m3,diameter,7
-motif-m1m2,n,69
-motif-m1m2,m,176
-motif-m1m2,inter_neg_edges,0.696429
-motif-m1m2,intra_pos_edges,0.768116
-motif-m1m2,f1_pos_neg,0.730518
-motif-m1m2,avg_cc,0.472684
-motif-m1m2,diameter,6
-motif-m1m2,n,69
-motif-m1m2,m,177
-motif-m1m2,inter_neg_edges,0.607477
-motif-m1m2,intra_pos_edges,0.778055
-motif-m1m2,f1_pos_neg,0.682265
-motif-m1m2,avg_cc,0.529873
-motif-m1m2,diameter,5
-motif-m3,n,114
-motif-m3,m,220
-motif-m3,inter_neg_edges,0.877551
-motif-m3,intra_pos_edges,0.951111
-motif-m3,f1_pos_neg,0.912852
-motif-m3,avg_cc,0.242788
-motif-m3,diameter,6
-motif-m1m2,n,1
-motif-m1m2,m,0
-motif-m1m2,inter_neg_edges,NaN
-motif-m1m2,intra_pos_edges,0
-motif-m1m2,f1_pos_neg,NaN
-motif-m1m2,avg_cc,0
-motif-m1m2,diameter,0
-motif-m1m2,n,58
-motif-m1m2,m,141
-motif-m1m2,inter_neg_edges,0.877551
-motif-m1m2,intra_pos_edges,0.780347
-motif-m1m2,f1_pos_neg,0.826099
-motif-m1m2,avg_cc,0.43729
-motif-m1m2,diameter,5
-motif-m1m2,n,61
-motif-m1m2,m,139
-motif-m1m2,inter_neg_edges,0.950617
-motif-m1m2,intra_pos_edges,0.796512
-motif-m1m2,f1_pos_neg,0.866768
-motif-m1m2,avg_cc,0.457241
-motif-m1m2,diameter,5
-motif-m1m2,n,58
-motif-m1m2,m,140
-motif-m1m2,inter_neg_edges,0.877551
-motif-m1m2,intra_pos_edges,0.772334
-motif-m1m2,f1_pos_neg,0.821588
-motif-m1m2,avg_cc,0.421207
-motif-m1m2,diameter,5
-motif-m1m2,n,56
-motif-m1m2,m,127
-motif-m1m2,inter_neg_edges,0.948052
-motif-m1m2,intra_pos_edges,0.791139
-motif-m1m2,f1_pos_neg,0.862517
-motif-m1m2,avg_cc,0.455817
-motif-m1m2,diameter,5
-motif-m1m2,n,57
-motif-m1m2,m,139
-motif-m1m2,inter_neg_edges,0.877551
-motif-m1m2,intra_pos_edges,0.773256
-motif-m1m2,f1_pos_neg,0.822109
-motif-m1m2,avg_cc,0.42895
-motif-m1m2,diameter,5
-motif-m1m2,n,89
-motif-m1m2,m,239
-motif-m1m2,inter_neg_edges,0.443609
-motif-m1m2,intra_pos_edges,0.782946
-motif-m1m2,f1_pos_neg,0.566337
-motif-m1m2,avg_cc,0.548796
-motif-m1m2,diameter,6
-motif-m3,n,96
-motif-m3,m,198
-motif-m3,inter_neg_edges,0.833333
-motif-m3,intra_pos_edges,0.940594
-motif-m3,f1_pos_neg,0.883721
-motif-m3,avg_cc,0.23853
-motif-m3,diameter,6
-motif-m1m2,n,65
-motif-m1m2,m,167
-motif-m1m2,inter_neg_edges,0.6
-motif-m1m2,intra_pos_edges,0.748718
-motif-m1m2,f1_pos_neg,0.66616
-motif-m1m2,avg_cc,0.553704
-motif-m1m2,diameter,5
-motif-m1m2m3,n,104
-motif-m1m2m3,m,210
-motif-m1m2m3,inter_neg_edges,0.842105
-motif-m1m2m3,intra_pos_edges,0.957143
-motif-m1m2m3,f1_pos_neg,0.895947
-motif-m1m2m3,avg_cc,0.228248
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,96
-motif-m1m2m3,m,202
-motif-m1m2m3,inter_neg_edges,0.834862
-motif-m1m2m3,intra_pos_edges,0.93012
-motif-m1m2m3,f1_pos_neg,0.879921
-motif-m1m2m3,avg_cc,0.22669
-motif-m1m2m3,diameter,6
-motif-m1m2,n,63
-motif-m1m2,m,156
-motif-m1m2,inter_neg_edges,0.690722
-motif-m1m2,intra_pos_edges,0.792135
-motif-m1m2,f1_pos_neg,0.73796
-motif-m1m2,avg_cc,0.465563
-motif-m1m2,diameter,5
-motif-m1m2m3,n,108
-motif-m1m2m3,m,216
-motif-m1m2m3,inter_neg_edges,0.842105
-motif-m1m2m3,intra_pos_edges,0.953917
-motif-m1m2m3,f1_pos_neg,0.894531
-motif-m1m2m3,avg_cc,0.198423
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,112
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.877551
-motif-m1m2m3,intra_pos_edges,0.950673
-motif-m1m2m3,f1_pos_neg,0.91265
-motif-m1m2m3,avg_cc,0.24733
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,103
-motif-m1m2m3,m,202
-motif-m1m2m3,inter_neg_edges,0.702128
-motif-m1m2m3,intra_pos_edges,0.947103
-motif-m1m2m3,f1_pos_neg,0.806421
-motif-m1m2m3,avg_cc,0.272467
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,105
-motif-m1m2m3,m,213
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.962085
-motif-m1m2m3,f1_pos_neg,0.888915
-motif-m1m2m3,avg_cc,0.220918
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,103
-motif-m1m2m3,m,204
-motif-m1m2m3,inter_neg_edges,0.87234
-motif-m1m2m3,intra_pos_edges,0.929577
-motif-m1m2m3,f1_pos_neg,0.90005
-motif-m1m2m3,avg_cc,0.234718
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,105
-motif-m1m2m3,m,213
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.962085
-motif-m1m2m3,f1_pos_neg,0.888915
-motif-m1m2m3,avg_cc,0.220918
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,118
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.560606
-motif-m1m2m3,intra_pos_edges,0.922449
-motif-m1m2m3,f1_pos_neg,0.697385
-motif-m1m2m3,avg_cc,0.237474
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,208
-motif-m1m2,n,64
-motif-m1m2,m,161
-motif-m1m2m3,m,505
-motif-m1m2,inter_neg_edges,0.722222
-motif-m1m2,intra_pos_edges,0.760417
-motif-m1m2m3,inter_neg_edges,0.0490196
-motif-m1m2,f1_pos_neg,0.740828
-motif-m1m2m3,intra_pos_edges,0.997555
-motif-m1m2,avg_cc,0.496413
-motif-m1m2m3,f1_pos_neg,0.0934472
-motif-m1m2,diameter,6
-motif-m1m2m3,avg_cc,0.261574
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,112
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.877551
-motif-m1m2m3,intra_pos_edges,0.950673
-motif-m1m2m3,f1_pos_neg,0.91265
-motif-m1m2m3,avg_cc,0.24733
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,98
-motif-m1m2m3,m,208
-motif-m1m2m3,inter_neg_edges,0.57265
-motif-m1m2m3,intra_pos_edges,0.859155
-motif-m1m2m3,f1_pos_neg,0.687237
-motif-m1m2m3,avg_cc,0.246786
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,208
-motif-m1m2m3,m,505
-motif-m1m2m3,inter_neg_edges,0.0490196
-motif-m1m2m3,intra_pos_edges,0.997555
-motif-m1m2m3,f1_pos_neg,0.0934472
-motif-m1m2m3,avg_cc,0.261574
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,118
-motif-m1m2m3,m,246
-motif-m1m2m3,inter_neg_edges,0.619048
-motif-m1m2m3,intra_pos_edges,0.909836
-motif-m1m2m3,f1_pos_neg,0.736788
-motif-m1m2m3,avg_cc,0.278385
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,114
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.886792
-motif-m1m2m3,intra_pos_edges,0.946429
-motif-m1m2m3,f1_pos_neg,0.915641
-motif-m1m2m3,avg_cc,0.226999
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,123
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.480315
-motif-m1m2m3,intra_pos_edges,0.872299
-motif-m1m2m3,f1_pos_neg,0.619509
-motif-m1m2m3,avg_cc,0.256755
-motif-m1m2m3,diameter,6
-motif-m1,n,11
-motif-m1,m,16
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.285714
-motif-m1,f1_pos_neg,0.444444
-motif-m1,avg_cc,0.360606
-motif-m1,diameter,4
-motif-m1,n,12
-motif-m1,m,16
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.264463
-motif-m1,f1_pos_neg,0.418301
-motif-m1,avg_cc,0.219444
-motif-m1,diameter,5
-motif-m1,n,5
-motif-m1,m,6
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.285714
-motif-m1,f1_pos_neg,0.444444
-motif-m1,avg_cc,0.533333
-motif-m1,diameter,3
-motif-m1m2m3,n,98
-motif-m1m2m3,m,202
-motif-m1m2m3,inter_neg_edges,0.816327
-motif-m1m2m3,intra_pos_edges,0.953086
-motif-m1m2m3,f1_pos_neg,0.879421
-motif-m1m2m3,avg_cc,0.241284
-motif-m1m2m3,diameter,6
-motif-m2,n,54
-motif-m2,m,136
-motif-m2,inter_neg_edges,0.869565
-motif-m2,intra_pos_edges,0.762463
-motif-m2,f1_pos_neg,0.8125
-motif-m2,avg_cc,0.478124
-motif-m2,diameter,5
-motif-m2,n,1
-motif-m2,m,0
-motif-m2,inter_neg_edges,NaN
-motif-m2,intra_pos_edges,0
-motif-m2,f1_pos_neg,NaN
-motif-m2,avg_cc,0
-motif-m2,diameter,0
-motif-m2,n,57
-motif-m2,m,134
-motif-m2,inter_neg_edges,0.92
-motif-m2,intra_pos_edges,0.772861
-motif-m2,f1_pos_neg,0.840036
-motif-m2,avg_cc,0.526524
-motif-m2,diameter,5
-motif-m2,n,49
-motif-m2,m,115
-motif-m2,inter_neg_edges,0.862069
-motif-m2,intra_pos_edges,0.662614
-motif-m2,f1_pos_neg,0.749295
-motif-m2,avg_cc,0.560172
-motif-m2,diameter,5
-motif-m3,n,98
-motif-m3,m,203
-motif-m3,inter_neg_edges,0.795918
-motif-m3,intra_pos_edges,0.936893
-motif-m3,f1_pos_neg,0.860671
-motif-m3,avg_cc,0.225724
-motif-m3,diameter,6
-motif-m2,n,60
-motif-m2,m,155
-motif-m2,inter_neg_edges,0.684211
-motif-m2,intra_pos_edges,0.738786
-motif-m2,f1_pos_neg,0.710452
-motif-m2,avg_cc,0.551046
-motif-m2,diameter,5
-motif-m3,n,102
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.850467
-motif-m3,intra_pos_edges,0.934579
-motif-m3,f1_pos_neg,0.890542
-motif-m3,avg_cc,0.217768
-motif-m3,diameter,6
-motif-m3,n,98
-motif-m3,m,173
-motif-m3,inter_neg_edges,0.663366
-motif-m3,intra_pos_edges,0.751807
-motif-m3,f1_pos_neg,0.704823
-motif-m3,avg_cc,0.22632
-motif-m3,diameter,7
-motif-m2,n,64
-motif-m2,m,168
-motif-m2,inter_neg_edges,0.636364
-motif-m2,intra_pos_edges,0.733496
-motif-m2,f1_pos_neg,0.681486
-motif-m2,avg_cc,0.566701
-motif-m2,diameter,5
-motif-m3,n,105
-motif-m3,m,211
-motif-m3,inter_neg_edges,0.842105
-motif-m3,intra_pos_edges,0.95283
-motif-m3,f1_pos_neg,0.894053
-motif-m3,avg_cc,0.23909
-motif-m3,diameter,6
-motif-m3,n,104
-motif-m3,m,206
-motif-m3,inter_neg_edges,0.705263
-motif-m3,intra_pos_edges,0.945813
-motif-m3,f1_pos_neg,0.808015
-motif-m3,avg_cc,0.259926
-motif-m3,diameter,6
-motif-m3,n,102
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.850467
-motif-m3,intra_pos_edges,0.934579
-motif-m3,f1_pos_neg,0.890542
-motif-m3,avg_cc,0.217768
-motif-m3,diameter,6
-motif-m3,n,106
-motif-m3,m,210
-motif-m3,inter_neg_edges,0.714286
-motif-m3,intra_pos_edges,0.953771
-motif-m3,f1_pos_neg,0.816837
-motif-m3,avg_cc,0.251501
-motif-m3,diameter,6
-motif-m2,n,62
-motif-m2,m,162
-motif-m2,inter_neg_edges,0.711538
-motif-m2,intra_pos_edges,0.738693
-motif-m2,f1_pos_neg,0.724862
-motif-m2,avg_cc,0.502553
-motif-m2,diameter,5
-motif-m3,n,116
-motif-m3,m,222
-motif-m3,inter_neg_edges,0.886792
-motif-m3,intra_pos_edges,0.953642
-motif-m3,f1_pos_neg,0.919003
-motif-m3,avg_cc,0.236016
-motif-m3,diameter,7
-motif-m2,n,52
-motif-m2,m,134
-motif-m2,inter_neg_edges,0.869565
-motif-m2,intra_pos_edges,0.759644
-motif-m2,f1_pos_neg,0.810896
-motif-m2,avg_cc,0.497648
-motif-m2,diameter,5
-motif-m3,n,116
-motif-m3,m,257
-motif-m3,inter_neg_edges,0.50365
-motif-m3,intra_pos_edges,0.90835
-motif-m3,f1_pos_neg,0.648003
-motif-m3,avg_cc,0.233803
-motif-m3,diameter,6
-motif-m3,n,106
-motif-m3,m,209
-motif-m3,inter_neg_edges,0.87156
-motif-m3,intra_pos_edges,0.95283
-motif-m3,f1_pos_neg,0.910385
-motif-m3,avg_cc,0.219073
-motif-m3,diameter,6
-motif-m3,n,123
-motif-m3,m,253
-motif-m3,inter_neg_edges,0.593496
-motif-m3,intra_pos_edges,0.934426
-motif-m3,f1_pos_neg,0.725925
-motif-m3,avg_cc,0.249898
-motif-m3,diameter,7
-motif-m3,n,101
-motif-m3,m,202
-motif-m3,inter_neg_edges,0.516129
-motif-m3,intra_pos_edges,0.8
-motif-m3,f1_pos_neg,0.627451
-motif-m3,avg_cc,0.24964
-motif-m3,diameter,5
-motif-m3,n,122
-motif-m3,m,244
-motif-m3,inter_neg_edges,0.672131
-motif-m3,intra_pos_edges,0.959315
-motif-m3,f1_pos_neg,0.790446
-motif-m3,avg_cc,0.246477
-motif-m3,diameter,7
-motif-m1m2,n,56
-motif-m1m2,m,139
-motif-m1m2,inter_neg_edges,0.877551
-motif-m1m2,intra_pos_edges,0.777778
-motif-m1m2,f1_pos_neg,0.824658
-motif-m1m2,avg_cc,0.453961
-motif-m1m2,diameter,5
-motif-m1m2,n,1
-motif-m1m2,m,0
-motif-m1m2,inter_neg_edges,NaN
-motif-m1m2,intra_pos_edges,0
-motif-m1m2,f1_pos_neg,NaN
-motif-m1m2,avg_cc,0
-motif-m1m2,diameter,0
-motif-m1m2m3,n,96
-motif-m1m2m3,m,202
-motif-m1m2m3,inter_neg_edges,0.834862
-motif-m1m2m3,intra_pos_edges,0.93012
-motif-m1m2m3,f1_pos_neg,0.879921
-motif-m1m2m3,avg_cc,0.22669
-motif-m1m2m3,diameter,6
-motif-m1m2,n,69
-motif-m1m2,m,174
-motif-m1m2,inter_neg_edges,0.740741
-motif-m1m2,intra_pos_edges,0.752941
-motif-m1m2,f1_pos_neg,0.746791
-motif-m1m2,avg_cc,0.447951
-motif-m1m2,diameter,6
-motif-m1m2,n,60
-motif-m1m2,m,140
-motif-m1m2,inter_neg_edges,0.951807
-motif-m1m2,intra_pos_edges,0.807018
-motif-m1m2,f1_pos_neg,0.873453
-motif-m1m2,avg_cc,0.486956
-motif-m1m2,diameter,5
-motif-m1m2,n,52
-motif-m1m2,m,117
-motif-m1m2,inter_neg_edges,1
-motif-m1m2,intra_pos_edges,0.78
-motif-m1m2,f1_pos_neg,0.876405
-motif-m1m2,avg_cc,0.47148
-motif-m1m2,diameter,5
-motif-m1m2m3,n,85
-motif-m1m2m3,m,158
-motif-m1m2m3,inter_neg_edges,0.673469
-motif-m1m2m3,intra_pos_edges,0.697789
-motif-m1m2m3,f1_pos_neg,0.685413
-motif-m1m2m3,avg_cc,0.216683
-motif-m1m2m3,diameter,6
-motif-m3,n,106
-motif-m3,m,209
-motif-m3,inter_neg_edges,0.87156
-motif-m3,intra_pos_edges,0.95283
-motif-m3,f1_pos_neg,0.910385
-motif-m3,avg_cc,0.219073
-motif-m3,diameter,6
-motif-m1m2m3,n,118
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.560606
-motif-m1m2m3,intra_pos_edges,0.922449
-motif-m1m2m3,f1_pos_neg,0.697385
-motif-m1m2m3,avg_cc,0.237474
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,105
-motif-m1m2m3,m,213
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.962085
-motif-m1m2m3,f1_pos_neg,0.888915
-motif-m1m2m3,avg_cc,0.220918
-motif-m1m2m3,diameter,6
-motif-m1,n,6
-motif-m1,m,7
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.27451
-motif-m1,f1_pos_neg,0.430769
-motif-m1,avg_cc,0.416667
-motif-m1,diameter,3
-motif-m1m2m3,n,106
-motif-m1m2m3,m,209
-motif-m1m2m3,inter_neg_edges,0.708333
-motif-m1m2m3,intra_pos_edges,0.951219
-motif-m1m2m3,f1_pos_neg,0.812002
-motif-m1m2m3,avg_cc,0.27206
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,118
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.560606
-motif-m1m2m3,intra_pos_edges,0.922449
-motif-m1m2m3,f1_pos_neg,0.697385
-motif-m1m2m3,avg_cc,0.237474
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,111
-motif-m1m2m3,m,215
-motif-m1m2m3,inter_neg_edges,0.896907
-motif-m1m2m3,intra_pos_edges,0.948081
-motif-m1m2m3,f1_pos_neg,0.921785
-motif-m1m2m3,avg_cc,0.250134
-motif-m1m2m3,diameter,6
-motif-m3,n,93
-motif-m3,m,191
-motif-m3,inter_neg_edges,0.831579
-motif-m3,intra_pos_edges,0.853147
-motif-m3,f1_pos_neg,0.842225
-motif-m3,avg_cc,0.260262
-motif-m3,diameter,6
-motif-m3,n,99
-motif-m3,m,203
-motif-m3,inter_neg_edges,0.816327
-motif-m3,intra_pos_edges,0.946341
-motif-m3,f1_pos_neg,0.876539
-motif-m3,avg_cc,0.252625
-motif-m3,diameter,6
-motif-m1m2m3,n,92
-motif-m1m2m3,m,175
-motif-m1m2m3,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.935829
-motif-m1m2m3,f1_pos_neg,0.966851
-motif-m1m2m3,avg_cc,0.271533
-motif-m1m2m3,diameter,6
-motif-m3,n,115
-motif-m3,m,235
-motif-m3,inter_neg_edges,0.587302
-motif-m3,intra_pos_edges,0.881857
-motif-m3,f1_pos_neg,0.705051
-motif-m3,avg_cc,0.244459
-motif-m3,diameter,6
-motif-m1m2m3,n,103
-motif-m1m2m3,m,207
-motif-m1m2m3,inter_neg_edges,0.847619
-motif-m1m2m3,intra_pos_edges,0.938679
-motif-m1m2m3,f1_pos_neg,0.890828
-motif-m1m2m3,avg_cc,0.198778
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,122
-motif-m1m2m3,m,263
-motif-m1m2m3,inter_neg_edges,0.514706
-motif-m1m2m3,intra_pos_edges,0.916335
-motif-m1m2m3,f1_pos_neg,0.659161
-motif-m1m2m3,avg_cc,0.222841
-motif-m1m2m3,diameter,6
-motif-m1,n,5
-motif-m1,m,6
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.315789
-motif-m1,f1_pos_neg,0.48
-motif-m1,avg_cc,0.6
-motif-m1,diameter,2
-motif-m2,n,54
-motif-m2,m,136
-motif-m2,inter_neg_edges,0.869565
-motif-m2,intra_pos_edges,0.762463
-motif-m2,f1_pos_neg,0.8125
-motif-m2,avg_cc,0.478124
-motif-m2,diameter,5
-motif-m1m2,n,69
-motif-m1m2,m,177
-motif-m1m2,inter_neg_edges,0.684211
-motif-m1m2,intra_pos_edges,0.75895
-motif-m1m2,f1_pos_neg,0.719645
-motif-m1m2,avg_cc,0.477597
-motif-m1m2,diameter,6
-motif-m1m2m3,n,90
-motif-m1m2m3,m,182
-motif-m1m2m3,inter_neg_edges,0.431193
-motif-m1m2m3,intra_pos_edges,0.751244
-motif-m1m2m3,f1_pos_neg,0.547904
-motif-m1m2m3,avg_cc,0.257979
-motif-m1m2m3,diameter,5
-motif-m1m2m3,n,123
-motif-m1m2m3,m,245
-motif-m1m2m3,inter_neg_edges,0.672131
-motif-m1m2m3,intra_pos_edges,0.957447
-motif-m1m2m3,f1_pos_neg,0.789812
-motif-m1m2m3,avg_cc,0.244393
-motif-m1m2m3,diameter,7
-motif-m1,n,4
-motif-m1,m,3
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.285714
-motif-m1,f1_pos_neg,0.444444
-motif-m1,avg_cc,0
-motif-m1,diameter,2
-motif-m1m2,n,55
-motif-m1m2,m,133
-motif-m1m2,inter_neg_edges,0.957447
-motif-m1m2,intra_pos_edges,0.777448
-motif-m1m2,f1_pos_neg,0.85811
-motif-m1m2,avg_cc,0.481075
-motif-m1m2,diameter,5
-motif-m1m2,n,69
-motif-m1m2,m,177
-motif-m1m2,inter_neg_edges,0.607477
-motif-m1m2,intra_pos_edges,0.778055
-motif-m1m2,f1_pos_neg,0.682265
-motif-m1m2,avg_cc,0.529873
-motif-m1m2,diameter,5
-motif-m3,n,103
-motif-m3,m,211
-motif-m3,inter_neg_edges,0.59292
-motif-m3,intra_pos_edges,0.884706
-motif-m3,f1_pos_neg,0.710004
-motif-m3,avg_cc,0.240799
-motif-m3,diameter,6
-motif-m1,n,6
-motif-m1,m,8
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.313726
-motif-m1,f1_pos_neg,0.477612
-motif-m1,avg_cc,0.583333
-motif-m1,diameter,3
-motif-m2,n,36
-motif-m2,m,79
-motif-m2,inter_neg_edges,0.876923
-motif-m2,intra_pos_edges,0.607287
-motif-m2,f1_pos_neg,0.717613
-motif-m2,avg_cc,0.625612
-motif-m2,diameter,5
-motif-m2,n,47
-motif-m2,m,110
-motif-m2,inter_neg_edges,1
-motif-m2,intra_pos_edges,0.758621
-motif-m2,f1_pos_neg,0.862745
-motif-m2,avg_cc,0.525829
-motif-m2,diameter,5
-motif-m2,n,41
-motif-m2,m,88
-motif-m2,inter_neg_edges,0.857143
-motif-m2,intra_pos_edges,0.6171
-motif-m2,f1_pos_neg,0.717579
-motif-m2,avg_cc,0.640956
-motif-m2,diameter,5
-motif-m2,n,41
-motif-m2,m,88
-motif-m2,inter_neg_edges,0.857143
-motif-m2,intra_pos_edges,0.6171
-motif-m2,f1_pos_neg,0.717579
-motif-m2,avg_cc,0.640956
-motif-m2,diameter,5
-motif-m2,n,52
-motif-m2,m,134
-motif-m2,inter_neg_edges,0.869565
-motif-m2,intra_pos_edges,0.759644
-motif-m2,f1_pos_neg,0.810896
-motif-m2,avg_cc,0.497648
-motif-m2,diameter,5
-motif-m1,n,4
-motif-m1,m,3
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.157895
-motif-m1,f1_pos_neg,0.272727
-motif-m1,avg_cc,0
-motif-m1,diameter,3
-motif-m1m2m3,n,103
-motif-m1m2m3,m,207
-motif-m1m2m3,inter_neg_edges,0.847619
-motif-m1m2m3,intra_pos_edges,0.938679
-motif-m1m2m3,f1_pos_neg,0.890828
-motif-m1m2m3,avg_cc,0.198778
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,125
-motif-m1m2m3,m,256
-motif-m1m2m3,inter_neg_edges,0.596774
-motif-m1m2m3,intra_pos_edges,0.940937
-motif-m1m2m3,f1_pos_neg,0.730341
-motif-m1m2m3,avg_cc,0.256385
-motif-m1m2m3,diameter,6
-motif-m2,n,42
-motif-m2,m,97
-motif-m2,inter_neg_edges,0.722222
-motif-m2,intra_pos_edges,0.587838
-motif-m2,f1_pos_neg,0.648138
-motif-m2,avg_cc,0.587416
-motif-m2,diameter,5
-motif-m2,n,55
-motif-m2,m,140
-motif-m2,inter_neg_edges,0.770833
-motif-m2,intra_pos_edges,0.724719
-motif-m2,f1_pos_neg,0.747065
-motif-m2,avg_cc,0.543964
-motif-m2,diameter,5
-motif-m3,n,100
-motif-m3,m,200
-motif-m3,inter_neg_edges,0.893617
-motif-m3,intra_pos_edges,0.960591
-motif-m3,f1_pos_neg,0.925894
-motif-m3,avg_cc,0.229676
-motif-m3,diameter,6
-motif-m3,n,102
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.850467
-motif-m3,intra_pos_edges,0.934579
-motif-m3,f1_pos_neg,0.890542
-motif-m3,avg_cc,0.217768
-motif-m3,diameter,6
-motif-m3,n,103
-motif-m3,m,209
-motif-m3,inter_neg_edges,0.78
-motif-m3,intra_pos_edges,0.942857
-motif-m3,f1_pos_neg,0.853731
-motif-m3,avg_cc,0.227054
-motif-m3,diameter,6
-motif-m3,n,99
-motif-m3,m,200
-motif-m3,inter_neg_edges,0.873684
-motif-m3,intra_pos_edges,0.960396
-motif-m3,f1_pos_neg,0.91499
-motif-m3,avg_cc,0.242668
-motif-m3,diameter,6
-motif-m1,n,4
-motif-m1,m,3
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.157895
-motif-m1,f1_pos_neg,0.272727
-motif-m1,avg_cc,0
-motif-m1,diameter,3
-motif-m3,n,114
-motif-m3,m,231
-motif-m3,inter_neg_edges,0.688073
-motif-m3,intra_pos_edges,0.955357
-motif-m3,f1_pos_neg,0.79998
-motif-m3,avg_cc,0.262996
-motif-m3,diameter,7
-motif-m3,n,113
-motif-m3,m,244
-motif-m3,inter_neg_edges,0.553846
-motif-m3,intra_pos_edges,0.899582
-motif-m3,f1_pos_neg,0.685593
-motif-m3,avg_cc,0.232223
-motif-m3,diameter,6
-motif-m3,n,123
-motif-m3,m,253
-motif-m3,inter_neg_edges,0.593496
-motif-m3,intra_pos_edges,0.944099
-motif-m3,f1_pos_neg,0.728825
-motif-m3,avg_cc,0.255361
-motif-m3,diameter,7
-motif-m1m2m3,n,97
-motif-m1m2m3,m,200
-motif-m1m2m3,inter_neg_edges,0.890909
-motif-m1m2m3,intra_pos_edges,0.948655
-motif-m1m2m3,f1_pos_neg,0.918876
-motif-m1m2m3,avg_cc,0.25494
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,102
-motif-m1m2m3,m,210
-motif-m1m2m3,inter_neg_edges,0.709091
-motif-m1m2m3,intra_pos_edges,0.919431
-motif-m1m2m3,f1_pos_neg,0.800677
-motif-m1m2m3,avg_cc,0.257861
-motif-m1m2m3,diameter,6
-motif-m1m2,n,60
-motif-m1m2,m,145
-motif-m1m2,inter_neg_edges,0.881188
-motif-m1m2,intra_pos_edges,0.787535
-motif-m1m2,f1_pos_neg,0.831734
-motif-m1m2,avg_cc,0.420655
-motif-m1m2,diameter,6
-motif-m3,n,97
-motif-m3,m,172
-motif-m3,inter_neg_edges,0.663366
-motif-m3,intra_pos_edges,0.748792
-motif-m3,f1_pos_neg,0.703495
-motif-m3,avg_cc,0.228653
-motif-m3,diameter,6
-motif-m3,n,96
-motif-m3,m,195
-motif-m3,inter_neg_edges,0.891304
-motif-m3,intra_pos_edges,0.947631
-motif-m3,f1_pos_neg,0.918605
-motif-m3,avg_cc,0.231219
-motif-m3,diameter,6
-motif-m1m2m3,n,138
-motif-m1m2m3,m,284
-motif-m1m2m3,inter_neg_edges,0.529412
-motif-m1m2m3,intra_pos_edges,0.918033
-motif-m1m2m3,f1_pos_neg,0.671552
-motif-m1m2m3,avg_cc,0.260178
-motif-m1m2m3,diameter,6
-motif-m1m2,n,70
-motif-m1m2,m,179
-motif-m1m2,inter_neg_edges,0.684211
-motif-m1m2,intra_pos_edges,0.764846
-motif-m1m2,f1_pos_neg,0.722285
-motif-m1m2,avg_cc,0.482917
-motif-m1m2,diameter,6
-motif-m1m2,n,56
-motif-m1m2,m,139
-motif-m1m2,inter_neg_edges,0.877551
-motif-m1m2,intra_pos_edges,0.777778
-motif-m1m2,f1_pos_neg,0.824658
-motif-m1m2,avg_cc,0.453961
-motif-m1m2,diameter,5
-motif-m3,n,208
-motif-m3,m,505
-motif-m3,inter_neg_edges,0.0490196
-motif-m3,intra_pos_edges,0.997555
-motif-m3,f1_pos_neg,0.0934472
-motif-m3,avg_cc,0.261574
-motif-m3,diameter,6
-motif-m1m2,n,55
-motif-m1m2,m,123
-motif-m1m2,inter_neg_edges,1
-motif-m1m2,intra_pos_edges,0.806557
-motif-m1m2,f1_pos_neg,0.892922
-motif-m1m2,avg_cc,0.463024
-motif-m1m2,diameter,5
-motif-m1m2,n,49
-motif-m1m2,m,105
-motif-m1m2,inter_neg_edges,0.833333
-motif-m1m2,intra_pos_edges,0.655518
-motif-m1m2,f1_pos_neg,0.733808
-motif-m1m2,avg_cc,0.511979
-motif-m1m2,diameter,6
-motif-m3,n,108
-motif-m3,m,225
-motif-m3,inter_neg_edges,0.666667
-motif-m3,intra_pos_edges,0.9217
-motif-m3,f1_pos_neg,0.773709
-motif-m3,avg_cc,0.24433
-motif-m3,diameter,5
-motif-m2,n,89
-motif-m2,m,256
-motif-m2,inter_neg_edges,0.397059
-motif-m2,intra_pos_edges,0.761062
-motif-m2,f1_pos_neg,0.521856
-motif-m2,avg_cc,0.502145
-motif-m2,diameter,5
-motif-m2,n,51
-motif-m2,m,128
-motif-m2,inter_neg_edges,0.883721
-motif-m2,intra_pos_edges,0.743202
-motif-m2,f1_pos_neg,0.807393
-motif-m2,avg_cc,0.48079
-motif-m2,diameter,5
-motif-m3,n,208
-motif-m3,m,505
-motif-m3,inter_neg_edges,0.0490196
-motif-m3,intra_pos_edges,0.997555
-motif-m3,f1_pos_neg,0.0934472
-motif-m3,avg_cc,0.261574
-motif-m3,diameter,6
-motif-m1m2m3,n,108
-motif-m1m2m3,m,216
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.960373
-motif-m1m2m3,f1_pos_neg,0.888183
-motif-m1m2m3,avg_cc,0.214208
-motif-m1m2m3,diameter,6
-motif-m1m2,n,49
-motif-m1m2,m,107
-motif-m1m2,inter_neg_edges,0.772152
-motif-m1m2,intra_pos_edges,0.620253
-motif-m1m2,f1_pos_neg,0.687917
-motif-m1m2,avg_cc,0.580236
-motif-m1m2,diameter,5
-motif-m1m2,n,61
-motif-m1m2,m,154
-motif-m1m2,inter_neg_edges,0.698113
-motif-m1m2,intra_pos_edges,0.739946
-motif-m1m2,f1_pos_neg,0.718421
-motif-m1m2,avg_cc,0.553607
-motif-m1m2,diameter,5
-motif-m1m2m3,n,118
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.560606
-motif-m1m2m3,intra_pos_edges,0.922449
-motif-m1m2m3,f1_pos_neg,0.697385
-motif-m1m2m3,avg_cc,0.237474
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,94
-motif-m1m2m3,m,198
-motif-m1m2m3,inter_neg_edges,0.814433
-motif-m1m2m3,intra_pos_edges,0.942643
-motif-m1m2m3,f1_pos_neg,0.873861
-motif-m1m2m3,avg_cc,0.253248
-motif-m1m2m3,diameter,6
-motif-m1m2,n,42
-motif-m1m2,m,88
-motif-m1m2,inter_neg_edges,0.859155
-motif-m1m2,intra_pos_edges,0.626415
-motif-m1m2,f1_pos_neg,0.724554
-motif-m1m2,avg_cc,0.57424
-motif-m1m2,diameter,5
-motif-m1m2m3,n,105
-motif-m1m2m3,m,213
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.962085
-motif-m1m2m3,f1_pos_neg,0.888915
-motif-m1m2m3,avg_cc,0.220918
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,117
-motif-m1m2m3,m,237
-motif-m1m2m3,inter_neg_edges,0.663717
-motif-m1m2m3,intra_pos_edges,0.954048
-motif-m1m2m3,f1_pos_neg,0.78283
-motif-m1m2m3,avg_cc,0.258655
-motif-m1m2m3,diameter,7
-motif-m3,n,91
-motif-m3,m,184
-motif-m3,inter_neg_edges,0.901235
-motif-m3,intra_pos_edges,0.935065
-motif-m3,f1_pos_neg,0.917838
-motif-m3,avg_cc,0.238005
-motif-m3,diameter,6
-motif-m1m2m3,n,118
-motif-m1m2m3,m,245
-motif-m1m2m3,inter_neg_edges,0.606299
-motif-m1m2m3,intra_pos_edges,0.90535
-motif-m1m2m3,f1_pos_neg,0.726244
-motif-m1m2m3,avg_cc,0.213735
-motif-m1m2m3,diameter,6
-motif-m1m2,n,57
-motif-m1m2,m,142
-motif-m1m2,inter_neg_edges,0.640449
-motif-m1m2,intra_pos_edges,0.688525
-motif-m1m2,f1_pos_neg,0.663617
-motif-m1m2,avg_cc,0.508971
-motif-m1m2,diameter,5
-motif-m1m2,n,42
-motif-m1m2,m,88
-motif-m1m2,inter_neg_edges,0.859155
-motif-m1m2,intra_pos_edges,0.626415
-motif-m1m2,f1_pos_neg,0.724554
-motif-m1m2,avg_cc,0.57424
-motif-m1m2,diameter,5
-motif-m3,n,103
-motif-m3,m,216
-motif-m3,inter_neg_edges,0.626168
-motif-m3,intra_pos_edges,0.888889
-motif-m3,f1_pos_neg,0.73475
-motif-m3,avg_cc,0.24738
-motif-m3,diameter,5
-motif-m1,n,1
-motif-m1,m,0
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0
-motif-m1,f1_pos_neg,0
-motif-m1,avg_cc,0
-motif-m1,diameter,0
-motif-m1m2m3,n,108
-motif-m1m2m3,m,224
-motif-m1m2m3,inter_neg_edges,0.657143
-motif-m1m2m3,intra_pos_edges,0.942792
-motif-m1m2m3,f1_pos_neg,0.774468
-motif-m1m2m3,avg_cc,0.270342
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,85
-motif-m1m2m3,m,158
-motif-m1m2m3,inter_neg_edges,0.673469
-motif-m1m2m3,intra_pos_edges,0.697789
-motif-m1m2m3,f1_pos_neg,0.685413
-motif-m1m2m3,avg_cc,0.216683
-motif-m1m2m3,diameter,6
-motif-m1,n,5
-motif-m1,m,6
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.315789
-motif-m1,f1_pos_neg,0.48
-motif-m1,avg_cc,0.6
-motif-m1,diameter,2
-motif-m1m2m3,n,109
-motif-m1m2m3,m,223
-motif-m1m2m3,inter_neg_edges,0.582609
-motif-m1m2m3,intra_pos_edges,0.896396
-motif-m1m2m3,f1_pos_neg,0.706216
-motif-m1m2m3,avg_cc,0.256475
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,112
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.693548
-motif-m1m2m3,intra_pos_edges,0.932755
-motif-m1m2m3,f1_pos_neg,0.79556
-motif-m1m2m3,avg_cc,0.24888
-motif-m1m2m3,diameter,6
-motif-m1m2,n,67
-motif-m1m2,m,165
-motif-m1m2,inter_neg_edges,0.773585
-motif-m1m2,intra_pos_edges,0.757426
-motif-m1m2,f1_pos_neg,0.76542
-motif-m1m2,avg_cc,0.475804
-motif-m1m2,diameter,6
-motif-m1m2m3,n,103
-motif-m1m2m3,m,221
-motif-m1m2m3,inter_neg_edges,0.526316
-motif-m1m2m3,intra_pos_edges,0.852747
-motif-m1m2m3,f1_pos_neg,0.650898
-motif-m1m2m3,avg_cc,0.286331
-motif-m1m2m3,diameter,5
-motif-m2,n,89
-motif-m2,m,256
-motif-m2,inter_neg_edges,0.397059
-motif-m2,intra_pos_edges,0.761062
-motif-m2,f1_pos_neg,0.521856
-motif-m2,avg_cc,0.502145
-motif-m2,diameter,5
-motif-m1m2,n,57
-motif-m1m2,m,142
-motif-m1m2,inter_neg_edges,0.640449
-motif-m1m2,intra_pos_edges,0.688525
-motif-m1m2,f1_pos_neg,0.663617
-motif-m1m2,avg_cc,0.508971
-motif-m1m2,diameter,5
-motif-m1,n,5
-motif-m1,m,6
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.375
-motif-m1,f1_pos_neg,0.545455
-motif-m1,avg_cc,0.533333
-motif-m1,diameter,3
-motif-m2,n,57
-motif-m2,m,143
-motif-m2,inter_neg_edges,0.727273
-motif-m2,intra_pos_edges,0.757225
-motif-m2,f1_pos_neg,0.741947
-motif-m2,avg_cc,0.511681
-motif-m2,diameter,5
-motif-m1m2m3,n,208
-motif-m1m2m3,m,505
-motif-m1m2m3,inter_neg_edges,0.0490196
-motif-m1m2m3,intra_pos_edges,0.997555
-motif-m1m2m3,f1_pos_neg,0.0934472
-motif-m1m2m3,avg_cc,0.261574
-motif-m1m2m3,diameter,6
-motif-m1,n,14
-motif-m1,m,21
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.47191
-motif-m1,f1_pos_neg,0.641221
-motif-m1,avg_cc,0.47381
-motif-m1,diameter,4
-motif-m2,n,49
-motif-m2,m,107
-motif-m2,inter_neg_edges,0.783784
-motif-m2,intra_pos_edges,0.61875
-motif-m2,f1_pos_neg,0.691557
-motif-m2,avg_cc,0.529214
-motif-m2,diameter,5
-motif-m3,n,98
-motif-m3,m,173
-motif-m3,inter_neg_edges,0.663366
-motif-m3,intra_pos_edges,0.751807
-motif-m3,f1_pos_neg,0.704823
-motif-m3,avg_cc,0.22632
-motif-m3,diameter,7
-motif-m2,n,79
-motif-m2,m,216
-motif-m2,inter_neg_edges,0.508197
-motif-m2,intra_pos_edges,0.748491
-motif-m2,f1_pos_neg,0.60537
-motif-m2,avg_cc,0.541732
-motif-m2,diameter,5
-motif-m2,n,46
-motif-m2,m,111
-motif-m2,inter_neg_edges,0.625
-motif-m2,intra_pos_edges,0.613419
-motif-m2,f1_pos_neg,0.619155
-motif-m2,avg_cc,0.56769
-motif-m2,diameter,5
-motif-m1m2m3,n,108
-motif-m1m2m3,m,220
-motif-m1m2m3,inter_neg_edges,0.758621
-motif-m1m2m3,intra_pos_edges,0.923767
-motif-m1m2m3,f1_pos_neg,0.833088
-motif-m1m2m3,avg_cc,0.236583
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,208
-motif-m1m2m3,m,505
-motif-m1m2m3,inter_neg_edges,0.0490196
-motif-m1m2m3,intra_pos_edges,0.997555
-motif-m1m2m3,f1_pos_neg,0.0934472
-motif-m1m2m3,avg_cc,0.261574
-motif-m1m2m3,diameter,6
-motif-m3,n,104
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.891892
-motif-m3,intra_pos_edges,0.964029
-motif-m3,f1_pos_neg,0.926558
-motif-m3,avg_cc,0.231911
-motif-m3,diameter,6
-motif-m3,n,118
-motif-m3,m,239
-motif-m3,inter_neg_edges,0.636364
-motif-m3,intra_pos_edges,0.948052
-motif-m3,f1_pos_neg,0.76155
-motif-m3,avg_cc,0.254937
-motif-m3,diameter,6
-motif-m2,n,64
-motif-m2,m,169
-motif-m2,inter_neg_edges,0.666667
-motif-m2,intra_pos_edges,0.724221
-motif-m2,f1_pos_neg,0.694253
-motif-m2,avg_cc,0.496205
-motif-m2,diameter,5
-motif-m3,n,104
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.891892
-motif-m3,intra_pos_edges,0.964029
-motif-m3,f1_pos_neg,0.926558
-motif-m3,avg_cc,0.231911
-motif-m3,diameter,6
-motif-m1m2m3,n,120
-motif-m1m2m3,m,250
-motif-m1m2m3,inter_neg_edges,0.559055
-motif-m1m2m3,intra_pos_edges,0.87574
-motif-m1m2m3,f1_pos_neg,0.682448
-motif-m1m2m3,avg_cc,0.269776
-motif-m1m2m3,diameter,6
-motif-m2,n,61
-motif-m2,m,159
-motif-m2,inter_neg_edges,0.666667
-motif-m2,intra_pos_edges,0.737113
-motif-m2,f1_pos_neg,0.700122
-motif-m2,avg_cc,0.548029
-motif-m2,diameter,5
-motif-m2,n,63
-motif-m2,m,165
-motif-m2,inter_neg_edges,0.698113
-motif-m2,intra_pos_edges,0.735802
-motif-m2,f1_pos_neg,0.716463
-motif-m2,avg_cc,0.513383
-motif-m2,diameter,5
-motif-m3,n,121
-motif-m3,m,241
-motif-m3,inter_neg_edges,0.672131
-motif-m3,intra_pos_edges,0.948498
-motif-m3,f1_pos_neg,0.78675
-motif-m3,avg_cc,0.234934
-motif-m3,diameter,6
-motif-m1,n,4
-motif-m1,m,4
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.153846
-motif-m1,f1_pos_neg,0.266667
-motif-m1,avg_cc,0.583333
-motif-m1,diameter,2
-motif-m3,n,87
-motif-m3,m,177
-motif-m3,inter_neg_edges,0.669725
-motif-m3,intra_pos_edges,0.76259
-motif-m3,f1_pos_neg,0.713147
-motif-m3,avg_cc,0.263122
-motif-m3,diameter,5
-motif-m3,n,114
-motif-m3,m,218
-motif-m3,inter_neg_edges,0.895833
-motif-m3,intra_pos_edges,0.955157
-motif-m3,f1_pos_neg,0.924545
-motif-m3,avg_cc,0.242412
-motif-m3,diameter,7
-motif-m3,n,104
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.891892
-motif-m3,intra_pos_edges,0.964029
-motif-m3,f1_pos_neg,0.926558
-motif-m3,avg_cc,0.231911
-motif-m3,diameter,6
-motif-m3,n,96
-motif-m3,m,187
-motif-m3,inter_neg_edges,0.614679
-motif-m3,intra_pos_edges,0.783019
-motif-m3,f1_pos_neg,0.688711
-motif-m3,avg_cc,0.235034
-motif-m3,diameter,6
-motif-m1m2,n,57
-motif-m1m2,m,142
-motif-m1m2,inter_neg_edges,0.640449
-motif-m1m2,intra_pos_edges,0.688525
-motif-m1m2,f1_pos_neg,0.663617
-motif-m1m2,avg_cc,0.508971
-motif-m1m2,diameter,5
-motif-m1m2m3,n,85
-motif-m1m2m3,m,158
-motif-m1m2m3,inter_neg_edges,0.673469
-motif-m1m2m3,intra_pos_edges,0.697789
-motif-m1m2m3,f1_pos_neg,0.685413
-motif-m1m2m3,avg_cc,0.216683
-motif-m1m2m3,diameter,6
-motif-m1,n,1
-motif-m1,m,0
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0
-motif-m1,f1_pos_neg,0
-motif-m1,avg_cc,0
-motif-m1,diameter,0
-motif-m1m2,n,58
-motif-m1m2,m,140
-motif-m1m2,inter_neg_edges,0.877551
-motif-m1m2,intra_pos_edges,0.772334
-motif-m1m2,f1_pos_neg,0.821588
-motif-m1m2,avg_cc,0.421207
-motif-m1m2,diameter,5
-motif-m2,n,41
-motif-m2,m,88
-motif-m2,inter_neg_edges,0.857143
-motif-m2,intra_pos_edges,0.6171
-motif-m2,f1_pos_neg,0.717579
-motif-m2,avg_cc,0.640956
-motif-m2,diameter,5
-motif-m3,n,118
-motif-m3,m,245
-motif-m3,inter_neg_edges,0.603053
-motif-m3,intra_pos_edges,0.922105
-motif-m3,f1_pos_neg,0.729208
-motif-m3,avg_cc,0.196018
-motif-m3,diameter,6
-motif-m2,n,1
-motif-m2,m,0
-motif-m2,inter_neg_edges,NaN
-motif-m2,intra_pos_edges,0
-motif-m2,f1_pos_neg,NaN
-motif-m2,avg_cc,0
-motif-m2,diameter,0
-motif-m1m2,n,49
-motif-m1m2,m,116
-motif-m1m2,inter_neg_edges,0.6
-motif-m1m2,intra_pos_edges,0.61875
-motif-m1m2,f1_pos_neg,0.609231
-motif-m1m2,avg_cc,0.488159
-motif-m1m2,diameter,5
-motif-m1m2,n,61
-motif-m1m2,m,139
-motif-m1m2,inter_neg_edges,0.950617
-motif-m1m2,intra_pos_edges,0.796512
-motif-m1m2,f1_pos_neg,0.866768
-motif-m1m2,avg_cc,0.457241
-motif-m1m2,diameter,5
-motif-m3,n,108
-motif-m3,m,217
-motif-m3,inter_neg_edges,0.81982
-motif-m3,intra_pos_edges,0.949541
-motif-m3,f1_pos_neg,0.879925
-motif-m3,avg_cc,0.198919
-motif-m3,diameter,6
-motif-m3,n,140
-motif-m3,m,308
-motif-m3,inter_neg_edges,0.395973
-motif-m3,intra_pos_edges,0.893039
-motif-m3,f1_pos_neg,0.548667
-motif-m3,avg_cc,0.269426
-motif-m3,diameter,6
-motif-m1m2m3,n,102
-motif-m1m2m3,m,202
-motif-m1m2m3,inter_neg_edges,0.869565
-motif-m1m2m3,intra_pos_edges,0.915888
-motif-m1m2m3,f1_pos_neg,0.892126
-motif-m1m2m3,avg_cc,0.237469
-motif-m1m2m3,diameter,5
-motif-m3,n,112
-motif-m3,m,216
-motif-m3,inter_neg_edges,0.877551
-motif-m3,intra_pos_edges,0.94382
-motif-m3,f1_pos_neg,0.90948
-motif-m3,avg_cc,0.232912
-motif-m3,diameter,6
-motif-m3,n,97
-motif-m3,m,195
-motif-m3,inter_neg_edges,0.862069
-motif-m3,intra_pos_edges,0.947368
-motif-m3,f1_pos_neg,0.902708
-motif-m3,avg_cc,0.236647
-motif-m3,diameter,6
-motif-m1m2m3,n,105
-motif-m1m2m3,m,213
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.962085
-motif-m1m2m3,f1_pos_neg,0.888915
-motif-m1m2m3,avg_cc,0.220918
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,105
-motif-m1m2m3,m,213
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.962085
-motif-m1m2m3,f1_pos_neg,0.888915
-motif-m1m2m3,avg_cc,0.220918
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,83
-motif-m1m2m3,m,155
-motif-m1m2m3,inter_neg_edges,0.663366
-motif-m1m2m3,intra_pos_edges,0.736
-motif-m1m2m3,f1_pos_neg,0.697798
-motif-m1m2m3,avg_cc,0.237345
-motif-m1m2m3,diameter,5
-motif-m1m2,n,54
-motif-m1m2,m,128
-motif-m1m2,inter_neg_edges,0.652174
-motif-m1m2,intra_pos_edges,0.682927
-motif-m1m2,f1_pos_neg,0.667196
-motif-m1m2,avg_cc,0.590065
-motif-m1m2,diameter,5
-motif-m1m2m3,n,96
-motif-m1m2m3,m,180
-motif-m1m2m3,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.9375
-motif-m1m2m3,f1_pos_neg,0.967742
-motif-m1m2m3,avg_cc,0.27185
-motif-m1m2m3,diameter,6
-motif-m1m2,n,68
-motif-m1m2,m,174
-motif-m1m2,inter_neg_edges,0.678571
-motif-m1m2,intra_pos_edges,0.751807
-motif-m1m2,f1_pos_neg,0.713314
-motif-m1m2,avg_cc,0.498667
-motif-m1m2,diameter,5
-motif-m1m2m3,n,131
-motif-m1m2m3,m,259
-motif-m1m2m3,inter_neg_edges,0.622047
-motif-m1m2m3,intra_pos_edges,0.934394
-motif-m1m2m3,f1_pos_neg,0.74688
-motif-m1m2m3,avg_cc,0.243309
-motif-m1m2m3,diameter,6
-motif-m1m2,n,53
-motif-m1m2,m,121
-motif-m1m2,inter_neg_edges,0.674419
-motif-m1m2,intra_pos_edges,0.636905
-motif-m1m2,f1_pos_neg,0.655125
-motif-m1m2,avg_cc,0.516573
-motif-m1m2,diameter,5
-motif-m3,n,128
-motif-m3,m,260
-motif-m3,inter_neg_edges,0.609375
-motif-m3,intra_pos_edges,0.947581
-motif-m3,f1_pos_neg,0.741745
-motif-m3,avg_cc,0.249726
-motif-m3,diameter,7
-motif-m1m2,n,69
-motif-m1m2,m,177
-motif-m1m2,inter_neg_edges,0.607477
-motif-m1m2,intra_pos_edges,0.778055
-motif-m1m2,f1_pos_neg,0.682265
-motif-m1m2,avg_cc,0.529873
-motif-m1m2,diameter,5
-motif-m3,n,208
-motif-m3,m,505
-motif-m3,inter_neg_edges,0.0490196
-motif-m3,intra_pos_edges,0.997555
-motif-m3,f1_pos_neg,0.0934472
-motif-m3,avg_cc,0.261574
-motif-m3,diameter,6
-motif-m3,n,113
-motif-m3,m,241
-motif-m3,inter_neg_edges,0.566667
-motif-m3,intra_pos_edges,0.875764
-motif-m3,f1_pos_neg,0.688097
-motif-m3,avg_cc,0.262887
-motif-m3,diameter,6
-motif-m1m2m3,n,100
-motif-m1m2m3,m,196
-motif-m1m2m3,inter_neg_edges,0.89899
-motif-m1m2m3,intra_pos_edges,0.924939
-motif-m1m2m3,f1_pos_neg,0.91178
-motif-m1m2m3,avg_cc,0.20552
-motif-m1m2m3,diameter,6
-motif-m1m2,n,89
-motif-m1m2,m,239
-motif-m1m2,inter_neg_edges,0.443609
-motif-m1m2,intra_pos_edges,0.782946
-motif-m1m2,f1_pos_neg,0.566337
-motif-m1m2,avg_cc,0.548796
-motif-m1m2,diameter,6
-motif-m1m2,n,1
-motif-m1m2,m,0
-motif-m1m2,inter_neg_edges,NaN
-motif-m1m2,intra_pos_edges,0
-motif-m1m2,f1_pos_neg,NaN
-motif-m1m2,avg_cc,0
-motif-m1m2,diameter,0
-motif-m1m2m3,n,131
-motif-m1m2m3,m,284
-motif-m1m2m3,inter_neg_edges,0.438356
-motif-m1m2m3,intra_pos_edges,0.923954
-motif-m1m2m3,f1_pos_neg,0.594609
-motif-m1m2m3,avg_cc,0.217324
-motif-m1m2m3,diameter,6
-motif-m2,n,89
-motif-m2,m,256
-motif-m2,inter_neg_edges,0.397059
-motif-m2,intra_pos_edges,0.761062
-motif-m2,f1_pos_neg,0.521856
-motif-m2,avg_cc,0.502145
-motif-m2,diameter,5
-motif-m2,n,2
-motif-m2,m,1
-motif-m2,inter_neg_edges,1
-motif-m2,intra_pos_edges,0.117647
-motif-m2,f1_pos_neg,0.210526
-motif-m2,avg_cc,0
-motif-m2,diameter,1
-motif-m3,n,88
-motif-m3,m,169
-motif-m3,inter_neg_edges,0.888889
-motif-m3,intra_pos_edges,0.891304
-motif-m3,f1_pos_neg,0.890095
-motif-m3,avg_cc,0.22712
-motif-m3,diameter,5
-motif-m1m2m3,n,107
-motif-m1m2m3,m,215
-motif-m1m2m3,inter_neg_edges,0.821429
-motif-m1m2m3,intra_pos_edges,0.946882
-motif-m1m2m3,f1_pos_neg,0.879705
-motif-m1m2m3,avg_cc,0.201034
-motif-m1m2m3,diameter,6
-motif-m1m2,n,43
-motif-m1m2,m,90
-motif-m1m2,inter_neg_edges,0.863014
-motif-m1m2,intra_pos_edges,0.62963
-motif-m1m2,f1_pos_neg,0.728076
-motif-m1m2,avg_cc,0.580911
-motif-m1m2,diameter,5
-motif-m3,n,112
-motif-m3,m,216
-motif-m3,inter_neg_edges,0.875
-motif-m3,intra_pos_edges,0.94382
-motif-m3,f1_pos_neg,0.908108
-motif-m3,avg_cc,0.231733
-motif-m3,diameter,6
-motif-m1m2m3,n,115
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.68595
-motif-m1m2m3,intra_pos_edges,0.938865
-motif-m1m2m3,f1_pos_neg,0.792724
-motif-m1m2m3,avg_cc,0.240868
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,105
-motif-m1m2m3,m,213
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.962085
-motif-m1m2m3,f1_pos_neg,0.888915
-motif-m1m2m3,avg_cc,0.220918
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,97
-motif-m1m2,n,1
-motif-m1m2m3,m,174
-motif-m1m2,m,0
-motif-m1m2m3,inter_neg_edges,0.673077
-motif-m1m2,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.747619
-motif-m1m2,intra_pos_edges,0
-motif-m1m2,f1_pos_neg,0
-motif-m1m2m3,f1_pos_neg,0.708392
-motif-m1m2m3,avg_cc,0.217743
-motif-m1m2,avg_cc,0
-motif-m1m2,diameter,0
-motif-m1m2m3,diameter,6
-motif-m1,n,4
-motif-m1,m,5
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.27027
-motif-m1,f1_pos_neg,0.425532
-motif-m1,avg_cc,0.833333
-motif-m1,diameter,2
-motif-m1,n,6
-motif-m1,m,8
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.313726
-motif-m1,f1_pos_neg,0.477612
-motif-m1,avg_cc,0.583333
-motif-m1,diameter,3
-motif-m3,n,109
-motif-m3,m,212
-motif-m3,inter_neg_edges,0.873684
-motif-m3,intra_pos_edges,0.93424
-motif-m3,f1_pos_neg,0.902948
-motif-m3,avg_cc,0.238111
-motif-m3,diameter,5
-motif-m1,n,14
-motif-m1,m,21
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.47191
-motif-m1,f1_pos_neg,0.641221
-motif-m1,avg_cc,0.47381
-motif-m1,diameter,4
-motif-m3,n,96
-motif-m3,m,187
-motif-m3,inter_neg_edges,0.614679
-motif-m3,intra_pos_edges,0.783019
-motif-m3,f1_pos_neg,0.688711
-motif-m3,avg_cc,0.235034
-motif-m3,diameter,6
-motif-m3,n,102
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.850467
-motif-m3,intra_pos_edges,0.934579
-motif-m3,f1_pos_neg,0.890542
-motif-m3,avg_cc,0.217768
-motif-m3,diameter,6
-motif-m1m2m3,n,108
-motif-m1m2m3,m,224
-motif-m1m2m3,inter_neg_edges,0.657143
-motif-m1m2m3,intra_pos_edges,0.942792
-motif-m1m2m3,f1_pos_neg,0.774468
-motif-m1m2m3,avg_cc,0.270342
-motif-m1m2m3,diameter,6
-motif-m3,n,113
-motif-m3,m,228
-motif-m3,inter_neg_edges,0.700935
-motif-m3,intra_pos_edges,0.957111
-motif-m3,f1_pos_neg,0.809232
-motif-m3,avg_cc,0.266672
-motif-m3,diameter,7
-motif-m3,n,114
-motif-m3,m,218
-motif-m3,inter_neg_edges,0.895833
-motif-m3,intra_pos_edges,0.955157
-motif-m3,f1_pos_neg,0.924545
-motif-m3,avg_cc,0.242412
-motif-m3,diameter,7
-motif-m3,n,123
-motif-m3,m,245
-motif-m3,inter_neg_edges,0.672131
-motif-m3,intra_pos_edges,0.957447
-motif-m3,f1_pos_neg,0.789812
-motif-m3,avg_cc,0.244393
-motif-m3,diameter,7
-motif-m2,n,54
-motif-m2,m,136
-motif-m2,inter_neg_edges,0.869565
-motif-m2,intra_pos_edges,0.762463
-motif-m2,f1_pos_neg,0.8125
-motif-m2,avg_cc,0.478124
-motif-m2,diameter,5
-motif-m1m2m3,n,130
-motif-m1m2m3,m,277
-motif-m1m2m3,inter_neg_edges,0.463768
-motif-m1m2m3,intra_pos_edges,0.892193
-motif-m1m2m3,f1_pos_neg,0.610299
-motif-m1m2m3,avg_cc,0.272444
-motif-m1m2m3,diameter,6
-motif-m1m2,n,57
-motif-m1m2,m,142
-motif-m1m2,inter_neg_edges,0.640449
-motif-m1m2,intra_pos_edges,0.688525
-motif-m1m2,f1_pos_neg,0.663617
-motif-m1m2,avg_cc,0.508971
-motif-m1m2,diameter,5
-motif-m1m2m3,n,208
-motif-m1m2m3,m,505
-motif-m1m2m3,inter_neg_edges,0.0490196
-motif-m1m2m3,intra_pos_edges,0.997555
-motif-m1m2m3,f1_pos_neg,0.0934472
-motif-m1m2m3,avg_cc,0.261574
-motif-m1m2m3,diameter,6
-motif-m1m2,n,2
-motif-m1m2,m,1
-motif-m1m2,inter_neg_edges,NaN
-motif-m1m2,intra_pos_edges,0.333333
-motif-m1m2,f1_pos_neg,NaN
-motif-m1m2,avg_cc,0
-motif-m1m2,diameter,1
-motif-m1m2m3,n,160
-motif-m1m2m3,m,346
-motif-m1m2m3,inter_neg_edges,0.354839
-motif-m1m2m3,intra_pos_edges,0.930818
-motif-m1m2m3,f1_pos_neg,0.513808
-motif-m1m2m3,avg_cc,0.272714
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,114
-motif-m1m2m3,m,233
-motif-m1m2m3,inter_neg_edges,0.657658
-motif-m1m2m3,intra_pos_edges,0.936543
-motif-m1m2m3,f1_pos_neg,0.772706
-motif-m1m2m3,avg_cc,0.243357
-motif-m1m2m3,diameter,6
-motif-m1,n,9
-motif-m1,m,13
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.412698
-motif-m1,f1_pos_neg,0.58427
-motif-m1,avg_cc,0.340741
-motif-m1,diameter,4
-motif-m3,n,98
-motif-m3,m,173
-motif-m3,inter_neg_edges,0.663366
-motif-m3,intra_pos_edges,0.751807
-motif-m3,f1_pos_neg,0.704823
-motif-m3,avg_cc,0.22632
-motif-m3,diameter,7
-motif-m3,n,104
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.891892
-motif-m3,intra_pos_edges,0.964029
-motif-m3,f1_pos_neg,0.926558
-motif-m3,avg_cc,0.231911
-motif-m3,diameter,6
-motif-m1m2m3,n,95
-motif-m1m2m3,m,192
-motif-m1m2m3,inter_neg_edges,0.865169
-motif-m1m2m3,intra_pos_edges,0.894231
-motif-m1m2m3,f1_pos_neg,0.87946
-motif-m1m2m3,avg_cc,0.238306
-motif-m1m2m3,diameter,5
-motif-m1m2m3,n,97
-motif-m1m2m3,m,174
-motif-m1m2m3,inter_neg_edges,0.673077
-motif-m1m2m3,intra_pos_edges,0.747619
-motif-m1m2m3,f1_pos_neg,0.708392
-motif-m1m2m3,avg_cc,0.217743
-motif-m1m2m3,diameter,6
-motif-m3,n,96
-motif-m3,m,195
-motif-m3,inter_neg_edges,0.891304
-motif-m3,intra_pos_edges,0.947631
-motif-m3,f1_pos_neg,0.918605
-motif-m3,avg_cc,0.231219
-motif-m3,diameter,6
-motif-m1,n,1
-motif-m1,m,0
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0
-motif-m1,f1_pos_neg,0
-motif-m1,avg_cc,0
-motif-m1,diameter,0
-motif-m3,n,123
-motif-m3,m,245
-motif-m3,inter_neg_edges,0.672131
-motif-m3,intra_pos_edges,0.957447
-motif-m3,f1_pos_neg,0.789812
-motif-m3,avg_cc,0.244393
-motif-m3,diameter,7
-motif-m1m2m3,n,103
-motif-m1m2m3,m,191
-motif-m1m2m3,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.952618
-motif-m1m2m3,f1_pos_neg,0.975734
-motif-m1m2m3,avg_cc,0.237709
-motif-m1m2m3,diameter,6
-motif-m2,n,60
-motif-m2,m,156
-motif-m2,inter_neg_edges,0.737374
-motif-m2,intra_pos_edges,0.731458
-motif-m2,f1_pos_neg,0.734404
-motif-m2,avg_cc,0.499467
-motif-m2,diameter,5
-motif-m3,n,103
-motif-m3,m,210
-motif-m3,inter_neg_edges,0.821429
-motif-m3,intra_pos_edges,0.954654
-motif-m3,f1_pos_neg,0.883045
-motif-m3,avg_cc,0.216284
-motif-m3,diameter,6
-motif-m1m2m3,n,118
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.560606
-motif-m1m2m3,intra_pos_edges,0.922449
-motif-m1m2m3,f1_pos_neg,0.697385
-motif-m1m2m3,avg_cc,0.237474
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,96
-motif-m1m2m3,m,180
-motif-m1m2m3,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.9375
-motif-m1m2m3,f1_pos_neg,0.967742
-motif-m1m2m3,avg_cc,0.27185
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,112
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.877551
-motif-m1m2m3,intra_pos_edges,0.950673
-motif-m1m2m3,f1_pos_neg,0.91265
-motif-m1m2m3,avg_cc,0.24733
-motif-m1m2m3,diameter,6
-motif-m1m2,n,49
-motif-m1m2,m,107
-motif-m1m2,inter_neg_edges,0.772152
-motif-m1m2,intra_pos_edges,0.620253
-motif-m1m2,f1_pos_neg,0.687917
-motif-m1m2,avg_cc,0.580236
-motif-m1m2,diameter,5
-motif-m1m2m3,n,100
-motif-m1m2m3,m,216
-motif-m1m2m3,inter_neg_edges,0.65
-motif-m1m2m3,intra_pos_edges,0.890411
-motif-m1m2m3,f1_pos_neg,0.751445
-motif-m1m2m3,avg_cc,0.254333
-motif-m1m2m3,diameter,6
-motif-m1m2,n,58
-motif-m1m2,m,141
-motif-m1m2,inter_neg_edges,0.877551
-motif-m1m2,intra_pos_edges,0.780347
-motif-m1m2,f1_pos_neg,0.826099
-motif-m1m2,avg_cc,0.43729
-motif-m1m2,diameter,5
-motif-m2,n,65
-motif-m2,m,172
-motif-m2,inter_neg_edges,0.651376
-motif-m2,intra_pos_edges,0.737349
-motif-m2,f1_pos_neg,0.691702
-motif-m2,avg_cc,0.500298
-motif-m2,diameter,5
-motif-m1m2,n,61
-motif-m1m2,m,139
-motif-m1m2,inter_neg_edges,0.950617
-motif-m1m2,intra_pos_edges,0.796512
-motif-m1m2,f1_pos_neg,0.866768
-motif-m1m2,avg_cc,0.457241
-motif-m1m2,diameter,5
-motif-m2,n,63
-motif-m2,m,168
-motif-m2,inter_neg_edges,0.666667
-motif-m2,intra_pos_edges,0.724638
-motif-m2,f1_pos_neg,0.694444
-motif-m2,avg_cc,0.504315
-motif-m2,diameter,5
-motif-m3,n,96
-motif-m3,m,201
-motif-m3,inter_neg_edges,0.8
-motif-m3,intra_pos_edges,0.92233
-motif-m3,f1_pos_neg,0.856821
-motif-m3,avg_cc,0.232075
-motif-m3,diameter,5
-motif-m1m2m3,n,85
-motif-m1m2m3,m,158
-motif-m1m2m3,inter_neg_edges,0.673469
-motif-m1m2m3,intra_pos_edges,0.697789
-motif-m1m2m3,f1_pos_neg,0.685413
-motif-m1m2m3,avg_cc,0.216683
-motif-m1m2m3,diameter,6
-motif-m2,n,44
-motif-m2,m,103
-motif-m2,inter_neg_edges,1
-motif-m2,intra_pos_edges,0.768657
-motif-m2,f1_pos_neg,0.869198
-motif-m2,avg_cc,0.515021
-motif-m2,diameter,5
-motif-m2,n,2
-motif-m2,m,1
-motif-m2,inter_neg_edges,NaN
-motif-m2,intra_pos_edges,0.333333
-motif-m2,f1_pos_neg,NaN
-motif-m2,avg_cc,0
-motif-m2,diameter,1
-motif-m2,n,54
-motif-m2,m,136
-motif-m2,inter_neg_edges,0.869565
-motif-m2,intra_pos_edges,0.762463
-motif-m2,f1_pos_neg,0.8125
-motif-m2,avg_cc,0.478124
-motif-m2,diameter,5
-motif-m1,n,14
-motif-m1,m,21
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.47191
-motif-m1,f1_pos_neg,0.641221
-motif-m1,avg_cc,0.47381
-motif-m1,diameter,4
-motif-m1m2,n,70
-motif-m1m2,m,179
-motif-m1m2,inter_neg_edges,0.684211
-motif-m1m2,intra_pos_edges,0.764846
-motif-m1m2,f1_pos_neg,0.722285
-motif-m1m2,avg_cc,0.482917
-motif-m1m2,diameter,6
-motif-m1m2m3,n,105
-motif-m1m2m3,m,213
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.962085
-motif-m1m2m3,f1_pos_neg,0.888915
-motif-m1m2m3,avg_cc,0.220918
-motif-m1m2m3,diameter,6
-motif-m3,n,106
-motif-m3,m,217
-motif-m3,inter_neg_edges,0.779661
-motif-m3,intra_pos_edges,0.946636
-motif-m3,f1_pos_neg,0.855073
-motif-m3,avg_cc,0.220052
-motif-m3,diameter,6
-motif-m1m2m3,n,106
-motif-m1m2m3,m,214
-motif-m1m2m3,inter_neg_edges,0.821429
-motif-m1m2m3,intra_pos_edges,0.96
-motif-m1m2m3,f1_pos_neg,0.885325
-motif-m1m2m3,avg_cc,0.21903
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,112
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.693548
-motif-m1m2m3,intra_pos_edges,0.932755
-motif-m1m2m3,f1_pos_neg,0.79556
-motif-m1m2m3,avg_cc,0.24888
-motif-m1m2m3,diameter,6
-motif-m3,n,114
-motif-m3,m,220
-motif-m3,inter_neg_edges,0.877551
-motif-m3,intra_pos_edges,0.951111
-motif-m3,f1_pos_neg,0.912852
-motif-m3,avg_cc,0.242788
-motif-m3,diameter,6
-motif-m1m2m3,n,112
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.877551
-motif-m1m2m3,intra_pos_edges,0.950673
-motif-m1m2m3,f1_pos_neg,0.91265
-motif-m1m2m3,avg_cc,0.24733
-motif-m1m2m3,diameter,6
-motif-m3,n,104
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.891892
-motif-m3,intra_pos_edges,0.964029
-motif-m3,f1_pos_neg,0.926558
-motif-m3,avg_cc,0.231911
-motif-m3,diameter,6
-motif-m3,n,105
-motif-m3,m,224
-motif-m3,inter_neg_edges,0.64486
-motif-m3,intra_pos_edges,0.917226
-motif-m3,f1_pos_neg,0.757298
-motif-m3,avg_cc,0.275685
-motif-m3,diameter,6
-motif-m1,n,14
-motif-m1,m,21
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.47191
-motif-m1,f1_pos_neg,0.641221
-motif-m1,avg_cc,0.47381
-motif-m1,diameter,4
-motif-m3,n,104
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.891892
-motif-m3,intra_pos_edges,0.964029
-motif-m3,f1_pos_neg,0.926558
-motif-m3,avg_cc,0.231911
-motif-m3,diameter,6
-motif-m3,n,108
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.956044
-motif-m3,intra_pos_edges,0.953488
-motif-m3,f1_pos_neg,0.954764
-motif-m3,avg_cc,0.255281
-motif-m3,diameter,6
-motif-m3,n,115
-motif-m3,m,234
-motif-m3,inter_neg_edges,0.663717
-motif-m3,intra_pos_edges,0.936819
-motif-m3,f1_pos_neg,0.776968
-motif-m3,avg_cc,0.240578
-motif-m3,diameter,6
-motif-m3,n,117
-motif-m3,m,237
-motif-m3,inter_neg_edges,0.680672
-motif-m3,intra_pos_edges,0.958242
-motif-m3,f1_pos_neg,0.795952
-motif-m3,avg_cc,0.258295
-motif-m3,diameter,7
-motif-m1m2m3,n,101
-motif-m1m2m3,m,207
-motif-m1m2m3,inter_neg_edges,0.792453
-motif-m1m2m3,intra_pos_edges,0.924528
-motif-m1m2m3,f1_pos_neg,0.853411
-motif-m1m2m3,avg_cc,0.222742
-motif-m1m2m3,diameter,6
-motif-m3,n,204
-motif-m3,m,501
-motif-m3,inter_neg_edges,0.0490196
-motif-m3,intra_pos_edges,0.99385
-motif-m3,f1_pos_neg,0.0934309
-motif-m3,avg_cc,0.267207
-motif-m3,diameter,6
-motif-m1m2,n,2
-motif-m1m2,m,1
-motif-m1m2,inter_neg_edges,NaN
-motif-m1m2,intra_pos_edges,0.333333
-motif-m1m2,f1_pos_neg,NaN
-motif-m1m2,avg_cc,0
-motif-m1m2,diameter,1
-motif-m1m2,n,57
-motif-m1m2,m,139
-motif-m1m2,inter_neg_edges,0.877551
-motif-m1m2,intra_pos_edges,0.773256
-motif-m1m2,f1_pos_neg,0.822109
-motif-m1m2,avg_cc,0.42895
-motif-m1m2,diameter,5
-motif-m2,n,57
-motif-m2,m,143
-motif-m2,inter_neg_edges,0.727273
-motif-m2,intra_pos_edges,0.757225
-motif-m2,f1_pos_neg,0.741947
-motif-m2,avg_cc,0.511681
-motif-m2,diameter,5
-motif-m1m2,n,54
-motif-m1m2,m,122
-motif-m1m2,inter_neg_edges,1
-motif-m1m2,intra_pos_edges,0.805281
-motif-m1m2,f1_pos_neg,0.892139
-motif-m1m2,avg_cc,0.445183
-motif-m1m2,diameter,5
-motif-m2,n,56
-motif-m2,m,142
-motif-m2,inter_neg_edges,0.727273
-motif-m2,intra_pos_edges,0.758017
-motif-m2,f1_pos_neg,0.742327
-motif-m2,avg_cc,0.521145
-motif-m2,diameter,5
-motif-m1m2,n,66
-motif-m1m2,m,170
-motif-m1m2,inter_neg_edges,0.660714
-motif-m1m2,intra_pos_edges,0.73301
-motif-m1m2,f1_pos_neg,0.694987
-motif-m1m2,avg_cc,0.520162
-motif-m1m2,diameter,5
-motif-m2,n,53
-motif-m2,m,133
-motif-m2,inter_neg_edges,0.869565
-motif-m2,intra_pos_edges,0.751479
-motif-m2,f1_pos_neg,0.806221
-motif-m2,avg_cc,0.489571
-motif-m2,diameter,5
-motif-m3,n,102
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.850467
-motif-m3,intra_pos_edges,0.934579
-motif-m3,f1_pos_neg,0.890542
-motif-m3,avg_cc,0.217768
-motif-m3,diameter,6
-motif-m2,n,56
-motif-m2,m,142
-motif-m2,inter_neg_edges,0.727273
-motif-m2,intra_pos_edges,0.758017
-motif-m2,f1_pos_neg,0.742327
-motif-m2,avg_cc,0.521145
-motif-m2,diameter,5
-motif-m3,n,123
-motif-m3,m,245
-motif-m3,inter_neg_edges,0.672131
-motif-m3,intra_pos_edges,0.957447
-motif-m3,f1_pos_neg,0.789812
-motif-m3,avg_cc,0.244393
-motif-m3,diameter,7
-motif-m1m2,n,70
-motif-m1m2,m,179
-motif-m1m2,inter_neg_edges,0.684211
-motif-m1m2,intra_pos_edges,0.764846
-motif-m1m2,f1_pos_neg,0.722285
-motif-m1m2,avg_cc,0.482917
-motif-m1m2,diameter,6
-motif-m3,n,103
-motif-m3,m,217
-motif-m1m2,n,1
-motif-m3,inter_neg_edges,0.695238
-motif-m1m2,m,0
-motif-m3,intra_pos_edges,0.919908
-motif-m1m2,inter_neg_edges,1
-motif-m3,f1_pos_neg,0.791947
-motif-m1m2,intra_pos_edges,0
-motif-m3,avg_cc,0.286039
-motif-m1m2,f1_pos_neg,0
-motif-m3,diameter,6
-motif-m1m2,avg_cc,0
-motif-m1m2,diameter,0
-motif-m1m2m3,n,114
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.886792
-motif-m1m2m3,intra_pos_edges,0.946429
-motif-m1m2m3,f1_pos_neg,0.915641
-motif-m1m2m3,avg_cc,0.226999
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,105
-motif-m1m2m3,m,213
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.962085
-motif-m1m2m3,f1_pos_neg,0.888915
-motif-m1m2m3,avg_cc,0.220918
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,103
-motif-m1m2m3,m,214
-motif-m1m2m3,inter_neg_edges,0.679245
-motif-m1m2m3,intra_pos_edges,0.901602
-motif-m1m2m3,f1_pos_neg,0.774786
-motif-m1m2m3,avg_cc,0.236993
-motif-m1m2m3,diameter,5
-motif-m1m2m3,n,109
-motif-m1m2m3,m,211
-motif-m1m2m3,inter_neg_edges,0.914894
-motif-m1m2m3,intra_pos_edges,0.949541
-motif-m1m2m3,f1_pos_neg,0.931895
-motif-m1m2m3,avg_cc,0.256122
-motif-m1m2m3,diameter,6
-motif-m3,n,96
-motif-m3,m,187
-motif-m3,inter_neg_edges,0.614679
-motif-m3,intra_pos_edges,0.783019
-motif-m3,f1_pos_neg,0.688711
-motif-m3,avg_cc,0.235034
-motif-m3,diameter,6
-motif-m1m2m3,n,101
-motif-m1m2m3,m,185
-motif-m1m2m3,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.948718
-motif-m1m2m3,f1_pos_neg,0.973684
-motif-m1m2m3,avg_cc,0.255646
-motif-m1m2m3,diameter,6
-motif-m3,n,96
-motif-m3,m,195
-motif-m3,inter_neg_edges,0.891304
-motif-m3,intra_pos_edges,0.947631
-motif-m3,f1_pos_neg,0.918605
-motif-m3,avg_cc,0.231219
-motif-m3,diameter,6
-motif-m3,n,108
-motif-m3,m,220
-motif-m3,inter_neg_edges,0.657143
-motif-m3,intra_pos_edges,0.90991
-motif-m3,f1_pos_neg,0.763141
-motif-m3,avg_cc,0.23198
-motif-m3,diameter,6
-motif-m1m2m3,n,108
-motif-m1m2m3,m,224
-motif-m1m2m3,inter_neg_edges,0.704918
-motif-m1m2m3,intra_pos_edges,0.95814
-motif-m1m2m3,f1_pos_neg,0.812251
-motif-m1m2m3,avg_cc,0.210477
-motif-m1m2m3,diameter,6
-motif-m3,n,100
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.821429
-motif-m3,intra_pos_edges,0.947115
-motif-m3,f1_pos_neg,0.879806
-motif-m3,avg_cc,0.223773
-motif-m3,diameter,6
-motif-m3,n,116
-motif-m3,m,257
-motif-m3,inter_neg_edges,0.50365
-motif-m3,intra_pos_edges,0.90835
-motif-m3,n,109
-motif-m3,m,221
-motif-m3,f1_pos_neg,0.648003
-motif-m3,inter_neg_edges,0.673077
-motif-m3,avg_cc,0.233803
-motif-m3,intra_pos_edges,0.918919
-motif-m3,diameter,6
-motif-m3,f1_pos_neg,0.777016
-motif-m3,avg_cc,0.245974
-motif-m3,diameter,7
-motif-m3,n,115
-motif-m3,m,221
-motif-m3,inter_neg_edges,0.886792
-motif-m3,intra_pos_edges,0.951327
-motif-m3,f1_pos_neg,0.917927
-motif-m3,avg_cc,0.239518
-motif-m3,diameter,6
-motif-m3,n,102
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.850467
-motif-m3,intra_pos_edges,0.934579
-motif-m3,f1_pos_neg,0.890542
-motif-m3,avg_cc,0.217768
-motif-m3,diameter,6
-motif-m1,n,5
-motif-m1,m,6
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.375
-motif-m1,f1_pos_neg,0.545455
-motif-m1,avg_cc,0.533333
-motif-m1,diameter,3
-motif-m1m2m3,n,118
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.560606
-motif-m1m2m3,intra_pos_edges,0.922449
-motif-m1m2m3,f1_pos_neg,0.697385
-motif-m1m2m3,avg_cc,0.237474
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,112
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.877551
-motif-m1m2m3,intra_pos_edges,0.950673
-motif-m1m2m3,f1_pos_neg,0.91265
-motif-m1m2m3,avg_cc,0.24733
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,105
-motif-m1m2m3,m,213
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.962085
-motif-m1m2m3,f1_pos_neg,0.888915
-motif-m1m2m3,avg_cc,0.220918
-motif-m1m2m3,diameter,6
-motif-m3,f1_pos_neg,0.943463
-motif-m3,avg_cc,0.241237
-motif-m3,diameter,6
-motif-m2,n,52
-motif-m2,m,134
-motif-m2,inter_neg_edges,0.869565
-motif-m2,intra_pos_edges,0.759644
-motif-m2,f1_pos_neg,0.810896
-motif-m2,avg_cc,0.497648
-motif-m2,diameter,5
-motif-m1m2,n,61
-motif-m1m2,m,141
-motif-m1m2,inter_neg_edges,0.951807
-motif-m1m2,intra_pos_edges,0.80814
-motif-m1m2,f1_pos_neg,0.874109
-motif-m1m2,avg_cc,0.47851
-motif-m1m2,diameter,5
-motif-m2,n,45
-motif-m2,m,105
-motif-m2,inter_neg_edges,1
-motif-m2,intra_pos_edges,0.774908
-motif-m2,f1_pos_neg,0.873181
-motif-m2,avg_cc,0.521354
-motif-m2,diameter,5
-motif-m2,n,2
-motif-m2,m,1
-motif-m2,inter_neg_edges,1
-motif-m2,intra_pos_edges,0.125
-motif-m2,f1_pos_neg,0.222222
-motif-m2,avg_cc,0
-motif-m2,diameter,1
-motif-m1,n,4
-motif-m1,m,4
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.153846
-motif-m1,f1_pos_neg,0.266667
-motif-m1,avg_cc,0.583333
-motif-m1,diameter,2
-motif-m2,n,63
-motif-m2,m,168
-motif-m2,inter_neg_edges,0.666667
-motif-m2,intra_pos_edges,0.724638
-motif-m2,f1_pos_neg,0.694444
-motif-m2,avg_cc,0.504315
-motif-m2,diameter,5
-motif-m1m2m3,n,97
-motif-m1m2m3,m,174
-motif-m1m2m3,inter_neg_edges,0.673077
-motif-m1m2m3,intra_pos_edges,0.747619
-motif-m1m2m3,f1_pos_neg,0.708392
-motif-m1m2m3,avg_cc,0.217743
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,112
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.693548
-motif-m1m2m3,intra_pos_edges,0.932755
-motif-m1m2m3,f1_pos_neg,0.79556
-motif-m1m2m3,avg_cc,0.24888
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,98
-motif-m1m2m3,m,203
-motif-m1m2m3,inter_neg_edges,0.708333
-motif-m1m2m3,intra_pos_edges,0.885246
-motif-m1m2m3,f1_pos_neg,0.78697
-motif-m1m2m3,avg_cc,0.2466
-motif-m1m2m3,diameter,6
-motif-m3,n,100
-motif-m3,m,203
-motif-m3,inter_neg_edges,0.890909
-motif-m3,intra_pos_edges,0.953995
-motif-m3,f1_pos_neg,0.921374
-motif-m3,avg_cc,0.246901
-motif-m3,diameter,6
-motif-m1,n,4
-motif-m1,m,3
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.285714
-motif-m1,f1_pos_neg,0.444444
-motif-m1,avg_cc,0
-motif-m1,diameter,2
-motif-m3,n,110
-motif-m3,m,211
-motif-m3,inter_neg_edges,0.934783
-motif-m3,intra_pos_edges,0.958525
-motif-m3,f1_pos_neg,0.946505
-motif-m3,avg_cc,0.24981
-motif-m3,diameter,6
-motif-m2,n,60
-motif-m2,m,158
-motif-m2,inter_neg_edges,0.714286
-motif-m2,intra_pos_edges,0.724051
-motif-m2,f1_pos_neg,0.719135
-motif-m2,avg_cc,0.522685
-motif-m2,diameter,5
-motif-m3,n,107
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.934783
-motif-m3,intra_pos_edges,0.951276
-motif-m3,f1_pos_neg,0.942957
-motif-m3,avg_cc,0.257692
-motif-m3,diameter,6
-motif-m1m2m3,n,112
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.877551
-motif-m1m2m3,intra_pos_edges,0.950673
-motif-m1m2m3,f1_pos_neg,0.91265
-motif-m1m2m3,avg_cc,0.24733
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,118
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.560606
-motif-m1m2m3,intra_pos_edges,0.922449
-motif-m1m2m3,f1_pos_neg,0.697385
-motif-m1m2m3,avg_cc,0.237474
-motif-m1m2m3,diameter,6
-motif-m3,n,108
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.956044
-motif-m3,intra_pos_edges,0.953488
-motif-m3,f1_pos_neg,0.954764
-motif-m3,avg_cc,0.255281
-motif-m3,diameter,6
-motif-m1m2m3,n,101
-motif-m1m2m3,m,205
-motif-m1m2m3,inter_neg_edges,0.831776
-motif-m1m2m3,intra_pos_edges,0.949153
-motif-m1m2m3,f1_pos_neg,0.886596
-motif-m1m2m3,avg_cc,0.220252
-motif-m1m2m3,diameter,6
-motif-m3,n,105
-motif-m3,m,228
-motif-m3,inter_neg_edges,0.581395
-motif-m3,intra_pos_edges,0.905405
-motif-m3,f1_pos_neg,0.708096
-motif-m3,avg_cc,0.195502
-motif-m3,diameter,6
-motif-m1m2m3,n,114
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.663717
-motif-m1m2m3,intra_pos_edges,0.947137
-motif-m1m2m3,f1_pos_neg,0.780494
-motif-m1m2m3,avg_cc,0.26613
-motif-m1m2m3,diameter,7
-motif-m1m2m3,n,122
-motif-m1m2m3,m,263
-motif-m1m2m3,inter_neg_edges,0.514706
-motif-m1m2m3,intra_pos_edges,0.916335
-motif-m1m2m3,f1_pos_neg,0.659161
-motif-m1m2m3,avg_cc,0.222841
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,99
-motif-m1m2m3,m,211
-motif-m1m2m3,inter_neg_edges,0.708738
-motif-m1m2m3,intra_pos_edges,0.920188
-motif-m1m2m3,f1_pos_neg,0.800739
-motif-m1m2m3,avg_cc,0.300053
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,86
-motif-m1m2m3,m,170
-motif-m1m2m3,inter_neg_edges,0.483146
-motif-m1m2m3,intra_pos_edges,0.715328
-motif-m1m2m3,f1_pos_neg,0.576747
-motif-m1m2m3,avg_cc,0.20471
-motif-m1m2m3,diameter,6
-motif-m1m2,n,61
-motif-m1m2,m,139
-motif-m1m2,inter_neg_edges,0.950617
-motif-m1m2,intra_pos_edges,0.796512
-motif-m1m2,f1_pos_neg,0.866768
-motif-m1m2,avg_cc,0.457241
-motif-m1m2,diameter,5
-motif-m1m2,n,56
-motif-m1m2,m,139
-motif-m1m2,inter_neg_edges,0.877551
-motif-m1m2,intra_pos_edges,0.777778
-motif-m1m2,f1_pos_neg,0.824658
-motif-m1m2,avg_cc,0.453961
-motif-m1m2,diameter,5
-motif-m1,n,19
-motif-m1,m,31
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.410596
-motif-m1,f1_pos_neg,0.58216
-motif-m1,avg_cc,0.461404
-motif-m1,diameter,4
-motif-m1m2,n,52
-motif-m1m2,m,116
-motif-m1m2,inter_neg_edges,1
-motif-m1m2,intra_pos_edges,0.805556
-motif-m1m2,f1_pos_neg,0.892308
-motif-m1m2,avg_cc,0.436984
-motif-m1m2,diameter,5
-motif-m2,n,62
-motif-m2,m,163
-motif-m2,inter_neg_edges,0.698113
-motif-m2,intra_pos_edges,0.729529
-motif-m2,f1_pos_neg,0.713475
-motif-m2,avg_cc,0.508492
-motif-m2,diameter,5
-motif-m3,n,123
-motif-m3,m,245
-motif-m3,inter_neg_edges,0.672131
-motif-m3,intra_pos_edges,0.957447
-motif-m3,f1_pos_neg,0.789812
-motif-m3,avg_cc,0.244393
-motif-m3,diameter,7
-motif-m1m2,n,2
-motif-m1m2,m,1
-motif-m1m2,inter_neg_edges,NaN
-motif-m1m2,intra_pos_edges,0.4
-motif-m1m2,f1_pos_neg,NaN
-motif-m1m2,avg_cc,0
-motif-m1m2,diameter,1
-motif-m3,n,126
-motif-m3,m,276
-motif-m3,inter_neg_edges,0.468531
-motif-m3,intra_pos_edges,0.922481
-motif-m3,f1_pos_neg,0.621434
-motif-m3,avg_cc,0.233947
-motif-m3,diameter,6
-motif-m1,n,1
-motif-m1,m,0
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0
-motif-m1,f1_pos_neg,0
-motif-m1,avg_cc,0
-motif-m1,diameter,0
-motif-m1,n,6
-motif-m1,m,9
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.339623
-motif-m1,f1_pos_neg,0.507042
-motif-m1,avg_cc,0.638889
-motif-m1,diameter,3
-motif-m1,n,4
-motif-m1,m,4
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.210526
-motif-m1,f1_pos_neg,0.347826
-motif-m1,avg_cc,0.583333
-motif-m1,diameter,2
-motif-m1m2,n,64
-motif-m1m2,m,166
-motif-m1m2,inter_neg_edges,0.675676
-motif-m1m2,intra_pos_edges,0.727273
-motif-m1m2,f1_pos_neg,0.700525
-motif-m1m2,avg_cc,0.538866
-motif-m1m2,diameter,5
-motif-m2,n,46
-motif-m2,m,111
-motif-m2,inter_neg_edges,0.625
-motif-m2,intra_pos_edges,0.613419
-motif-m2,f1_pos_neg,0.619155
-motif-m2,avg_cc,0.56769
-motif-m2,diameter,5
-motif-m1m2m3,n,107
-motif-m1m2m3,m,215
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.962441
-motif-m1m2m3,f1_pos_neg,0.889066
-motif-m1m2m3,avg_cc,0.21636
-motif-m1m2m3,diameter,6
-motif-m2,n,62
-motif-m2,m,160
-motif-m2,inter_neg_edges,0.666667
-motif-m2,intra_pos_edges,0.736573
-motif-m2,f1_pos_neg,0.699879
-motif-m2,avg_cc,0.535964
-motif-m2,diameter,5
-motif-m2,n,67
-motif-m2,m,176
-motif-m2,inter_neg_edges,0.636364
-motif-m2,intra_pos_edges,0.737589
-motif-m2,f1_pos_neg,0.683247
-motif-m2,avg_cc,0.5024
-motif-m2,diameter,5
-motif-m1m2m3,n,102
-motif-m1m2m3,m,189
-motif-m1m2m3,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.949749
-motif-m1m2m3,f1_pos_neg,0.974227
-motif-m1m2m3,avg_cc,0.22073
-motif-m1m2m3,diameter,6
-motif-m1m2,n,65
-motif-m1m2,m,168
-motif-m1m2,inter_neg_edges,0.660714
-motif-m1m2,intra_pos_edges,0.741294
-motif-m1m2,f1_pos_neg,0.698688
-motif-m1m2,avg_cc,0.53931
-motif-m1m2,diameter,5
-motif-m1m2m3,n,97
-motif-m1m2m3,m,181
-motif-m1m2m3,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.94026
-motif-m1m2m3,f1_pos_neg,0.96921
-motif-m1m2m3,avg_cc,0.268016
-motif-m1m2m3,diameter,6
-motif-m3,n,93
-motif-m3,m,193
-motif-m3,inter_neg_edges,0.869565
-motif-m3,intra_pos_edges,0.944444
-motif-m3,f1_pos_neg,0.905459
-motif-m3,avg_cc,0.250621
-motif-m3,diameter,6
-motif-m2,n,61
-motif-m2,m,159
-motif-m2,inter_neg_edges,0.666667
-motif-m2,intra_pos_edges,0.737113
-motif-m2,f1_pos_neg,0.700122
-motif-m2,avg_cc,0.548029
-motif-m2,diameter,5
-motif-m2,n,62
-motif-m2,m,163
-motif-m2,inter_neg_edges,0.669903
-motif-m2,intra_pos_edges,0.720988
-motif-m2,f1_pos_neg,0.694507
-motif-m2,avg_cc,0.50221
-motif-m2,diameter,5
-motif-m2,n,63
-motif-m2,m,165
-motif-m2,inter_neg_edges,0.698113
-motif-m2,intra_pos_edges,0.735802
-motif-m2,f1_pos_neg,0.716463
-motif-m2,avg_cc,0.513383
-motif-m2,diameter,5
-motif-m3,n,110
-motif-m3,m,219
-motif-m3,inter_neg_edges,0.826087
-motif-m3,intra_pos_edges,0.954338
-motif-m3,f1_pos_neg,0.885593
-motif-m3,avg_cc,0.194696
-motif-m3,diameter,6
-motif-m2,n,47
-motif-m2,m,117
-motif-m2,inter_neg_edges,0.942857
-motif-m2,intra_pos_edges,0.749186
-motif-m2,f1_pos_neg,0.834938
-motif-m2,avg_cc,0.557903
-motif-m2,diameter,5
-motif-m3,n,101
-motif-m3,m,212
-motif-m3,inter_neg_edges,0.565217
-motif-m3,intra_pos_edges,0.867749
-motif-m3,f1_pos_neg,0.684548
-motif-m3,avg_cc,0.255471
-motif-m3,diameter,6
-motif-m1m2m3,n,91
-motif-m1m2m3,m,189
-motif-m1m2m3,inter_neg_edges,0.703704
-motif-m1m2m3,intra_pos_edges,0.867168
-motif-m1m2m3,f1_pos_neg,0.776931
-motif-m1m2m3,avg_cc,0.19184
-motif-m1m2m3,diameter,6
-motif-m3,n,87
-motif-m3,m,177
-motif-m3,inter_neg_edges,0.669725
-motif-m3,intra_pos_edges,0.76259
-motif-m3,f1_pos_neg,0.713147
-motif-m3,avg_cc,0.263122
-motif-m3,diameter,5
-motif-m1m2m3,n,94
-motif-m1m2m3,m,179
-motif-m1m2m3,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.939633
-motif-m1m2m3,f1_pos_neg,0.968877
-motif-m1m2m3,avg_cc,0.240095
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,112
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.877551
-motif-m1m2m3,intra_pos_edges,0.950673
-motif-m1m2m3,f1_pos_neg,0.91265
-motif-m1m2m3,avg_cc,0.24733
-motif-m1m2m3,diameter,6
-motif-m3,n,110
-motif-m3,m,216
-motif-m3,inter_neg_edges,0.875
-motif-m3,intra_pos_edges,0.948081
-motif-m3,f1_pos_neg,0.910076
-motif-m3,avg_cc,0.251004
-motif-m3,diameter,7
-motif-m1m2m3,n,112
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.877551
-motif-m1m2m3,intra_pos_edges,0.950673
-motif-m1m2m3,f1_pos_neg,0.91265
-motif-m1m2m3,avg_cc,0.24733
-motif-m1m2m3,diameter,6
-motif-m1,n,11
-motif-m1,m,16
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.285714
-motif-m1,f1_pos_neg,0.444444
-motif-m1,avg_cc,0.360606
-motif-m1,diameter,4
-motif-m1m2,n,70
-motif-m1m2,m,179
-motif-m1m2,inter_neg_edges,0.684211
-motif-m1m2,intra_pos_edges,0.764846
-motif-m1m2,f1_pos_neg,0.722285
-motif-m1m2,avg_cc,0.482917
-motif-m1m2,diameter,6
-motif-m1m2m3,n,119
-motif-m1m2m3,m,266
-motif-m1m2m3,inter_neg_edges,0.482014
-motif-m1m2m3,intra_pos_edges,0.918164
-motif-m1m2m3,f1_pos_neg,0.63216
-motif-m1m2m3,avg_cc,0.247268
-motif-m1m2m3,diameter,6
-motif-m3,n,102
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.850467
-motif-m3,intra_pos_edges,0.934579
-motif-m3,f1_pos_neg,0.890542
-motif-m3,avg_cc,0.217768
-motif-m3,diameter,6
-motif-m3,n,88
-motif-m3,m,169
-motif-m3,inter_neg_edges,0.888889
-motif-m3,intra_pos_edges,0.891304
-motif-m3,f1_pos_neg,0.890095
-motif-m3,avg_cc,0.22712
-motif-m3,diameter,5
-motif-m3,n,96
-motif-m3,m,196
-motif-m3,inter_neg_edges,0.87234
-motif-m3,intra_pos_edges,0.952381
-motif-m3,f1_pos_neg,0.910605
-motif-m3,avg_cc,0.240585
-motif-m3,diameter,6
-motif-m3,n,93
-motif-m3,m,200
-motif-m3,inter_neg_edges,0.768421
-motif-m3,intra_pos_edges,0.902148
-motif-m3,f1_pos_neg,0.829932
-motif-m3,avg_cc,0.279443
-motif-m3,diameter,6
-motif-m3,n,96
-motif-m3,m,198
-motif-m3,inter_neg_edges,0.768421
-motif-m3,intra_pos_edges,0.918919
-motif-m3,f1_pos_neg,0.836958
-motif-m3,avg_cc,0.230551
-motif-m3,diameter,6
-motif-m3,n,122
-motif-m3,m,270
-motif-m3,inter_neg_edges,0.478873
-motif-m3,intra_pos_edges,0.924603
-motif-m3,f1_pos_neg,0.630959
-motif-m3,avg_cc,0.2397
-motif-m3,diameter,6
-motif-m3,n,102
-motif-m3,m,213
-motif-m3,inter_neg_edges,0.76
-motif-m3,intra_pos_edges,0.909502
-motif-m3,f1_pos_neg,0.828057
-motif-m3,avg_cc,0.26203
-motif-m3,diameter,6
-motif-m2,n,45
-motif-m2,m,105
-motif-m2,inter_neg_edges,1
-motif-m2,intra_pos_edges,0.774908
-motif-m2,f1_pos_neg,0.873181
-motif-m2,avg_cc,0.521354
-motif-m2,diameter,5
-motif-m1m2,n,49
-motif-m1m2,m,116
-motif-m1m2,inter_neg_edges,0.6
-motif-m1m2,intra_pos_edges,0.61875
-motif-m1m2,f1_pos_neg,0.609231
-motif-m1m2,avg_cc,0.488159
-motif-m1m2,diameter,5
-motif-m1m2,n,58
-motif-m1m2,m,136
-motif-m1m2,inter_neg_edges,0.950617
-motif-m1m2,intra_pos_edges,0.795252
-motif-m1m2,f1_pos_neg,0.866022
-motif-m1m2,avg_cc,0.482415
-motif-m1m2,diameter,5
-motif-m2,n,49
-motif-m2,m,114
-motif-m2,inter_neg_edges,1
-motif-m2,intra_pos_edges,0.77027
-motif-m2,f1_pos_neg,0.870229
-motif-m2,avg_cc,0.533618
-motif-m2,diameter,5
-motif-m1,n,14
-motif-m1,m,21
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.47191
-motif-m1,f1_pos_neg,0.641221
-motif-m1,avg_cc,0.47381
-motif-m1,diameter,4
-motif-m1m2,n,60
-motif-m1m2,m,149
-motif-m1m2,inter_neg_edges,0.673913
-motif-m1m2,intra_pos_edges,0.774566
-motif-m1m2,f1_pos_neg,0.720743
-motif-m1m2,avg_cc,0.483634
-motif-m1m2,diameter,5
-motif-m1m2m3,n,104
-motif-m1m2m3,m,215
-motif-m1m2m3,inter_neg_edges,0.77193
-motif-m1m2m3,intra_pos_edges,0.943925
-motif-m1m2m3,f1_pos_neg,0.849307
-motif-m1m2m3,avg_cc,0.223202
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,100
-motif-m1m2m3,m,205
-motif-m1m2m3,inter_neg_edges,0.839286
-motif-m1m2m3,intra_pos_edges,0.926714
-motif-m1m2m3,f1_pos_neg,0.880836
-motif-m1m2m3,avg_cc,0.188684
-motif-m1m2m3,diameter,6
-motif-m3,n,99
-motif-m3,m,202
-motif-m3,inter_neg_edges,0.890909
-motif-m3,intra_pos_edges,0.951456
-motif-m3,f1_pos_neg,0.920188
-motif-m3,avg_cc,0.249395
-motif-m3,diameter,6
-motif-m1m2,n,70
-motif-m1m2,m,179
-motif-m1m2,inter_neg_edges,0.684211
-motif-m1m2,intra_pos_edges,0.764846
-motif-m1m2,f1_pos_neg,0.722285
-motif-m1m2,avg_cc,0.482917
-motif-m1m2,diameter,6
-motif-m1m2,n,67
-motif-m1m2,m,170
-motif-m1m2,inter_neg_edges,0.740741
-motif-m1m2,intra_pos_edges,0.755448
-motif-m1m2,f1_pos_neg,0.748022
-motif-m1m2,avg_cc,0.458097
-motif-m1m2,diameter,6
-motif-m1m2m3,n,100
-motif-m1m2m3,m,203
-motif-m1m2m3,inter_neg_edges,0.539823
-motif-m1m2m3,intra_pos_edges,0.836879
-motif-m1m2m3,f1_pos_neg,0.656303
-motif-m1m2m3,avg_cc,0.25785
-motif-m1m2m3,diameter,6
-motif-m1m2,n,66
-motif-m1m2,m,164
-motif-m1m2,inter_neg_edges,0.727273
-motif-m1m2,intra_pos_edges,0.766067
-motif-m1m2,f1_pos_neg,0.746166
-motif-m1m2,avg_cc,0.49494
-motif-m1m2,diameter,6
-motif-m2,n,57
-motif-m2,m,143
-motif-m2,inter_neg_edges,0.727273
-motif-m2,intra_pos_edges,0.757225
-motif-m2,f1_pos_neg,0.741947
-motif-m2,avg_cc,0.511681
-motif-m2,diameter,5
-motif-m1m2m3,n,83
-motif-m1m2m3,m,155
-motif-m1m2m3,inter_neg_edges,0.663366
-motif-m1m2m3,intra_pos_edges,0.736
-motif-m1m2m3,f1_pos_neg,0.697798
-motif-m1m2m3,avg_cc,0.237345
-motif-m1m2m3,diameter,5
-motif-m3,n,118
-motif-m3,m,236
-motif-m3,inter_neg_edges,0.683333
-motif-m3,intra_pos_edges,0.951754
-motif-m3,f1_pos_neg,0.795511
-motif-m3,avg_cc,0.243624
-motif-m3,diameter,6
-motif-m1m2,n,58
-motif-m1m2,m,145
-motif-m1m2,inter_neg_edges,0.708333
-motif-m1m2,intra_pos_edges,0.715847
-motif-m1m2,f1_pos_neg,0.71207
-motif-m1m2,avg_cc,0.55287
-motif-m1m2,diameter,5
-motif-m3,n,104
-motif-m3,m,206
-motif-m3,inter_neg_edges,0.705263
-motif-m3,intra_pos_edges,0.945813
-motif-m3,f1_pos_neg,0.808015
-motif-m3,avg_cc,0.259926
-motif-m3,diameter,6
-motif-m1m2,n,70
-motif-m1m2,m,179
-motif-m1m2,inter_neg_edges,0.684211
-motif-m1m2,intra_pos_edges,0.764846
-motif-m1m2,f1_pos_neg,0.722285
-motif-m1m2,avg_cc,0.482917
-motif-m1m2,diameter,6
-motif-m1m2m3,n,110
-motif-m1m2m3,m,214
-motif-m1m2m3,inter_neg_edges,0.896907
-motif-m1m2m3,intra_pos_edges,0.945701
-motif-m1m2m3,f1_pos_neg,0.920658
-motif-m1m2m3,avg_cc,0.250893
-motif-m1m2m3,diameter,7
-motif-m1m2m3,n,118
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.560606
-motif-m1m2m3,intra_pos_edges,0.922449
-motif-m1m2m3,f1_pos_neg,0.697385
-motif-m1m2m3,avg_cc,0.237474
-motif-m1m2m3,diameter,6
-motif-m3,n,118
-motif-m3,m,245
-motif-m3,inter_neg_edges,0.603053
-motif-m3,intra_pos_edges,0.922105
-motif-m3,f1_pos_neg,0.729208
-motif-m3,avg_cc,0.196018
-motif-m3,diameter,6
-motif-m1m2m3,n,100
-motif-m1m2m3,m,216
-motif-m1m2m3,inter_neg_edges,0.65
-motif-m1m2m3,intra_pos_edges,0.890411
-motif-m1m2m3,f1_pos_neg,0.751445
-motif-m1m2m3,avg_cc,0.254333
-motif-m1m2m3,diameter,6
-motif-m3,n,114
-motif-m3,m,218
-motif-m3,inter_neg_edges,0.895833
-motif-m3,intra_pos_edges,0.955157
-motif-m3,f1_pos_neg,0.924545
-motif-m3,avg_cc,0.242412
-motif-m3,diameter,7
-motif-m1m2,n,52
-motif-m1m2,m,116
-motif-m1m2,inter_neg_edges,1
-motif-m1m2,intra_pos_edges,0.805556
-motif-m1m2,f1_pos_neg,0.892308
-motif-m1m2,avg_cc,0.436984
-motif-m1m2,diameter,5
-motif-m1m2m3,n,104
-motif-m1m2m3,m,227
-motif-m1m2m3,inter_neg_edges,0.655738
-motif-m1m2m3,intra_pos_edges,0.905495
-motif-m1m2m3,f1_pos_neg,0.760639
-motif-m1m2m3,avg_cc,0.256513
-motif-m1m2m3,diameter,6
-motif-m3,n,123
-motif-m3,m,245
-motif-m3,inter_neg_edges,0.672131
-motif-m3,intra_pos_edges,0.957447
-motif-m3,f1_pos_neg,0.789812
-motif-m3,avg_cc,0.244393
-motif-m3,diameter,7
-motif-m1m2,n,57
-motif-m1m2,m,127
-motif-m1m2,inter_neg_edges,1
-motif-m1m2,intra_pos_edges,0.81672
-motif-m1m2,f1_pos_neg,0.899115
-motif-m1m2,avg_cc,0.469956
-motif-m1m2,diameter,5
-motif-m1,n,19
-motif-m1,m,31
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.410596
-motif-m1,f1_pos_neg,0.58216
-motif-m1,avg_cc,0.461404
-motif-m1,diameter,4
-motif-m3,n,114
-motif-m3,m,220
-motif-m3,inter_neg_edges,0.877551
-motif-m3,intra_pos_edges,0.951111
-motif-m3,f1_pos_neg,0.912852
-motif-m3,avg_cc,0.242788
-motif-m3,diameter,6
-motif-m1m2m3,n,101
-motif-m1m2m3,m,208
-motif-m1m2m3,inter_neg_edges,0.79798
-motif-m1m2m3,intra_pos_edges,0.929577
-motif-m1m2m3,f1_pos_neg,0.858766
-motif-m1m2m3,avg_cc,0.268158
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,105
-motif-m1m2m3,m,213
-motif-m1m2m3,inter_neg_edges,0.826087
-motif-m1m2m3,intra_pos_edges,0.962085
-motif-m1m2m3,f1_pos_neg,0.888915
-motif-m1m2m3,avg_cc,0.220918
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,130
-motif-m1m2m3,m,279
-motif-m1m2m3,inter_neg_edges,0.475177
-motif-m1m2m3,intra_pos_edges,0.930769
-motif-m1m2m3,f1_pos_neg,0.629157
-motif-m1m2m3,avg_cc,0.239177
-motif-m1m2m3,diameter,6
-motif-m2,n,56
-motif-m2,m,148
-motif-m2,inter_neg_edges,0.666667
-motif-m2,intra_pos_edges,0.700265
-motif-m2,f1_pos_neg,0.683053
-motif-m2,avg_cc,0.527244
-motif-m2,diameter,5
-motif-m1m2m3,n,111
-motif-m1m2m3,m,236
-motif-m1m2m3,inter_neg_edges,0.648
-motif-m1m2m3,intra_pos_edges,0.908705
-motif-m1m2m3,f1_pos_neg,0.756522
-motif-m1m2m3,avg_cc,0.286524
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,104
-motif-m1m2m3,m,210
-motif-m1m2m3,inter_neg_edges,0.842105
-motif-m1m2m3,intra_pos_edges,0.957143
-motif-m1m2m3,f1_pos_neg,0.895947
-motif-m1m2m3,avg_cc,0.228248
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,119
-motif-m1m2m3,m,237
-motif-m1m2m3,inter_neg_edges,0.683333
-motif-m1m2m3,intra_pos_edges,0.951965
-motif-m1m2m3,f1_pos_neg,0.795585
-motif-m1m2m3,avg_cc,0.241044
-motif-m1m2m3,diameter,6
-motif-m2,n,41
-motif-m2,m,91
-motif-m2,inter_neg_edges,1
-motif-m2,intra_pos_edges,0.745902
-motif-m2,f1_pos_neg,0.85446
-motif-m2,avg_cc,0.564063
-motif-m2,diameter,5
-motif-m1,n,4
-motif-m1,m,4
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.210526
-motif-m1,f1_pos_neg,0.347826
-motif-m1,avg_cc,0.583333
-motif-m1,diameter,2
-motif-m1m2m3,n,106
-motif-m1m2m3,m,209
-motif-m1m2m3,inter_neg_edges,0.708333
-motif-m1m2m3,intra_pos_edges,0.951219
-motif-m1m2m3,f1_pos_neg,0.812002
-motif-m1m2m3,avg_cc,0.27206
-motif-m1m2m3,diameter,6
-motif-m1m2,n,62
-motif-m1m2,m,154
-motif-m1m2,inter_neg_edges,0.708333
-motif-m1m2,intra_pos_edges,0.793201
-motif-m1m2,f1_pos_neg,0.748369
-motif-m1m2,avg_cc,0.477669
-motif-m1m2,diameter,5
-motif-m3,n,121
-motif-m3,m,246
-motif-m3,inter_neg_edges,0.645161
-motif-m3,intra_pos_edges,0.935282
-motif-m3,f1_pos_neg,0.763593
-motif-m3,avg_cc,0.249727
-motif-m3,diameter,6
-motif-m1m2m3,n,131
-motif-m1m2m3,m,284
-motif-m1m2m3,inter_neg_edges,0.438356
-motif-m1m2m3,intra_pos_edges,0.923954
-motif-m1m2m3,f1_pos_neg,0.594609
-motif-m1m2m3,avg_cc,0.217324
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,96
-motif-m1m2m3,m,180
-motif-m1m2m3,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.9375
-motif-m1m2m3,f1_pos_neg,0.967742
-motif-m1m2m3,avg_cc,0.27185
-motif-m1m2m3,diameter,6
-motif-m2,n,56
-motif-m2,m,148
-motif-m2,inter_neg_edges,0.666667
-motif-m2,intra_pos_edges,0.700265
-motif-m2,f1_pos_neg,0.683053
-motif-m2,avg_cc,0.527244
-motif-m2,diameter,5
-motif-m3,n,123
-motif-m3,m,253
-motif-m3,inter_neg_edges,0.593496
-motif-m3,intra_pos_edges,0.934426
-motif-m3,f1_pos_neg,0.725925
-motif-m3,avg_cc,0.249898
-motif-m3,diameter,7
-motif-m3,n,101
-motif-m3,m,212
-motif-m3,inter_neg_edges,0.565217
-motif-m3,intra_pos_edges,0.867749
-motif-m3,f1_pos_neg,0.684548
-motif-m3,avg_cc,0.255471
-motif-m3,diameter,6
-motif-m3,n,95
-motif-m3,m,193
-motif-m3,inter_neg_edges,0.862069
-motif-m3,intra_pos_edges,0.946835
-motif-m3,f1_pos_neg,0.902466
-motif-m3,avg_cc,0.24194
-motif-m3,diameter,6
-motif-m3,n,102
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.850467
-motif-m3,intra_pos_edges,0.934579
-motif-m3,f1_pos_neg,0.890542
-motif-m3,avg_cc,0.217768
-motif-m3,diameter,6
-motif-m2,n,54
-motif-m2,m,144
-motif-m2,inter_neg_edges,0.623529
-motif-m2,intra_pos_edges,0.721127
-motif-m2,f1_pos_neg,0.668786
-motif-m2,avg_cc,0.509187
-motif-m2,diameter,5
-motif-m3,n,113
-motif-m3,m,219
-motif-m3,inter_neg_edges,0.877551
-motif-m3,intra_pos_edges,0.95302
-motif-m3,f1_pos_neg,0.91373
-motif-m3,avg_cc,0.243666
-motif-m3,diameter,7
-motif-m1m2m3,n,112
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.877551
-motif-m1m2m3,intra_pos_edges,0.950673
-motif-m1m2m3,f1_pos_neg,0.91265
-motif-m1m2m3,avg_cc,0.24733
-motif-m1m2m3,diameter,6
-motif-m2,n,59
-motif-m2,m,150
-motif-m2,inter_neg_edges,0.777778
-motif-m2,intra_pos_edges,0.741333
-motif-m2,f1_pos_neg,0.759118
-motif-m2,avg_cc,0.511524
-motif-m2,diameter,5
-motif-m1,n,1
-motif-m1,m,0
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0
-motif-m1,f1_pos_neg,0
-motif-m1,avg_cc,0
-motif-m1,diameter,0
-motif-m1m2m3,n,114
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.886792
-motif-m1m2m3,intra_pos_edges,0.946429
-motif-m1m2m3,f1_pos_neg,0.915641
-motif-m1m2m3,avg_cc,0.226999
-motif-m1m2m3,diameter,6
-motif-m2,n,56
-motif-m2,m,142
-motif-m2,inter_neg_edges,0.727273
-motif-m2,intra_pos_edges,0.758017
-motif-m2,f1_pos_neg,0.742327
-motif-m2,avg_cc,0.521145
-motif-m2,diameter,5
-motif-m1,n,4
-motif-m1,m,3
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.157895
-motif-m1,f1_pos_neg,0.272727
-motif-m1,avg_cc,0
-motif-m1,diameter,3
-motif-m3,n,103
-motif-m3,m,216
-motif-m3,inter_neg_edges,0.626168
-motif-m3,intra_pos_edges,0.888889
-motif-m3,f1_pos_neg,0.73475
-motif-m3,avg_cc,0.24738
-motif-m3,diameter,5
-motif-m2,n,56
-motif-m2,m,131
-motif-m2,inter_neg_edges,0.917808
-motif-m2,intra_pos_edges,0.759644
-motif-m2,f1_pos_neg,0.83127
-motif-m2,avg_cc,0.516284
-motif-m2,diameter,5
-motif-m3,n,90
-motif-m3,m,182
-motif-m3,inter_neg_edges,0.68
-motif-m3,intra_pos_edges,0.887701
-motif-m3,f1_pos_neg,0.770091
-motif-m3,avg_cc,0.241621
-motif-m3,diameter,6
-motif-m3,n,112
-motif-m3,m,214
-motif-m3,inter_neg_edges,0.884615
-motif-m3,intra_pos_edges,0.945455
-motif-m3,f1_pos_neg,0.914024
-motif-m3,avg_cc,0.238509
-motif-m3,diameter,6
-motif-m1,n,1
-motif-m1,m,0
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0
-motif-m1,f1_pos_neg,0
-motif-m1,avg_cc,0
-motif-m1,diameter,0
-motif-m2,n,57
-motif-m2,m,134
-motif-m2,inter_neg_edges,0.92
-motif-m2,intra_pos_edges,0.772861
-motif-m2,f1_pos_neg,0.840036
-motif-m2,avg_cc,0.526524
-motif-m2,diameter,5
-motif-m1m2,n,57
-motif-m1m2,m,127
-motif-m1m2,inter_neg_edges,1
-motif-m1m2,intra_pos_edges,0.81672
-motif-m1m2,f1_pos_neg,0.899115
-motif-m1m2,avg_cc,0.469956
-motif-m1m2,diameter,5
-motif-m3,n,101
-motif-m3,m,213
-motif-m3,inter_neg_edges,0.59292
-motif-m3,intra_pos_edges,0.859729
-motif-m3,f1_pos_neg,0.701822
-motif-m3,avg_cc,0.232514
-motif-m3,diameter,5
-motif-m3,n,113
-motif-m3,m,230
-motif-m3,inter_neg_edges,0.666667
-motif-m3,intra_pos_edges,0.931868
-motif-m3,f1_pos_neg,0.777269
-motif-m3,avg_cc,0.263391
-motif-m3,diameter,7
-motif-m3,n,100
-motif-m3,m,206
-motif-m3,inter_neg_edges,0.78
-motif-m3,intra_pos_edges,0.942029
-motif-m3,f1_pos_neg,0.853392
-motif-m3,avg_cc,0.234432
-motif-m3,diameter,6
-motif-m1m2m3,n,118
-motif-m1m2m3,m,246
-motif-m1m2m3,inter_neg_edges,0.619048
-motif-m1m2m3,intra_pos_edges,0.909836
-motif-m1m2m3,f1_pos_neg,0.736788
-motif-m1m2m3,avg_cc,0.278385
-motif-m1m2m3,diameter,6
-motif-m3,n,109
-motif-m3,m,221
-motif-m3,inter_neg_edges,0.673077
-motif-m3,intra_pos_edges,0.918919
-motif-m3,f1_pos_neg,0.777016
-motif-m3,avg_cc,0.245974
-motif-m3,diameter,7
-motif-m1m2m3,n,100
-motif-m1m2m3,m,203
-motif-m1m2m3,inter_neg_edges,0.539823
-motif-m1m2m3,intra_pos_edges,0.836879
-motif-m1m2m3,f1_pos_neg,0.656303
-motif-m1m2m3,avg_cc,0.25785
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,125
-motif-m1m2m3,m,256
-motif-m1m2m3,inter_neg_edges,0.596774
-motif-m1m2m3,intra_pos_edges,0.940937
-motif-m1m2m3,f1_pos_neg,0.730341
-motif-m1m2m3,avg_cc,0.256385
-motif-m1m2m3,diameter,6
-motif-m2,n,57
-motif-m2,m,143
-motif-m2,inter_neg_edges,0.727273
-motif-m2,intra_pos_edges,0.757225
-motif-m2,f1_pos_neg,0.741947
-motif-m2,avg_cc,0.511681
-motif-m2,diameter,5
-motif-m1m2,n,59
-motif-m1m2,m,148
-motif-m1m2,inter_neg_edges,0.56701
-motif-m1m2,intra_pos_edges,0.711485
-motif-m1m2,f1_pos_neg,0.631084
-motif-m1m2,avg_cc,0.493504
-motif-m1m2,diameter,5
-motif-m1m2,n,69
-motif-m1m2,m,177
-motif-m1m2,inter_neg_edges,0.607477
-motif-m1m2,intra_pos_edges,0.778055
-motif-m1m2,f1_pos_neg,0.682265
-motif-m1m2,avg_cc,0.529873
-motif-m1m2,diameter,5
-motif-m1m2,n,64
-motif-m1m2,m,162
-motif-m1m2,inter_neg_edges,0.724771
-motif-m1m2,intra_pos_edges,0.763636
-motif-m1m2,f1_pos_neg,0.743696
-motif-m1m2,avg_cc,0.513853
-motif-m1m2,diameter,5
-motif-m1m2m3,n,112
-motif-m1m2m3,m,216
-motif-m1m2m3,inter_neg_edges,0.896907
-motif-m1m2m3,intra_pos_edges,0.95045
-motif-m1m2m3,f1_pos_neg,0.922903
-motif-m1m2m3,avg_cc,0.246413
-motif-m1m2m3,diameter,7
-motif-m3,n,103
-motif-m3,m,215
-motif-m3,inter_neg_edges,0.683168
-motif-m3,intra_pos_edges,0.936471
-motif-m3,f1_pos_neg,0.790012
-motif-m3,avg_cc,0.282564
-motif-m3,diameter,6
-motif-m1m2m3,n,100
-motif-m1m2m3,m,206
-motif-m1m2m3,inter_neg_edges,0.836364
-motif-m1m2m3,intra_pos_edges,0.947115
-motif-m1m2m3,f1_pos_neg,0.888301
-motif-m1m2m3,avg_cc,0.243759
-motif-m1m2m3,diameter,6
-motif-m3,n,118
-motif-m3,m,245
-motif-m3,inter_neg_edges,0.603053
-motif-m3,intra_pos_edges,0.922105
-motif-m3,f1_pos_neg,0.729208
-motif-m3,avg_cc,0.196018
-motif-m3,diameter,6
-motif-m3,n,114
-motif-m3,m,218
-motif-m3,inter_neg_edges,0.895833
-motif-m3,intra_pos_edges,0.955157
-motif-m3,f1_pos_neg,0.924545
-motif-m3,avg_cc,0.242412
-motif-m3,diameter,7
-motif-m1m2,n,61
-motif-m1m2,m,141
-motif-m1m2,inter_neg_edges,0.951807
-motif-m1m2,intra_pos_edges,0.80814
-motif-m1m2,f1_pos_neg,0.874109
-motif-m1m2,avg_cc,0.47851
-motif-m1m2,diameter,5
-motif-m1m2m3,n,120
-motif-m1m2m3,m,250
-motif-m1m2m3,inter_neg_edges,0.559055
-motif-m1m2m3,intra_pos_edges,0.87574
-motif-m1m2m3,f1_pos_neg,0.682448
-motif-m1m2m3,avg_cc,0.269776
-motif-m1m2m3,diameter,6
-motif-m3,n,117
-motif-m3,m,238
-motif-m3,inter_neg_edges,0.636364
-motif-m3,intra_pos_edges,0.949891
-motif-m3,f1_pos_neg,0.762143
-motif-m3,avg_cc,0.2572
-motif-m1m2m3,n,118
-motif-m3,diameter,6
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.560606
-motif-m1m2m3,intra_pos_edges,0.922449
-motif-m1m2m3,f1_pos_neg,0.697385
-motif-m1m2m3,avg_cc,0.237474
-motif-m1m2m3,diameter,6
-motif-m2,n,55
-motif-m2,m,130
-motif-m2,inter_neg_edges,0.758242
-motif-m2,intra_pos_edges,0.657459
-motif-m2,f1_pos_neg,0.704263
-motif-m2,avg_cc,0.551152
-motif-m2,diameter,5
-motif-m2,n,62
-motif-m2,m,162
-motif-m2,inter_neg_edges,0.711538
-motif-m2,intra_pos_edges,0.738693
-motif-m2,f1_pos_neg,0.724862
-motif-m2,avg_cc,0.502553
-motif-m2,diameter,5
-motif-m1m2,n,69
-motif-m1m2,m,177
-motif-m1m2,inter_neg_edges,0.607477
-motif-m1m2,intra_pos_edges,0.778055
-motif-m1m2,f1_pos_neg,0.682265
-motif-m1m2,avg_cc,0.529873
-motif-m1m2,diameter,5
-motif-m1m2m3,n,90
-motif-m1m2m3,m,191
-motif-m1m2m3,inter_neg_edges,0.622642
-motif-m1m2m3,intra_pos_edges,0.832117
-motif-m1m2m3,f1_pos_neg,0.712298
-motif-m1m2m3,avg_cc,0.260431
-motif-m1m2m3,diameter,5
-motif-m3,n,102
-motif-m3,m,208
-motif-m3,inter_neg_edges,0.850467
-motif-m3,intra_pos_edges,0.934579
-motif-m3,f1_pos_neg,0.890542
-motif-m3,avg_cc,0.217768
-motif-m3,diameter,6
-motif-m3,n,112
-motif-m3,m,222
-motif-m3,inter_neg_edges,0.603448
-motif-m3,intra_pos_edges,0.900452
-motif-m3,f1_pos_neg,0.722623
-motif-m3,avg_cc,0.235547
-motif-m3,diameter,6
-motif-m1m2m3,n,114
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.663717
-motif-m1m2m3,intra_pos_edges,0.947137
-motif-m1m2m3,f1_pos_neg,0.780494
-motif-m1m2m3,avg_cc,0.26613
-motif-m1m2m3,diameter,7
-motif-m1,n,4
-motif-m1,m,3
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.285714
-motif-m1,f1_pos_neg,0.444444
-motif-m1,avg_cc,0
-motif-m1,diameter,2
-motif-m1m2,n,2
-motif-m1m2,m,1
-motif-m1m2,inter_neg_edges,1
-motif-m1m2,intra_pos_edges,0.133333
-motif-m1m2,f1_pos_neg,0.235294
-motif-m1m2,avg_cc,0
-motif-m1m2,diameter,1
-motif-m1m2,n,58
-motif-m1m2,m,136
-motif-m1m2,inter_neg_edges,0.950617
-motif-m1m2,intra_pos_edges,0.795252
-motif-m1m2,f1_pos_neg,0.866022
-motif-m1m2,avg_cc,0.482415
-motif-m1m2,diameter,5
-motif-m1m2,n,58
-motif-m1m2,m,128
-motif-m1m2,inter_neg_edges,1
-motif-m1m2,intra_pos_edges,0.805031
-motif-m1m2,f1_pos_neg,0.891986
-motif-m1m2,avg_cc,0.46175
-motif-m1m2,diameter,5
-motif-m1m2,n,61
-motif-m1m2,m,139
-motif-m1m2,inter_neg_edges,0.950617
-motif-m1m2,intra_pos_edges,0.796512
-motif-m1m2,f1_pos_neg,0.866768
-motif-m1m2,avg_cc,0.457241
-motif-m1m2,diameter,5
-motif-m2,n,55
-motif-m2,m,143
-motif-m2,inter_neg_edges,0.662921
-motif-m2,intra_pos_edges,0.727273
-motif-m2,f1_pos_neg,0.693608
-motif-m2,avg_cc,0.528972
-motif-m2,diameter,5
-motif-m2,n,57
-motif-m2,m,143
-motif-m2,inter_neg_edges,0.727273
-motif-m2,intra_pos_edges,0.757225
-motif-m2,f1_pos_neg,0.741947
-motif-m2,avg_cc,0.511681
-motif-m2,diameter,5
-motif-m1m2m3,n,102
-motif-m1m2m3,m,210
-motif-m1m2m3,inter_neg_edges,0.808696
-motif-m1m2m3,intra_pos_edges,0.940898
-motif-m1m2m3,f1_pos_neg,0.869802
-motif-m1m2m3,avg_cc,0.23541
-motif-m1m2m3,diameter,6
-motif-m3,n,113
-motif-m3,m,216
-motif-m3,inter_neg_edges,0.876289
-motif-m3,intra_pos_edges,0.9375
-motif-m3,f1_pos_neg,0.905861
-motif-m3,avg_cc,0.228934
-motif-m3,diameter,6
-motif-m1m2m3,n,110
-motif-m1m2m3,m,212
-motif-m1m2m3,inter_neg_edges,0.883495
-motif-m1m2m3,intra_pos_edges,0.942792
-motif-m1m2m3,f1_pos_neg,0.912181
-motif-m1m2m3,avg_cc,0.243538
-motif-m1m2m3,diameter,6
-motif-m1,n,11
-motif-m1,m,16
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.285714
-motif-m1,f1_pos_neg,0.444444
-motif-m1,avg_cc,0.360606
-motif-m1,diameter,4
-motif-m1m2m3,n,114
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.663717
-motif-m1m2m3,intra_pos_edges,0.947137
-motif-m1m2m3,f1_pos_neg,0.780494
-motif-m1m2m3,avg_cc,0.26613
-motif-m1m2m3,diameter,7
-motif-m3,n,90
-motif-m3,m,163
-motif-m3,inter_neg_edges,0.833333
-motif-m3,intra_pos_edges,0.782828
-motif-m3,f1_pos_neg,0.807292
-motif-m3,avg_cc,0.28356
-motif-m3,diameter,6
-motif-m3,n,106
-motif-m3,m,209
-motif-m3,inter_neg_edges,0.891892
-motif-m3,intra_pos_edges,0.964371
-motif-m3,f1_pos_neg,0.926716
-motif-m3,avg_cc,0.22708
-motif-m3,diameter,6
-motif-m1m2m3,n,96
-motif-m1m2m3,m,180
-motif-m1m2m3,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.9375
-motif-m1m2m3,f1_pos_neg,0.967742
-motif-m1m2m3,avg_cc,0.27185
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,131
-motif-m1m2m3,m,284
-motif-m1m2m3,inter_neg_edges,0.438356
-motif-m1m2m3,intra_pos_edges,0.923954
-motif-m1m2m3,f1_pos_neg,0.594609
-motif-m1m2m3,avg_cc,0.217324
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,125
-motif-m1m2m3,m,254
-motif-m1m2m3,inter_neg_edges,0.59375
-motif-m1m2m3,intra_pos_edges,0.924949
-motif-m1m2m3,f1_pos_neg,0.723236
-motif-m1m2m3,avg_cc,0.266159
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,110
-motif-m1m2m3,m,228
-motif-m1m2m3,inter_neg_edges,0.663551
-motif-m1m2m3,intra_pos_edges,0.950226
-motif-m1m2m3,f1_pos_neg,0.781426
-motif-m1m2m3,avg_cc,0.277217
-motif-m1m2m3,diameter,6
-motif-m3,n,100
-motif-m3,m,206
-motif-m3,inter_neg_edges,0.78
-motif-m3,intra_pos_edges,0.942029
-motif-m3,f1_pos_neg,0.853392
-motif-m3,avg_cc,0.234432
-motif-m3,diameter,6
-motif-m2,n,63
-motif-m2,m,165
-motif-m2,inter_neg_edges,0.698113
-motif-m2,intra_pos_edges,0.735802
-motif-m2,f1_pos_neg,0.716463
-motif-m2,avg_cc,0.513383
-motif-m2,diameter,5
-motif-m1,n,11
-motif-m1,m,16
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.285714
-motif-m1,f1_pos_neg,0.444444
-motif-m1,avg_cc,0.360606
-motif-m1,diameter,4
-motif-m1m2m3,n,118
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.560606
-motif-m1m2m3,intra_pos_edges,0.922449
-motif-m1m2m3,f1_pos_neg,0.697385
-motif-m1m2m3,avg_cc,0.237474
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,102
-motif-m1m2m3,m,202
-motif-m1m2m3,inter_neg_edges,0.910112
-motif-m1m2m3,intra_pos_edges,0.93617
-motif-m1m2m3,f1_pos_neg,0.922957
-motif-m1m2m3,avg_cc,0.262085
-motif-m1m2m3,diameter,6
-motif-m3,n,115
-motif-m3,m,221
-motif-m3,inter_neg_edges,0.886792
-motif-m3,intra_pos_edges,0.951327
-motif-m3,f1_pos_neg,0.917927
-motif-m3,avg_cc,0.239518
-motif-m3,diameter,6
-motif-m3,n,91
-motif-m3,m,178
-motif-m3,inter_neg_edges,0.744681
-motif-m3,intra_pos_edges,0.805825
-motif-m3,f1_pos_neg,0.774047
-motif-m3,avg_cc,0.221513
-motif-m3,diameter,6
-motif-m3,n,96
-motif-m3,m,199
-motif-m3,inter_neg_edges,0.814433
-motif-m3,intra_pos_edges,0.940594
-motif-m3,f1_pos_neg,0.872979
-motif-m3,avg_cc,0.250881
-motif-m3,diameter,6
-motif-m1m2m3,n,138
-motif-m1m2m3,m,275
-motif-m1m2m3,inter_neg_edges,0.587786
-motif-m1m2m3,intra_pos_edges,0.930582
-motif-m1m2m3,f1_pos_neg,0.720488
-motif-m1m2m3,avg_cc,0.243275
-motif-m1m2m3,diameter,6
-motif-m3,n,103
-motif-m3,m,209
-motif-m3,inter_neg_edges,0.78
-motif-m3,intra_pos_edges,0.942857
-motif-m3,f1_pos_neg,0.853731
-motif-m3,avg_cc,0.227054
-motif-m3,diameter,6
-motif-m3,n,94
-motif-m3,m,192
-motif-m3,inter_neg_edges,0.862069
-motif-m3,intra_pos_edges,0.944162
-motif-m3,f1_pos_neg,0.90125
-motif-m3,avg_cc,0.245105
-motif-m3,diameter,6
-motif-m1m2m3,n,108
-motif-m1m2m3,m,225
-motif-m1m2m3,inter_neg_edges,0.651376
-motif-m1m2m3,intra_pos_edges,0.9217
-motif-m1m2m3,f1_pos_neg,0.763311
-motif-m1m2m3,avg_cc,0.246454
-motif-m1m2m3,diameter,5
-motif-m1m2,n,69
-motif-m1m2,m,177
-motif-m1m2,inter_neg_edges,0.684211
-motif-m1m2,intra_pos_edges,0.75895
-motif-m1m2,f1_pos_neg,0.719645
-motif-m1m2,avg_cc,0.477597
-motif-m1m2,diameter,6
-motif-m3,n,101
-motif-m3,m,211
-motif-m3,inter_neg_edges,0.757576
-motif-m3,intra_pos_edges,0.927739
-motif-m3,f1_pos_neg,0.834067
-motif-m3,avg_cc,0.272913
-motif-m3,diameter,6
-motif-m2,n,59
-motif-m2,m,147
-motif-m2,inter_neg_edges,0.733333
-motif-m2,intra_pos_edges,0.769231
-motif-m2,f1_pos_neg,0.750853
-motif-m2,avg_cc,0.512731
-motif-m2,diameter,5
-motif-m2,n,59
-motif-m2,m,147
-motif-m2,inter_neg_edges,0.733333
-motif-m2,intra_pos_edges,0.769231
-motif-m2,f1_pos_neg,0.750853
-motif-m2,avg_cc,0.512731
-motif-m2,diameter,5
-motif-m1m2,n,61
-motif-m1m2,m,139
-motif-m1m2,inter_neg_edges,0.950617
-motif-m1m2,intra_pos_edges,0.796512
-motif-m1m2,f1_pos_neg,0.866768
-motif-m1m2,avg_cc,0.457241
-motif-m1m2,diameter,5
-motif-m1m2,n,61
-motif-m1m2,m,155
-motif-m1m2,inter_neg_edges,0.612245
-motif-m1m2,intra_pos_edges,0.751381
-motif-m1m2,f1_pos_neg,0.674715
-motif-m1m2,avg_cc,0.514153
-motif-m1m2,diameter,5
-motif-m3,n,113
-motif-m3,m,230
-motif-m3,inter_neg_edges,0.666667
-motif-m3,intra_pos_edges,0.931868
-motif-m3,f1_pos_neg,0.777269
-motif-m3,avg_cc,0.263391
-motif-m3,diameter,7
-motif-m1m2,n,70
-motif-m1m2,m,179
-motif-m1m2,inter_neg_edges,0.684211
-motif-m1m2,intra_pos_edges,0.764846
-motif-m1m2,f1_pos_neg,0.722285
-motif-m1m2,avg_cc,0.482917
-motif-m1m2,diameter,6
-motif-m1m2,n,47
-motif-m1m2,m,98
-motif-m1m2,inter_neg_edges,0.818182
-motif-m1m2,intra_pos_edges,0.608696
-motif-m1m2,f1_pos_neg,0.698061
-motif-m1m2,avg_cc,0.528027
-motif-m1m2,diameter,5
-motif-m1m2,n,70
-motif-m1m2,m,179
-motif-m1m2,inter_neg_edges,0.684211
-motif-m1m2,intra_pos_edges,0.764846
-motif-m1m2,f1_pos_neg,0.722285
-motif-m1m2,avg_cc,0.482917
-motif-m1m2,diameter,6
-motif-m1m2m3,n,102
-motif-m1m2m3,m,210
-motif-m1m2m3,inter_neg_edges,0.808696
-motif-m1m2m3,intra_pos_edges,0.940898
-motif-m1m2m3,f1_pos_neg,0.869802
-motif-m1m2m3,avg_cc,0.23541
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,98
-motif-m1m2m3,m,201
-motif-m1m2m3,inter_neg_edges,0.890909
-motif-m1m2m3,intra_pos_edges,0.951219
-motif-m1m2m3,f1_pos_neg,0.920077
-motif-m1m2m3,avg_cc,0.251967
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,94
-motif-m1m2m3,m,198
-motif-m1m2m3,inter_neg_edges,0.814433
-motif-m1m2m3,intra_pos_edges,0.942643
-motif-m1m2m3,f1_pos_neg,0.873861
-motif-m1m2m3,avg_cc,0.253248
-motif-m1m2m3,diameter,6
-motif-m1m2,n,61
-motif-m1m2,m,141
-motif-m1m2,inter_neg_edges,0.951807
-motif-m1m2,intra_pos_edges,0.80814
-motif-m1m2,f1_pos_neg,0.874109
-motif-m1m2,avg_cc,0.47851
-motif-m1m2,diameter,5
-motif-m3,n,113
-motif-m3,m,230
-motif-m3,inter_neg_edges,0.666667
-motif-m3,intra_pos_edges,0.931868
-motif-m3,f1_pos_neg,0.777269
-motif-m3,avg_cc,0.263391
-motif-m3,diameter,7
-motif-m1m2m3,n,112
-motif-m1m2m3,m,218
-motif-m1m2m3,inter_neg_edges,0.877551
-motif-m1m2m3,intra_pos_edges,0.950673
-motif-m1m2m3,f1_pos_neg,0.91265
-motif-m1m2m3,avg_cc,0.24733
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,74
-motif-m1m2m3,m,137
-motif-m1m2m3,inter_neg_edges,0.917808
-motif-m1m2m3,intra_pos_edges,0.817073
-motif-m1m2m3,f1_pos_neg,0.864516
-motif-m1m2m3,avg_cc,0.248117
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,101
-motif-m1m2m3,m,207
-motif-m1m2m3,inter_neg_edges,0.798165
-motif-m1m2m3,intra_pos_edges,0.937799
-motif-m1m2m3,f1_pos_neg,0.862366
-motif-m1m2m3,avg_cc,0.222227
-motif-m1m2m3,diameter,6
-motif-m3,n,88
-motif-m3,m,169
-motif-m3,inter_neg_edges,0.888889
-motif-m3,intra_pos_edges,0.891304
-motif-m3,f1_pos_neg,0.890095
-motif-m3,avg_cc,0.22712
-motif-m3,diameter,5
-motif-m3,n,100
-motif-m3,m,189
-motif-m3,inter_neg_edges,1
-motif-m3,intra_pos_edges,0.947368
-motif-m3,f1_pos_neg,0.972973
-motif-m3,avg_cc,0.265681
-motif-m3,diameter,5
-motif-m1,n,4
-motif-m1,m,4
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.210526
-motif-m1,f1_pos_neg,0.347826
-motif-m1,avg_cc,0.583333
-motif-m1,diameter,2
-motif-m1m2m3,n,105
-motif-m1m2m3,m,212
-motif-m1m2m3,inter_neg_edges,0.821429
-motif-m1m2m3,intra_pos_edges,0.955083
-motif-m1m2m3,f1_pos_neg,0.883228
-motif-m1m2m3,avg_cc,0.211729
-motif-m1m2m3,diameter,6
-motif-m1m2,n,61
-motif-m1m2,m,141
-motif-m1m2,inter_neg_edges,0.951807
-motif-m1m2,intra_pos_edges,0.80814
-motif-m1m2,f1_pos_neg,0.874109
-motif-m1m2,avg_cc,0.47851
-motif-m1m2,diameter,5
-motif-m1,n,1
-motif-m1,m,0
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0
-motif-m1,f1_pos_neg,0
-motif-m1,avg_cc,0
-motif-m1,diameter,0
-motif-m1m2m3,n,114
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.663717
-motif-m1m2m3,intra_pos_edges,0.947137
-motif-m1m2m3,f1_pos_neg,0.780494
-motif-m1m2m3,avg_cc,0.26613
-motif-m1m2m3,diameter,7
-motif-m1m2,n,60
-motif-m1m2,m,140
-motif-m1m2,inter_neg_edges,0.951807
-motif-m1m2,intra_pos_edges,0.807018
-motif-m1m2,f1_pos_neg,0.873453
-motif-m1m2,avg_cc,0.486956
-motif-m1m2,diameter,5
-motif-m1m2m3,n,207
-motif-m1m2m3,m,504
-motif-m1m2m3,inter_neg_edges,0.0490196
-motif-m1m2m3,intra_pos_edges,0.996328
-motif-m1m2m3,f1_pos_neg,0.0934419
-motif-m1m2m3,avg_cc,0.263068
-motif-m1m2m3,diameter,6
-motif-m1,n,1
-motif-m1,m,0
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0
-motif-m1,f1_pos_neg,0
-motif-m1,avg_cc,0
-motif-m1,diameter,0
-motif-m1m2m3,n,105
-motif-m1m2m3,m,223
-motif-m1m2m3,inter_neg_edges,0.716667
-motif-m1m2m3,intra_pos_edges,0.9217
-motif-m1m2m3,f1_pos_neg,0.806354
-motif-m1m2m3,avg_cc,0.266465
-motif-m1m2m3,diameter,6
-motif-m3,n,103
-motif-m3,m,209
-motif-m3,inter_neg_edges,0.78
-motif-m3,intra_pos_edges,0.942857
-motif-m3,f1_pos_neg,0.853731
-motif-m3,avg_cc,0.227054
-motif-m3,diameter,6
-motif-m3,n,117
-motif-m3,m,238
-motif-m3,inter_neg_edges,0.62963
-motif-m3,intra_pos_edges,0.947826
-motif-m3,f1_pos_neg,0.756635
-motif-m3,avg_cc,0.257767
-motif-m3,diameter,6
-motif-m1m2m3,n,114
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.663717
-motif-m1m2m3,intra_pos_edges,0.947137
-motif-m1m2m3,f1_pos_neg,0.780494
-motif-m1m2m3,avg_cc,0.26613
-motif-m1m2m3,diameter,7
-motif-m1m2m3,n,100
-motif-m1m2m3,m,216
-motif-m1m2m3,inter_neg_edges,0.65
-motif-m1m2m3,intra_pos_edges,0.890411
-motif-m1m2m3,f1_pos_neg,0.751445
-motif-m1m2m3,avg_cc,0.254333
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,100
-motif-m1m2m3,m,188
-motif-m1m2m3,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.944724
-motif-m1m2m3,f1_pos_neg,0.971576
-motif-m1m2m3,avg_cc,0.246348
-motif-m1m2m3,diameter,6
-motif-m3,n,119
-motif-m3,m,243
-motif-m3,inter_neg_edges,0.648
-motif-m3,intra_pos_edges,0.938429
-motif-m3,f1_pos_neg,0.76663
-motif-m3,avg_cc,0.255921
-motif-m3,diameter,6
-motif-m3,n,101
-motif-m3,m,202
-motif-m3,inter_neg_edges,0.516129
-motif-m3,intra_pos_edges,0.8
-motif-m3,f1_pos_neg,0.627451
-motif-m3,avg_cc,0.24964
-motif-m3,diameter,5
-motif-m1m2,n,64
-motif-m1m2,m,162
-motif-m1m2,inter_neg_edges,0.724771
-motif-m1m2,intra_pos_edges,0.763636
-motif-m1m2,f1_pos_neg,0.743696
-motif-m1m2,avg_cc,0.513853
-motif-m1m2,diameter,5
-motif-m2,n,61
-motif-m2,m,159
-motif-m2,inter_neg_edges,0.666667
-motif-m2,intra_pos_edges,0.737113
-motif-m2,f1_pos_neg,0.700122
-motif-m2,avg_cc,0.548029
-motif-m2,diameter,5
-motif-m1m2m3,n,103
-motif-m1m2m3,m,204
-motif-m1m2m3,inter_neg_edges,0.866667
-motif-m1m2m3,intra_pos_edges,0.918793
-motif-m1m2m3,f1_pos_neg,0.891969
-motif-m1m2m3,avg_cc,0.254449
-motif-m1m2m3,diameter,6
-motif-m1m2,n,1
-motif-m1m2,m,0
-motif-m1m2,inter_neg_edges,1
-motif-m1m2,intra_pos_edges,0
-motif-m1m2,f1_pos_neg,0
-motif-m1m2,avg_cc,0
-motif-m1m2,diameter,0
-motif-m1m2m3,n,105
-motif-m1m2m3,m,213
-motif-m1m2m3,inter_neg_edges,0.808696
-motif-m1m2m3,intra_pos_edges,0.941725
-motif-m1m2m3,f1_pos_neg,0.870155
-motif-m1m2m3,avg_cc,0.228199
-motif-m1m2m3,diameter,6
-motif-m2,n,57
-motif-m2,m,134
-motif-m2,inter_neg_edges,0.92
-motif-m2,intra_pos_edges,0.772861
-motif-m2,f1_pos_neg,0.840036
-motif-m2,avg_cc,0.526524
-motif-m2,diameter,5
-motif-m3,n,113
-motif-m3,m,230
-motif-m3,inter_neg_edges,0.666667
-motif-m3,intra_pos_edges,0.931868
-motif-m3,f1_pos_neg,0.777269
-motif-m3,avg_cc,0.263391
-motif-m3,diameter,7
-motif-m1m2m3,n,90
-motif-m1m2m3,m,182
-motif-m1m2m3,inter_neg_edges,0.431193
-motif-m1m2m3,intra_pos_edges,0.751244
-motif-m1m2m3,f1_pos_neg,0.547904
-motif-m1m2m3,avg_cc,0.257979
-motif-m1m2m3,diameter,5
-motif-m3,n,112
-motif-m3,m,227
-motif-m3,inter_neg_edges,0.52459
-motif-m3,intra_pos_edges,0.86087
-motif-m3,f1_pos_neg,0.651919
-motif-m3,avg_cc,0.254486
-motif-m3,diameter,6
-motif-m2,n,50
-motif-m2,m,127
-motif-m2,inter_neg_edges,0.888889
-motif-m2,intra_pos_edges,0.743902
-motif-m2,f1_pos_neg,0.809959
-motif-m2,avg_cc,0.491454
-motif-m2,diameter,5
-motif-m3,n,127
-motif-m3,m,258
-motif-m3,inter_neg_edges,0.6
-motif-m3,intra_pos_edges,0.94332
-motif-m3,f1_pos_neg,0.733473
-motif-m3,avg_cc,0.252347
-motif-m3,diameter,7
-motif-m2,n,59
-motif-m2,m,152
-motif-m2,inter_neg_edges,0.677419
-motif-m2,intra_pos_edges,0.72679
-motif-m2,f1_pos_neg,0.701237
-motif-m2,avg_cc,0.538655
-motif-m2,diameter,5
-motif-m3,n,103
-motif-m3,m,217
-motif-m3,inter_neg_edges,0.695238
-motif-m3,intra_pos_edges,0.919908
-motif-m3,f1_pos_neg,0.791947
-motif-m3,avg_cc,0.286039
-motif-m3,diameter,6
-motif-m1m2,n,61
-motif-m1m2,m,141
-motif-m1m2,inter_neg_edges,0.951807
-motif-m1m2,intra_pos_edges,0.80814
-motif-m1m2,f1_pos_neg,0.874109
-motif-m1m2,avg_cc,0.47851
-motif-m1m2,diameter,5
-motif-m1m2m3,n,98
-motif-m1m2m3,m,193
-motif-m1m2m3,inter_neg_edges,0.938776
-motif-m1m2m3,intra_pos_edges,0.913462
-motif-m1m2m3,f1_pos_neg,0.925946
-motif-m1m2m3,avg_cc,0.226187
-motif-m1m2m3,diameter,6
-motif-m3,n,118
-motif-m3,m,239
-motif-m3,inter_neg_edges,0.636364
-motif-m3,intra_pos_edges,0.948052
-motif-m3,f1_pos_neg,0.76155
-motif-m3,avg_cc,0.254937
-motif-m3,diameter,6
-motif-m1m2m3,n,114
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.663717
-motif-m1m2m3,intra_pos_edges,0.947137
-motif-m1m2m3,f1_pos_neg,0.780494
-motif-m1m2m3,avg_cc,0.26613
-motif-m1m2m3,diameter,7
-motif-m3,n,100
-motif-m3,m,206
-motif-m3,inter_neg_edges,0.78
-motif-m3,intra_pos_edges,0.942029
-motif-m3,f1_pos_neg,0.853392
-motif-m3,avg_cc,0.234432
-motif-m3,diameter,6
-motif-m1m2,n,69
-motif-m1m2,m,177
-motif-m1m2,inter_neg_edges,0.607477
-motif-m1m2,intra_pos_edges,0.778055
-motif-m1m2,f1_pos_neg,0.682265
-motif-m1m2,avg_cc,0.529873
-motif-m1m2,diameter,5
-motif-m3,n,108
-motif-m3,m,216
-motif-m3,inter_neg_edges,0.826087
-motif-m3,intra_pos_edges,0.95814
-motif-m3,f1_pos_neg,0.887227
-motif-m3,avg_cc,0.204827
-motif-m3,diameter,6
-motif-m1m2,f1_pos_neg,0.874109
-motif-m1m2,avg_cc,0.47851
-motif-m1m2,diameter,5
-motif-m1m2m3,n,114
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.663717
-motif-m1m2m3,intra_pos_edges,0.947137
-motif-m1m2m3,f1_pos_neg,0.780494
-motif-m1m2m3,avg_cc,0.26613
-motif-m1m2m3,diameter,7
-motif-m2,n,59
-motif-m2,m,147
-motif-m2,inter_neg_edges,0.733333
-motif-m2,intra_pos_edges,0.769231
-motif-m2,f1_pos_neg,0.750853
-motif-m2,avg_cc,0.512731
-motif-m2,diameter,5
-motif-m1,n,5
-motif-m1,m,6
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.315789
-motif-m1,f1_pos_neg,0.48
-motif-m1,avg_cc,0.6
-motif-m1,diameter,2
-motif-m1m2,n,71
-motif-m1m2,m,182
-motif-m1m2,inter_neg_edges,0.65812
-motif-m1m2,intra_pos_edges,0.767772
-motif-m1m2,f1_pos_neg,0.70873
-motif-m1m2,avg_cc,0.490183
-motif-m1m2,diameter,6
-motif-m3,n,120
-motif-m3,m,244
-motif-m3,inter_neg_edges,0.648
-motif-m3,intra_pos_edges,0.940678
-motif-m3,f1_pos_neg,0.767379
-motif-m3,avg_cc,0.252399
-motif-m3,diameter,7
-motif-m2,n,55
-motif-m2,m,140
-motif-m2,inter_neg_edges,0.770833
-motif-m2,intra_pos_edges,0.724719
-motif-m2,f1_pos_neg,0.747065
-motif-m2,avg_cc,0.543964
-motif-m2,diameter,5
-motif-m1m2m3,n,114
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.663717
-motif-m1m2m3,intra_pos_edges,0.947137
-motif-m1m2m3,f1_pos_neg,0.780494
-motif-m1m2m3,avg_cc,0.26613
-motif-m1m2m3,diameter,7
-motif-m1m2m3,n,98
-motif-m1m2m3,m,201
-motif-m1m2m3,inter_neg_edges,0.890909
-motif-m3,inter_neg_edges,0.6
-motif-m3,intra_pos_edges,0.919492
-motif-m3,f1_pos_neg,0.726157
-motif-m3,avg_cc,0.254758
-motif-m3,diameter,7
-motif-m1m2,n,61
-motif-m1m2,m,154
-motif-m1m2,inter_neg_edges,0.698113
-motif-m1m2,intra_pos_edges,0.739946
-motif-m1m2,f1_pos_neg,0.718421
-motif-m1m2,avg_cc,0.553607
-motif-m1m2,diameter,5
-motif-m3,n,114
-motif-m3,m,242
-motif-m3,inter_neg_edges,0.6
-motif-m3,intra_pos_edges,0.919492
-motif-m3,f1_pos_neg,0.726157
-motif-m3,avg_cc,0.254758
-motif-m3,diameter,7
-motif-m1m2m3,n,113
-motif-m1m2m3,m,219
-motif-m1m2m3,inter_neg_edges,0.877551
-motif-m1m2m3,intra_pos_edges,0.95302
-motif-m1m2m3,f1_pos_neg,0.91373
-motif-m1m2m3,avg_cc,0.243666
-motif-m1m2m3,diameter,7
-motif-m1m2m3,n,114
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.663717
-motif-m1m2m3,intra_pos_edges,0.947137
-motif-m1m2m3,f1_pos_neg,0.780494
-motif-m1m2m3,avg_cc,0.26613
-motif-m1m2m3,diameter,7
-motif-m1m2,n,66
-motif-m1m2,m,171
-motif-m1m2,inter_neg_edges,0.660714
-motif-m1m2,intra_pos_edges,0.754342
-motif-m1m2,f1_pos_neg,0.704431
-motif-m1m2,avg_cc,0.51306
-motif-m1m2,diameter,5
-motif-m1m2m3,n,110
-motif-m1m2m3,m,212
-motif-m1m2m3,inter_neg_edges,0.914894
-motif-m1m2m3,intra_pos_edges,0.951945
-motif-m1m2m3,f1_pos_neg,0.933052
-motif-m1m2m3,avg_cc,0.252278
-motif-m1m2m3,diameter,7
-motif-m1m2m3,n,99
-motif-m1m2m3,m,211
-motif-m1m2m3,inter_neg_edges,0.708738
-motif-m1m2m3,intra_pos_edges,0.920188
-motif-m1m2m3,f1_pos_neg,0.800739
-motif-m1m2m3,avg_cc,0.300053
-motif-m1m2m3,diameter,6
-motif-m1,diameter,4
-motif-m2,n,61
-motif-m2,m,159
-motif-m2,inter_neg_edges,0.666667
-motif-m2,intra_pos_edges,0.737113
-motif-m2,f1_pos_neg,0.700122
-motif-m2,avg_cc,0.548029
-motif-m2,diameter,5
-motif-m2,n,55
-motif-m2,m,140
-motif-m2,inter_neg_edges,0.770833
-motif-m2,intra_pos_edges,0.724719
-motif-m2,f1_pos_neg,0.747065
-motif-m2,avg_cc,0.543964
-motif-m2,diameter,5
-motif-m3,n,114
-motif-m3,m,242
-motif-m3,inter_neg_edges,0.6
-motif-m3,intra_pos_edges,0.919492
-motif-m3,f1_pos_neg,0.726157
-motif-m3,avg_cc,0.254758
-motif-m3,diameter,7
-motif-m3,n,114
-motif-m3,m,242
-motif-m3,inter_neg_edges,0.6
-motif-m3,intra_pos_edges,0.919492
-motif-m3,f1_pos_neg,0.726157
-motif-m3,avg_cc,0.254758
-motif-m3,diameter,7
-motif-m1m2m3,n,96
-motif-m1m2m3,m,197
-motif-m1m2m3,inter_neg_edges,0.826923
-motif-m1m2m3,intra_pos_edges,0.923833
-motif-m1m2m3,f1_pos_neg,0.872696
-motif-m1m2m3,avg_cc,0.231627
-motif-m1m2m3,diameter,6
-motif-m2,n,57
-motif-m2,m,134
-motif-m2,inter_neg_edges,0.92
-motif-m2,intra_pos_edges,0.772861
-motif-m2,f1_pos_neg,0.840036
-motif-m2,avg_cc,0.526524
-motif-m2,diameter,5
-motif-m3,n,122
-motif-m3,m,244
-motif-m3,inter_neg_edges,0.672131
-motif-m3,intra_pos_edges,0.955224
-motif-m3,f1_pos_neg,0.789054
-motif-m3,avg_cc,0.246787
-motif-m3,diameter,7
-motif-m3,n,124
-motif-m3,m,249
-motif-m3,inter_neg_edges,0.634921
-motif-m3,intra_pos_edges,0.94958
-motif-m3,f1_pos_neg,0.761007
-motif-m3,f1_pos_neg,0.818803
-motif-m3,avg_cc,0.249037
-motif-m3,diameter,6
-motif-m1m2,n,62
-motif-m1m2,m,151
-motif-m1m2,inter_neg_edges,0.705263
-motif-m1m2,intra_pos_edges,0.789625
-motif-m1m2,f1_pos_neg,0.745064
-motif-m1m2,avg_cc,0.480701
-motif-m1m2,diameter,5
-motif-m2,n,63
-motif-m2,m,165
-motif-m2,inter_neg_edges,0.698113
-motif-m2,intra_pos_edges,0.735802
-motif-m2,f1_pos_neg,0.716463
-motif-m2,avg_cc,0.513383
-motif-m2,diameter,5
-motif-m3,n,96
-motif-m3,m,195
-motif-m3,inter_neg_edges,0.846154
-motif-m3,intra_pos_edges,0.937656
-motif-m3,f1_pos_neg,0.889558
-motif-m3,avg_cc,0.247471
-motif-m3,diameter,6
-motif-m1m2m3,n,105
-motif-m1m2m3,m,220
-motif-m1m2m3,inter_neg_edges,0.747899
-motif-m1m2m3,intra_pos_edges,0.927602
-motif-m1m2m3,f1_pos_neg,0.828114
-motif-m1m2m3,avg_cc,0.287073
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,122
-motif-m1m2m3,m,244
-motif-m1m2m3,inter_neg_edges,0.672131
-motif-m1m2m3,intra_pos_edges,0.955224
-motif-m1m2m3,f1_pos_neg,0.789054
-motif-m1m2m3,avg_cc,0.246787
-motif-m1m2m3,diameter,7
-motif-m2,n,60
-motif-m2,m,156
-motif-m2,inter_neg_edges,0.72
-motif-m2,intra_pos_edges,0.718987
-motif-m2,f1_pos_neg,0.719493
-motif-m2,avg_cc,0.516014
-motif-m2,diameter,5
-motif-m3,n,96
-motif-m3,m,195
-motif-m3,inter_neg_edges,0.846154
-motif-m3,intra_pos_edges,0.937656
-motif-m3,f1_pos_neg,0.889558
-motif-m3,avg_cc,0.247471
-motif-m3,diameter,6
-motif-m1m2,n,57
-motif-m1m2,m,127
-motif-m1m2,inter_neg_edges,1
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.157895
-motif-m1,f1_pos_neg,0.272727
-motif-m1,avg_cc,0
-motif-m1,diameter,3
-motif-m2,n,67
-motif-m2,m,176
-motif-m2,inter_neg_edges,0.636364
-motif-m2,intra_pos_edges,0.737589
-motif-m2,f1_pos_neg,0.683247
-motif-m2,avg_cc,0.5024
-motif-m2,diameter,5
-motif-m2,n,79
-motif-m2,m,216
-motif-m2,inter_neg_edges,0.508197
-motif-m2,intra_pos_edges,0.748491
-motif-m2,f1_pos_neg,0.60537
-motif-m2,avg_cc,0.541732
-motif-m2,diameter,5
-motif-m1m2m3,n,130
-motif-m1m2m3,m,279
-motif-m1m2m3,inter_neg_edges,0.475177
-motif-m1m2m3,intra_pos_edges,0.930769
-motif-m1m2m3,f1_pos_neg,0.629157
-motif-m1m2m3,avg_cc,0.239177
-motif-m1m2m3,diameter,6
-motif-m2,n,56
-motif-m2,m,142
-motif-m2,inter_neg_edges,0.727273
-motif-m2,intra_pos_edges,0.758017
-motif-m2,f1_pos_neg,0.742327
-motif-m2,avg_cc,0.521145
-motif-m2,diameter,5
-motif-m1,n,5
-motif-m1,m,6
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.375
-motif-m1,f1_pos_neg,0.545455
-motif-m1,avg_cc,0.533333
-motif-m1,diameter,3
-motif-m2,n,53
-motif-m2,m,134
-motif-m2,inter_neg_edges,0.869565
-motif-m2,intra_pos_edges,0.755162
-motif-m2,f1_pos_neg,0.808336
-motif-m2,avg_cc,0.469176
-motif-m2,diameter,5
-motif-m3,n,97
-motif-m3,m,193
-motif-m3,inter_neg_edges,0.733333
-motif-m3,intra_pos_edges,0.855792
-motif-m3,f1_pos_neg,0.789844
-motif-m3,avg_cc,0.2378
-motif-m3,diameter,6
-motif-m3,n,115
-motif-m1m2,n,59
-motif-m1m2,m,132
-motif-m1m2,inter_neg_edges,0.95
-motif-m1m2,intra_pos_edges,0.790274
-motif-m1m2,f1_pos_neg,0.862807
-motif-m1m2,avg_cc,0.431135
-motif-m1m2,diameter,5
-motif-m1m2m3,n,124
-motif-m1m2m3,m,255
-motif-m1m2m3,inter_neg_edges,0.596774
-motif-m1m2m3,intra_pos_edges,0.940695
-motif-m1m2m3,f1_pos_neg,0.730268
-motif-m1m2m3,avg_cc,0.25995
-motif-m1m2m3,diameter,7
-motif-m1,n,19
-motif-m1,m,31
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.410596
-motif-m1,f1_pos_neg,0.58216
-motif-m1,avg_cc,0.461404
-motif-m1,diameter,4
-motif-m1m2m3,n,102
-motif-m1m2m3,m,205
-motif-m1m2m3,inter_neg_edges,0.866667
-motif-m1m2m3,intra_pos_edges,0.925581
-motif-m1m2m3,f1_pos_neg,0.895156
-motif-m1m2m3,avg_cc,0.260258
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,102
-motif-m1m2m3,m,210
-motif-m1m2m3,n,104
-motif-m1m2m3,m,215
-motif-m1m2m3,inter_neg_edges,0.578947
-motif-m1m2m3,intra_pos_edges,0.876147
-motif-m1m2m3,inter_neg_edges,0.808696
-motif-m1m2m3,f1_pos_neg,0.697196
-motif-m1m2m3,avg_cc,0.275309
-motif-m1m2m3,diameter,5
-motif-m1m2m3,intra_pos_edges,0.940898
-motif-m1m2m3,f1_pos_neg,0.869802
-motif-m1m2m3,avg_cc,0.23541
-motif-m1m2m3,diameter,6
-motif-m1m2,n,58
-motif-m1m2,m,141
-motif-m1m2,inter_neg_edges,0.895833
-motif-m1m2,intra_pos_edges,0.781609
-motif-m1m2,f1_pos_neg,0.834832
-motif-m1m2,avg_cc,0.428286
-motif-m1m2,diameter,6
-motif-m1m2m3,n,99
-motif-m1m2m3,m,211
-motif-m1m2m3,inter_neg_edges,0.708738
-motif-m1m2m3,intra_pos_edges,0.920188
-motif-m1m2m3,f1_pos_neg,0.800739
-motif-m1m2m3,avg_cc,0.300053
-motif-m1m2m3,diameter,6
-motif-m1,n,9
-motif-m1,m,12
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.3
-motif-m1,f1_pos_neg,0.461538
-motif-m1,avg_cc,0.466667
-motif-m1,diameter,5
-motif-m2,n,56
-motif-m2,m,142
-motif-m2,inter_neg_edges,0.727273
-motif-m2,intra_pos_edges,0.758017
-motif-m2,f1_pos_neg,0.742327
-motif-m2,avg_cc,0.521145
-motif-m2,diameter,5
-motif-m3,n,113
-motif-m3,m,230
-motif-m3,inter_neg_edges,0.666667
-motif-m3,intra_pos_edges,0.931868
-motif-m3,f1_pos_neg,0.777269
-motif-m3,avg_cc,0.263391
-motif-m3,diameter,7
-motif-m1m2m3,n,106
-motif-m1m2m3,m,212
-motif-m1m2m3,inter_neg_edges,0.858407
-motif-m1m2m3,intra_pos_edges,0.946636
-motif-m1m2m3,f1_pos_neg,0.900365
-motif-m1m2m3,avg_cc,0.202581
-motif-m1m2m3,diameter,6
-motif-m2,n,51
-motif-m2,m,127
-motif-m2,inter_neg_edges,0.865169
-motif-m2,intra_pos_edges,0.744615
-motif-m2,f1_pos_neg,0.800378
-motif-m2,avg_cc,0.500712
-motif-m2,diameter,5
-motif-m3,n,109
-motif-m3,m,221
-motif-m3,inter_neg_edges,0.673077
-motif-m3,intra_pos_edges,0.918919
-motif-m3,f1_pos_neg,0.777016
-motif-m3,avg_cc,0.245974
-motif-m3,diameter,7
-motif-m3,n,99
-motif-m3,m,205
-motif-m3,inter_neg_edges,0.840708
-motif-m3,intra_pos_edges,0.940048
-motif-m3,f1_pos_neg,0.887607
-motif-m3,avg_cc,0.259379
-motif-m3,diameter,6
-motif-m1m2,n,61
-motif-m1m2,m,141
-motif-m1m2,inter_neg_edges,0.951807
-motif-m1m2,intra_pos_edges,0.80814
-motif-m1m2m3,intra_pos_edges,0.951219
-motif-m1m2m3,f1_pos_neg,0.920077
-motif-m1m2m3,avg_cc,0.251967
-motif-m1m2m3,diameter,6
-motif-m2,n,61
-motif-m2,m,161
-motif-m2,inter_neg_edges,0.711538
-motif-m2,intra_pos_edges,0.737374
-motif-m2,f1_pos_neg,0.724226
-motif-m2,avg_cc,0.511388
-motif-m2,diameter,5
-motif-m3,n,119
-motif-m3,m,241
-motif-m3,inter_neg_edges,0.672131
-motif-m3,intra_pos_edges,0.95671
-motif-m3,f1_pos_neg,0.789561
-motif-m3,avg_cc,0.252914
-motif-m3,diameter,7
-motif-m1m2,n,57
-motif-m1m2,m,127
-motif-m1m2,inter_neg_edges,1
-motif-m1m2,intra_pos_edges,0.81672
-motif-m1m2,f1_pos_neg,0.899115
-motif-m1m2,avg_cc,0.469956
-motif-m1m2,diameter,5
-motif-m3,n,103
-motif-m3,m,217
-motif-m3,inter_neg_edges,0.695238
-motif-m3,intra_pos_edges,0.919908
-motif-m3,f1_pos_neg,0.791947
-motif-m3,avg_cc,0.286039
-motif-m3,diameter,6
-motif-m3,n,113
-motif-m3,m,230
-motif-m3,inter_neg_edges,0.666667
-motif-m3,intra_pos_edges,0.931868
-motif-m3,f1_pos_neg,0.777269
-motif-m3,avg_cc,0.263391
-motif-m3,diameter,7
-motif-m1m2,n,50
-motif-m1m2,m,113
-motif-m1m2,inter_neg_edges,1
-motif-m1m2,intra_pos_edges,0.766102
-motif-m1m2,f1_pos_neg,0.867562
-motif-m1m2,avg_cc,0.48372
-motif-m1m2,diameter,5
-motif-m3,n,104
-motif-m3,m,209
-motif-m3,inter_neg_edges,0.857143
-motif-m3,intra_pos_edges,0.945882
-motif-m3,f1_pos_neg,0.899329
-motif-m3,avg_cc,0.228476
-motif-m3,diameter,6
-motif-m3,n,114
-motif-m3,m,242
-motif-m1m2m3,n,112
-motif-m1m2m3,m,230
-motif-m1m2m3,inter_neg_edges,0.657658
-motif-m1m2m3,intra_pos_edges,0.939866
-motif-m1m2m3,f1_pos_neg,0.773835
-motif-m1m2m3,avg_cc,0.25924
-motif-m1m2m3,diameter,7
-motif-m1m2m3,n,112
-motif-m1m2m3,m,230
-motif-m1m2m3,inter_neg_edges,0.657658
-motif-m1m2m3,intra_pos_edges,0.939866
-motif-m1m2m3,f1_pos_neg,0.773835
-motif-m1m2m3,avg_cc,0.25924
-motif-m1m2m3,diameter,7
-motif-m1m2m3,n,103
-motif-m1m2m3,m,208
-motif-m1m2m3,inter_neg_edges,0.873874
-motif-m1m2m3,intra_pos_edges,0.939252
-motif-m1m2m3,f1_pos_neg,0.905384
-motif-m1m2m3,avg_cc,0.223702
-motif-m1m2m3,diameter,6
-motif-m1,n,13
-motif-m1,m,18
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.285714
-motif-m1,f1_pos_neg,0.444444
-motif-m1,avg_cc,0.305128
-motif-m1,diameter,5
-motif-m3,n,96
-motif-m3,m,195
-motif-m3,inter_neg_edges,0.846154
-motif-m3,intra_pos_edges,0.937656
-motif-m3,f1_pos_neg,0.889558
-motif-m3,avg_cc,0.247471
-motif-m3,diameter,6
-motif-m2,n,56
-motif-m2,m,131
-motif-m2,inter_neg_edges,0.917808
-motif-m2,intra_pos_edges,0.759644
-motif-m2,f1_pos_neg,0.83127
-motif-m2,avg_cc,0.516284
-motif-m2,diameter,5
-motif-m2,n,57
-motif-m2,m,141
-motif-m2,inter_neg_edges,0.733333
-motif-m2,intra_pos_edges,0.75
-motif-m2,f1_pos_neg,0.741573
-motif-m2,avg_cc,0.525997
-motif-m2,diameter,5
-motif-m1,n,19
-motif-m1,m,31
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.410596
-motif-m1,f1_pos_neg,0.58216
-motif-m1,avg_cc,0.461404
-motif-m3,avg_cc,0.251197
-motif-m3,diameter,7
-motif-m1m2,n,61
-motif-m1m2,m,141
-motif-m1m2,inter_neg_edges,0.951807
-motif-m1m2,intra_pos_edges,0.80814
-motif-m1m2,f1_pos_neg,0.874109
-motif-m1m2,avg_cc,0.47851
-motif-m1m2,diameter,5
-motif-m3,n,104
-motif-m3,m,218
-motif-m3,inter_neg_edges,0.695238
-motif-m3,intra_pos_edges,0.922374
-motif-m3,f1_pos_neg,0.79286
-motif-m3,avg_cc,0.283289
-motif-m3,diameter,6
-motif-m1m2m3,n,112
-motif-m1m2m3,m,230
-motif-m1m2m3,inter_neg_edges,0.657658
-motif-m1m2m3,intra_pos_edges,0.939866
-motif-m1m2m3,f1_pos_neg,0.773835
-motif-m1m2m3,avg_cc,0.25924
-motif-m1m2m3,diameter,7
-motif-m1m2m3,n,112
-motif-m1m2m3,m,230
-motif-m1m2m3,inter_neg_edges,0.657658
-motif-m1m2m3,intra_pos_edges,0.939866
-motif-m1m2m3,f1_pos_neg,0.773835
-motif-m1m2m3,avg_cc,0.25924
-motif-m1m2m3,diameter,7
-motif-m1,n,6
-motif-m1,m,9
-motif-m1,inter_neg_edges,1
-motif-m1,intra_pos_edges,0.339623
-motif-m1,f1_pos_neg,0.507042
-motif-m1,avg_cc,0.638889
-motif-m1,diameter,3
-motif-m1m2,n,61
-motif-m1m2,m,154
-motif-m1m2,inter_neg_edges,0.698113
-motif-m1m2,intra_pos_edges,0.739946
-motif-m1m2,f1_pos_neg,0.718421
-motif-m1m2,avg_cc,0.553607
-motif-m1m2,diameter,5
-motif-m1m2,n,61
-motif-m1m2,m,152
-motif-m1m2,inter_neg_edges,0.673913
-motif-m1m2,intra_pos_edges,0.782857
-motif-m1m2,f1_pos_neg,0.724311
-motif-m1m2,avg_cc,0.459364
-motif-m1m2,diameter,5
-motif-m3,n,107
-motif-m3,m,211
-motif-m3,inter_neg_edges,0.717172
-motif-m3,intra_pos_edges,0.953995
-motif-m1m2,intra_pos_edges,0.81672
-motif-m1m2,f1_pos_neg,0.899115
-motif-m1m2,avg_cc,0.469956
-motif-m1m2,diameter,5
-motif-m1m2m3,n,117
-motif-m1m2m3,m,236
-motif-m1m2m3,inter_neg_edges,0.697479
-motif-m1m2m3,intra_pos_edges,0.947826
-motif-m1m2m3,f1_pos_neg,0.803606
-motif-m1m2m3,avg_cc,0.252054
-motif-m1m2m3,diameter,6
-motif-m1m2,n,69
-motif-m1m2,m,176
-motif-m1m2,inter_neg_edges,0.696429
-motif-m1m2,intra_pos_edges,0.768116
-motif-m1m2,f1_pos_neg,0.730518
-motif-m1m2,avg_cc,0.472684
-motif-m1m2,diameter,6
-motif-m1m2m3,n,96
-motif-m1m2m3,m,197
-motif-m1m2m3,inter_neg_edges,0.826923
-motif-m1m2m3,intra_pos_edges,0.923833
-motif-m1m2m3,f1_pos_neg,0.872696
-motif-m1m2m3,avg_cc,0.231627
-motif-m1m2m3,diameter,6
-motif-m3,n,121
-motif-m3,m,269
-motif-m3,inter_neg_edges,0.478873
-motif-m3,intra_pos_edges,0.922465
-motif-m3,f1_pos_neg,0.63046
-motif-m3,avg_cc,0.242442
-motif-m3,diameter,6
-motif-m1m2m3,n,96
-motif-m1m2m3,m,197
-motif-m1m2m3,inter_neg_edges,0.826923
-motif-m1m2m3,intra_pos_edges,0.923833
-motif-m1m2m3,f1_pos_neg,0.872696
-motif-m1m2m3,avg_cc,0.231627
-motif-m1m2m3,diameter,6
-motif-m1m2,n,67
-motif-m1m2,m,170
-motif-m1m2,inter_neg_edges,0.740741
-motif-m1m2,intra_pos_edges,0.755448
-motif-m1m2,f1_pos_neg,0.748022
-motif-m1m2,avg_cc,0.458097
-motif-m1m2,diameter,6
-motif-m1m2m3,n,101
-motif-m1m2m3,m,189
-motif-m1m2m3,inter_neg_edges,1
-motif-m1m2m3,intra_pos_edges,0.956962
-motif-m1m2m3,f1_pos_neg,0.978008
-motif-m1m2m3,avg_cc,0.237971
-motif-m1m2m3,diameter,6
-motif-m1,n,4
-motif-m1,m,3
-motif-m3,m,235
-motif-m3,inter_neg_edges,0.587302
-motif-m3,intra_pos_edges,0.881857
-motif-m3,f1_pos_neg,0.705051
-motif-m3,avg_cc,0.244459
-motif-m3,diameter,6
-motif-m3,n,109
-motif-m3,m,221
-motif-m3,inter_neg_edges,0.673077
-motif-m3,intra_pos_edges,0.918919
-motif-m3,f1_pos_neg,0.777016
-motif-m3,avg_cc,0.245974
-motif-m3,diameter,7
-motif-m2,n,59
-motif-m2,m,155
-motif-m2,inter_neg_edges,0.730769
-motif-m2,intra_pos_edges,0.717557
-motif-m2,f1_pos_neg,0.724103
-motif-m2,avg_cc,0.533966
-motif-m2,diameter,5
-motif-m1m2,n,61
-motif-m1m2,m,141
-motif-m1m2,inter_neg_edges,0.951807
-motif-m1m2,intra_pos_edges,0.80814
-motif-m1m2,f1_pos_neg,0.874109
-motif-m1m2,avg_cc,0.47851
-motif-m1m2,diameter,5
-motif-m1m2,n,68
-motif-m1m2,m,173
-motif-m1m2,inter_neg_edges,0.618182
-motif-m1m2,intra_pos_edges,0.727273
-motif-m1m2,f1_pos_neg,0.668305
-motif-m1m2,avg_cc,0.521588
-motif-m1m2,diameter,5
-motif-m3,n,99
-motif-m3,m,205
-motif-m3,inter_neg_edges,0.765957
-motif-m3,intra_pos_edges,0.919431
-motif-m3,f1_pos_neg,0.835707
-motif-m3,avg_cc,0.26572
-motif-m3,diameter,6
-motif-m1m2,n,89
-motif-m1m2,m,239
-motif-m1m2,inter_neg_edges,0.443609
-motif-m1m2,intra_pos_edges,0.782946
-motif-m1m2,f1_pos_neg,0.566337
-motif-m1m2,avg_cc,0.548796
-motif-m1m2,diameter,6
-motif-m1m2m3,n,114
-motif-m1m2m3,m,234
-motif-m1m2m3,inter_neg_edges,0.663717
-motif-m1m2m3,intra_pos_edges,0.947137
-motif-m1m2m3,f1_pos_neg,0.780494
-motif-m1m2m3,avg_cc,0.26613
-motif-m1m2m3,diameter,7
-motif-m3,n,127
-motif-m3,m,280
-motif-m3,inter_neg_edges,0.444444
-motif-m3,intra_pos_edges,0.910816
-motif-m3,f1_pos_neg,0.597386
-motif-m3,avg_cc,0.234733
-motif-m3,diameter,6
-motif-m1m2m3,n,116
-motif-m1m2m3,m,250
-motif-m1m2m3,inter_neg_edges,0.609375
-motif-m1m2m3,intra_pos_edges,0.894632
-motif-m1m2m3,f1_pos_neg,0.724952
-motif-m1m2m3,avg_cc,0.266088
-motif-m1m2m3,diameter,6
-motif-m1m2,n,59
-motif-m1m2,m,147
-motif-m1m2,inter_neg_edges,0.795918
-motif-m1m2,intra_pos_edges,0.72679
-motif-m1m2,f1_pos_neg,0.759785
-motif-m1m2,avg_cc,0.494136
-motif-m1m2,diameter,5
-motif-m1m2m3,n,138
-motif-m1m2m3,m,284
-motif-m1m2m3,inter_neg_edges,0.529412
-motif-m1m2m3,intra_pos_edges,0.918033
-motif-m1m2m3,f1_pos_neg,0.671552
-motif-m1m2m3,avg_cc,0.260178
-motif-m1m2m3,diameter,6
-motif-m1m2,n,61
-motif-m1m2,m,157
-motif-m1m2,inter_neg_edges,0.675676
-motif-m1m2,intra_pos_edges,0.709184
-motif-m1m2,f1_pos_neg,0.692024
-motif-m1m2,avg_cc,0.545886
-motif-m1m2,diameter,5
-motif-m1m2m3,n,114
-motif-m1m2m3,m,231
-motif-m1m2m3,inter_neg_edges,0.728814
-motif-m1m2m3,intra_pos_edges,0.922747
-motif-m1m2m3,f1_pos_neg,0.814394
-motif-m1m2m3,avg_cc,0.248749
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,124
-motif-m1m2m3,m,274
-motif-m1m2m3,inter_neg_edges,0.450704
-motif-m1m2m3,intra_pos_edges,0.912621
-motif-m1m2m3,f1_pos_neg,0.60341
-motif-m1m2m3,avg_cc,0.245779
-motif-m1m2m3,diameter,6
-motif-m3,n,100
-motif-m3,m,207
-motif-m3,inter_neg_edges,0.821429
-motif-m3,intra_pos_edges,0.947115
-motif-m3,f1_pos_neg,0.879806
-motif-m3,avg_cc,0.223773
-motif-m3,diameter,6
-motif-m1m2m3,n,101
-motif-m1m2m3,m,205
-motif-m1m2m3,inter_neg_edges,0.831776
-motif-m1m2m3,intra_pos_edges,0.949153
-motif-m1m2m3,f1_pos_neg,0.886596
-motif-m1m2m3,avg_cc,0.220252
-motif-m1m2m3,diameter,6
-motif-m1m2m3,n,106
-motif-m1m2m3,m,230
-motif-m1m2m3,inter_neg_edges,0.645161
-motif-m1m2m3,intra_pos_edges,0.908297
-motif-m1m2m3,f1_pos_neg,0.754443
-motif-m1m2m3,avg_cc,0.26061
-motif-m1m2m3,diameter,6
-motif-m3,n,82
-motif-m3,m,169
-motif-m3,inter_neg_edges,0.517241
-motif-m3,intra_pos_edges,0.711538
-motif-m3,f1_pos_neg,0.599029
-motif-m3,avg_cc,0.199045
-motif-m3,diameter,5
-motif-m1m2,n,61
-motif-m1m2,m,141
-motif-m1m2,inter_neg_edges,0.951807
-motif-m1m2,intra_pos_edges,0.80814
-motif-m1m2,f1_pos_neg,0.874109
-motif-m1m2,avg_cc,0.47851
-motif-m1m2,diameter,5
-motif-m1m2,n,61
-motif-m1m2,m,139
-motif-m1m2,inter_neg_edges,0.950617
-motif-m1m2,intra_pos_edges,0.796512
-motif-m1m2,f1_pos_neg,0.866768
-motif-m1m2,avg_cc,0.457241
-motif-m1m2,diameter,5
-motif-m1m2,n,62
-motif-m1m2,m,158
-motif-m1m2,inter_neg_edges,0.700935
-motif-m1m2,intra_pos_edges,0.741514
-motif-m1m2,f1_pos_neg,0.720654
-motif-m1m2,avg_cc,0.536484
-motif-m1m2,diameter,5
-motif-m1m2m3,n,207
-motif-m1m2m3,m,504
-motif-m1m2m3,inter_neg_edges,0.0490196
-motif-m1m2m3,intra_pos_edges,0.997549
-motif-m1m2m3,f1_pos_neg,0.0934472
-motif-m1m2m3,avg_cc,0.263028
-motif-m1m2m3,diameter,6
-motif-m3,n,107
-motif-m3,m,206
-motif-m3,inter_neg_edges,0.934066
-motif-m3,intra_pos_edges,0.953052
+id method f1 avg_cc diameter
+3b65c205d901a158d9e1db8f8234564f7a16cb0130824118fedd5daa motif-m1 0.5 0 1
+fcd6fbfdf8ba707b55ea323dbd9b5c1f263e00d9cde5e964f824b4fb motif-m1 0 0 0
+6c75ceda78cab064830ae872f8cb24539005d96c2c7f0e7380f49020 motif-m1 0.266667 0.583333 2
+34459b2532a058ba11a027598bdc514d5221b58ac3c1a4d14b17f8c6 motif-m1 0.641221 0.47381 4
+fad1c2557adf6abd00751fecc619b84a9e82aed017c9ebff0e2ce494 motif-m2 0.210526 0 1
+eb47d91da7fb47e832a9ff5ca032ce05bc6f080d668fb0992b05ae6a motif-m2 0.722291 0.52963 5
+56923c463093a6270021e6059d8880bfa8405b236581f32b376e71f5 motif-m1 0.324324 0.277778 4
+044b5d0e479a19f52924529651dddec0296f09f8d3163af74ee76779 motif-m2 0.741947 0.511681 5
+dbe92f3202e78ed25846857965656cd4e7fae6491bc36f3899d779a3 motif-m3 0.627451 0.24964 5
+f726adec197fc43f765ecbf3dc994997d0d0859a1e62402157f37ba2 motif-m3 0.791947 0.286039 6
+914997e236c13343d05614eddf3d6030f6908f6628026b1b090fc8d6 motif-m3 0.926558 0.231911 6
+5e6057343513cc019b437593160338a048031a7cbdbdadda0c6b3092 motif-m1 0 0 0
+17df44c1f630fae13b5355c4f6ed051aa4aa0056f7e1d6a13f50a3af motif-m3 0.790652 0.216286 6
+e28700421e1dc42c546c96f54ebf23bb78f5ad9f78f78ce19f0265e0 motif-m3 0.704823 0.22632 7
+e07bf060c8b03975a2446d0557302f6a7247b41d3405d4f9229a8c3c motif-m3 0.808015 0.259926 6
+9bc2587d68940ad4b3bb23b73244afd83749d57ff8e5be67cca6b4a3 motif-m3 0.890542 0.217768 6
+06f59fd3def91376f67ba05419f2003125e15e518dda9bb421de952a motif-m3 0.924545 0.242412 7
+a6d3817e4c08c3fcab50752ab29c0af40adf72ffad79e2d016f403fe motif-m3 0.796739 0.256106 7
+63e8f9e55a2fea332ecf950c62c68b821ffec0ab91dcc691ebd048de motif-m3 0.885593 0.194696 6
+fbdbb49f2339c4f1c756be8419c38facbe07f65875808113e1fa74d8 motif-m3 0.789812 0.244393 7
+98c6e984a63e9e979b46eb8f35b6c0f800bab4115e6b802b4f08ea92 motif-m3 0.890542 0.217768 6
+d2dae9e9d1b41c95d57f7d807cb4425543a07061ba92738ab05fd075 motif-m2 0.724862 0.502553 5
+29863f3f2c8b8de863d87ada651e399be26a86cdb77258b2c1ab5333 motif-m3 0.789812 0.244393 7
+6d4342cad1153f999cfeefdb5946a8f74b4970dd2aafd05583a2712f motif-m1m2 0.825551 0.429537 5
+e8ae1e4548548af2fcd2e40aaaf548160452e611b157beebddc8370c motif-m2 0.684484 0.576671 5
+b3f34de8717f8819c4c071be30b7b45e38c22461a1843bace326b854 motif-m1m2 0.235294 0 1
+e71fb81259dc06b509851930d1e846d12b63beb016f4b3e1552339ba motif-m2 0.700122 0.548029 5
+3128073322efa79b8753ab4364bcc9de1cdb0952e6e1be29e6c6485d motif-m1m2 0.712235 0.532131 5
+f1b2693804439f66ca4373d176a5558cc5087e1b1e938cdb0834e51c motif-m1m2 0.866768 0.457241 5
+262853f27b0d2ef60c0b59fb557a7bb5eabda964db4a9b0aa990639f motif-m3 0.902466 0.24194 6
+b70f22fcc4be05f74f52ef0ee7e8d6e601dfb32132c6c38da00b809d motif-m1m2m3 0.800739 0.300053 6
+39ab1c14704637983cc7c723e5935d07ce51e158ee428fb01702d769 motif-m1m2m3 0.547904 0.257979 5
+a88b19c1c864cfddffbc80a23d85291334a9043ab15f99c8a6d50119 motif-m1m2m3 0.888915 0.220918 6
+78874ee3945a48d168e85647fa5a91ee97dba6f1c244298d3e6287b1 motif-m1m2m3 0.801491 0.201762 6
+d33c960a126358d2cd5081882574fbf64aa1d1c4e17ca81bbdf53f0b motif-m1m2m3 0.685413 0.216683 6
+75ab64a12024a2d36585ef36be6757ae2ff0168d4315b87fdfa8024a motif-m1m2m3 0.904707 0.20596 6
+66496d5a88fcffdc8fb80ae800be7eed6e7b67928c8533978a090dfe motif-m1m2m3 0.697385 0.237474 6
+87f6bc81ca8f8ecd2e8b7d7706136b3d3fc017b779f7f4e04c6408ac motif-m1m2m3 0.967742 0.27185 6
+df64e3403ba07c0ed4b407749debf0af08abbaee02d65c3f479113cd motif-m1m2m3 0.812002 0.27206 6
+21c2fcde761eaf761e024ab0f242cff0f2d518290bb43b1b314a1509 motif-m1m2m3 0.91265 0.24733 6
+4e6df464ffd93c09210364144454c64336f89ce428b4f9c7d20f6079 motif-m1m2m3 0.931895 0.256122 6
+3a71074d750d26b563aa5a9037ea2c565123dc21ef95c956e59ac695 motif-m1m2m3 0.697385 0.237474 6
+45cda2b9e98f267084844367c87914565fb3b355d01ad9d4d25c0c0e motif-m1m2 0.719645 0.477597 6
+091a82477cf81df700695f0bf99da6e0edf519ce50766b49cb5f6d0a motif-m1 0.641221 0.47381 4
+86a186973a9d6ca1c98f44da188909b9a29fc98972cb5bf2154da2c2 motif-m1m2m3 0.91265 0.24733 6
+24ec0e6a9145669e23d78aef7de86306951087ae52227121ec104f64 motif-m3 0.794604 0.230525 5
+858ad4b06294563789d79d989e6e5da01ea357e91367f1391119b0cd motif-m1 0.430769 0.416667 3
+6eb071e5015b16bb00944ee8bd3c41628299f9d95de36c42e57e5ded motif-m1 0.5 0 1
+4c22cefd8ef37aa8c1d2cadd9daf16858577d3f6911d27d4383c6b12 motif-m3 0.909235 0.226521 6
+a6cbf7388357c20e7790b7cd73f62c10a8901855a83a00fa11fb9fea motif-m1 0.641221 0.47381 4
+bf97bfb588c3321df4a486422d3660ad6e0bcb640e6c0a9f40722503 motif-m1 0.48 0.6 2
+0a456099d1f1dbd3bf93274a36bfd8406d596a329c633d9ac5cc3e3e motif-m1 0.641221 0.47381 4
+9a592494cf87587f8de835aacd3e2a96109930ad269560ce32e185cd motif-m3 0.633552 0.199938 6
+8261f96fc3983327675d6876f5d54ae2b56b38ceadd9d72029db13e2 motif-m2 NaN 0 0
+7dad3b7a004ec114b45f2d359162f8040b613669539c750d90b2ab6a motif-m1m2m3 0.855258 0.213423 6
+be14a172e21fca0ce0bc45d72202dad07e6f1dd8edc427398fe50949 motif-m1 0.641221 0.47381 4
+4ed8d62be133ccc03ec9ecd1edf2efe15f19fda9f60491ad2c3123ad motif-m2 0.716463 0.513383 5
+71b12b4cd5daccac0b0b52b91ff52c507e51b1a59a6294072dd859c8 motif-m2 0.60537 0.541732 5
+1bddc22526d356bccf6b6606b99cf7fec267c152643eaed5833ea209 motif-m2 0.807891 0.461217 5
+52b782f79f342855caa1e940e7a3cd10d1d4f7f548fe4e8c245634dc motif-m2 0.8125 0.478124 5
+b774388172328fa3db770c4f1a88d6116180a7687e15ec4c5f3f2fe4 motif-m2 0.724226 0.511388 5
+a86eb5808c760ace3fbe6236daa1f0befe269d3ab2b2bf7c34aeca04 motif-m2 0.693608 0.528972 5
+66e8f61a7973bf93bd613e1d40e5620b90756909f3e65d5b880d361f motif-m2 0.688776 0.55503 5
+6f29dd67f9f968729b10a2e96dd5b54256ef3b9455f3a027589c5710 motif-m1m2 0.703906 0.548227 5
+7a23e0d7e02062c920056f54c298b29b0df424bd5d6758b8bd0f01e2 motif-m2 0.741947 0.511681 5
+040aac96ddd7f3bf658b27ffe1a7fe64580b6daf7ea90191fee3e713 motif-m3 0.860671 0.225724 6
+7be2adaf1c7a84676fefccdf7b64568c9505c8a95f0e4f8f2529b80c motif-m3 0.814003 0.25778 6
+576e25055d18a94ddeb46cebefb8dd0b05c2eff8b39f715a91f384be motif-m3 0.890542 0.217768 6
+3a193bd442e8b7ccd467d6583facdfb6dd270f81fa976890aa0a3e68 motif-m3 0.876554 0.201951 6
+c586c39eb8198c577b3eb1226c78111cd0704dc7b44883311fb54f52 motif-m3 0.794945 0.233642 5
+20376216a3ff90d46539f76d63a1b07fe3accf69ce798ae3aa2a111e motif-m3 0.789812 0.244393 7
+d9fb0f9381894e1ee3f0f2b0865343430689fad0c16fe40a65e1815f motif-m3 0.736043 0.246082 6
+ed262c59dabc012b4f9af84320c00a4ee0f03d3489d533c2cc0002e9 motif-m3 0.926558 0.231911 6
+315019267629eabd5444fef2dd08f1a907f8c801081e14ffdd06be52 motif-m3 0.926558 0.231911 6
+197274c119d1563323b7d51c1d7f493cf7d45a8e6a005ae45788260a motif-m3 0.903082 0.233621 6
+1c2ac37da8ca3ded294fb49db0dba40852bdd4d5885417e399988185 motif-m3 0.763593 0.249727 6
+5c5a337540f3a153e73fcefb04a423824a61921bd4deda9d8da794ff motif-m2 0.716463 0.513383 5
+02128cbea887e4f829c805b889bc242563f23aaad40cbe583a490dd5 motif-m3 0.789812 0.244393 7
+d629f4652e0098e9dad73e933208c697cfd8a473fb731c6bb1f8d1cf motif-m1m2 0.730518 0.472684 6
+48f142e624b6ef70e399fa0d79df737a011d19c3dd6b7f884c69bfeb motif-m1m2 0.682265 0.529873 5
+c0003b33d3df8d17bc1042431634f7e087ca49a250824e8da4e85847 motif-m3 0.912852 0.242788 6
+1357fb7b6f6b64f3a8a000b13429ce91951db9556e363fbdee0b746e motif-m1m2 NaN 0 0
+8c31cd88ee69a65fd6ccbc985ad3211ae155059d64f534deffa797f1 motif-m1m2 0.826099 0.43729 5
+431b17ecb49656bb53a0027e6c17f710332a69c802cfb55ea5523cbd motif-m1m2 0.866768 0.457241 5
+2c9694e277fbf74e4102e018389b4373835779d85103d08781c1e0ef motif-m1m2 0.821588 0.421207 5
+32af1b96fa2709ecd552f742888b41a20dda4cebd483f65999d21d96 motif-m1m2 0.862517 0.455817 5
+51effe1299111ddefa9fe8c3385e10110d7ee88f24b8f2ae9d08bcad motif-m1m2 0.822109 0.42895 5
+5d9158857a6b5b79d116c21a1993293ef16285660d8acb19b646237e motif-m1m2 0.566337 0.548796 6
+b9e8cb5057d08bc284ccb5c11fff000a06dfb7e31eb7dfe8969a2e08 motif-m3 0.883721 0.23853 6
+dd566c320e0827e33eddc9bf4937bd958c839dedaba9ab719d3187b7 motif-m1m2 0.66616 0.553704 5
+cee15ca14fb0d215786110fca1d3678cb3540584a0f42cc3976e5835 motif-m1m2m3 0.895947 0.228248 6
+cb4ab4bc872193b3ec89842732a56f9b5906be6494722085a7743db1 motif-m1m2m3 0.879921 0.22669 6
+b24b732021cbb014b46f348001738757f02e6fb715b501921e70c32b motif-m1m2 0.73796 0.465563 5
+02a4304d7338a986bab4f206e552f8b342264f96cd77d7cc38c700b0 motif-m1m2m3 0.894531 0.198423 6
+8e1273a1c62fd0224f5bb2dd53ec801bc8656216805a178fb9613773 motif-m1m2m3 0.91265 0.24733 6
+781c541d2dfed7ca84b56f9919771c71cfcc8556ebe29348a67030ce motif-m1m2m3 0.806421 0.272467 6
+f0f00ebd92333fd1f948772b73e16d7a1426a9a9b48dea304e1ea053 motif-m1m2m3 0.888915 0.220918 6
+aef098db8f0eca3bce3b4d94566fcd50850617680c5b81d1acc43456 motif-m1m2m3 0.90005 0.234718 6
+758398627e31a86ef380e279e1b303df16161b904ac94359ecbdc683 motif-m1m2m3 0.888915 0.220918 6
+1dfa8afd34743fa737e7c8ba57247ea6ce0e08c77cb174053737855d motif-m1m2m3 0.697385 0.237474 6
+62c552e8a2dd2ee4c876022e04f34c7efb4a95e29cd0e6b5d7bc5c79 motif-m1m2 0.740828 0.496413 6
+f0c6e8edb6752c096956e31814d5f77dafb60181292cf9b2156d6fae motif-m1m2m3 0.0934472 0.261574 6
+4b7b9554dae8e1298d3ebf1889fb667215046bcc3ef0d1d77aa73e51 motif-m1m2m3 0.91265 0.24733 6
+1dc7ff122dd41b1f70e240fc53db05bb8f295d51e5c125aca30bdcd8 motif-m1m2m3 0.687237 0.246786 6
+5d0f87c91b0980f191ed104b26a57a43f22ceca07af1b4eeb2ef11b7 motif-m1m2m3 0.0934472 0.261574 6
+a36e5398db60b9f10228c8ec9959422139910376babae0b1aea67c19 motif-m1m2m3 0.736788 0.278385 6
+6c6c560447b9fc4c4a672ff79c5f8daa289c1e891207ce318597833c motif-m1m2m3 0.915641 0.226999 6
+be287154ba847a90d570f0d4497a083de8f024f465e418f0ab7372fa motif-m1m2m3 0.619509 0.256755 6
+b49270ab44f7353b53485dfd813cfd96898eca41ba692f0b2899f727 motif-m1 0.444444 0.360606 4
+cc94fcc3836887dfae717c56f59c6b7237fa442a7d6888fc1a875894 motif-m1 0.418301 0.219444 5
+cecb5e04bfa38411e6b27aa6179697258e5c4efba94ec7dd802ce9d2 motif-m1 0.444444 0.533333 3
+39f4e49240bb512ac9c59a67d334fa076d130a88533506c914e2604c motif-m1m2m3 0.879421 0.241284 6
+120c8b7461ccc4c38f1a0a382e9fc5f315235752f8c0e448fe3671bc motif-m2 0.8125 0.478124 5
+7e052dc2d86ad52faca21d8d6bbc718e1b613e86f005cd249c2285e0 motif-m2 NaN 0 0
+7ab07d64cfa87148bb885b073566f206a4886bc4a03fd74b2edafb82 motif-m2 0.840036 0.526524 5
+92b754c985b0f23e1f021e6aca7b77846c2953e4ba6cfb43116e2a4f motif-m2 0.749295 0.560172 5
+eb693130b17b8224c769b8f5c659d6606ac80d864ee023dda52ce71f motif-m3 0.860671 0.225724 6
+86fdc4ee4dcac58668ffd912897e031968a054dce8ba00f0c60c7cb0 motif-m2 0.710452 0.551046 5
+e0b120f92601cdd5914c0b953dd09c0556404ea8099597cc4b7581f3 motif-m3 0.890542 0.217768 6
+31790238076a46a43a2f214a0d310a3f12b119711a31d6d8f2842f7f motif-m3 0.704823 0.22632 7
+e5809d6e96283a500d837e3c45810e5612680d06415f2b68134050ab motif-m2 0.681486 0.566701 5
+c745f4c9fe93a01b9e1d898c689c14e9cae1b31d58ce63774d7e2120 motif-m3 0.894053 0.23909 6
+0339252ab11d4517b07949dfcbe62753845c9c2e62d80a61bb923d72 motif-m3 0.808015 0.259926 6
+51d889fd260553c8edd9c70b904c29a3c7331f58d519666b0c1766a0 motif-m3 0.890542 0.217768 6
+5b8e0595a943f110aa49c8cdf1499a6a887ca0d7dad3968428948f8d motif-m3 0.816837 0.251501 6
+6c690fec0fda91ab4c7835661e6b17c85628607f961f02f26ed2ff01 motif-m2 0.724862 0.502553 5
+8fa06d5f120d437f2ea193c9a9058e42d5e375523691a86a40e5fa30 motif-m3 0.919003 0.236016 7
+7950d79fdcd2e9eda6207c8337a405a5e1e54bc3a76fbe88f30a4a16 motif-m2 0.810896 0.497648 5
+a97f027e637835c5d24a84a639a939b45f154cd40b34d0e70a459ba5 motif-m3 0.648003 0.233803 6
+ad8b97c93158e02c0c506a1bcad55e7f009bc5129f58135f8e048bbd motif-m3 0.910385 0.219073 6
+360d78e47aca0829fdff194bb3e2f1ff1dd16d2627bd4f282a0bda9c motif-m3 0.725925 0.249898 7
+454a27f41a46d967a4c6ed947dccf016dce234778768f5e1624e4015 motif-m3 0.627451 0.24964 5
+b61df2d5f02a9384daa73c9c9d97a52f2d113fad0d6d1455b1fe4d34 motif-m3 0.790446 0.246477 7
+fec045af1ea235781f47f15883722d7b5067f5710c14ee3b832d6d8f motif-m1m2 0.824658 0.453961 5
+14140401d5004613210c38c14266cbb52def801750b1f54caa843f49 motif-m1m2 NaN 0 0
+03dfcaaa6cd885f0bba61dc4751d8ebcf09e6ed77d20783273d5be40 motif-m1m2m3 0.879921 0.22669 6
+c47f26e00a4463dca0c333f1f9bdac0579dd8aedcf2cd8299d974524 motif-m1m2 0.746791 0.447951 6
+04e4b22672afc830a22e269565c04b3044ff2561cbffabf1089024e7 motif-m1m2 0.873453 0.486956 5
+97b7227787888cfa4154cf6ad54fe6517be7e6060054c5b5fb7d1286 motif-m1m2 0.876405 0.47148 5
+7d88b2c8bb9231b614a93ebe3631167afa392e6cbc8067f8da0ef970 motif-m1m2m3 0.685413 0.216683 6
+b2e2fade73ba8553a242fd834cc0b543a17bc4ccea62f9d7afaa7eb4 motif-m3 0.910385 0.219073 6
+82fd1c2649f29adcf63f91e26fb1de59fbc8e5ad9d85134190e3a01b motif-m1m2m3 0.697385 0.237474 6
+7e0c630a1fd196654664ba7e2c4432e70e3d8fdf6d4f9013a259ca31 motif-m1m2m3 0.888915 0.220918 6
+9bc5fccfec1fb3473425158828d36e3caf6ba87999e4f2822b000836 motif-m1 0.430769 0.416667 3
+d5432a3e2c5c7eed574e1e01396c08eb9f720110da9ea008fec9bb33 motif-m1m2m3 0.812002 0.27206 6
+eec6f85ea64d47c0f23def78435abb9b9243ee319b9f11ba51ea2766 motif-m1m2m3 0.697385 0.237474 6
+138a79c0187922b1dfc36d3d531d7720f1332215d197f36fac461afd motif-m1m2m3 0.921785 0.250134 6
+eabe5e119c81858d68f9f10a4712573340b094aa4cc33bbac0e3e711 motif-m3 0.842225 0.260262 6
+0b560a57f56eff7f97d5ead0bb2bf045e9275b46c0f8ed0456b34845 motif-m3 0.876539 0.252625 6
+474b8f47bfe1791cef81679d4645549effc291befcf768329e1f80d4 motif-m1m2m3 0.966851 0.271533 6
+f134f7d4130dc0fd029cb9b93e263719a5f64682eb7a5020ee696fa6 motif-m3 0.705051 0.244459 6
+c183c658545401adfb101274ca7169ca9c05e3dcd7d6c6487c4b024e motif-m1m2m3 0.890828 0.198778 6
+9906a01baad85cc80e420409f0d1e94f70c761dc054852d04a27650b motif-m1m2m3 0.659161 0.222841 6
+38a771ee5f9490a99e36e28aeffec2f20fd34813bf7869ae0884704f motif-m1 0.48 0.6 2
+09ee199df2c2694e14210870680772004cf4930ba2e9188dd58f3120 motif-m2 0.8125 0.478124 5
+9288c3d94ee4c3ef797eed30b0bf50219578da3f7baee8ffe0d94a3a motif-m1m2 0.719645 0.477597 6
+414a601478a37d18ba9efe64f9e8c76cda4ee3ecaf2844627701af4d motif-m1m2m3 0.547904 0.257979 5
+3d93a45ebeb15d42b2ff22ad15002d5940e925e93403627b444701b7 motif-m1m2m3 0.789812 0.244393 7
+6ba5098dbde8c2237f5ffb740b63e9ea6b5e1d4c3c890293b9d9c399 motif-m1 0.444444 0 2
+de175bf4ab219a7ae29896e79c47274b541a57089cf8b8dbd15b4d77 motif-m1m2 0.85811 0.481075 5
+9aeaa905d4845b079d8ca389305379119e0e69749bc2b71837729edd motif-m1m2 0.682265 0.529873 5
+7f4ef6c2da4230d35e6126981152a6282c3cf22b013e5bb1407c5daf motif-m3 0.710004 0.240799 6
+5da4eb6a52cb96698e83382c236b36aa3e2169ab93bb62f7922ab3d6 motif-m1 0.477612 0.583333 3
+d4f2e7cf058de7e2f1b0ed6f3d4293cc6d1e2944eb7bdb93dc8d0443 motif-m2 0.717613 0.625612 5
+ceb079804d5695d969e20ca9e7d36abb596ec94f517547b8c253623a motif-m2 0.862745 0.525829 5
+b980543f56abed893da3293af9c393d46e28c6be4bcc9fb39329a6e4 motif-m2 0.717579 0.640956 5
+dd10326a91dbc64da3e7a4d5517401daa3ee3109f65e1ea82e3f4527 motif-m2 0.717579 0.640956 5
+046531423dbc03992b6794808e9b0653428ba58cd0ecd1de13e21ad1 motif-m2 0.810896 0.497648 5
+527e697e27ec84e11c5f912bdd3809eb2ac74be52e0d07951f028566 motif-m1 0.272727 0 3
+63fe4110ac57a945b6aeba63296657499c56fdcdd7839ae386ab0713 motif-m1m2m3 0.890828 0.198778 6
+28b712be0875c69ceb796b82cd59807095379d4b3fabf343c731f1b7 motif-m1m2m3 0.730341 0.256385 6
+84d8a0a2c41a450049f1ce54acfca2e4887ae65ba491888d2a42309d motif-m2 0.648138 0.587416 5
+ca5ee76d9ebd7187bf2bd6151f20722bbee17f5499d74c895c3e4e6c motif-m2 0.747065 0.543964 5
+f50611ce0648efdbf5176685c058cd60d82238dc51ae8c262be5619c motif-m3 0.925894 0.229676 6
+230164c6b6cfd16412dadee316c545692f8188fd7f8dda82985fa697 motif-m3 0.890542 0.217768 6
+ed3a6cb60ea261aab017a244db32e0e1025ba19d0ccf7f9cf1a39c7d motif-m3 0.853731 0.227054 6
+d9a616b6f48c9d1f4a30bc4f828dcb3e81b2078fb9034691d3b68a5d motif-m3 0.91499 0.242668 6
+7a672b99019985d6abe7342b842e947971f6c1e3187bef69ed739a28 motif-m1 0.272727 0 3
+7151b4c583459031fdf6f8c0e8cf1db2768caf38aa363d8e70fdd9af motif-m3 0.79998 0.262996 7
+693055a9a965aaba804ffbf5da17bd63af07834691b29a9b954b9d6d motif-m3 0.685593 0.232223 6
+2801cbc8d530db7e6a0c6d840b4310657ba499c9ce9f1149a869b68e motif-m3 0.728825 0.255361 7
+83f114c2cdcc9e9a445b2cd7b1f52675ae4a6fde007f6c681222382c motif-m1m2m3 0.918876 0.25494 6
+574121eb943e7772a6354a340e7972b4b13e5e8c43f34ac8d70e8fdf motif-m1m2m3 0.800677 0.257861 6
+3b5fad7a137e37eba06ad43d59738bd9bf525554449a54a5a98caa12 motif-m1m2 0.831734 0.420655 6
+db9d030d2323e99c74ee47b19b56ff8c9533a8d3665727b90fbc0c8d motif-m3 0.703495 0.228653 6
+f27aa7bc32bcc3b6990b8b8daf9bdb7996235dc30fbc084a7e39ada3 motif-m3 0.918605 0.231219 6
+e2381ce8014c9dbbffab9bb3ab3c289dff3609d8830fd41618c25bb6 motif-m1m2m3 0.671552 0.260178 6
+304cea70ab87ecef731f76979f790f3d2b130b55a92926ab3405ea02 motif-m1m2 0.722285 0.482917 6
+8b29345c35cbaf8bf42b3998b9ad3cb5a720ff0cb59e061bdcb073e0 motif-m1m2 0.824658 0.453961 5
+ac3433272207940352d6044a1b5122822d4169b3333110c70159728f motif-m3 0.0934472 0.261574 6
+b8da5a83d9b2d584e4d000fb7d25b2b7c856ca36d2bde6bc881fdaeb motif-m1m2 0.892922 0.463024 5
+231fd07f252788690d4d45ce11e4defb8e2b65ae516e3cb2d9de6c26 motif-m1m2 0.733808 0.511979 6
+3931255e4b081742c3a924b27ea1ca3a55fc39f699387e4c649fde3a motif-m3 0.773709 0.24433 5
+721e15f10429e71f0fc2af83fac344685eba4c7ffdf6cfa00106fee9 motif-m2 0.521856 0.502145 5
+b33b62b5ccedf4d6c52ff6c2695098f90df020fa70dbd1d941de1913 motif-m2 0.807393 0.48079 5
+94284c5ad15e0fb006eb2f20c37e37d0be5a5197b2effbc93a45ad90 motif-m3 0.0934472 0.261574 6
+a32cab1a801234f9730bb9930a8bf21405f971c1820f4ff03ab05353 motif-m1m2m3 0.888183 0.214208 6
+634496786928e047827b2c340ee1921fa2f56f781ec8e9d5b2330349 motif-m1m2 0.687917 0.580236 5
+5467d8d2e210c0268e6fff8f738196658d59b84185c7d3818675d778 motif-m1m2 0.718421 0.553607 5
+8d4c90fcf48851525c5882510e6894061e7aa7ce64696b777f8ae8ef motif-m1m2m3 0.697385 0.237474 6
+d6e7c5309e6b02dc48dec48a3397e04f18164646a2700ac2e35f4ba4 motif-m1m2m3 0.873861 0.253248 6
+f12c496335bb5c0ba36e6abcdacd5df0ff5cdbff8e7b6ff3894c6372 motif-m1m2 0.724554 0.57424 5
+057ab57c7b0aa51951872617681081c49ad8c90991eb1c7780e03fe8 motif-m1m2m3 0.888915 0.220918 6
+995ef24f65715bfb9949b95b26c9ebc977c224a2f1e1c6607ffe839e motif-m1m2m3 0.78283 0.258655 7
+9cbc8e14e3cb62474215b21ba08f9fc47609c4c5a7dc5ec1e90bbf69 motif-m3 0.917838 0.238005 6
+90bf6b88dd99bd80a07f42bd6117ce296b95dd313c27a5b0e74e8519 motif-m1m2m3 0.726244 0.213735 6
+d4ff7669a66877994ff5d58e5c7f17c642f974743be9fb92cf0977b3 motif-m1m2 0.663617 0.508971 5
+3c5034d792e85c23b48b697a550b02dd1f3aae48994f1c85957bbde2 motif-m1m2 0.724554 0.57424 5
+78a522b9e580f51689da5a4fcfb9c4769f40ec2d9f7dcd807b658b7d motif-m3 0.73475 0.24738 5
+38e8fc164c9146524333d6bada56954e75d40bf63d344a084a62cadc motif-m1 0 0 0
+48c4923b43356e3af812f81f354efa82dd2b03703e8396ed634041c8 motif-m1m2m3 0.774468 0.270342 6
+e8cd869f43d99637780191742bbef0fc17287ea0074e1e0230676db5 motif-m1m2m3 0.685413 0.216683 6
+aaa59bcb366c143515f10c8ba6f46da4d7c6374434f8ac3894ceb7a9 motif-m1 0.48 0.6 2
+4e0f239f483c4488b668ceeab6eaa1c043569d44c80d12009667f875 motif-m1m2m3 0.706216 0.256475 6
+2699b65db0d77720cb717ea92cf9c3fed9286351baa8233ebd16e942 motif-m1m2m3 0.79556 0.24888 6
+4a9010df10c6425d8e9b73c8a54ac93206d515f0b7215f8459028cb8 motif-m1m2 0.76542 0.475804 6
+82001c63ee9df3e00510d4c8e4c5d927da7ec96788ddcaf52e894a5d motif-m1m2m3 0.650898 0.286331 5
+4383ce692c65cbfb9465173be0cd187a57265b2dcdbd0fb3e56d157a motif-m2 0.521856 0.502145 5
+961600574fd91d5564e551303be3d7e1b273d500b9b19be125a8b68f motif-m1m2 0.663617 0.508971 5
+c7d5b5e84852635e8644ab2187b8efd95ffdea59894b5c2b45651f2f motif-m1 0.545455 0.533333 3
+f2b37eff949632c1e5f5ac7276736cf126a5ccf516ddcaf987424725 motif-m2 0.741947 0.511681 5
+785db44bacb105ed01ab6a9834ae8b1e026185d09906b1ce030a9a99 motif-m1m2m3 0.0934472 0.261574 6
+eb7769d04cfbde81c22ddf146d943a280e1ac4221b743f6f2eff10e5 motif-m1 0.641221 0.47381 4
+c7a927ec18e45bbb4cfc831bd94c8c09b97f703080c6cfbebd9a609a motif-m2 0.691557 0.529214 5
+ab75d22f203d4d0125bdab4ded026d6820493a110dd310bc26d095ff motif-m3 0.704823 0.22632 7
+355b32505eafef2b711ad8316e2c260a16d0d8a80a5dc5aa5215d294 motif-m2 0.60537 0.541732 5
+89a212d354ff4ab9dbd4a08febac3ecd00b575e958af47de14eb7d44 motif-m2 0.619155 0.56769 5
+82b2030812ca2adab693353d30bf263c5ed4a2919b544685d2f8f623 motif-m1m2m3 0.833088 0.236583 6
+7f0b449ad9fb7fbeaccfc837cdf994f46ae07218d378a5f6ba8ec54b motif-m1m2m3 0.0934472 0.261574 6
+ec164371fb3554b5cf00ed9404bb48ee99ac75db75f74f89483f810c motif-m3 0.926558 0.231911 6
+ab04140200dc583f44b398cd3e49bfaab1fb96410d3dca15ce55c444 motif-m3 0.76155 0.254937 6
+bdb12af5771fb923b7d8c1eb666ad8b7063d930a87b89a5322c36a9b motif-m2 0.694253 0.496205 5
+4a0e1f7d78251175cd5105969e172353e79e5464a51684b79573d003 motif-m3 0.926558 0.231911 6
+0aedeb0a31710375693d22db22f2a92ca8838f4f2aaf827fc9c0c678 motif-m1m2m3 0.682448 0.269776 6
+9c968747af91a3262cb8e96789b332c12dc3d9630fcb7a3821e9bf96 motif-m2 0.700122 0.548029 5
+32fd6a6b7a48607648681eead0d0970bb7642592bc082da8051e1231 motif-m2 0.716463 0.513383 5
+4c257b221a07a8d6df7cc18bafd45b0d542f04a5f78bd759fa8d1688 motif-m3 0.78675 0.234934 6
+971bada003d536504a7ef62ea16e53a69acc4be270a6bf16c851beea motif-m1 0.266667 0.583333 2
+32d3e61fbd20e3ed0166d951ea41e365325b71e73612aa8a98cc6542 motif-m3 0.713147 0.263122 5
+edebad6f6ff669f25105821b894d1c3c79da5673031c393ef875079d motif-m3 0.924545 0.242412 7
+85910fc9372827ed3b1e05e36f75a5b39e99018d80886036bbc05f7f motif-m3 0.926558 0.231911 6
+5e0b52dad9327be844e43e4ee414460ed08bd0a8bcf676870fa98093 motif-m3 0.688711 0.235034 6
+1b6b73df1763c5b7063591df60174b43999fe98b5000a0c5462842ee motif-m1m2 0.663617 0.508971 5
+c72f35a65b7d951107c652e55e9718914006ed8c77f0822a01e17aa5 motif-m1m2m3 0.685413 0.216683 6
+f17d9c6692d3415d35e8192e564881739a6e357525285dc0459e3579 motif-m1 0 0 0
+bc18fb087af77c8c1b673a9bc9116b5dbf0ce244a92d8d569a4810ea motif-m1m2 0.821588 0.421207 5
+313e858c9219bb45ed61f5b3eb178c0b6508e7a21d56a79fe71eeb2d motif-m2 0.717579 0.640956 5
+21515fa729c048b83f16e2ab381288f0496eab1298472b91842e4275 motif-m3 0.729208 0.196018 6
+b089d93a6f2f964e2eb8862d519ac875a7d6fdf49b0d531fb214fcfc motif-m2 NaN 0 0
+2f1c156c4a0c5e3a10a6ae60f4d2ea2ad67d32dbbe28f685feb3fa87 motif-m1m2 0.609231 0.488159 5
+8c9f35d3c917b9b238f6078e9b44d5c32cd0fb2391e89eaad925f318 motif-m1m2 0.866768 0.457241 5
+efa74b28b3e4b9b927f5f9f1f9f20766480b025ff04d4ed38126bee1 motif-m3 0.879925 0.198919 6
+19ea58c4f285cafc2c08c4d65d74c48d80fccff0ddff11791d71cd69 motif-m3 0.548667 0.269426 6
+cd5b4304a185f44b31ba9ff6a89bfee64ddffbb01ba055d21e44e259 motif-m1m2m3 0.892126 0.237469 5
+c0cce84704da5b5cec981874ff26056ffd9c6cc1aaed23383223b329 motif-m3 0.90948 0.232912 6
+da09cab5aec3e299897ecdacb3682d9118ea7e064c1525524ab389b6 motif-m3 0.902708 0.236647 6
+49b5974042c4437308e6a9e7bd4e51bc2a58051f3790fbf5dcb8ddc6 motif-m1m2m3 0.888915 0.220918 6
+ca9e6bbba982226369494c104dd781ee833e528dd91a8f726533081d motif-m1m2m3 0.888915 0.220918 6
+6e910a419e4ccf0c2242b9448f69a94ac56ee8aa1afd58c02c8f50bf motif-m1m2m3 0.697798 0.237345 5
+22905623959b297a1583eec6be8e31f46a4fcc5749858bad3ad3f285 motif-m1m2 0.667196 0.590065 5
+cf8fa1656951eeef531c7d99db1f01d289b642085d40ea18d53d1dcf motif-m1m2m3 0.967742 0.27185 6
+196240204fc9128b5dd11e7e9ffc68b2f7bf1db3a483f32e75c50544 motif-m1m2 0.713314 0.498667 5
+a3f2b70f0790d1dd668a990774f7ee80753aec09b988bb079257e109 motif-m1m2m3 0.74688 0.243309 6
+ef6f42eb5bcb024da535b2a0fd15927005c0d0fef3cc3ffb4b36a2f5 motif-m1m2 0.655125 0.516573 5
+6237958e654fdf5abb802a8b74dd9b38172c30f909d7c165081e873e motif-m3 0.741745 0.249726 7
+55031f733d090907e438ef18184a0a000de7c0759b826dee51d2b09e motif-m1m2 0.682265 0.529873 5
+6b1d6a9dc3774cfa6b514e34ba50ca21a2a9c3c021c727a1d8664684 motif-m3 0.0934472 0.261574 6
+b7f675fb4d88db6701632838dd9a0f423616e26c5c9513507323fd7e motif-m3 0.688097 0.262887 6
+13b7556d66fd78e062c4f4c31c8f97b3a3c7f672536805c30b1a86c0 motif-m1m2m3 0.91178 0.20552 6
+d12d9ab3849904b2be8386f6e791b7a129bc775835a7a69f464244b2 motif-m1m2 0.566337 0.548796 6
+cbf69c29baa0fbea2368cbe710c42e7bfba297954a186b5226006b05 motif-m1m2 NaN 0 0
+1ddcc117175f2fc9af10e6adbd53f841a15cc1bdece9c779f7e3d01e motif-m1m2m3 0.594609 0.217324 6
+996ab686ec28f8b5fc944f203c95b4672b60fc9276707e0fa57db0ae motif-m2 0.521856 0.502145 5
+da8aed48766b39435b938697f10797536842c96d886ad8cd73009e77 motif-m2 0.210526 0 1
+829fe0f2f48f8e4841a895601aa398ec09b2a3f5a339f345a17fa009 motif-m3 0.890095 0.22712 5
+192470360675fcff344986e493b28f615b18a2030a63bad606243ab6 motif-m1m2m3 0.879705 0.201034 6
+057725514fa2f92f28a7400fedff7d69a1dd95b6fa359d5d0f9e137c motif-m1m2 0.728076 0.580911 5
+35cafbb3cda7d41a2a5e88696d06c54b35f5ff72f08e7a0bbde330ba motif-m3 0.908108 0.231733 6
+2beaa3a68edbab2b3ae7b779a90274c66ef2b4a0f9242d8c3d6aafbc motif-m1m2m3 0.792724 0.240868 6
+f1361d1b47b303744922d6718f0be9fc144c839d0973da958791b827 motif-m1m2m3 0.888915 0.220918 6
+228c63ea5d47d719e07edf50565592a9690484ad07c91c9096c5a06b motif-m1m2 0 0 0
+3409ba7650b26d26a16b9937c852805e84df8f2fb2b32d45beeb7991 motif-m1m2m3 0.708392 0.217743 6
+425c594d18e19a8fb80e2114fb73385d3cd9a7678c9cfa861c30b0ea motif-m1 0.425532 0.833333 2
+bb1d7f8497bcf20c3dccf7e75b118f63059dd70545e8312a96b53ad7 motif-m1 0.477612 0.583333 3
+2c43d79d3a1b70840150d1ca4bb1a7a72c76b219c1ab39acb325413f motif-m3 0.902948 0.238111 5
+553cf28ed0b0164c68a79809b1d4313d2330c1978f77de45ac5b7280 motif-m1 0.641221 0.47381 4
+a917afe7bf3cfecd62f1de6357c38ed42d32bbede7fc1ee66594c2d3 motif-m3 0.688711 0.235034 6
+e927a7fa221afbbf06bc2b5d2fd71591e850147876beba89942eed5f motif-m3 0.890542 0.217768 6
+793b6219742c7650fa8761d0086e154f0ea06f3cef98805fbb470f06 motif-m1m2m3 0.774468 0.270342 6
+80c4b3a5d08b1dfb528bf0619b652723779bfd4c1e464b829d1572ad motif-m3 0.809232 0.266672 7
+532a069edaf503d796687f823168a42dd057fabcd42687c5df1c4837 motif-m3 0.924545 0.242412 7
+bda53ea2a875b1157137dad732dea2af2b5034a1c01e2ddd10d89952 motif-m3 0.789812 0.244393 7
+3de639a44b56387d5b38e07f07d176eb0954894f2857b226eb5a7405 motif-m2 0.8125 0.478124 5
+eef16a5b15b96fb7da1a4467e402d4c1bd53fbdbe50ef08c7378379b motif-m1m2m3 0.610299 0.272444 6
+5b7f98b45d5e3c0f175eb6e150f0c9b873b414b37701150d0a4df203 motif-m1m2 0.663617 0.508971 5
+aade3e5b7b674d42c1723b93e3278d3724cbd50b947cfbec310d8da8 motif-m1m2m3 0.0934472 0.261574 6
+8921725045a4026310f95c8f9a56e20790021c3352647f5d1df2ece0 motif-m1m2 NaN 0 1
+8483e86c71a2785358d8d71f73a426e58a75bbbe687295da137b258b motif-m1m2m3 0.513808 0.272714 6
+2ddd836fc754794a1c5334a263a7dbd906ca28c3b4617e9af9a22831 motif-m1m2m3 0.772706 0.243357 6
+54fe44e72916256130f1d8bcdc46d9524d11ede25193bbd6aaffc075 motif-m1 0.58427 0.340741 4
+d30c79d1e8f394441ebfb7a1d2874266d8723b45f044ffed6f565c94 motif-m3 0.704823 0.22632 7
+7e9bd3be5556d130ef813dd90087b6687af12ef132fc59ceb9cbdd32 motif-m3 0.926558 0.231911 6
+05dc067a31d1eb35277d140cbce97e2d72dfa5d3e7fbf213298944b7 motif-m1m2m3 0.87946 0.238306 5
+9ee922f4f7359a5ebe872f0e3b4e551f579d9b1bdaed40fcb7cb3cb6 motif-m1m2m3 0.708392 0.217743 6
+87489429e7e3832b55cf4169b6c6f5167b3cc3f1c0f182a38e6997ab motif-m3 0.918605 0.231219 6
+b887911dbf5960d23ee8c5800da527310d3ed4dccca0d260e5545425 motif-m1 0 0 0
+d5a4dfbb3b0aa738552add6ec10c1f06b0bfa7400ee02e51a6be80ca motif-m3 0.789812 0.244393 7
+9c02f74eb5381ccb87a0880004ddd72724cb50abe66e2c8a7d93f54e motif-m1m2m3 0.975734 0.237709 6
+6aed4de787b6fc39b0737ebdcfad2e715f026bd45761374159c2c84f motif-m2 0.734404 0.499467 5
+b26db7755a7aa70baeed5f0f5e11c5f78019242dba21e633271614e9 motif-m3 0.883045 0.216284 6
+8ee92a00b1c97faaa31e51b94d40c806960f73c51f0284073603c8c6 motif-m1m2m3 0.697385 0.237474 6
+d41c1ea5ddf6dcc261ce7a860a898c728f5df95b4e74f7eaceabd68c motif-m1m2m3 0.967742 0.27185 6
+29261e58356442b1082c88902b5f50620803e2e90917669b67bbf0d3 motif-m1m2m3 0.91265 0.24733 6
+f0e8e63425bce80a28f095441ad984b8d5962b3a8f10d46593113996 motif-m1m2 0.687917 0.580236 5
+79fafd72304e89092a4ab82b7fc579919e5e3d43c3837b129f12920c motif-m1m2m3 0.751445 0.254333 6
+b05c8c1418672da3b7047111126b2e4ad7b6c4ca7032a407184d5a09 motif-m1m2 0.826099 0.43729 5
+9ecab5504243bcc49d247fc97b18839a85c329587e1d18257070446a motif-m2 0.691702 0.500298 5
+5cfff48063d08d6d6d5b3684bb28be2562a64d214e0c13111c77993a motif-m1m2 0.866768 0.457241 5
+ea39f6ac3b88b5cc7c2bf66264de1237529dfbd47e42877e827b2a45 motif-m2 0.694444 0.504315 5
+bd0d36ed8a1167072719ec348d798c20c6f69e677668eb6a3830a3ac motif-m3 0.856821 0.232075 5
+94a0561ee5e27274391fb5fa9ff0f5493a6b635d068d857a85f459fb motif-m1m2m3 0.685413 0.216683 6
+e74a3767c45a29327fb37e2671ef945bb439075d2dbc16aba2ba47e7 motif-m2 0.869198 0.515021 5
+787c7941c4fece7a0d1fc14f31651c9f1ae4b22acc9461c6b656c6de motif-m2 NaN 0 1
+3053dccddb505eb6ffbcecedb7e05ee96cb9884c14f6942b795c8804 motif-m2 0.8125 0.478124 5
+feccc5cc02006c768558cf29718723bff4626ce3d459190e4f8a37f9 motif-m1 0.641221 0.47381 4
+108289c84a71c56263f67394f7aeaf7a29ba3864911665c245074737 motif-m1m2 0.722285 0.482917 6
+9dd1fa401755746d91fd0664040bf153b20b5777dadcfecc98976679 motif-m1m2m3 0.888915 0.220918 6
+e4742cd8004440409fa44db4f9093727339c5a56d7048c6a20a813e2 motif-m3 0.855073 0.220052 6
+037b3f1d19052a58295e8d30f2353e42b86a4aa8df3f5c761bc23522 motif-m1m2m3 0.885325 0.21903 6
+6950c29fa0dad809f86d150b6f01217cf5708fcba0c73c71fd95036b motif-m1m2m3 0.79556 0.24888 6
+87655dba81a8ab0595af3895393d64912a0faffcf0fe4be67ebdaf54 motif-m3 0.912852 0.242788 6
+2d99e201e4d1fe36f81a8cb6c2e981d0bf186743bc77bfe76e157bff motif-m1m2m3 0.91265 0.24733 6
+f9f937ff3f0abc72ddd562a6809a104e9dfdf2d23634022e2198f3e3 motif-m3 0.926558 0.231911 6
+e84c4ab438471dcdeb81a92a52dd0442c065de0589d1924ff925ef5d motif-m3 0.757298 0.275685 6
+8f0fedfea600efab840a04eb8ffe319a6d6ae9aed2b5806c69e7d80f motif-m1 0.641221 0.47381 4
+bcc5dc6c004692b471e3df913996012e39b571c8e248850ab51e6cd5 motif-m3 0.926558 0.231911 6
+e44782d69c2cdafba7f438987b4fc95b1cc8155dcb1535cbc5eda9e9 motif-m3 0.954764 0.255281 6
+e06c7952567b94ac0565cf251d06f60a8a6d3379a5db50d52822a427 motif-m3 0.776968 0.240578 6
+4854ae2ae0b25b25ac3329a2dbf914ef84ca6456052606b54001d5cf motif-m3 0.795952 0.258295 7
+9dbfbaf040968105e590b6dadf620c45216d87857752c43632f03061 motif-m1m2m3 0.853411 0.222742 6
+e68f5af65e86ff5d69e268f5fbdd2bb8196cb28839bdc635aae18787 motif-m3 0.0934309 0.267207 6
+75406ac21f1a9cae720c1eea79413d8f77bc88955ebf1476a0a303dc motif-m1m2 NaN 0 1
+ded0d98945985e82743af40f64c9b0569f2a660a32278994b4480a1c motif-m1m2 0.822109 0.42895 5
+8cc023cf69cacefa684a12f3bfe2b11ae9b65ea8392396fbf900263f motif-m2 0.741947 0.511681 5
+a2fff012315a261092bdf8a61323b7e282d3b7efd4e6d2c0c8bf1e1b motif-m1m2 0.892139 0.445183 5
+1f41b0122f376619fabd5688dc92bf632086db19c428c56aed0acd54 motif-m2 0.742327 0.521145 5
+4a5436235d5c32d59f5528bf58cdd04ff2933da41da802bed5a63fd7 motif-m1m2 0.694987 0.520162 5
+0e7cea6b45d75d1ea25c832b8f30b220d43b22f3bb40ebe2678faa35 motif-m2 0.806221 0.489571 5
+6c6e30b09ca543ee4debc117dd67a6faa14052150048e4a08f30514b motif-m3 0.890542 0.217768 6
+4b755883c78d2e8a158ff3e22cba9eae36e8a8fdf73e79d9df9ea8d4 motif-m2 0.742327 0.521145 5
+f33d3be017ee8cecb5c0e49917769832c6733cc17919e0aa49c75568 motif-m3 0.789812 0.244393 7
+f40f72416da71c7ff9d70b955a2f92cc6e05cfda9b8de6fca14cfda7 motif-m1m2 0.722285 0.482917 6
+9ed77abaaabcb9d050cafae8ed21eceb90a3d8b1d589ac57be88135c motif-m3 0.791947 0.286039 6
+6fe2c0704a1d76ba4caadd03131becf8aa72c8761b2e659ccf624b84 motif-m1m2 0 0 0
+fcc8793726824acc47f00811cc93b55671d17c9326579adf1ffad3a3 motif-m1m2m3 0.915641 0.226999 6
+dd28324b998381898439bb542156a8b1fececed5abf5dc0de4676e5d motif-m1m2m3 0.888915 0.220918 6
+4d2dd3fb6d6d8efeb4bd0b96e501d236af65b433c5aa5d2e247861b3 motif-m1m2m3 0.774786 0.236993 5
+3064d1143f6774851c6bbafee5e2cdd97da2876f8509940109f70630 motif-m1m2m3 0.931895 0.256122 6
+3408f0ea81d3260c1388e6e9a2cb554392f7668d422985ca8c47452c motif-m3 0.688711 0.235034 6
+cd5bd3114d048b792fd9d4bbd92649ae1d19cb2188b0cb8c53dc325f motif-m1m2m3 0.973684 0.255646 6
+0e0ee09424da552b7759490a136edf3037584be5e01f38fdb9f0e5b1 motif-m3 0.918605 0.231219 6
+d148fe57c2a17b514661d85909effc533b6bbf7d20ab85d74c7ee5ad motif-m3 0.763141 0.23198 6
+4e5b7b597f0ae6b033f851044b329b59c1a84e43407cf328c588c4c6 motif-m1m2m3 0.812251 0.210477 6
+145f2c6ea7444382984cfd1b965897a9a6102b12d09e83e85dac4f29 motif-m3 0.879806 0.223773 6
+d666cb1cb7ddca73104fb13fe65db0b3f8163171e18a34d7244f7ff6 motif-m3 0.648003 0.233803 6
+a7190cfeb9f396ec8494124aefdcbc1f9957f0040f572ad41c697fda motif-m3 0.777016 0.245974 7
+cc33940b232cac87697244bfe3ebc3f59eb2f644d32de0b3aabf0cff motif-m3 0.917927 0.239518 6
+1491dfe8ce546c16af64407733083ab775367e69fdcaa0ce8b609335 motif-m3 0.890542 0.217768 6
+3ef44474a7bddac93c5bd4c2d3021635c5f22e92c33fa844095521f7 motif-m1 0.545455 0.533333 3
+90b77ce67b9287f2829f6fd31eb1cd0f279a8b2d6ab1c82d32f6a5e0 motif-m1m2m3 0.697385 0.237474 6
+4c2e025016cea53616f95f3f11d06a1c4d52e461b6796666a75f40fb motif-m1m2m3 0.91265 0.24733 6
+813455b8501441e9a7b32bb82797e38c75130c038e9987d838905db5 motif-m1m2m3 0.888915 0.220918 6
+77dfd56ba7f83d12e203bc029a6ac0eacbd1aac4275ce00c6d5fca08 motif-m1m2m3 0.754443 0.26061 6
+f31d9590ea783a09bb441936b5bb2462ae47053d180d83b76f7af27a motif-m3 0.599029 0.199045 5
+607f8558480a3358f19df5a610d281fc973e60fe792975379f6b713d motif-m1m2 0.874109 0.47851 5
+062f9c20d4adc74d3a40d5a45b6170fdae9c0e237fff5d72fa14dba4 motif-m1m2 0.866768 0.457241 5
+f125345f2ec3055eb010a72a46811ca02ef1b7b00976a2023d88c708 motif-m1m2 0.720654 0.536484 5
+f03d3973ecc38b5cce85ec4c18ac56af611dd806329facfeccd2c7e6 motif-m1m2m3 0.0934472 0.263028 6
+9684682ede89566a38e39baa5792e3b21b350fe4603d09d596cef3a5 motif-m3 0.943463 0.241237 6
+55905cc0e737454c86ad7cadd5669aef10e58086a808ecbc6bedab43 motif-m2 0.810896 0.497648 5
+80167a6e146a7f95a0429df303a4aac5b842ab3fe961962194a0f90b motif-m1m2 0.874109 0.47851 5
+ea5c5eb96593e65fad73c2087c7b348051352d7eda6766127bda8269 motif-m2 0.873181 0.521354 5
+50bd00ddad2d7952e38fa69c23b99d4e5ae85545ba533883509c152b motif-m2 0.222222 0 1
+20dc244fad291ee96e271f19f6165b2a5e38a69f619ebe963a4d0ff6 motif-m1 0.266667 0.583333 2
+34d53ba2829ebb5b86076e5449664fcd9b23b8ecb5f105541ef9eba2 motif-m2 0.694444 0.504315 5
+7d9fe539600b74d1b90f9e5e4749bbcd763210d12329752f0eac653c motif-m1m2m3 0.708392 0.217743 6
+3c9d6b26c63de8f57c11147184447b629e4ff1f882e398a14cecbe0f motif-m1m2m3 0.79556 0.24888 6
+e94e2253d5584028c219e7724fe19e622f7657172d6ae8d514c3ae90 motif-m1m2m3 0.78697 0.2466 6
+26147685720f35d6030950fc946f6c27089de259947e1ce447c1c023 motif-m3 0.921374 0.246901 6
+7241114bb779393312897214c59567d37f3812841dec9a18bfb4e771 motif-m1 0.444444 0 2
+a0ffa5bb8a09f6d4f31c27c074f2360c9d2b6a336b2fef562cc6bc24 motif-m3 0.946505 0.24981 6
+517d1e7d63b958240a038669f741f346e6499bfbfc3d9e1a8d842f48 motif-m2 0.719135 0.522685 5
+68458f6443f02b02c69d6c8af9f4a300360a1746cb8f2ee3a2b5112e motif-m3 0.942957 0.257692 6
+07e078149b77ddc5aa7059e4594993ff4276d6157bed1536a1cd6064 motif-m1m2m3 0.91265 0.24733 6
+157d5980b538a336f968b4ec020e23861811a91ec139d27dcab29ba0 motif-m1m2m3 0.697385 0.237474 6
+0648c6e69064d08f8cce3ecb27dcbc4896636f3b3f34b4185d75b71a motif-m3 0.954764 0.255281 6
+077bb4cbd49eaa07c33ef85b2ffd7f3e64ff96ab00f2539fccd56c6c motif-m1m2m3 0.886596 0.220252 6
+9110822468f315881d088fb901516bb2774cbc4294c2f60531d510eb motif-m3 0.708096 0.195502 6
+ff8bd7c193d039eca916e106618c9dcfdb3f106f472bbd34d0bff680 motif-m1m2m3 0.780494 0.26613 7
+ccad581477d6e049e46e7bacc18e2dbdefd520bd642b47ddc1e9717c motif-m1m2m3 0.659161 0.222841 6
+8e23af1477e0db3478b046db9dd703e80d408773f543e9c4136d918c motif-m1m2m3 0.800739 0.300053 6
+e776deb1815fa526a0b843f16c4ca076f516921fa4bfafcffe15db9b motif-m1m2m3 0.576747 0.20471 6
+c48d1d2a30c9cba77ed1b458d566095f5016b57c4a96e3ac95843d44 motif-m1m2 0.866768 0.457241 5
+99a275ccc56b9b56396bfcd7407719f6d178c373ee0e448a14c56dc1 motif-m1m2 0.824658 0.453961 5
+a6217dcaf9f5041627206ada3d688fac8b1f63bb36d6215ceff4a33d motif-m1 0.58216 0.461404 4
+2f193f5623398a7651d29eb5ea046aa0e6b9ef8a293cb43b84303cb7 motif-m1m2 0.892308 0.436984 5
+fe03e819532d073beb5f6bd30186d8b02eab98d5008d94f10c7f478b motif-m2 0.713475 0.508492 5
+89a2e7c4f70f96094d1d434a6d6c4e822320ef3eb55ac1401f0244ac motif-m3 0.789812 0.244393 7
+fca0aaeb5f0b390d459d610c4e02b9960a190dd50f763e7555f7ad09 motif-m1m2 NaN 0 1
+de93ef34913ad1342d3ccddd1b0c7516aacd80b5181aff09597013c4 motif-m3 0.621434 0.233947 6
+e9e70f755e4aae0a24a996fa54db9808dc8d6c0c2a6dd6b8e3472276 motif-m1 0 0 0
+6ef9ece0d092f3c8ffd51bb7e549c92aa148e87073237022d59dbf7d motif-m1 0.507042 0.638889 3
+5b109fa488d62e8598c9ee8d67a5b67cff5e13fe3ce2d9a756d5117c motif-m1 0.347826 0.583333 2
+ed0f0d3e6bed798a1c20ef0bc572c4769af47caad0ec7ce2d390ff42 motif-m1m2 0.700525 0.538866 5
+043594483e9c0c78e08cecf4f8d49b428643c4f55ebb9f1c911e72d2 motif-m2 0.619155 0.56769 5
+d86002465039666045baf249293225bdaa3176ba97242c6027c66ad0 motif-m1m2m3 0.889066 0.21636 6
+11c85bdd42b15bd6459874ed168bd7c4979bc826e6a335de06a54e0e motif-m2 0.699879 0.535964 5
+ba65f48a07df5199f08180943c0249f7af2cbd77e9f74a3920574cd4 motif-m2 0.683247 0.5024 5
+820ab6931167b76099971a7945e7338b9a560804ec1c8367697c6ccc motif-m1m2m3 0.974227 0.22073 6
+d8e3638978c2394a04db2387fbdbc717053ebd5c2105d7e02342ab0b motif-m1m2 0.698688 0.53931 5
+9372434ddb72a2bd3e00eac81f310b59b107600ca197ce3f7221b423 motif-m1m2m3 0.96921 0.268016 6
+723eca313bbc0ebbf34f368fcca1ad2ec253d95e142b61c5f5d1a8b4 motif-m3 0.905459 0.250621 6
+9be5b9583a1fb0a3880b9be5ea9f6f7c9d43894b30f906575c57dc92 motif-m2 0.700122 0.548029 5
+24074daa5825c82bd3f4dd8fbe9b8747eb3b7a7a792419085dc69c6e motif-m2 0.694507 0.50221 5
+28f8f3a6739f13a94611a8d597c7734e6bb14dd52837fa8584e0d11d motif-m2 0.716463 0.513383 5
+8b11256b7cbf27846a580061a3b265ee8e76554d7346c78f577756b0 motif-m3 0.885593 0.194696 6
+bdafd57c9ac4c80f021d32db0c5fd2a38844eef381f4ca86bf084416 motif-m2 0.834938 0.557903 5
+90f69ed6ec32c42c8f35e99811591cb031b1f8b1168aaf9cace2fd94 motif-m3 0.684548 0.255471 6
+ca8fe24558a216e457a61a46905a89aba6f3042387fd22e3e7a95eda motif-m1m2m3 0.776931 0.19184 6
+23f97820dcf1c60eca69ffd8ac53bea05c5860132941acd6e2ba7435 motif-m3 0.713147 0.263122 5
+d013c4c7e46c65dd0f5798c80932a049095e93b10720275ed68ba16f motif-m1m2m3 0.968877 0.240095 6
+554329c2f0baa9617e76e7a32f84c0e104729d5db96938b19015c15f motif-m1m2m3 0.91265 0.24733 6
+54b6934d055b47812b2eccd3fc021efad85f1021e265dcda415f541c motif-m3 0.910076 0.251004 7
+82cd19827baef4a86e1777dc64c799a3b9cb3b75ef01cc32257876ee motif-m1m2m3 0.91265 0.24733 6
+45441b82de5e0215333d9139c592c90e1927a36a11e4568b672992c4 motif-m1 0.444444 0.360606 4
+b3cdac122ccc519c90d4e64e4d48cccfbedcd4089c9c1eb1616b7f9f motif-m1m2 0.722285 0.482917 6
+2ff7defa50085ce625ccf11612c09ac4f3936261d2d16371dfed28aa motif-m1m2m3 0.63216 0.247268 6
+1496b85c15d72a1b7e5989ed6c9c654e362a5a98b3ac3d92df50a26c motif-m3 0.890542 0.217768 6
+e06cf5cbe004916be082cd89eab4769dcd1632d1de998029a08afb58 motif-m3 0.890095 0.22712 5
+b1eb668f8d4e1676f68d07f7ab3038b9ddbc66c96d8af1c2b9712928 motif-m3 0.910605 0.240585 6
+f49c3ad734321b8c73a5d69098f9d62c83e9375a24b1397f74f2f713 motif-m3 0.829932 0.279443 6
+edffcb3cfe2ed3e0172da530cd316f09629bfdf809c9795c9aab5ad8 motif-m3 0.836958 0.230551 6
+1b621892955f0f82ee1f8d07666da5eb42b22f9d603b3ecdd7742936 motif-m3 0.630959 0.2397 6
+2ff2c21efa0bf6d21967e68bf19564f22c990c0f366ddc3bcd59daaa motif-m3 0.828057 0.26203 6
+f709fb2e2ad76d0d0915ede429b2cdad8e829641b96990ed489e4185 motif-m2 0.873181 0.521354 5
+243eb2eedf7509d926725bc2f9a7ca9ee76963e36447c9ac5980d8df motif-m1m2 0.609231 0.488159 5
+91ac8aa526e21617d275d007cfa75ef188a2e3dcb4d5cce6d73177f4 motif-m1m2 0.866022 0.482415 5
+b67b57f13fb791fc5a876359c917bd4a5332cddbe4eff1054d4c7049 motif-m2 0.870229 0.533618 5
+5bc99e93a518832655435399867c28675225566d4162397a0e7c9471 motif-m1 0.641221 0.47381 4
+273781c84c494e58f64cbcb03ef281935ec4d860e10683f200ecdc04 motif-m1m2 0.720743 0.483634 5
+822326b311b2f8d57a48d1229eb0373c3040e7e2a805c21fef94150e motif-m1m2m3 0.849307 0.223202 6
+66ad0956367d7ef4a3f387e5fa6fd64fa4e12988e45d16edae42198e motif-m1m2m3 0.880836 0.188684 6
+39a73f977541cd39408c535197b2e26668d40ef27ab92df051d506ec motif-m3 0.920188 0.249395 6
+9f273a097938492a6a5c144e9a96fac9c10f6817da0f26a5e4be9273 motif-m1m2 0.722285 0.482917 6
+a9c2af971924bfb0a088ce7f12d3a370a870f22506b3c030deb9d1ca motif-m1m2 0.748022 0.458097 6
+4d2c1237fc885aafb50af88c7371250274a636d61fa606f2c433a176 motif-m1m2m3 0.656303 0.25785 6
+33bd2f425d0401e6e2e2eed18e5cbfa36bddb98b7847c5a76741d2f0 motif-m1m2 0.746166 0.49494 6
+001e14a5837aa33fa8d51e4e60a1d3396ab9c2461e4617ebdb1d2aa0 motif-m2 0.741947 0.511681 5
+a81b86a8e362337bdbada273475c1a03b8265a732574761ce5564574 motif-m1m2m3 0.697798 0.237345 5
+1055b8c3f6f2de97a9047fa3cebcd22d92e1725039c87d562ef3bfb3 motif-m3 0.795511 0.243624 6
+526c87a40c1c4b26ede2fdc69d63295ee9cfccad73fbab564beb7eab motif-m1m2 0.71207 0.55287 5
+31f1725359461a49c8ed74fd7d13acd213570b949113cfa39f0c6fd8 motif-m3 0.808015 0.259926 6
+e9d2836d56c77bec45a8c81dc03999fad495d66fdf31ac60bcbfab71 motif-m1m2 0.722285 0.482917 6
+88e277100bfff09a5a9c68993ef4a20379ff14ecf769178162e6b6ef motif-m1m2m3 0.920658 0.250893 7
+32dbd52754f192ec62e02c302ec6fa3b4f2c4429a7be3c19012747af motif-m1m2m3 0.697385 0.237474 6
+c74f752c7152c2759b541e624c5e6f0bda45c598ee7b5781e6013e87 motif-m3 0.729208 0.196018 6
+3d6f42c0af2cb3a50a59f154403b0b03778b155eec58323f561c32c4 motif-m1m2m3 0.751445 0.254333 6
+0387e51a153d92cef97f4c8ead130c564135ab598b0a5af50c0fd81a motif-m3 0.924545 0.242412 7
+3df00f28dfcf69d388e3cd1359164cbfd898004d01eeabf3def0585e motif-m1m2 0.892308 0.436984 5
+137848482c11f4c5b48a0c4511a490c2d0b9f7ef7835e907fac40cda motif-m1m2m3 0.760639 0.256513 6
+e6a4e1717c4b5990c4da9b9aa6c7080d710f2dcd35e6a5bdc79cac03 motif-m3 0.789812 0.244393 7
+0adfe3fc1c59b4cd55436a69f67000f5dab84d547cbb82116c4bc905 motif-m1m2 0.899115 0.469956 5
+43da5d1100c63921bc13f0eb4d096555877ce21eacb8367943819ba2 motif-m1 0.58216 0.461404 4
+f9dc660776b13f251c59389bd1dbec7add8615bedfcfe18c35472ae4 motif-m3 0.912852 0.242788 6
+fe539b8d1a0cf18225ea4f3f8b197b2b9f4a1a50d8d5d1dfc5a72151 motif-m1m2m3 0.858766 0.268158 6
+1cd16d3bc14d7ac2f8e48814942099aec349c94ed7d6c1d2527dac63 motif-m1m2m3 0.888915 0.220918 6
+75042d9e1a591d000a55f7bb55c73d7baa66ef638383c600fa44cb84 motif-m1m2m3 0.629157 0.239177 6
+f180a6fb5508879708fbce647b329f5734b2d3b4497d762305c89a70 motif-m2 0.683053 0.527244 5
+d1117349b24fdbd5db8520e016a6e28c550864e1d077cd1916080756 motif-m1m2m3 0.756522 0.286524 6
+b8e007e1b772284ea335afce3456b32198adf6601a680c798c89b3c8 motif-m1m2m3 0.895947 0.228248 6
+72d56a0d32575a32423e81ba10fc31580451e69baa6030552c619dcb motif-m1m2m3 0.795585 0.241044 6
+9307ab7a3ce46c77e0be36d0112ca777fdc473e10c1bf4586fd3a8f2 motif-m2 0.85446 0.564063 5
+a037ac74271d0e0b0227ce69ef60012c8f6f9c79831a7f71c5fb2d97 motif-m1 0.347826 0.583333 2
+1f8cef6135945970bfdc444bf60544b9fcf4d76a6284f3166dfa4c9b motif-m1m2m3 0.812002 0.27206 6
+9c2f6336899b5d532b8afeb078f0773c84e4bd1c4fb03ac20dd81873 motif-m1m2 0.748369 0.477669 5
+60fb14cfc50543681239153a36205ceb6c22728bd4c1cee7c59ff5e2 motif-m3 0.763593 0.249727 6
+8f20fff7f4b5622c56e8f275857e8c693506587ed93964e880860925 motif-m1m2m3 0.594609 0.217324 6
+3201e030883c681a26e24a98d4fe2a7220ef392ad0fbc6792e472e33 motif-m1m2m3 0.967742 0.27185 6
+eabb1f4763daa2af1e7343bcc178291d639ea8676860ad59f6664b08 motif-m2 0.683053 0.527244 5
+2590c3c7334a4d246aae896e244d679e3fc2a408c972a41df48f8d5f motif-m3 0.725925 0.249898 7
+4e3d9b0bb9aa7d4d06faa8c66fa695c4517828594e59c21036840c5f motif-m3 0.684548 0.255471 6
+30f54c7c71b9815462e6d007eefe1226d4dc7ca45fb1877298f96984 motif-m3 0.902466 0.24194 6
+45c3630e49d231786a164b2e0ccd825f5e635a983bd5f1fd788595b9 motif-m3 0.890542 0.217768 6
+6cb3753c9c8252c6174cae2d074d287e7be727e511a489e05b4380ac motif-m2 0.668786 0.509187 5
+648325237ee47143cf0089bf8cef12f841192f4f55beec047ecbf3f6 motif-m3 0.91373 0.243666 7
+c71daf1134f473480cfd86997001d72db037d66009128aec9ab62f04 motif-m1m2m3 0.91265 0.24733 6
+15b5be9ff43ac523732bd2ec22d687edab2411bc98a55a8eb42034b9 motif-m2 0.759118 0.511524 5
+505b332716ff21886d90797584d18715fdccb2b7474f5f1858953895 motif-m1 0 0 0
+a29f2344c0b7bf26090c8831a390a29d640e6259f4e1377c40b20286 motif-m1m2m3 0.915641 0.226999 6
+2663021a57241c15f358cf94ef1a116e4d4ec8efe2811faae3fe631a motif-m2 0.742327 0.521145 5
+0a349302137591429c662af1e1f0bbf9fc4477d78e75572fe7d36f81 motif-m1 0.272727 0 3
+719c83a3d61b0a6ea11b76b96914081001a400209f73a2d4e9a7a0b9 motif-m3 0.73475 0.24738 5
+862847b4e5d6f5a41a1b64bf56d78676591cba7783102b97a691ceb1 motif-m2 0.83127 0.516284 5
+612cea5d74257cf4c7fcbba916354a9f5972d540590c70a09e071dfc motif-m3 0.770091 0.241621 6
+9a79a0c66af95e7bcb0e0672368ef08de3433917f913ef7d576aacf1 motif-m3 0.914024 0.238509 6
+90c27e86c3298ecb1db066986cf5273fff6b0c2e6c219cb78333787b motif-m1 0 0 0
+8d586e217b4a1e701fd54f87709bc238f4b7f86459ae8dc0545cb48c motif-m2 0.840036 0.526524 5
+7df2fa5ff0c3873ef49b8e29a184575313cf2187560550928d8e3e99 motif-m1m2 0.899115 0.469956 5
+63968add17023e1961badc45947ca2afd9c3bb826d12574b91e74f8e motif-m3 0.701822 0.232514 5
+b1102395c9c571446246feaaca704f42bbf9225dbf5d0b8ae38cf9d0 motif-m3 0.777269 0.263391 7
+dcb62caddf50aeaf08e1c875a128f2ca70d1e9300f1752d25b890b66 motif-m3 0.853392 0.234432 6
+ad1118c82482727ceb57bd2b18bf8407c5cb3d900122142ee187c53d motif-m1m2m3 0.736788 0.278385 6
+26a4bf4a5a16c8e3b879d5d3ded72a4816535b91c50238a970f3e114 motif-m3 0.777016 0.245974 7
+3357970891eba0c8d6713de0736540207ce3bbabafe0de5e46b47d2a motif-m1m2m3 0.656303 0.25785 6
+f39055ca66e34b2506a399730fc9549c099bf5406f5f3200f3a2d1f8 motif-m1m2m3 0.730341 0.256385 6
+c5e3f7a16ca2327ec2172d79ad620a31332722645baea0c0023c50da motif-m2 0.741947 0.511681 5
+5a58edf4cfe9defdc8c457f39df3517dace650191d0e3f4d5f2bac48 motif-m1m2 0.631084 0.493504 5
+bfa0c53838ad49f9b14fc7e716df318f52d63a8b052a146ada94208c motif-m1m2 0.682265 0.529873 5
+93ea42d1089b275afd3013583842fd459cbc0dc04c0246f4fab1d332 motif-m1m2 0.743696 0.513853 5
+dc337c978080ad7e511725df4134de0f3302973eb86fd68f6d8481bc motif-m1m2m3 0.922903 0.246413 7
+353fbaab743dd9df963cfd681321de5b0920c1abd2d593e9a637e86e motif-m3 0.790012 0.282564 6
+749395078fa4f745a794a8110ede5160c5438d1f082bc2df8daa6278 motif-m1m2m3 0.888301 0.243759 6
+52c57f4753093212b8872e6c39cbaf2a43de98d5d64fb42aa7cb5630 motif-m3 0.729208 0.196018 6
+075c33ece43513fd2a6643650845d414c341c11e2e5b1a36a8229873 motif-m3 0.924545 0.242412 7
+f8ec9e1713e8f9f40e0f5d8af2ab365c83964bddd7988ebf531cb78e motif-m1m2 0.874109 0.47851 5
+44cbc38e4f38d6075a9175f71e25f73a657b4120638fcbd2c1ddd05b motif-m1m2m3 0.682448 0.269776 6
+04f58c3e2e6fbb995c74ce1c88189dea6a3f744db2de056985f0c168 motif-m3 0.762143 0.2572 6
+858139dbbdf3a9836a7201102b08c4ea859d1887f5ebbafbf472270b motif-m1m2m3 0.697385 0.237474 6
+52658934d932cfb1b765c1cee90cba67e42b486ae73476af3994e681 motif-m2 0.704263 0.551152 5
+a837d3d9c994f289b514b182d1435dd4d91c9cc507a6940c10615abf motif-m2 0.724862 0.502553 5
+db5e685ffc7aebd46f63b94a377770a7a2ef63e973e673ce458ca814 motif-m1m2 0.682265 0.529873 5
+486082c6459820571a11c14c1ac192eacdf9b62e3737c1751ec6bfd7 motif-m1m2m3 0.712298 0.260431 5
+f7cb82c8a5493893c4eeb412fe646ef5133b49c81f37c6c1930ec9ca motif-m3 0.890542 0.217768 6
+0c9e82a3e8443c7823fbd2506260722a110854035daf32443b1c055c motif-m3 0.722623 0.235547 6
+eff5aa78ec82d7a7e61877d183d13d42c10435d4e5d8273e104ac96d motif-m1m2m3 0.780494 0.26613 7
+055379c145b660b6f8248f6cc36400228fb32b95137b2fd4da86739d motif-m1 0.444444 0 2
+46a376e85ea95cdd555fd9030a2dbcca7ae8a56be6b53bdd423d87da motif-m1m2 0.235294 0 1
+09e94351016d21d885430543ba08c5845a5c16b30ef70d8c94f7ee44 motif-m1m2 0.866022 0.482415 5
+a660891e2b69f0e05fef658bf9e29378938d31c0d77dd8dd3310b303 motif-m1m2 0.891986 0.46175 5
+2dd8f2ba501752cf4a9372f35a546c268717406faa7605a3196b9ff1 motif-m1m2 0.866768 0.457241 5
+5e530dba8e2251524b238f497b73e51e7df34cbe2d7e45d35abe421e motif-m2 0.693608 0.528972 5
+a80e03125d2bd11809dea43a3529af92e5275f930198e3c5549cb533 motif-m2 0.741947 0.511681 5
+63da7ea0cb905054b7471a000f0e4a90055b74e54a078766236e9181 motif-m1m2m3 0.869802 0.23541 6
+6d65674de9cd37144feb5ce74a392e6a07d67f744b87ede0f5651e1b motif-m3 0.905861 0.228934 6
+78ca47028d002c0098506d73110bf5c7607059cc39e8bedb81bf07ee motif-m1m2m3 0.912181 0.243538 6
+5071740193172a03cb146bbaeed75535a6ef1d2e59d19f868f9a19f0 motif-m1 0.444444 0.360606 4
+3964ed054fa7cde4cf756d09e3128d845bb2f543605af1fd6a24ec4c motif-m1m2m3 0.780494 0.26613 7
+110c57a2d544f3f059a796b313ca9cf2d4d6a546d27f50c52ac883b9 motif-m3 0.807292 0.28356 6
+2911e940a702041b0184a8e8e9442d832e5640e212f762a06e944393 motif-m3 0.926716 0.22708 6
+31d4f137839e21dae3d0d1ac4c74c4be4ff5d8882170d03211c0cc34 motif-m1m2m3 0.967742 0.27185 6
+53e25eef450dfa1eefd358d9f246ba844783fd1dbc32acf028b70bf6 motif-m1m2m3 0.594609 0.217324 6
+be8ad9678bd372923f21726d440cfc1f547568660b07c2194712bdbb motif-m1m2m3 0.723236 0.266159 6
+9d41d147ba8c324a855acc1d4f2788970aea4454febde8594b72f5e7 motif-m1m2m3 0.781426 0.277217 6
+ef78cc59b79b78e2b9ac05e605f9a85930b57f78dfe09f00163d1aa9 motif-m3 0.853392 0.234432 6
+6b0fe7d4df31bb5500052a3ac21b457f031ed2e5c9f0188dea4a9829 motif-m2 0.716463 0.513383 5
+9220abe265342b130ec1fd0672408dd1f0564c607730a2147f49b588 motif-m1 0.444444 0.360606 4
+55738baa60393142f2889078d2df98c401201a39f6e6ebdb2d0c8772 motif-m1m2m3 0.697385 0.237474 6
+8333d4e575c28bbf307ac39c7260d9d58907e2b845114ec4b9b4002b motif-m1m2m3 0.922957 0.262085 6
+6ced1b6d6f9b008916499af2e20d734bcd0bfd671b12f334c02b1a59 motif-m3 0.917927 0.239518 6
+68311b26cda7e3cf386bc29306549027b37c944afe47e4ca82430faa motif-m3 0.774047 0.221513 6
+b11f19345d27c5ca4ab9a4326258cde7be2730c122ebcff529d1c4ab motif-m3 0.872979 0.250881 6
+0ed246593a29dce54b7d0018eaa14cb1d3bdff27418fb9b6ce57a75a motif-m1m2m3 0.720488 0.243275 6
+2b0cadc11c8f8f47af3fdaff14a52d251bf8ed3f47d52013f4a98460 motif-m3 0.853731 0.227054 6
+ec3447cb3b8dad3ca8476e5179bc4d74e5c50e90c183e926ae465b65 motif-m3 0.90125 0.245105 6
+0a806a30baa4f019dbf0488c4afbf55ff68b6d9b4fc84382bc04530f motif-m1m2m3 0.763311 0.246454 5
+d1eb55b497b8a01348e01e7106a6f8c995098e2fe189b51c91913c28 motif-m1m2 0.719645 0.477597 6
+2a25e90638816e3b2f44915880ae3612def4d7283dacb728946065d4 motif-m3 0.834067 0.272913 6
+d70b1d268dffa0a95db3bc8516d66c4789d77bc2fe6f1631e47d3cf9 motif-m2 0.750853 0.512731 5
+4887d3758a9b3437058dd7eff062aa6883f228a562ff509fcef46c9c motif-m2 0.750853 0.512731 5
+c792f6aa22a0c7e73c3aa39d7f563fcbd3fe3da8dd5d7e1503a75da9 motif-m1m2 0.866768 0.457241 5
+6f7edf672d49efd71b25bdc787fdd3fb59ceacdb1b0889b9cdda8d9f motif-m1m2 0.674715 0.514153 5
+faff5c0314c63d31ae60d137051b94a786a7e9f2bf5fb481b2660d51 motif-m3 0.777269 0.263391 7
+fe8a1bf7dcaabe7767a1d707c1f35d2aaa6647c51190414130c61b4c motif-m1m2 0.722285 0.482917 6
+e8002343ab7d5809bb8b8b2eda26c9b80b5f104c48e31b475ba11a13 motif-m1m2 0.698061 0.528027 5
+81bafcd0c5e7551a7cbc66a2d485308d76c8b42b61d9088f92fdc48f motif-m1m2 0.722285 0.482917 6
+3da8d9f57e601b448500048313ff2c3454b237d46f8356f231492817 motif-m1m2m3 0.869802 0.23541 6
+03158529c083258306deb220a66c2462ad72d5c431a97b3e86530b35 motif-m1m2m3 0.920077 0.251967 6
+bdb45094d62ac6da4eaebf2b531075c893ceb1aa01103d856a055d9f motif-m1m2m3 0.873861 0.253248 6
+1f0c0f3194cf19d3422c61cdeeb2f97f49a63160b62e6070818a237f motif-m1m2 0.874109 0.47851 5
+e056b60e31f88e567897c73bbf1cc34d97c710ec3c4a6706db326aca motif-m3 0.777269 0.263391 7
+95f9cc54110f4d5189b12ccadcc0ac42b1f0ac312ab944a71015ce09 motif-m1m2m3 0.91265 0.24733 6
+ad169012e79dcb70f80a58e004cc8cff65d353f3c1725ed0146ed82f motif-m1m2m3 0.864516 0.248117 6
+2cf591f7ff939d5c5f7f3741f1f084a0835980d71b38cf4cbc0b1a02 motif-m1m2m3 0.862366 0.222227 6
+54f6ad624c1769279b5184e6ae8272f9e7c9480f9c1d518a1c01694c motif-m3 0.890095 0.22712 5
+4d3cc7aceba29fee7c2bf01ef4c8860d2a3c4ce4cbc52f775df530df motif-m3 0.972973 0.265681 5
+1875b26a9c8d963f49cb80f9c41d6556d939f5c21e38f3a5a9be5063 motif-m1 0.347826 0.583333 2
+3195b2fb4702e6fed06cd600f57ff006a1ca33067a44c35ea2995070 motif-m1m2m3 0.883228 0.211729 6
+43553a3f3a97158be3e02fe587562c0d4f8d210ea4980d87f03c91fe motif-m1m2 0.874109 0.47851 5
+3f62b9a4f417e571f41834e9ba5c212d3494527db2278768c12cb2d8 motif-m1 0 0 0
+80fef38788ea38684f6390cd8987f116518353b8a7676e2dab3b3c8a motif-m1m2m3 0.780494 0.26613 7
+55dd54e0b301408b43e92ac61b1774e9693dd043b8eb2b5dbeb30c0f motif-m1m2 0.873453 0.486956 5
+4256a8562c75eab8e678f2ff7a0a3fe1a8c11dda5eb5e6d8281ad6d5 motif-m1m2m3 0.0934419 0.263068 6
+cbda73535529e4f19cc6dff80b668a2670d9b6146d6e63814a0690f8 motif-m1 0 0 0
+be1a619310adc60e227a75e4d660ee4a647d64cca8e27735efe0ced4 motif-m1m2m3 0.806354 0.266465 6
+f4701dcba9e7051077be0d28a41b01f4d41f7bcc6b5807810f5733b5 motif-m3 0.853731 0.227054 6
+0eee59442ccec4f87f0d9fa98837443b8f02300590a01e32ddff2f4a motif-m3 0.756635 0.257767 6
+e1903caa7a852779120be0e3b0add9b273f56f9dd4a51e7f4c0b6f5c motif-m1m2m3 0.780494 0.26613 7
+a1b192c325f0870d7cf94c7ab69c8be3efae18886a7d2b8faf47bdd7 motif-m1m2m3 0.751445 0.254333 6
+af4e3fc12df207621fb1a794ef595fa71ab8c599590c2771ab14bd8d motif-m1m2m3 0.971576 0.246348 6
+2c69247a2f4f2142497189841b90bd61e12791694d33269085c97add motif-m3 0.76663 0.255921 6
+f5ff9af664886ec58466c29a904de9f0e8fae3ef0d09eac22a751f53 motif-m3 0.627451 0.24964 5
+af4a689430679922e6d00dc38812d9ff714726d4195eac84cb3f326a motif-m1m2 0.743696 0.513853 5
+035e2ccc0e32b38f8428bb1a5c838588c5062f10326b1fe2175c4c73 motif-m2 0.700122 0.548029 5
+1dfd7e3341a5e370d57d9a74a5521d1261b663742927c7563ef8779c motif-m1m2m3 0.891969 0.254449 6
+a600f5030803abc4d4c6d687d2af7627f49667d2820be630fc97da6a motif-m1m2 0 0 0
+3e94b6e8ddfab290225d166998be4ce0e179d15a8db8d74a070184c4 motif-m1m2m3 0.870155 0.228199 6
+a3b912dc4432950632e6c73d4915ef1a7b65604883809905e448cea5 motif-m2 0.840036 0.526524 5
+a222fb0754b3b810c27df511a12cd7a92392975b4f01bf5e1e9bd9aa motif-m3 0.777269 0.263391 7
+c42568a0606873467155e0ec0b0429a92a3e653ee89594f035b7e4f3 motif-m1m2m3 0.547904 0.257979 5
+e9eba086899edeeb72bec28756bfe40c56072f0b35684e603f83d492 motif-m3 0.651919 0.254486 6
+257932448236cbffc980bb605fb705f3eae6afdd474be28ccedeef1b motif-m2 0.809959 0.491454 5
+20794c8cc5cd71f68259ae04fe6ff4029a81752b966c7de45482be8c motif-m3 0.733473 0.252347 7
+4b168ca57a4acbc9eebdbd891fdada1a8fdfb54256327e1053770925 motif-m2 0.701237 0.538655 5
+54897df748a2816aadfa399d6865d212c8ef54338f9b59c3ae558250 motif-m3 0.791947 0.286039 6
+679e8d1560b9cfb5027beedd42eb5e3e59d50db5bef33bbbdc569803 motif-m1m2 0.874109 0.47851 5
+0e20e1ab095a6d9fd224ce6d66e48ae32df0c308fb1361edc61ca622 motif-m1m2m3 0.925946 0.226187 6
+93d07d221e902b32613805c5b9c1f895f6b42a426bc5a18473e0614d motif-m3 0.76155 0.254937 6
+baf8594684af72005b151ce5df9a672de04b47158dcbcfd902ccd977 motif-m1m2m3 0.780494 0.26613 7
+e03b2c97d97e8bccc20b5572e9a5b4d9522783c5daa21b1062b2c1b1 motif-m3 0.853392 0.234432 6
+3aa9ce0ad50223a434b7cbc775159e556af3ce62d6a7c9b78e247edf motif-m1m2 0.682265 0.529873 5
+eb0a2c30d9406f1af90452ca48be9652b2bec5620114f6b4e28322ac motif-m3 0.887227 0.204827 6
+ef9aa5f6e09fe6e299e996fe802cb0bd8ab90d696c9250b6d18557ee motif-m1m2 0.862807 0.431135 5
+3f0351ebed8e5fa103fa105a98fe60ffeec6deef35c9287171bc5caf motif-m1m2m3 0.730268 0.25995 7
+8abf100cd4493f97ce690520821427cb42c3e53c61a3271e2e488490 motif-m1 0.58216 0.461404 4
+88641f3288553fbf81a7e5e5c80aaeac5883f28329fe773c74a00172 motif-m1m2m3 0.895156 0.260258 6
+251fe5100b74490f58dc123ec5ea76f3a503712e18f54c345d0f55a4 motif-m1m2m3 0.697196 0.275309 5
+aff95c4d5fcb20b55dde1dd98978c823188d96d1da33b24aec140bb3 motif-m1m2m3 0.869802 0.23541 6
+93fd17b0ffc63b722ecd67ac07367c0eaf5122b09539a30c480d132e motif-m1m2 0.834832 0.428286 6
+957bcd7133f40db0ff9dd4b76fb3fb2fbd2a94069eb724a4c29cb2fa motif-m1m2m3 0.800739 0.300053 6
+2e0f5332716bce489d39b9faaf13752c1337bfa43928699ca983912d motif-m1 0.461538 0.466667 5
+822329ccb0a5ade5cd46b8142c86d4250aca82badc18f8982e119b26 motif-m2 0.742327 0.521145 5
+98869225ca3cc852f3b0d209487d6ecff47fe2ce0a06703634d43d66 motif-m3 0.777269 0.263391 7
+fc402251757695e64964014881c8235eb3b5fb424bae5356c463ffcb motif-m1m2m3 0.900365 0.202581 6
+adddebde03af9a68d27ba94ed9d723b7dee3cf7206217da12f7e8c10 motif-m2 0.800378 0.500712 5
+e84089ef0645ce20aa2e53a1c637eb0bb3d778f9da06b1d89762d88a motif-m3 0.777016 0.245974 7
+2f99bc6253919af86c33c376165c0a49a7de129dedeee46698110bf5 motif-m3 0.887607 0.259379 6
+f9976c6b24d390e74880bbd6abff79936633ab122af81233018f1299 motif-m1m2 0.874109 0.47851 5
+e2040b51536c4bd81adb7b6ada6d530f3ffb684c821c2b5d7ccdd78d motif-m1m2m3 0.780494 0.26613 7
+ac12a5c18c44c4875ee2925473ddf96ff7d722de2dc46a6a3ece7fb5 motif-m2 0.750853 0.512731 5
+d50862b1440963f83b7672636d0b7d34943a1e857841c7965b243034 motif-m1 0.48 0.6 2
+18e3b26332a2040e60c626c3e9939b1f9c86f2d186348749f44ed1e0 motif-m1m2 0.70873 0.490183 6
+e635d0293cc58c8a6a7ac53cd67bdcd647d1d892e8422a7028daa3c4 motif-m3 0.767379 0.252399 7
+6d1423c1fe4c59e860b7aa1d81073bae823316a27fc7a5217a733efa motif-m2 0.747065 0.543964 5
+c899cc08f105a5936ec67c381e2b524a4adf9718b7f776cd4a602e69 motif-m1m2m3 0.780494 0.26613 7
+208755079b5f1d11c51ec207cfb3c4679f53d11acd2e066b7c1370c0 motif-m1m2m3 0.920077 0.251967 6
+c44766fdd3ce6a118e2f0da88528c5b3b6fc1ea4c9901bd1a250247d motif-m2 0.724226 0.511388 5
+d8266be6e01dd4dfa7f0e0dae3be7d4a3010dda21d49e7284841071b motif-m3 0.789561 0.252914 7
+5cd59f6e99e38bb9094257e7202db7b7cd08f4b4af647176526e0edd motif-m1m2 0.899115 0.469956 5
+e6614fa19450f93e8eb8e9ba7f9b0c770cf435e44d660a19c96054c5 motif-m3 0.791947 0.286039 6
+10c5b1151b435b29a34c5b400c5d6de12e8738afce28f857ce7e6edb motif-m3 0.777269 0.263391 7
+1014b7417f9df4cc94c1ecabe00fe1b77b3266b3f5b6b2edd72090f9 motif-m1m2 0.867562 0.48372 5
+5fcf2fd0e9680303c41cee0ad09a690fa5be8d8679574384a25ed459 motif-m3 0.899329 0.228476 6
+71b6cd0f50e2a6b027a03f57d03c5b4963bb5677047bd0c2927d48e3 motif-m3 0.726157 0.254758 7
+d1ff9d2f8780a29df41ac57f719e7173b48084060fc967692e7a8298 motif-m1m2 0.718421 0.553607 5
+aac22cd9d4655c44a56dc47c71ac34f3756ee9c6950a06010c3bc9c7 motif-m3 0.726157 0.254758 7
+4b40b779d1d671a4fe1315bc0322d2250b598a995b514d8896c5d7ee motif-m1m2m3 0.91373 0.243666 7
+ea865fa911bd655b6e01adb51cf2d0813e37a9021e135de3e8bf72e4 motif-m1m2m3 0.780494 0.26613 7
+3ecbf0cff206b00a246d3b25679a1e0644cbed8233900be8d44d9159 motif-m1m2 0.704431 0.51306 5
+1884b710be034e787dc6ff883951be286ca696ecb831baaed0df3018 motif-m1m2m3 0.933052 0.252278 7
+66d99db3660a735c5eee9934facc0e68192a9141f6848451dc2605ee motif-m1m2m3 0.800739 0.300053 6
+551baeabbd1ee1dc47a169e217b2713cc07a233e4120acca390470c1 motif-m1m2m3 0.773835 0.25924 7
+38a0a90c94fd2382e0ca698ce7844c71411e89eed978aefe6cd0e9c9 motif-m1m2m3 0.773835 0.25924 7
+101e22a57e759a1fe90ccf6806226b733ffa329ba8fd5abd38b9e558 motif-m1m2m3 0.905384 0.223702 6
+4e3167e7f633c25ff6d391e5f3fbb10439705af6b6df2583b5e78226 motif-m1 0.444444 0.305128 5
+64ea108bf58789eb233bc0a800c6c90f7a6db86e9e81e8fab9a43e99 motif-m3 0.889558 0.247471 6
+1dbd334ab28ffaead9fefd9d8bbee628746bb76eaa99d07c67c28d4e motif-m2 0.83127 0.516284 5
+d762036987f5fe1e4ccab6fddf8291d049871c802f87ce34c8dc13db motif-m2 0.741573 0.525997 5
+ade2ec845dcf05b4f0e30467236c844a9e4bd63052b1ceceb8ac81e9 motif-m1 0.58216 0.461404 4
+eadc44002f3c8a3f165fc2e2eed10a9bea3ba2faf520f69c1dbeda3b motif-m2 0.700122 0.548029 5
+3ef636eaea50ef91dbbf2d480b77126156ac22c10f2151998ccfcf7e motif-m2 0.747065 0.543964 5
+7d0c66ed2bd1195b7e534c594b0081eebe69f1342e59f207da52ff40 motif-m3 0.726157 0.254758 7
+53cc406118d68006524c1f597771013239517adec799410514febf92 motif-m3 0.726157 0.254758 7
+e4d1db3906afaa4576ccff0cfa14c59b6f89103975c8178f257d2f12 motif-m1m2m3 0.872696 0.231627 6
+60ce4b081009f7f511a224af8acd36f66bda12757f8f52e33c6f0296 motif-m2 0.840036 0.526524 5
+8e55ea38c901a754b00d18184a1fda56cb2aa02bb9c07c028b0758a2 motif-m3 0.789054 0.246787 7
+7e620eb37e42b1d1019cde36495c3d0ea86b90fdb2ead146ab28d092 motif-m3 0.761007 0.251197 7
+adaf6cc6bddd07deb4db9ae20f77031160cccf6fdd3a6d52a1679e00 motif-m1m2 0.874109 0.47851 5
+b94400b39beaaea66360efb8ef6e541356b4771b655e1c42b3c95902 motif-m3 0.79286 0.283289 6
+237b2cefc07bb796cafd37e2021928acb3188ba8d91e976636b387c3 motif-m1m2m3 0.773835 0.25924 7
+9247c34895b6aca5488365676a2ee820dc77a0a5210f223e8e856346 motif-m1m2m3 0.773835 0.25924 7
+0d125d47278c3e9c45b470481a348e57a101860a94aee31d0aaf6d39 motif-m1 0.507042 0.638889 3
+da999cabe6ff5dafe947ca73c638ca938f94c1f10d5ae9b977dcf352 motif-m1m2 0.718421 0.553607 5
+95f34c854078a7d3b714c461e971c05281fcc5351c502877f2042c48 motif-m1m2 0.724311 0.459364 5
+83389174a949a75f3222004b598227cfdb99917e5e1120dc34d7860c motif-m3 0.818803 0.249037 6
+da75ed2ea5d6d59eedf38200fadf87e0020e065480e8fef01389fc6d motif-m1m2 0.745064 0.480701 5
+2ccacea7351dd7ce66c3d7b464a2e01c498d1b88edb012a938a31c94 motif-m2 0.716463 0.513383 5
+4b3553a284419c3078545e5e67688aaab316953faa87c0dcddb936bd motif-m3 0.889558 0.247471 6
+252b0fe47827266a96e3723aa94655dbfd956ca7b9d31e9986ba3529 motif-m1m2m3 0.828114 0.287073 6
+5fdb2866c3ec6bd4e636ee958db7acfedf6b7f45810b0023b0ff11fd motif-m1m2m3 0.789054 0.246787 7
+5472a1cef5b945a836bb38d4dafddb839302ac46db0323e176d9eb0a motif-m2 0.719493 0.516014 5
+ea78ca3dfc1e43600840a1326853777dbd00c69047331b3829e8719b motif-m3 0.889558 0.247471 6
+569fc80dd4a988f565f6be4a62a1af6046d6ac470bf9b276ab7241a7 motif-m1m2 0.899115 0.469956 5
+fe26af588eb1a8c3c6d8045d712cd0486bef7693eb6ce6f3274e6260 motif-m1m2m3 0.803606 0.252054 6
+a653dd33e8e2c0681977c4468d3780c77f87770405ebe5c1fa039af5 motif-m1m2 0.730518 0.472684 6
+c9be96e022820509417bb9c36c046bb0f5ba7b233cddfdb46af8fd51 motif-m1m2m3 0.872696 0.231627 6
+04b50075355ed6497af7544bb71cdede4918c954e4ee11b8b315611a motif-m3 0.63046 0.242442 6
+ebb262428a8ab8bc67526219366e4c7c9623d85939075693901f4acd motif-m1m2m3 0.872696 0.231627 6
+220c6ba8022d712444feb8079fc207177ef59d98698df58f840dbe45 motif-m1m2 0.748022 0.458097 6
+456292023601d747c3ce00436fe3f24d4f0454a73524c58e82b1cc58 motif-m1m2m3 0.978008 0.237971 6
+3d6eeffcc6da4375a3efcda5a7bec72f76e9d0d15f0dbcab9e6d24e2 motif-m1 0.272727 0 3
+4d694e9c587fdae738e4098085eb946b1763dd1980f0d82d3aeb4c22 motif-m2 0.683247 0.5024 5
+fd57627a1d95291229cf06c30ac38a3a0b29eabf63c6ff3d336a6822 motif-m2 0.60537 0.541732 5
+8ce596fa3ac31ee759557bf105695f6a0cf7a3c5211ee8c4af317307 motif-m1m2m3 0.629157 0.239177 6
+5697384a326b50efb1cb3d3afc948e82721c75187f66461d383636bf motif-m2 0.742327 0.521145 5
+f94b9cfa5b689add9a6f93b144fee0c6ecc0ff55537fc909ab07e80b motif-m1 0.545455 0.533333 3
+ae5a9472b0c3f05fa5fc59fcb2d8d5b1d96e21b618af5da1c176e9f8 motif-m2 0.808336 0.469176 5
+df79d0576428602d63075c7dc747bc1e7160524cef4f49ffffc028d2 motif-m3 0.789844 0.2378 6
+7b7b6afa3a486afa3800f683fff0915b2dfb0e988c89ada6189e8b09 motif-m3 0.705051 0.244459 6
+8452a85fecb8e7592016b00065e9738c812ea416a51e97117bf9fb4d motif-m3 0.777016 0.245974 7
+9b803220217d260f0e8c11a1f3835e4a71825e3fe1d4e132b8576eef motif-m2 0.724103 0.533966 5
+affd896f9e0b9395f21d9ca128859ad5e3eb123fef96bfa8e6b7b4df motif-m1m2 0.874109 0.47851 5
+1ae82a691fc4498a32927c6b932bba91dae65eceaa514a3a8262f84d motif-m1m2 0.668305 0.521588 5
+a332cd26e10a8630315d7fa8c5ddc612d4811a6da4a875cdc4bdf13c motif-m3 0.835707 0.26572 6
+7595873f92ea91e53bf4c9a10fdbed1102bd8b71e854dbd39b3df808 motif-m1m2 0.566337 0.548796 6
+8acf44bd9c7a989278d596b2ed3336fbe8be65cdfaf858628b65f409 motif-m1m2m3 0.780494 0.26613 7
+29c50b4670b0a6ea264eb2bfa477e379a4c674f47ca023fe908fa014 motif-m3 0.597386 0.234733 6
+6ed1010e872306240da1f5618ce99c4c7da05784485a7ef2435bc217 motif-m1m2m3 0.724952 0.266088 6
+8131cfcd5b58159bab2f109782c1e17f866180e3e06de7a79b182415 motif-m1m2 0.759785 0.494136 5
+79db566c2c25037ee9a12ead25aea59d571adf246b6c237c0a7dae30 motif-m1m2m3 0.671552 0.260178 6
+df4afc87c82956b85d588a6d55cf178686fc88acc0a20c0a42a27f46 motif-m1m2 0.692024 0.545886 5
+b8db81f5700eb68c7829972528342d1c1cf2a33033c0a67de004e877 motif-m1m2m3 0.814394 0.248749 6
+1b7798e3dc593250094df44e65d63b627da968cd16c4369805ef34ca motif-m1m2m3 0.60341 0.245779 6
+c1d23f3fb44291b59051423218eaac58f93609c0ca0d88fdcf1b3b95 motif-m3 0.879806 0.223773 6
+fc4e10be0c4cd40a50508c884f916a71d9005f897b72dbd171e6eafc motif-m1m2m3 0.886596 0.220252 6

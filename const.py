@@ -23,6 +23,7 @@ ALL_GRAPHS_AND_NUM_NODES = [
     # ('graphs/tribe.pkl', 16),
     # ('graphs/cloister.pkl', 18),
     # ('graphs/congress.pkl', 219),
+    ('graphs/bitcoin.pkl', 5881),
     ('graphs/thesaurus.pkl', 15670),
-    # ('graphs/slashdot1/graph.pkl', 77268)
+    ('graphs/slashdot1/graph.pkl', 77268)
 ]
