@@ -28,10 +28,10 @@ class TableCreation:
         teleport_alpha         NUMERIC,
         other_params           JSONB,
 
-        community              BYTEA
-,
+        community              BYTEA,
         time_elapsed           REAL
-    )
+    );
+    CREATE UNIQUE INDEX IF NOT EXISTS {schema}_{table_name}_idx ON {schema}.{table_name} (id);
     """.format(
         table_name=query_result_table,
         schema=schema
@@ -51,7 +51,8 @@ class TableCreation:
 
         key                    TEXT,
         value                  REAL
-    )
+    );
+    CREATE UNIQUE INDEX IF NOT EXISTS {schema}_{table_name}_idx ON {schema}.{table_name} (id, key);
     """.format(
         table_name=eval_result_table,
         schema=schema
