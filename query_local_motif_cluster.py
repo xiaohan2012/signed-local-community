@@ -63,7 +63,7 @@ def find_local_cluster(g, motif_ids, query, alpha):
     # get the best community
     best_pos = np.argmin(sweep_scores)
     cc_comm = order[:best_pos+1]
-    print('best position', best_pos+1)
+    # print('best position', best_pos+1)
 
     # map back the lcc nodes to g
     comm = [cc2g_map[n] for n in cc_comm]
@@ -118,7 +118,7 @@ if __name__ == "__main__":
         ans['community'] = community
         ans['time_elapsed'] = time_elapsed
 
-        print(ans)
+        # print(ans)
 
         summary = community_summary(g.subgraph(community), g)
         print('summary', summary)

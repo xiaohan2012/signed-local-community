@@ -32,6 +32,8 @@ class TableCreation:
         time_elapsed           REAL
     );
     CREATE UNIQUE INDEX IF NOT EXISTS {schema}_{table_name}_idx ON {schema}.{table_name} (id);
+    CREATE INDEX IF NOT EXISTS {schema}_{table_name}_method ON {schema}.{table_name} (method);
+    CREATE INDEX IF NOT EXISTS {schema}_{table_name}_graph ON {schema}.{table_name} (graph_path);
     """.format(
         table_name=query_result_table,
         schema=schema
@@ -53,13 +55,15 @@ class TableCreation:
         value                  REAL
     );
     CREATE UNIQUE INDEX IF NOT EXISTS {schema}_{table_name}_idx ON {schema}.{table_name} (id, key);
+    CREATE INDEX IF NOT EXISTS {schema}_{table_name}_method ON {schema}.{table_name} (method);
+    CREATE INDEX IF NOT EXISTS {schema}_{table_name}_graph ON {schema}.{table_name}  (graph_path);
     """.format(
         table_name=eval_result_table,
         schema=schema
     )
 
 
-def init_db(debug=False):
+def init_db(debug=False, create_table=False):
     """
     create connection, make a cursor and create the tables if needed
     """
@@ -73,11 +77,14 @@ def init_db(debug=False):
         TableCreation.query_result_table_creation,
         TableCreation.eval_result_table_creation
     )
-    for sql in sqls_to_execute:
-        cursor.execute(sql)
+    if create_table:
+        for sql in sqls_to_execute:
+            cursor.execute(sql)
+        conn.commit()
+        print('execution SQL done')
     if debug:
         conn.set_trace_callback(print)
-        pass
+
     return conn, cursor
 
 
