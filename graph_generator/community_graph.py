@@ -20,9 +20,11 @@ def make_random_signed_graph(N, density=0.9, negatives_ratio=0.5):
     for e in it.combinations(range(N), 2):
         if np.random.rand() < density:
             w = 1
+            label = 1  # 1 means "good" edge
             if np.random.rand() < negatives_ratio:
                 w = -1
-            G.add_edge(e[0], e[1], sign=w)
+                label = 0  # 0 means "noisy" edge
+            G.add_edge(e[0], e[1], sign=w, label=label)
     return G
 
 
@@ -49,9 +51,11 @@ def connect_communities(comm_list, edge_proba=0.3, neg_ratio=0.8):
             if np.random.rand() < edge_proba:
                 if np.random.random() < neg_ratio:
                     sign = - 1.0
+                    label = 1
                 else:
                     sign = 1.0
-                new_g.add_edge(u, v, sign=sign)
+                    label = 0
+                new_g.add_edge(u, v, sign=sign, label=label)
     return nx.convert_node_labels_to_integers(new_g), nodes_by_comm
 
 
@@ -118,16 +122,17 @@ def make_and_dump_batch(
             
             pkl.dump((g, comm, params), open(output_path, 'wb'))
 
-            
-if __name__ == '__main__':    
-
+  
+if __name__ == '__main__':
     internal_density_list = make_range(0.5, 1.0)
     internal_negative_ratio_list = make_range(0, 0.5)
     external_edge_proba_list = make_range(0.0, 0.5)
     external_neg_ratio_list = make_range(0.6, 1.0)
 
-    n_reps  = 10
+    n_reps = 10
     n, k = 16, 4
+    root_dir = "/scratch/work/xiaoh1/data/signed-local-community"
+    output_dir = "{}/community_graphs-n{}-k{}".format(root_dir, n, k)
     make_and_dump_batch(
         n_reps,
         n, k,
@@ -135,5 +140,6 @@ if __name__ == '__main__':
         internal_negative_ratio_list,
         external_edge_proba_list,
         external_neg_ratio_list,
-        output_dir="/scratch/work/xiaoh1/data/signed-local-community/community_graphs-n{}-k{}".format(n, k)
+        output_dir=output_dir
     )
+
