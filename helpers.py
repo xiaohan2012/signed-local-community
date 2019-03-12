@@ -3,6 +3,7 @@ import random
 import string
 import datetime
 import hashlib
+import scipy
 
 import pandas as pd
 import networkx as nx
@@ -50,6 +51,7 @@ def signed_conductance(g, S, verbose=0):
     
     |cut+(S, V\S) + #deg-(S)| / sum_s deg(s)
     """
+    raise Exception('this implementation is wrong!')
     numer = 0
     denum = 0
     S = set(S)
@@ -404,6 +406,52 @@ def conductance_vectorized(C, S, self_degree, verbose=0):
     if verbose > 0:
         print('{} / min({}, {})'.format(cut_size, vol, total_vol - vol))
     return cut_size / min(vol, total_vol - vol)
+
+
+def signed_conductance_by_sweeping(A, order):
+    # relevant adj matrices
+    pos_A = A.copy()
+    pos_A[pos_A < 0] = 0
+    pos_A.eliminate_zeros()
+
+    neg_A = A.copy()
+    neg_A[neg_A > 0] = 0
+    neg_A.eliminate_zeros()
+    neg_A = -neg_A
+
+    # negative part
+    neg_B = neg_A[order, :][:, order]  # permute the matrix, both rows and columns
+    neg_B_lower = sp.tril(neg_B)
+    neg_B_sums = flatten(neg_B.sum(axis=1))
+    neg_volumes = np.cumsum(neg_B_sums)  # pos_volumes
+
+    neg_B_lower_sums = flatten(neg_B_lower.sum(axis=1))
+    neg_penalty = np.cumsum(2 * neg_B_lower_sums)
+    neg_cut = np.cumsum(neg_B_sums - 2 * neg_B_lower_sums)
+    neg_penalty_other = neg_A.sum() - 2 * neg_cut - neg_penalty
+
+    # positive part
+    pos_B = pos_A[order, :][:, order]  # permute the matrix, both rows and columns
+    pos_B_lower = sp.tril(pos_B)
+    pos_B_sums = flatten(pos_B.sum(axis=1))
+    pos_volumes = np.cumsum(pos_B_sums)  # pos_volumes
+    
+    # distinguish diagonal entries and non-diagonal ones
+    pos_self_degree = pos_B.diagonal()
+    pos_B_lower_off_diag = pos_B_lower - sp.diags(pos_self_degree)
+    pos_B_lower_off_diag_sums = flatten(pos_B_lower_off_diag.sum(axis=1))
+    
+    pos_penalty = np.cumsum(pos_B_sums - 2 * pos_B_lower_off_diag_sums - pos_self_degree)  # to fix
+    
+    # together
+    total_vol = abs(A).todense().sum()
+    volumes = pos_volumes + neg_volumes
+    volumes_other = total_vol * np.ones(len(order)) - volumes
+    
+    neg_penalty_selected = scipy.where(volumes < volumes_other, neg_penalty, neg_penalty_other)
+    vols = np.minimum(volumes, volumes_other)
+    scores = (pos_penalty + neg_penalty_selected) / vols
+    return scores
 
 
 def conductance_by_sweeping(A, order):

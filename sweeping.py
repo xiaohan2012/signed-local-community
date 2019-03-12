@@ -1,10 +1,13 @@
 import networkx as nx
 import numpy as np
-from helpers import flatten, conductance_by_sweeping
+from helpers import flatten, conductance_by_sweeping, signed_conductance_by_sweeping
 from algorithms.pagerank import pr_score
 
 
-def sweeping_scores_using_ppr(g, query, alpha, weight='weight', A=None):
+def sweeping_scores_using_ppr(
+        g, query, alpha, weight='weight', A=None, signed_A=None,
+        conductance_measure='unsigned'
+):
     """
     run ppr and returns sweeping positions as well as scores
     """
@@ -19,7 +22,16 @@ def sweeping_scores_using_ppr(g, query, alpha, weight='weight', A=None):
     # print('len(node_scores)', len(node_scores))
 
     order = np.argsort(node_scores)[::-1]
-    sweep_scores = conductance_by_sweeping(A, order)
+    if conductance_measure == 'unsigned':
+        sweep_scores = conductance_by_sweeping(A, order)
+    elif conductance_measure == 'signed':
+        print(order)
+        assert signed_A is not None
+        assert (signed_A < 0).sum() > 0, \
+            'no negative entires in signed_A, are you sure it is a signed graph?'
+        sweep_scores = signed_conductance_by_sweeping(signed_A, order)
+    else:
+        raise ValueError('"{}" not implemented'.format(conductance_measure))
     # print('len(sweep_scores)', len(sweep_scores))
     # print('sweep_scores', sweep_scores)
 
