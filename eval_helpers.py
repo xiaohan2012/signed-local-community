@@ -28,8 +28,10 @@ def edge_agreement_ratio(subg, A):
     """number of good edges / total number of edges"""
     def n_cut_and_n_inside(A, nodes):
         n_inside = A[nodes, :][:, nodes].sum() / 2
-        A[:, nodes] = 0
-        n_cut = A.sum()
+        
+        mask = np.zeros(A.shape[0], dtype=bool)
+        mask[nodes] = 1
+        n_cut = A[:, np.logical_not(mask)].sum()
         return n_inside, n_cut
         
     nodes = list(subg.nodes())
@@ -54,8 +56,9 @@ def edge_agreement_ratio(subg, A):
     return agreement_ratio
 
 
-def community_summary(subg, g):
-    A = nx.adj_matrix(g, weight='sign')
+def community_summary(subg, g, A=None):
+    if A is None:
+        A = nx.adj_matrix(g, weight='sign')
     # neg_frac = 1 - frac_intra_neg_edges(subg, A)
     # pos_frac = 1 - frac_inter_pos_edges(subg, A)
     res = OrderedDict()
