@@ -1,3 +1,5 @@
 # signed-local-community
 
-code for project 
+## where is?
+
+- code for synthetic graph experiment: `rewiring-self-loops.ipynb`

@@ -25,7 +25,7 @@ def sweeping_scores_using_ppr(
     if conductance_measure == 'unsigned':
         sweep_scores = conductance_by_sweeping(A, order)
     elif conductance_measure == 'signed':
-        print(order)
+        # print(order)
         assert signed_A is not None
         assert (signed_A < 0).sum() > 0, \
             'no negative entires in signed_A, are you sure it is a signed graph?'
