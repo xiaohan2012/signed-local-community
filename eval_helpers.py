@@ -6,67 +6,6 @@ from helpers import n_neg_edges, n_pos_edges, approx_diameter
 from collections import OrderedDict
 
 
-def edge_agreement_ratio(g, groups):
-    nodes = list(chain(*groups))
-    g_sub = g.subgraph(nodes)
-    n_edges = g_sub.number_of_edges()
-    node_label = {u: i for i, grp in enumerate(groups) for u in grp}
-    num_agrees = 0
-    for u, v in g_sub.edges():
-        if g_sub[u][v]['sign'] == 1:
-            num_agrees += int(node_label[u] == node_label[v])
-        else:
-            num_agrees += int(node_label[u] != node_label[v])
-    return num_agrees / n_edges
-
-
-def avg_cc(g, groups):
-    cc_list = []
-    for grp in groups:
-        subg = g.subgraph(grp).copy()
-        subg.remove_edges_from([(u, v) for u, v in subg.edges() if subg[u][v]['sign'] < 0])
-        cc_list += list(nx.clustering(subg).values())
-    return np.mean(cc_list)
-
-
-def cohesion(g, grp):
-    subg = g.subgraph(grp).copy()
-    subg.remove_edges_from([(u, v) for u, v in subg.edges() if subg[u][v]['sign'] < 0])
-    n = subg.number_of_nodes()
-    return 2 * subg.number_of_edges() / n / (n-1)
-
-
-def avg_cohesion(g, groups):
-    return np.mean([cohesion(g, grp) for grp in groups])
-
-
-def opposition(g, grp1, grp2):
-    grp1, grp2 = map(set, [grp1, grp2])
-    subg = g.subgraph(grp1 | grp2)
-
-    cnt = 0
-    for u, v in subg.edges():
-        if (u in grp1 and v in grp2) or (u in grp2 and v in grp1):
-            cnt += int(subg[u][v]['sign'] < 0)
-    total = len(grp1) * len(grp2)
-    return cnt / total
-
-
-def avg_opposition(g, groups):
-    return np.mean(
-        [opposition(g, grp1, grp2) for grp1, grp2 in combinations(groups, 2)]
-    )
-
-
-def opposing_groups_summary(g, groups):
-    return dict(
-        agree_ratio=edge_agreement_ratio(g, groups),
-        cc=avg_cc(g, groups),
-        coh=avg_cohesion(g, groups),
-        opp=avg_opposition(g, groups)
-    )
-
-
 def frac_intra_neg_edges(subg, A):
     nodes = list(subg.nodes())
     neg_A = A.copy()
@@ -85,22 +24,52 @@ def frac_inter_pos_edges(subg, A):
     return 1 - n_pos_edges_inside / n_pos_edges_total
 
 
+def edge_agreement_ratio(subg, A):
+    """number of good edges / total number of edges"""
+    def n_cut_and_n_inside(A, nodes):
+        n_inside = A[nodes, :][:, nodes].sum() / 2
+        A[:, nodes] = 0
+        n_cut = A.sum()
+        return n_inside, n_cut
+        
+    nodes = list(subg.nodes())
+    pos_A = A.copy()
+    pos_A[pos_A < 0] = 0
+    pos_A = pos_A.astype('bool')
+    pos_A.eliminate_zeros()
+    n_pos_edges_inside, n_pos_edges_cut = n_cut_and_n_inside(pos_A, nodes)
+
+    neg_A = A.copy()
+    neg_A[neg_A > 0] = 0
+    neg_A = neg_A.astype('bool')
+    neg_A.eliminate_zeros()
+    n_neg_edges_inside, n_neg_edges_cut = n_cut_and_n_inside(neg_A, nodes)
+
+    # print('n_pos_edges_inside, n_pos_edges_cut', n_pos_edges_inside, n_pos_edges_cut)
+    # print('n_neg_edges_inside, n_neg_edges_cut', n_neg_edges_inside, n_neg_edges_cut)
+    total = n_pos_edges_inside + n_pos_edges_cut + n_neg_edges_inside + n_neg_edges_cut
+    n_good_edges = n_pos_edges_inside + n_neg_edges_cut
+
+    agreement_ratio = n_good_edges / total
+    return agreement_ratio
+
+
 def community_summary(subg, g):
     A = nx.adj_matrix(g, weight='sign')
-    neg_frac = 1 - frac_intra_neg_edges(subg, A)
-    pos_frac = 1 - frac_inter_pos_edges(subg, A)
+    # neg_frac = 1 - frac_intra_neg_edges(subg, A)
+    # pos_frac = 1 - frac_inter_pos_edges(subg, A)
     res = OrderedDict()
     res['n'] = subg.number_of_nodes()
     res['m'] = subg.number_of_edges()
-    res['inter_neg_edges'] = neg_frac
-    res['intra_pos_edges'] = pos_frac
-    res['f1_pos_neg'] = 2 * (pos_frac * neg_frac) / (pos_frac + neg_frac)
+    # res['inter_neg_ratio'] = neg_frac
+    # res['intra_pos_ratio'] = pos_frac
+    res['edge_agreement_ratio'] = edge_agreement_ratio(subg, A)
 
-    res['avg_cc'] = np.mean(list(nx.clustering(subg).values()))
+    # res['avg_cc'] = np.mean(list(nx.clustering(subg).values()))
 
-    if g.number_of_nodes() <= 1000:
-        # for small graphs, compute diameter exactly
-        res['diameter'] = nx.diameter(subg)
-    else:
-        res['diameter'] = approx_diameter(g)
+    # if g.number_of_nodes() <= 1000:
+    #     # for small graphs, compute diameter exactly
+    #     res['diameter'] = nx.diameter(subg)
+    # else:
+    #     res['diameter'] = approx_diameter(g)
     return res
