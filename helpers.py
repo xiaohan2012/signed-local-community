@@ -75,7 +75,6 @@ def signed_laplacian(g):
     L = D - A
     return L
 
-
 def signed_layout(g):
     L = signed_laplacian(g)
     w, pos_array = eigs(L.asfptype(), k=2, which='SM')
@@ -90,10 +89,10 @@ def draw_nodes(g, pos, labels=None, ax=None):
 
 def draw_edges(g, pos, ax=None, draw_pos=True, draw_neg=True):
     if draw_pos:
-        pos_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] == 1.0]
+        pos_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] > 0]
         nx.draw_networkx_edges(g, pos, pos_edges, style='solid', edge_color='blue', ax=ax)
     if draw_neg:
-        neg_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] == -1.0]
+        neg_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] < 0]
         nx.draw_networkx_edges(g, pos, neg_edges, style='dashed', edge_color='red', ax=ax)
 
 
@@ -298,6 +297,12 @@ def get_lcc(g):
     cc_list = nx.connected_component_subgraphs(g)
     lcc = max(cc_list, key=lambda cc: cc.number_of_nodes())
     return lcc
+
+
+def laplacian(A):
+    deg = A.sum(axis=0)
+    L = sp.diags(flatten(deg)) - A
+    return L
 
 
 def normalized_laplacian(A):
@@ -523,3 +528,28 @@ def approx_diameter(g):
     dist = nx.shortest_path_length(g, source=n)
     return max(list(dist.values()))
     
+
+def noise_level(g, weight=None):
+    """fraction of 'bad' edges of all edges"""
+    if not weight:
+        edge_labels = np.array([g[u][v]['label'] for u, v in g.edges()])
+        return 1 - edge_labels.sum() / edge_labels.shape[0]
+    else:
+        good_edge_weights = np.array([g[u][v]['label'] * abs(g[u][v][weight]) for u, v in g.edges()])
+        all_edge_weights = np.array([abs(g[u][v][weight]) for u, v in g.edges()])
+        return 1 - good_edge_weights.sum() / all_edge_weights.sum()
+
+
+def pos_adj(A):
+    pos_A = A.copy()
+    pos_A[pos_A < 0] = 0
+    pos_A.eliminate_zeros()
+    return pos_A
+
+
+def neg_adj(A):
+    """entry values are positive"""
+    neg_A = A.copy()
+    neg_A[neg_A > 0] = 0
+    neg_A.eliminate_zeros()
+    return -neg_A
