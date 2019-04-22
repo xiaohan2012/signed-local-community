@@ -305,11 +305,18 @@ def laplacian(A):
     return L
 
 
-def normalized_laplacian(A):
+def normalized_laplacian(A, subtract=True):
+    """
+    subtract=False maps to Q case
+    """
     deg = A.sum(axis=0)
     D_neg_half = sp.diags(flatten(1 / np.sqrt(deg)))
-    L_norm = sp.eye(A.shape[0]) - D_neg_half @ A @ D_neg_half
-    return L_norm
+    part1 = sp.eye(A.shape[0])
+    part2 = D_neg_half @ A @ D_neg_half
+    if subtract:
+        return part1 - part2
+    else:
+        return part1 + part2
 
 
 def signed_normalized_laplacian(A):
