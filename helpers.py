@@ -14,6 +14,7 @@ from scipy.sparse.linalg import eigs
 from scipy import sparse as sp
 from matplotlib import pyplot as plt
 from tqdm import tqdm
+from scipy.linalg import sqrtm, inv
 
 
 def walk(g, s0, beta, n_steps, verbose=0):
@@ -75,11 +76,36 @@ def signed_laplacian(g):
     L = D - A
     return L
 
+
 def signed_layout(g):
     L = signed_laplacian(g)
     w, pos_array = eigs(L.asfptype(), k=2, which='SM')
     pos_array = np.real(pos_array)
     return {i: pos_array[i, :] for i in range(g.number_of_nodes())}
+
+
+def signed_layout_geometric_mean(g):
+    """
+    visualization using geometric mean of Laplacian
+    Reference:
+    Clustering Signed Networks with the Geometric Mean of Laplacians, NIPS 2016
+    note: supporting only **small** graphs (internally using numpy.array)
+    """
+    
+    A = nx.adjacency_matrix(g, weight='sign')
+    Ap = pos_adj(A).A
+    An = neg_adj(A).A
+    Lp = normalized_laplacian(Ap).A
+    Qn = normalized_laplacian(An, subtract=False).A
+
+    Lp_sq = sqrtm(Lp)
+    Lp_sq_inv = inv(Lp_sq)
+    L_gm = Lp_sq @ sqrtm(Lp_sq_inv @ Qn @ Lp_sq_inv) @ Lp_sq
+
+    w, pos_array = eigs(np.real(L_gm), k=2, which='SM')
+    pos_array = np.real(pos_array)
+    pos = {i: pos_array[i, :] for i in range(g.number_of_nodes())}
+    return pos
 
 
 def draw_nodes(g, pos, labels=None, ax=None):
@@ -560,3 +586,97 @@ def neg_adj(A):
     neg_A[neg_A > 0] = 0
     neg_A.eliminate_zeros()
     return -neg_A
+
+
+def degree_diag(g):
+    """diagonal matrix with degrees as the diagonal"""
+    deg = nx.adjacency_matrix(g).sum(axis=0)
+    return diags(deg.tolist()[0], 0)
+
+
+def prepare_seed_vector(seeds, D):
+    """
+    prepare seed vector s s.t.
+    s.T D s = 1
+
+    assuming one or two seeds are given,
+    if two, they're in opposing communities
+    """
+    n = D.shape[0]
+    s = np.zeros(n)
+    
+    for u in seeds[0]:
+        s[u] = 1
+
+    if len(seeds) > 1:
+        # has 2nd seed
+        for u in seeds[1]:
+            s[u] = -1
+
+    s /= np.linalg.norm(s)
+    s = s[:, None]
+    
+    s = np.diag(1 / np.sqrt(D.diagonal())) @ s
+            
+    # requirement check
+    sTDs = (s.T @ D @ s)
+    assert np.isclose(sTDs[0, 0], 1.0), '{} != 0.0'.format(sTDs[0, 0])
+    return s
+
+
+def is_rank_one(M, verbose=False):
+    """
+    we check if the ith row/col of M is a multiple of the jth row/column, for every pair of i, j
+    
+    before doing that, we round the numbers to certain decimal point
+    
+    note thatfor some unknown reason, the following does not return 1
+    
+    np.linalg.matrix_rank(np.round(X.value, 3))
+    """
+    n = M.shape[0]
+    r = 0
+    for i in range(n):
+        for j in range(i+1, n):
+            divisors = M[i, :] / M[j, :]
+            divisors = np.round(divisors, 3)
+            r = max(r, len(np.unique(divisors)))
+            if verbose:
+                print(np.unique(divisors))
+    if r > 1:
+        print('rank is {}'.format(r))
+    return r == 1
+
+def sbr(g, x, t):
+    """
+    compute signed bipartiteness ratio
+    g: graph
+    x: score vector
+    t: threshold
+    """
+    assert t >= 0
+    A = nx.adj_matrix(g, weight='sign')
+    
+    S1 = np.nonzero(x <= -t)[0]
+    S2 = np.nonzero(x >= t)[0]
+    S = np.nonzero(np.abs(x) >= t)[0]
+
+    neg_degree_inside = ((A[S1, :][:, S1] < 0).sum() + (A[S2, :][:, S2] < 0).sum())
+    pos_degree_between = (A[S1, :][:, S2] > 0).sum() * 2
+    vol_inside = scipy.absolute(A[S, :][:, S]).sum()
+    vol_total = scipy.absolute(A[S, :]).sum()
+    edges_outside = vol_total - vol_inside
+
+    # TODO: should be multiplied by 2?
+    ret = (edges_outside + neg_degree_inside + pos_degree_between) / vol_total
+    assert ret >= 0 and ret <= 1, "out of range, {}".format(ret)
+    return ret
+
+
+def get_theoretical_kappa(S, seeds, A):
+    """get the theoretic kappa defined by a set and seed nodes,
+    A is the adj matrix"""
+    vol_S = scipy.absolute(A[S, :]).sum()
+    vol_uv = scipy.absolute(A[seeds, :]).sum()
+    k = vol_S / vol_uv
+    return np.sqrt(1/k)
