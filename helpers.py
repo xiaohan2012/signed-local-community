@@ -647,9 +647,39 @@ def is_rank_one(M, verbose=False):
         print('rank is {}'.format(r))
     return r == 1
 
-def sbr(g, x, t):
+
+def sbr(A, S1, S2, verbose=0):
     """
-    compute signed bipartiteness ratio
+    compute signed bipartiteness ratio given two sets S1 and S2
+
+    A: adj matrix
+    """
+    S = list(set(S1) | set(S2))
+    neg_degree_inside = ((A[S1, :][:, S1] < 0).sum() + (A[S2, :][:, S2] < 0).sum())
+    pos_degree_between = (A[S1, :][:, S2] > 0).sum() * 2
+    vol_inside = scipy.absolute(A[S, :][:, S]).sum()
+    vol_total = scipy.absolute(A[S, :]).sum()
+    edges_outside = vol_total - vol_inside
+
+    if verbose > 0:
+        print('neg_degree_inside=', neg_degree_inside)
+        print('pos_degree_between=', pos_degree_between)
+        print('vol_total=', vol_total)
+        print('edges_outside=', edges_outside)
+
+    if verbose > 1:
+        print('A', A.A)
+        print('S', S)
+        print('A[S, :].A', A[S, :].A)
+    # TODO: should be multiplied by 2?
+    ret = (edges_outside + neg_degree_inside + pos_degree_between) / vol_total
+    assert ret >= 0 and ret <= 1, "out of range, {}".format(ret)
+    return ret
+
+
+def sbr_by_threshold(g, x, t):
+    """
+    compute signed bipartiteness ratio using the rounding result by threshold `t`
     g: graph
     x: score vector
     t: threshold
@@ -659,18 +689,7 @@ def sbr(g, x, t):
     
     S1 = np.nonzero(x <= -t)[0]
     S2 = np.nonzero(x >= t)[0]
-    S = np.nonzero(np.abs(x) >= t)[0]
-
-    neg_degree_inside = ((A[S1, :][:, S1] < 0).sum() + (A[S2, :][:, S2] < 0).sum())
-    pos_degree_between = (A[S1, :][:, S2] > 0).sum() * 2
-    vol_inside = scipy.absolute(A[S, :][:, S]).sum()
-    vol_total = scipy.absolute(A[S, :]).sum()
-    edges_outside = vol_total - vol_inside
-
-    # TODO: should be multiplied by 2?
-    ret = (edges_outside + neg_degree_inside + pos_degree_between) / vol_total
-    assert ret >= 0 and ret <= 1, "out of range, {}".format(ret)
-    return ret
+    return sbr(A, S1, S2)
 
 
 def get_theoretical_kappa(S, seeds, A):
