@@ -2,8 +2,11 @@ import numpy as np
 import networkx as nx
 
 from itertools import chain, combinations
-from helpers import n_neg_edges, n_pos_edges, approx_diameter
 from collections import OrderedDict
+
+from sklearn.metrics import precision_recall_fscore_support
+
+from helpers import n_neg_edges, n_pos_edges, approx_diameter
 
 
 def frac_intra_neg_edges(subg, A):
@@ -76,3 +79,66 @@ def community_summary(subg, g, A=None):
     # else:
     #     res['diameter'] = approx_diameter(g)
     return res
+
+
+def evaluate_level_1(n, C_pred, C_true):
+    """
+    for evaluating local polarization detection
+
+    consider nodes in C_tree has true label 1 and nodes in C_pred are predicted to have label 1,
+    compute precision, recall and f1
+    """
+    y_pred = np.zeros(n)
+    y_pred[C_pred] = 1
+    y_true = np.zeros(n)
+    y_true[C_true] = 1
+    return precision_recall_fscore_support(y_true, y_pred, average='binary')
+
+
+def evaluate_level_2(n, c1, c2, C_true, groups):
+    """
+    for evaluating local polarization detection
+
+    consider only nodes in (c1 \cup c2) \cap C_true
+    if it's in c1, it has label 1
+    if it's in c2, it has label -1
+    
+    for nodes in groups, if it's in commmunity 1, it has label 1 and -1 otherwise
+
+    compute the precision, recall and f1 for each community
+
+    Params
+    --------
+
+    n: number of nodes
+    c1: list of nodes in community 1
+    c2: list of nodes in community 1
+    C_true: list of nodes in community 1 or 2
+    groups: list of two lists, each list corresponds to one community
+
+    """
+    c1 = list(set(C_true).intersection(set(c1)))
+    c2 = list(set(C_true).intersection(set(c2)))
+    
+    y_pred = np.zeros(n)
+    y_pred[c1] = 1
+    y_pred[c2] = -1
+    nodes = y_pred.nonzero()[0]
+    y_pred = y_pred[nodes]
+
+    y_true = np.zeros(n)
+    for i, grp in enumerate(groups):
+        y_true[grp] = i*2 - 1
+    y_true = y_true[nodes]
+
+    ret1 = precision_recall_fscore_support(y_true, y_pred, average='micro')
+    # make sure evaluation is label invariant
+    y_pred = -y_pred  # invert the labels
+    ret2 = precision_recall_fscore_support(y_true, y_pred, average='micro')
+    
+    if ret1[2] > ret2[2]:
+        return ret1
+    else:
+        return ret2
+
+
