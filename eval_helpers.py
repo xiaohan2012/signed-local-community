@@ -135,7 +135,8 @@ def evaluate_level_2(n, c1, c2, C_true, groups):
     # make sure evaluation is label invariant
     y_pred = -y_pred  # invert the labels
     ret2 = precision_recall_fscore_support(y_true, y_pred, average='micro')
-    
+
+    # return the best
     if ret1[2] > ret2[2]:
         return ret1
     else:

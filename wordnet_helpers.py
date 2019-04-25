@@ -9,7 +9,7 @@ from tqdm import tqdm
 
 def load_synonyms(lemma):
     synonyms = set()
-    for syn in wn.synsets('good'):
+    for syn in wn.synsets(lemma):
         for l in syn.lemmas():
             synonyms.add(l.name())
     return synonyms
@@ -17,7 +17,7 @@ def load_synonyms(lemma):
 
 def load_antonyms(lemma):
     antonyms = set()
-    for syn in wn.synsets('joy'):
+    for syn in wn.synsets(lemma):
         for l in syn.lemmas():
             for ant in l.antonyms():
                 antonyms.add(ant.name())
@@ -38,4 +38,7 @@ def build_graph():
             g.add_edge(u, v, sign=1)
         for v in load_antonyms(u):
             g.add_edge(u, v, sign=-1)
+    g.remove_edges_from(g.selfloop_edges())
     nx.write_gpickle(g, 'graphs/wordnet.pkl')
+
+    

@@ -32,20 +32,20 @@ if __name__ == '__main__':
         print(arg, getattr(args, arg))
     print('-' * 25)
 
-    conn, cursor = init_db()
+    if args.save_db:
+        conn, cursor = init_db()
 
-    # if runs already, exit
-    filter_value = dict(
-        graph_path=args.graph_path,
-        method=args.method,
-        teleport_alpha=args.teleport_alpha,
-        query_node=args.query_node
-        
-    )
-    if record_exists(cursor, TableCreation.query_result_table, filter_value):
-        print('record exists, exit')
-        sys.exit(0)
-
+        # if runs already, exit
+        filter_value = dict(
+            graph_path=args.graph_path,
+            method=args.method,
+            teleport_alpha=args.teleport_alpha,
+            query_node=args.query_node
+            
+        )
+        if record_exists(cursor, TableCreation.query_result_table, filter_value):
+            print('record exists, exit')
+            sys.exit(0)
 
     if args.verbose > 0:
         print('reading graph')
@@ -57,10 +57,12 @@ if __name__ == '__main__':
     if args.method == DetectionMethods.PR_ON_POS:
         other_params = {}
         pred_comm = get_comunity_using_pos_pagerank(
-            g, args.query_node, args.teleport_alpha,
+            g, args.query_node,
+            args.teleport_alpha,
+            args.max_iter,
             **other_params,
             verbose=args.verbose,
-            show_progress=args.show_progress            
+            show_progress=args.show_progress
         )
     elif args.method == DetectionMethods.JUMPING_RW:
         other_params = dict(
@@ -69,7 +71,9 @@ if __name__ == '__main__':
             truncate_percentile=0  # no truncation for now
         )
         pred_comm = get_community_by_jumping_pagerank(
-            g, args.query_node, args.teleport_alpha,
+            g, args.query_node,
+            args.teleport_alpha,
+            args.max_iter,
             **other_params,
             verbose=args.verbose,
             show_progress=args.show_progress
@@ -95,9 +99,10 @@ if __name__ == '__main__':
 
     print(ans)
 
-    insert_record(
-        cursor, TableCreation.schema, TableCreation.query_result_table, ans
-    )
-    conn.commit()
-    print('inserted to db')
-    conn.close()    
+    if args.save_db:
+        insert_record(
+            cursor, TableCreation.schema, TableCreation.query_result_table, ans
+        )
+        conn.commit()
+        print('inserted to db')
+        conn.close()
