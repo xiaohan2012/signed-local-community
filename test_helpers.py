@@ -37,8 +37,3 @@ def test_sbr(test_graph):
     S1, S2 = [0, 2], [3, 4]
     expected = (0 + 6) / 10
     assert sbr(A, S1, S2, verbose=1) == expected
-
-    
-    
-
-    
