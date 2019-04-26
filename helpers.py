@@ -648,7 +648,7 @@ def is_rank_one(M, verbose=False):
     return r == 1
 
 
-def sbr(A, S1, S2, verbose=0):
+def sbr(A, S1, S2, verbose=0, return_details=False):
     """
     compute signed bipartiteness ratio given two sets S1 and S2
 
@@ -672,9 +672,24 @@ def sbr(A, S1, S2, verbose=0):
         print('S', S)
         print('A[S, :].A', A[S, :].A)
     # TODO: should be multiplied by 2?
-    ret = (edges_outside + neg_degree_inside + pos_degree_between) / vol_total
-    assert ret >= 0 and ret <= 1, "out of range, {}".format(ret)
-    return ret
+    val = (edges_outside + neg_degree_inside + pos_degree_between) / vol_total
+    assert val >= 0 and val <= 1, "out of range, {}".format(val)
+    details = dict(
+        edges_outside=edges_outside,
+        neg_degree_inside=neg_degree_inside,
+        pos_degree_between=pos_degree_between,
+        vol_total=vol_total,
+        math_str="{}+{}+{}/{}".format(
+            edges_outside,
+            neg_degree_inside,
+            pos_degree_between,
+            vol_total
+        )
+    )
+    if return_details:
+        return val, details
+    else:
+        return val
 
 
 def sbr_by_threshold(g, x, t):

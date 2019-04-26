@@ -61,4 +61,4 @@ def sweep_on_x(g, x, verbose=0):
         print('comm1:', c1)
         print('comm2:', c2)
         
-    return c1, c2, C, best_sbr
+    return c1, c2, C, best_sbr, ts, sbr_list

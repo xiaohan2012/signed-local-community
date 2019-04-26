@@ -92,19 +92,19 @@ def make_polarized_graphs_fewer_parameters(
     # add noisy nodes and edges
     noisy_nodes = list(range(cur_n, cur_n + nn))
 
-    def add_edge_randomly(u, v):
+    def add_noisy_edge_randomly(u, v):
         if np.random.rand() < eta:
             if np.random.rand() >= 0.5:
-                g.add_edge(u, v, sign=1)
+                g.add_edge(u, v, sign=1, label=0)
             else:
-                g.add_edge(u, v, sign=-1)
+                g.add_edge(u, v, sign=-1, label=0)
 
     g.add_nodes_from(noisy_nodes)
     for u, v in combinations(noisy_nodes, 2):
-        add_edge_randomly(u, v)
+        add_noisy_edge_randomly(u, v)
 
     for u in comm_nodes:
         for v in noisy_nodes:
-            add_edge_randomly(u, v)
+            add_noisy_edge_randomly(u, v)
 
     return g, comms, groupings
