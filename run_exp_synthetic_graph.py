@@ -23,8 +23,8 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, eta, nl, run_id):
     return res
 
 
-n_graphs = 1
-n_reps = 1
+n_graphs = 10
+n_reps = 60
 kappa = 0.8
 
 nc, nn = 10, 0
