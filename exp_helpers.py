@@ -27,8 +27,8 @@ def run_pipeline(
         plot_true_community=False,  # plot the true p--community
         verbose=0
 ):
-    x_opt, opt_val = query_graph_using_dense_matrix(g, seeds, kappa=kappa, verbose=0)
-    c1, c2, C, min_sbr, ts, sbr_list = sweep_on_x(g, x_opt, verbose=0)
+    x_opt, opt_val = query_graph_using_dense_matrix(g, seeds, kappa=kappa, verbose=verbose)
+    c1, c2, C, min_sbr, ts, sbr_list = sweep_on_x(g, x_opt, verbose=verbose)
 
     prec_L1, rec_L1, f1_L1 = evaluate_level_1(
         g.number_of_nodes(), C, true_comms[target_comm]
@@ -88,12 +88,14 @@ def run_pipeline(
         
     if check_bound:
         # check the bound according to Proposition 1
-        print('beta=', min_sbr)
-        print('upperbound sqrt(opt_val)=', np.sqrt(2 * opt_val))
         does_hold = min_sbr <= np.sqrt(2 * opt_val)
+        if verbose > 0:
+            print('beta=', min_sbr)
+            print('upperbound sqrt(opt_val)=', np.sqrt(2 * opt_val))
+            print('does upperbound hold?', does_hold)
+            print('-' * 10)
+
         assert does_hold
-        print('does upperbound hold?', does_hold)
-        print('-' * 10)
 
     if verbose > 0:
         A = nx.adj_matrix(g, weight='sign')

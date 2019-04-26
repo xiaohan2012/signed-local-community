@@ -27,7 +27,8 @@ def make_polarized_graphs(
     ]
     under possibly noisy setting
     """
-    print('#communities', k)
+    if verbose > 0:
+        print('#communities', k)
     assert k == len(comm_sizes)
     comms = []
     size_acc = 0
@@ -42,10 +43,11 @@ def make_polarized_graphs(
             edge_proba=comm_cross_edge_proba,
             neg_ratio=comm_cross_neg_ratio
         )
-        print('comm#{} sizes: {} {}'.format(i+1, c0.number_of_nodes(), c1.number_of_nodes()))
         if verbose > 0:
-            print('num. good edges', num_good_edges(c))
-            print('num. bad edges', num_bad_edges(c))
+            print('comm#{} sizes: {} {}'.format(i+1, c0.number_of_nodes(), c1.number_of_nodes()))
+            if verbose > 1:
+                print('num. good edges', num_good_edges(c))
+                print('num. bad edges', num_bad_edges(c))
         groups = np.asarray(groups)
         groups += size_acc
         groupings.append(groups.tolist())
@@ -125,6 +127,7 @@ def make_polarized_graphs_fewer_parameters(
             num_noisy_edges - num_noisy_edges_inside_community
         )
         assert (num_good_edges + num_noisy_edges) == g.number_of_edges()
+        print('-' * 15)
         print('num. good edges=', num_good_edges)
         print('num. noisy edges inside pairs=', num_noisy_edges_inside_community)
         print('num. noisy edges among pairs=', num_noisy_edges_among_communities)

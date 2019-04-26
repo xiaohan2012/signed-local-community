@@ -680,18 +680,21 @@ def sbr(A, S1, S2, verbose=0, return_details=False):
         print('A[S, :].A', A[S, :].A)
     # TODO: should be multiplied by 2?
     val = (edges_outside + neg_degree_inside + pos_degree_between) / vol_total
-    assert val >= 0 and val <= 1, "out of range, {}".format(val)
+    math_str = "({}+{}+{})/{} = {}".format(
+        edges_outside,
+        neg_degree_inside,
+        pos_degree_between,
+        vol_total,
+        val
+    )
+
+    assert val >= 0 and val <= 1, "out of range, {}".format(math_str)
     details = dict(
         edges_outside=edges_outside,
         neg_degree_inside=neg_degree_inside,
         pos_degree_between=pos_degree_between,
         vol_total=vol_total,
-        math_str="{}+{}+{}/{}".format(
-            edges_outside,
-            neg_degree_inside,
-            pos_degree_between,
-            vol_total
-        )
+        math_str=math_str
     )
     if return_details:
         return val, details
@@ -721,3 +724,11 @@ def get_theoretical_kappa(S, seeds, A):
     vol_uv = scipy.absolute(A[seeds, :]).sum()
     k = vol_S / vol_uv
     return np.sqrt(1/k)
+
+
+def sample_seeds(true_comms, true_groupings):
+    target_comm = np.random.choice(len(true_comms))
+    v1 = np.random.choice(true_groupings[target_comm][0])
+    v2 = np.random.choice(true_groupings[target_comm][1])
+    seeds = [[v1], [v2]]
+    return seeds, target_comm
