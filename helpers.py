@@ -562,11 +562,18 @@ def approx_diameter(g):
     return max(list(dist.values()))
     
 
+def num_good_edges(g):
+    return np.array([g[u][v]['label'] for u, v in g.edges()]).sum()
+
+
+def num_bad_edges(g):
+    return g.number_of_edges() - num_good_edges(g)
+
+
 def noise_level(g, weight=None):
     """fraction of 'bad' edges of all edges"""
     if not weight:
-        edge_labels = np.array([g[u][v]['label'] for u, v in g.edges()])
-        return 1 - edge_labels.sum() / edge_labels.shape[0]
+        return num_bad_edges(g) / g.number_of_edges()
     else:
         good_edge_weights = np.array([g[u][v]['label'] * abs(g[u][v][weight]) for u, v in g.edges()])
         all_edge_weights = np.array([abs(g[u][v][weight]) for u, v in g.edges()])

@@ -31,7 +31,7 @@ def make_random_signed_graph(N, density=0.9, negatives_ratio=0.5):
     return G
 
 
-def connect_communities(comm_list, edge_proba=0.3, neg_ratio=0.8):
+def connect_communities(comm_list, edge_proba=0.3, neg_ratio=0.8, as_noise=False):
     """
     comm_list: list of nx.Graph, each as a community
     edge_proba: probability that an edge, regardless of sign, exists between two communities
@@ -58,7 +58,7 @@ def connect_communities(comm_list, edge_proba=0.3, neg_ratio=0.8):
             if np.random.rand() < edge_proba:
                 if np.random.random() < neg_ratio:
                     sign = - 1.0
-                    label = 1
+                    label = (0 if as_noise else 1)
                 else:
                     sign = 1.0
                     label = 0
