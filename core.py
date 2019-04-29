@@ -62,6 +62,11 @@ def query_graph_using_dense_matrix(g, seeds, kappa=0.25, verbose=0):
 def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, tol=1e-3, verbose=0):
     """
     more scalable approach by solving a sparse linear system
+    
+    return:
+
+    - x_opt: np.ndarray
+    - opt_val: float
     """
     L = signed_laplacian(g)
     D = degree_diag(g)

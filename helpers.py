@@ -625,7 +625,7 @@ def prepare_seed_vector(seeds, D):
     s = s[:, None]
     
     s = np.diag(1 / np.sqrt(D.diagonal())) @ s
-            
+    
     # requirement check
     sTDs = (s.T @ D @ s)
     assert np.isclose(sTDs[0, 0], 1.0), '{} != 1.0'.format(sTDs[0, 0])
