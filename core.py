@@ -16,6 +16,19 @@ from helpers import (
 )
 
 
+def query_graph(g, seeds, kappa=0.25, solver='sp', verbose=0):
+    """wrapper from different solvers"""
+    assert solver in {'sp', 'sdp'}
+    args = (g, seeds)
+    kwargs = dict(kappa=kappa, verbose=verbose)
+    if solver == 'sp':
+        return query_graph_using_sparse_linear_solver(*args, **kwargs)
+    elif solver == 'sdp':
+        return query_graph_using_dense_matrix(*args, **kwargs)
+
+    raise ValueError('unknown solver name', solver)
+
+
 def query_graph_using_dense_matrix(g, seeds, kappa=0.25, verbose=0):
     n = g.number_of_nodes()
     L = signed_laplacian(g).A
@@ -46,9 +59,9 @@ def query_graph_using_dense_matrix(g, seeds, kappa=0.25, verbose=0):
     return x_opt, opt_val
 
 
-def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, tol=1e-10, verbose=0):
+def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, tol=1e-3, verbose=0):
     """
-    more scalable approach by solving a linear system
+    more scalable approach by solving a sparse linear system
     """
     L = signed_laplacian(g)
     D = degree_diag(g)

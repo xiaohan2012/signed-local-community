@@ -2,7 +2,7 @@ import numpy as np
 import scipy
 import networkx as nx
 from matplotlib import pyplot as plt
-from core import query_graph_using_dense_matrix, sweep_on_x
+from core import query_graph, sweep_on_x
 from eval_helpers import evaluate_level_1, evaluate_level_2
 from helpers import (
     flatten,
@@ -27,7 +27,8 @@ def run_pipeline(
         plot_true_community=False,  # plot the true p--community
         verbose=0
 ):
-    x_opt, opt_val = query_graph_using_dense_matrix(g, seeds, kappa=kappa, verbose=verbose)
+    # x_opt, opt_val = query_graph_using_dense_matrix(g, seeds, kappa=kappa, verbose=verbose)
+    x_opt, opt_val = query_graph(g, seeds, kappa=kappa, verbose=verbose, solver='sp')
     c1, c2, C, min_sbr, ts, sbr_list = sweep_on_x(g, x_opt, verbose=verbose)
 
     prec_L1, rec_L1, f1_L1 = evaluate_level_1(
