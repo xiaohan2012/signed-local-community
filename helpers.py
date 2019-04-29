@@ -15,6 +15,7 @@ from scipy import sparse as sp
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 from scipy.linalg import sqrtm, inv
+from numpy.linalg import svd
 
 
 def walk(g, s0, beta, n_steps, verbose=0):
@@ -631,28 +632,17 @@ def prepare_seed_vector(seeds, D):
     return s
 
 
+def effective_rank(A, abs_tol=1e-6):
+    """compute the effective rank using SVD"""
+    _, sigma, _ = svd(A)
+    return (np.absolute(sigma) > abs_tol).nonzero()[0].shape[0]
+
+
 def is_rank_one(M, verbose=False):
     """
-    we check if the ith row/col of M is a multiple of the jth row/column, for every pair of i, j
-    
-    before doing that, we round the numbers to certain decimal point
-    
-    note thatfor some unknown reason, the following does not return 1
-    
-    np.linalg.matrix_rank(np.round(X.value, 3))
+    np.linalg.matrix_rank(np.round(X.value, 3)) does not work because of imperfect numeraical precision
     """
-    n = M.shape[0]
-    r = 0
-    for i in range(n):
-        for j in range(i+1, n):
-            divisors = M[i, :] / M[j, :]
-            divisors = np.round(divisors, 3)
-            r = max(r, len(np.unique(divisors)))
-            if verbose:
-                print(np.unique(divisors))
-    if r > 1:
-        print('rank is {}'.format(r))
-    return r == 1
+    return effective_rank(M) == 1
 
 
 def sbr(A, S1, S2, verbose=0, return_details=False):
