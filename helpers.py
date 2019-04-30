@@ -78,8 +78,12 @@ def signed_laplacian(g):
     return L
 
 
-def signed_layout(g):
-    L = signed_laplacian(g)
+def signed_layout(g, normalize=False):
+    if normalize:
+        L = signed_normalized_laplacian(nx.adj_matrix(g, weight='sign'))
+    else:
+        L = signed_laplacian(g)
+
     w, pos_array = eigs(L.asfptype(), k=2, which='SM')
     pos_array = np.real(pos_array)
     return {i: pos_array[i, :] for i in range(g.number_of_nodes())}

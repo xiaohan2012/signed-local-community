@@ -1,13 +1,16 @@
 import numpy as np
-from scipy.sparse.linalg import eigs
-from scipy.sparse.linalg import eigs, spsolve, cg
-from numpy import linalg as LA
+import networkx as nx
+from tqdm import tqdm
 from scipy.sparse import diags
+from scipy.sparse.linalg import eigs, spsolve
+from numpy import linalg as LA
+
 
 import cvxpy as cp
 
 from helpers import (
     signed_laplacian,
+    signed_normalized_laplacian,
     prepare_seed_vector,
     prepare_seed_vector_sparse,
     degree_diag,
@@ -70,13 +73,21 @@ def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, tol=1e-3, verbo
     - opt_val: float
     """
     L = signed_laplacian(g)
+    A = nx.adj_matrix(g, weight='sign')
     D = degree_diag(g)
 
     s = prepare_seed_vector_sparse(seeds, D)
-    
+
+    if verbose > 0:
+        print('matrices loading done')
+
+    Ln = signed_normalized_laplacian(A)
     lb = - g.number_of_edges() * 2
-    lambda1 = eigs(L, k=1, which='SM')[0][0]  # the smallest eigen value
+    lambda1 = eigs(Ln, k=1, which='SM')[0][0]  # the smallest eigen value
     ub = np.real(lambda1)
+
+    if verbose > 0:
+        print('found lambda_1=', lambda1)
 
     b = D @ s
     n_steps = 0
@@ -93,7 +104,11 @@ def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, tol=1e-3, verbo
         assert np.isclose((y.T @ D @ y)[0, 0], 1), 'y not normalized w.r.t D'
 
         gap = (np.sqrt(kappa) - y.T @ D @ s)[0, 0]
-        
+
+        if n_steps % 5 == 0 and verbose > 0:
+            print('at iteration {} (alpha={:.5f})'.format(n_steps, alpha))
+            print("residual: sqrt(kappa) - y' D s={}".format(gap))
+
         if gap > -tol and gap < 0:
             if verbose > 0:
                 print("""terminates after {} iterations:
@@ -109,13 +124,21 @@ def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, tol=1e-3, verbo
     return flatten(y), y @ L @ y.T
 
 
-def sweep_on_x(g, x, verbose=0):
+def sweep_on_x(g, x, top_k=-1, verbose=0):
     """
     g: the graph
     x: the node score vector
+    top_k: the number of threshold to consider, -1 to consider all
     """
     ts = sorted(np.abs(x))[2:]  # avoid very small threshold
-    sbr_list = [sbr_by_threshold(g, x, t) for t in ts]
+    if top_k > 0:
+        if verbose > 0:
+            print('sweep on top {}'.format(top_k))
+        ts = ts[-top_k:]  # use large absolute thresholds
+
+    iters = (tqdm(ts) if verbose > 0 else ts)
+
+    sbr_list = [sbr_by_threshold(g, x, t) for t in iters]
     best_t = ts[np.argmin(sbr_list)]
     best_sbr = np.min(sbr_list)
     if verbose > 0:
