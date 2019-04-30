@@ -9,6 +9,7 @@ import cvxpy as cp
 from helpers import (
     signed_laplacian,
     prepare_seed_vector,
+    prepare_seed_vector_sparse,
     degree_diag,
     is_rank_one,
     sbr_by_threshold,
@@ -71,7 +72,7 @@ def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, tol=1e-3, verbo
     L = signed_laplacian(g)
     D = degree_diag(g)
 
-    s = prepare_seed_vector(seeds, D)
+    s = prepare_seed_vector_sparse(seeds, D)
     
     lb = - g.number_of_edges() * 2
     lambda1 = eigs(L, k=1, which='SM')[0][0]  # the smallest eigen value

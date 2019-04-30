@@ -9,8 +9,8 @@ import pandas as pd
 import networkx as nx
 
 from collections import defaultdict
-from scipy.sparse import diags
-from scipy.sparse.linalg import eigs
+from scipy.sparse import diags, coo_matrix
+from scipy.sparse.linalg import eigs, norm as norms
 from scipy import sparse as sp
 from matplotlib import pyplot as plt
 from tqdm import tqdm
@@ -629,6 +629,40 @@ def prepare_seed_vector(seeds, D):
     # requirement check
     sTDs = (s.T @ D @ s)
     assert np.isclose(sTDs[0, 0], 1.0), '{} != 1.0'.format(sTDs[0, 0])
+    return s
+
+
+def prepare_seed_vector_sparse(seeds, D, verbose=0):
+    """
+    sparse version of preparing seed vector s s.t.
+    s.T D s = 1
+
+    assuming seeds from one or two communities are given,
+    if two, the communities are opposing each other
+    """
+
+    n = D.shape[0]
+
+    i = list(seeds[0])
+    j = ([0] * len(seeds[0]))
+    data = ([1.0] * len(seeds[0]))
+
+    if len(seeds) > 1:
+        i += list(seeds[1])
+        j += ([0] * len(seeds[1]))
+        data += ([-1.0] * len(seeds[1]))
+
+    s = coo_matrix((data, (i, j)), shape=(n, 1), dtype=np.float64)
+    s /= norms(s, ord=2, axis=0)[0]  # l2 norm
+
+    s = diags(1 / np.sqrt(D.diagonal())) @ s
+    
+    # requirement check
+    sTDs = (s.T @ D @ s).A[0, 0]
+    assert np.isclose(sTDs, 1.0), '{} != 1.0'.format(sTDs)
+    if verbose > 0:
+        print('s', s.A)
+        print('s.shape', s.shape)
     return s
 
 

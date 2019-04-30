@@ -1,6 +1,9 @@
 import pytest
+import numpy as np
 import networkx as nx
-from helpers import purity, sbr
+
+from scipy.sparse import diags, issparse
+from helpers import purity, sbr, prepare_seed_vector_sparse
 
 
 @pytest.fixture
@@ -37,3 +40,23 @@ def test_sbr(test_graph):
     S1, S2 = [0, 2], [3, 4]
     expected = (0 + 6) / 10
     assert sbr(A, S1, S2, verbose=1) == expected
+
+
+@pytest.mark.parametrize("seeds", [
+    [[0, 1], [2, 3]],
+    [[0, 1]],
+    [[0]]
+])
+def test_prepare_seed_vector_sparse(seeds):
+    D = diags([1, 2, 3, 4])
+    
+    s = prepare_seed_vector_sparse(seeds, D)
+    # is sparse
+    assert issparse(s)
+    assert s.shape == (4, 1)
+    # are active
+    for seed_list in seeds:
+        for seed in seed_list:
+            assert not np.isclose(s[seed, 0], 0.0)
+    # normalized
+    assert np.isclose((s.T @ D @ s)[0, 0], 1)
