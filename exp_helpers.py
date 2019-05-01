@@ -29,7 +29,7 @@ def run_pipeline(
 ):
     # x_opt, opt_val = query_graph_using_dense_matrix(g, seeds, kappa=kappa, verbose=verbose)
     x_opt, opt_val = query_graph(g, seeds, kappa=kappa, verbose=verbose, solver='sp')
-    c1, c2, C, min_sbr, ts, sbr_list = sweep_on_x(g, x_opt, verbose=verbose)
+    c1, c2, C, best_t, min_sbr, ts, sbr_list = sweep_on_x(g, x_opt, verbose=verbose)
 
     prec_L1, rec_L1, f1_L1 = evaluate_level_1(
         g.number_of_nodes(), C, true_comms[target_comm]

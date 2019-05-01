@@ -1,8 +1,8 @@
 import numpy as np
 import networkx as nx
 from tqdm import tqdm
-from scipy.sparse import diags
-from scipy.sparse.linalg import eigs, spsolve
+from scipy.sparse import diags, issparse
+from scipy.sparse.linalg import eigs, spsolve, cg
 from numpy import linalg as LA
 
 
@@ -22,11 +22,13 @@ from helpers import (
 
 def query_graph(g, seeds, kappa=0.25, solver='sp', verbose=0):
     """wrapper from different solvers"""
-    assert solver in {'sp', 'sdp'}
+    assert solver in {'sp', 'sdp', 'cg'}
     args = (g, seeds)
     kwargs = dict(kappa=kappa, verbose=verbose)
     if solver == 'sp':
-        return query_graph_using_sparse_linear_solver(*args, **kwargs)
+        return query_graph_using_sparse_linear_solver(*args, **kwargs, solver='sp')
+    elif solver == 'cg':
+        return query_graph_using_sparse_linear_solver(*args, **kwargs, solver='cg')
     elif solver == 'sdp':
         return query_graph_using_dense_matrix(*args, **kwargs)
 
@@ -63,7 +65,7 @@ def query_graph_using_dense_matrix(g, seeds, kappa=0.25, verbose=0):
     return x_opt, opt_val
 
 
-def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, tol=1e-3, verbose=0):
+def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, solver='cg', tol=1e-3, verbose=0):
     """
     more scalable approach by solving a sparse linear system
     
@@ -72,6 +74,9 @@ def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, tol=1e-3, verbo
     - x_opt: np.ndarray
     - opt_val: float
     """
+    if solver == 'sp':
+        print('WARNING: using "sp", note that "cg" is faster')
+
     L = signed_laplacian(g)
     A = nx.adj_matrix(g, weight='sign')
     D = degree_diag(g)
@@ -96,7 +101,17 @@ def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, tol=1e-3, verbo
         alpha = (ub + lb) / 2
         A = L - alpha * D
         # linear system solver
-        y = spsolve(A, b)
+        if solver == 'cg':
+            if issparse(b):
+                # cg requires b to be dense
+                b = b.A
+            y, info = cg(A, b)
+            if info != 0:
+                raise Exception('cg error, info=', info)
+        elif solver == 'sp':
+            y = spsolve(A, b)
+        else:
+            raise ValueError('unknown solver', solver)
             
         y /= LA.norm(y, 2)
         y = diags(1 / np.sqrt(D.diagonal())) @ y[:, None]
@@ -151,4 +166,4 @@ def sweep_on_x(g, x, top_k=-1, verbose=0):
         print('comm1:', c1)
         print('comm2:', c2)
         
-    return c1, c2, C, best_sbr, ts, sbr_list
+    return c1, c2, C, best_t, best_sbr, ts, sbr_list

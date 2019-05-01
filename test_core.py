@@ -13,7 +13,7 @@ np.random.seed(12345)
 
 
 @pytest.mark.parametrize('rep_i', range(1))
-@pytest.mark.parametrize('solver_pair', combinations(('sdp', 'sp'), 2))
+@pytest.mark.parametrize('solver_pair', combinations(('sdp', 'sp', 'cg'), 2))
 def test_solver_consistency(rep_i, solver_pair):
     """
     make sure the solutions by different solvers are same (up to certain float point precsion)

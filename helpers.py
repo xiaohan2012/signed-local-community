@@ -89,6 +89,14 @@ def signed_layout(g, normalize=False):
     return {i: pos_array[i, :] for i in range(g.number_of_nodes())}
 
 
+def pos_spring_layout(g, normalize=False):
+    """spring layout using the positive graph"""
+    A = nx.adj_matrix(g, weight='sign')
+    pos_A = pos_adj(A)
+    new_g = nx.from_scipy_sparse_matrix(pos_A)
+    return nx.spring_layout(new_g)
+
+
 def signed_layout_geometric_mean(g):
     """
     visualization using geometric mean of Laplacian
@@ -118,13 +126,13 @@ def draw_nodes(g, pos, labels=None, ax=None):
     nx.draw_networkx_labels(g, pos, labels=labels, ax=ax)
 
 
-def draw_edges(g, pos, ax=None, draw_pos=True, draw_neg=True):
+def draw_edges(g, pos, ax=None, draw_pos=True, draw_neg=True, **kwargs):
     if draw_pos:
         pos_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] > 0]
-        nx.draw_networkx_edges(g, pos, pos_edges, style='solid', edge_color='blue', ax=ax)
+        nx.draw_networkx_edges(g, pos, pos_edges, style='solid', edge_color='blue', ax=ax, **kwargs)
     if draw_neg:
         neg_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] < 0]
-        nx.draw_networkx_edges(g, pos, neg_edges, style='dashed', edge_color='red', ax=ax)
+        nx.draw_networkx_edges(g, pos, neg_edges, style='dashed', edge_color='red', ax=ax, **kwargs)
 
 
 def show_result(g, pos, query, scores):
