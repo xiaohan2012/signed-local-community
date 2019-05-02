@@ -14,13 +14,22 @@ random.seed(12345)
 
 def run_one_for_parallel(g, true_comms, true_groupings, kappa, seed_size, nl, run_id):
     seeds, target_comm = sample_seeds(true_comms, true_groupings, k=seed_size)
-    res = run_pipeline(g, seeds, kappa, target_comm, true_comms, true_groupings, verbose=0)
+    try:
+        res = run_pipeline(g, seeds, kappa, target_comm, true_comms, true_groupings, verbose=0)
+        res['kappa'] = kappa
+        res['seed_size'] = seed_size
+        res['edge_noise_level'] = nl
+        res['run_id'] = run_id
+        return res
+    except RuntimeError:
+        return dict(
+            kappa=None,
+            seed_size=None,
+            edge_noise_level=None,
+            run_id=None
+        )
 
-    res['kappa'] = kappa
-    res['seed_size'] = seed_size
-    res['edge_noise_level'] = nl
-    res['run_id'] = run_id
-    return res
+
 
 
 n_graphs = 10

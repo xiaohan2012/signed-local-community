@@ -107,7 +107,7 @@ def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, solver='cg', to
                 b = b.A
             y, info = cg(A, b)
             if info != 0:
-                raise Exception('cg error, info=', info)
+                raise RuntimeError('cg error, info=', info)
         elif solver == 'sp':
             y = spsolve(A, b)
         else:
