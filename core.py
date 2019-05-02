@@ -116,7 +116,7 @@ def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, solver='cg', to
         y /= LA.norm(y, 2)
         y = diags(1 / np.sqrt(D.diagonal())) @ y[:, None]
 
-        assert np.isclose((y.T @ D @ y)[0, 0], 1), 'y not normalized w.r.t D'
+        # assert np.isclose((y.T @ D @ y)[0, 0], 1), 'y not normalized w.r.t D'
 
         gap = (np.sqrt(kappa) - y.T @ D @ s)[0, 0]
 
