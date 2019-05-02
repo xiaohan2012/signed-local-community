@@ -222,6 +222,7 @@ def make_pair(u, v):
 def _one_step_for_incremental_signed_conductance(
         g, prev_nodes, new_node, prev_vol, prev_pos_cut, prev_neg_cut, verbose=2
 ):
+    raise Exception('deprecated, do not use')
     if verbose > 1:
         print('prev_nodes', prev_nodes)
         print('new_node', new_node)
@@ -264,6 +265,7 @@ def _one_step_for_incremental_signed_conductance(
 
 def incremental_signed_conductance(g, nodes_in_order, verbose=0, show_progress=False):
     """incremental implementation of conductance computation"""
+    raise Exception('deprecated, do not use')
     conductance_list = []
     prev_nodes = set()
     prev_vol = 0
@@ -460,6 +462,7 @@ def conductance_vectorized(C, S, self_degree, verbose=0):
 
 
 def signed_conductance_by_sweeping(A, order):
+    """vectorized sweeping (signed conductance)"""
     # relevant adj matrices
     pos_A = A.copy()
     pos_A[pos_A < 0] = 0
@@ -472,10 +475,10 @@ def signed_conductance_by_sweeping(A, order):
 
     # negative part
     neg_B = neg_A[order, :][:, order]  # permute the matrix, both rows and columns
-    neg_B_lower = sp.tril(neg_B)
     neg_B_sums = flatten(neg_B.sum(axis=1))
-    neg_volumes = np.cumsum(neg_B_sums)  # pos_volumes
+    neg_volumes = np.cumsum(neg_B_sums)
 
+    neg_B_lower = sp.tril(neg_B)
     neg_B_lower_sums = flatten(neg_B_lower.sum(axis=1))
     neg_penalty = np.cumsum(2 * neg_B_lower_sums)
     neg_cut = np.cumsum(neg_B_sums - 2 * neg_B_lower_sums)
