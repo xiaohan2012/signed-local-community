@@ -3,7 +3,7 @@ import numpy as np
 import networkx as nx
 
 from scipy.sparse import diags, issparse
-from helpers import purity, sbr, prepare_seed_vector_sparse
+from helpers import purity, sbr, prepare_seed_vector_sparse, sample_seeds
 
 
 @pytest.fixture
@@ -60,3 +60,21 @@ def test_prepare_seed_vector_sparse(seeds):
             assert not np.isclose(s[seed, 0], 0.0)
     # normalized
     assert np.isclose((s.T @ D @ s)[0, 0], 1)
+
+
+def test_sample_seeds():
+    true_comms = [[0, 1, 2, 3], [4, 5, 6, 7]]
+    true_groupings = [[[0, 1], [2, 3]], [[4, 5], [6, 7]]]
+
+    seeds, _ = sample_seeds(true_comms, true_groupings, k=1)
+    assert len(seeds) == 2
+    for s in seeds:
+        assert len(set(s)) == 1
+    
+    seeds, _ = sample_seeds(true_comms, true_groupings, k=2)
+    assert len(seeds) == 2
+    for s in seeds:
+        assert len(set(s)) == 2
+
+    with pytest.raises(ValueError):
+        seeds, _ = sample_seeds(true_comms, true_groupings, k=3)

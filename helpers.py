@@ -765,9 +765,12 @@ def get_theoretical_kappa(S, seeds, A):
     return np.sqrt(1/k)
 
 
-def sample_seeds(true_comms, true_groupings):
+def sample_seeds(true_comms, true_groupings, k=1):
     target_comm = np.random.choice(len(true_comms))
-    v1 = np.random.choice(true_groupings[target_comm][0])
-    v2 = np.random.choice(true_groupings[target_comm][1])
-    seeds = [[v1], [v2]]
+    if k > len(true_groupings[target_comm][0]) or k > len(true_groupings[target_comm][1]):
+        raise ValueError('k is too large')
+    
+    v1 = np.random.permutation(true_groupings[target_comm][0])[:k]
+    v2 = np.random.permutation(true_groupings[target_comm][1])[:k]
+    seeds = [v2, v1]
     return seeds, target_comm
