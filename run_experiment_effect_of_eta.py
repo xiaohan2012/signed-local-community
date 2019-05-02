@@ -47,4 +47,4 @@ for eta in tqdm(head_eta_list):
         )
 
 perf_df = pd.DataFrame.from_records(perf_list)
-perf_df.to_csv('outputs/result_synthetic_graphs_sp.csv')
+perf_df.to_csv('outputs/result_synthetic_graphs_cg.csv')
