@@ -29,16 +29,13 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, seed_size, nl, ru
             run_id=None
         )
 
-
-
-
 n_graphs = 10
 n_reps = 60
 kappa = 0.8
 
 nc, nn = 10, 0
 k = 6
-eta = 0.1
+eta = 0.2
 
 seed_size_list = np.arange(1, nc+1)
 

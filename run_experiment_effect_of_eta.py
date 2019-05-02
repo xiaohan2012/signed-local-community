@@ -30,7 +30,7 @@ kappa = 0.8
 nc, nn = 10, 0
 k = 6
 
-head_eta_list = np.linspace(0.01, 0.09, 9)
+head_eta_list = np.linspace(0.01, 0.30, 9)
 perf_list = []
 
 for eta in tqdm(head_eta_list):
