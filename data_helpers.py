@@ -1,4 +1,5 @@
 import numpy as np
+import networkx as nx
 from graph_generator.community_graph import (
     make_random_signed_graph,
     connect_communities
@@ -87,70 +88,79 @@ def make_polarized_graphs_fewer_parameters(
     with probability η and have equal probability of being positive
     or negative.
     """
-    assert eta >= 0
-    assert eta <= 1
-    
-    comm_sizes = [(nc, nc) for i in range(k)]
-    inside_edge_proba = 1-eta/2
-    ind = inside_edge_proba
-    inr = (eta / 2) / ind
-    ccep = inside_edge_proba
-    ccnr = (1-eta)/ccep
+    def _aux():
+        assert eta >= 0
+        assert eta <= 1
+        
+        comm_sizes = [(nc, nc) for i in range(k)]
+        inside_edge_proba = 1-eta/2
+        ind = inside_edge_proba
+        inr = (eta / 2) / ind
+        ccep = inside_edge_proba
+        ccnr = (1-eta)/ccep
 
-    if verbose > 0:
-        print('internal_density', ind)
-        print('internal_neg_ratio', inr)
+        if verbose > 0:
+            print('internal_density', ind)
+            print('internal_neg_ratio', inr)
 
-    g, comms, groupings = make_polarized_graphs(
-        k, comm_sizes,
-        internal_density=ind,
-        internal_neg_ratio=inr,
-        comm_cross_edge_proba=ccep,
-        comm_cross_neg_ratio=ccnr,
-        cross_edge_proba=eta,
-        cross_neg_ratio=0.5,
-        verbose=verbose
-    )
-
-    if verbose > 0:
-        # print edge statistics (by whether it's noisy or not)
-        edge_labels_inside = np.array([
-            g[u][v]['label'] for comm in comms for u, v in g.subgraph(comm).edges()
-        ])
-        edge_labels = np.array([
-            g[u][v]['label'] for u, v in g.edges()
-        ])
-        num_good_edges = edge_labels.sum()
-        num_noisy_edges = edge_labels[edge_labels == 0].shape[0]
-        num_noisy_edges_inside_community = edge_labels_inside[edge_labels_inside == 0].shape[0]
-        num_noisy_edges_among_communities = (
-            num_noisy_edges - num_noisy_edges_inside_community
+        g, comms, groupings = make_polarized_graphs(
+            k, comm_sizes,
+            internal_density=ind,
+            internal_neg_ratio=inr,
+            comm_cross_edge_proba=ccep,
+            comm_cross_neg_ratio=ccnr,
+            cross_edge_proba=eta,
+            cross_neg_ratio=0.5,
+            verbose=verbose
         )
-        assert (num_good_edges + num_noisy_edges) == g.number_of_edges()
-        print('-' * 15)
-        print('num. good edges=', num_good_edges)
-        print('num. noisy edges inside pairs=', num_noisy_edges_inside_community)
-        print('num. noisy edges among pairs=', num_noisy_edges_among_communities)
-   
-    cur_n = g.number_of_nodes()
-    comm_nodes = np.arange(cur_n)
+            
+        if verbose > 0:
+            # print edge statistics (by whether it's noisy or not)
+            edge_labels_inside = np.array([
+                g[u][v]['label'] for comm in comms for u, v in g.subgraph(comm).edges()
+            ])
+            edge_labels = np.array([
+                g[u][v]['label'] for u, v in g.edges()
+            ])
+            num_good_edges = edge_labels.sum()
+            num_noisy_edges = edge_labels[edge_labels == 0].shape[0]
+            num_noisy_edges_inside_community = edge_labels_inside[edge_labels_inside == 0].shape[0]
+            num_noisy_edges_among_communities = (
+                num_noisy_edges - num_noisy_edges_inside_community
+            )
+            assert (num_good_edges + num_noisy_edges) == g.number_of_edges()
+            print('-' * 15)
+            print('num. good edges=', num_good_edges)
+            print('num. noisy edges inside pairs=', num_noisy_edges_inside_community)
+            print('num. noisy edges among pairs=', num_noisy_edges_among_communities)
+       
+        cur_n = g.number_of_nodes()
+        comm_nodes = np.arange(cur_n)
 
-    # add noisy nodes and edges
-    noisy_nodes = list(range(cur_n, cur_n + nn))
+        # add noisy nodes and edges
+        noisy_nodes = list(range(cur_n, cur_n + nn))
 
-    def add_noisy_edge_randomly(u, v):
-        if np.random.rand() < eta:
-            if np.random.rand() >= 0.5:
-                g.add_edge(u, v, sign=1, label=0)
-            else:
-                g.add_edge(u, v, sign=-1, label=0)
+        def add_noisy_edge_randomly(u, v):
+            if np.random.rand() < eta:
+                if np.random.rand() >= 0.5:
+                    g.add_edge(u, v, sign=1, label=0)
+                else:
+                    g.add_edge(u, v, sign=-1, label=0)
 
-    g.add_nodes_from(noisy_nodes)
-    for u, v in combinations(noisy_nodes, 2):
-        add_noisy_edge_randomly(u, v)
-
-    for u in comm_nodes:
-        for v in noisy_nodes:
+        g.add_nodes_from(noisy_nodes)
+        for u, v in combinations(noisy_nodes, 2):
             add_noisy_edge_randomly(u, v)
-    
+
+        for u in comm_nodes:
+            for v in noisy_nodes:
+                add_noisy_edge_randomly(u, v)
+        
+        return g, comms, groupings
+
+    while True:
+        g, comms, groupings = _aux()
+        if len(list(nx.connected_components(g))) == 1:
+            break
+        print('gen_graph: not connected, repeat')
+
     return g, comms, groupings
