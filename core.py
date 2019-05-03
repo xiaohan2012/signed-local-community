@@ -20,15 +20,25 @@ from helpers import (
 )
 
 
-def query_graph(g, seeds, kappa=0.25, solver='sp', verbose=0):
+def query_graph(g, seeds, kappa=0.25, solver='cg', verbose=0):
     """wrapper from different solvers"""
     assert solver in {'sp', 'sdp', 'cg'}
+    assert kappa > 0, 'kappa should be non-negative'
+    assert kappa < 1, 'kappa should be < 1'
     args = (g, seeds)
     kwargs = dict(kappa=kappa, verbose=verbose)
     if solver == 'sp':
         return query_graph_using_sparse_linear_solver(*args, **kwargs, solver='sp')
     elif solver == 'cg':
-        return query_graph_using_sparse_linear_solver(*args, **kwargs, solver='cg')
+        n_attempts = 0
+        while True and n_attempts <= 5:
+            try:
+                n_attempts += 1
+                return query_graph_using_sparse_linear_solver(*args, **kwargs, solver='cg')
+            except RuntimeError:
+                continue
+        raise RuntimeError('cg error and attempted 5 times')
+
     elif solver == 'sdp':
         return query_graph_using_dense_matrix(*args, **kwargs)
 
