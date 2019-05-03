@@ -13,8 +13,22 @@ random.seed(12345)
 
 
 def run_one_for_parallel(g, true_comms, true_groupings, kappa, nn, nl, run_id):
-    seeds, target_comm = sample_seeds(true_comms, true_groupings)
-    res = run_pipeline(g, seeds, kappa, target_comm, true_comms, true_groupings, verbose=0)
+    try:
+        seeds, target_comm = sample_seeds(true_comms, true_groupings)
+        res = run_pipeline(g, seeds, kappa, target_comm, true_comms, true_groupings, verbose=0)
+    except AssertionError as e:
+        import pickle as pkl
+        print('dumping result')
+        pkl.dump(
+            dict(
+                g=g, true_comms=true_comms, true_groupings=true_groupings,
+                kappa=kappa, nn=nn, nl=nl, run_id=run_id,
+                seeds=seeds, target_comm=target_comm
+            ),
+            open('dumps/scene.pkl', 'wb')
+        )
+        print(e)
+        raise e
 
     res['kappa'] = kappa
     res['nn'] = nn
@@ -31,7 +45,7 @@ nc = 10
 k = 6
 eta = 0.03
 
-nn_list = np.arange(nc, nc*2*k + 1, 2*nc)
+nn_list = np.arange(0, nc*2*k + 1, 2*nc)
 
 perf_list = []
 
