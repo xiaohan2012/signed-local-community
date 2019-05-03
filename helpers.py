@@ -670,8 +670,10 @@ def prepare_seed_vector_sparse(seeds, D, verbose=0):
     s = coo_matrix((data, (i, j)), shape=(n, 1), dtype=np.float64)
     s /= norms(s, ord=2, axis=0)[0]  # l2 norm
 
+    assert (D.diagonal() > 0).all()
+
     s = diags(1 / np.sqrt(D.diagonal())) @ s
-    
+
     # requirement check
     sTDs = (s.T @ D @ s).A[0, 0]
     assert np.isclose(sTDs, 1.0), '{} != 1.0'.format(sTDs)
@@ -748,7 +750,7 @@ def sbr_by_threshold(g, x, t):
     x: score vector
     t: threshold
     """
-    assert t >= 0
+    assert t >= 0, 't={}'.format(t)
     A = nx.adj_matrix(g, weight='sign')
     
     S1 = np.nonzero(x <= -t)[0]
@@ -760,7 +762,7 @@ def get_theoretical_kappa(S, seeds, A):
     """get the theoretic kappa defined by a set and seed nodes,
     A is the adj matrix"""
     vol_S = scipy.absolute(A[S, :]).sum()
-    vol_uv = scipy.absolute(A[seeds, :]).sum()
+    vol_uv = scipy.absolute(A[flatten(seeds), :]).sum()
     k = vol_S / vol_uv
     return np.sqrt(1/k)
 
