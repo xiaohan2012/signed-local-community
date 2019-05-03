@@ -52,7 +52,7 @@ nc, nn = 10, 0
 k = 6
 eta = 0.2
 
-seed_size_list = np.arange(1, nc+1)
+seed_size_list = np.arange(1, nc)
 
 
 if __name__ == "__main__":
