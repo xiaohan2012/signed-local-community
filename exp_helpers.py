@@ -131,6 +131,7 @@ def run_pipeline(
         C1=c1,
         C2=c2,
         min_beta=min_sbr,
-        seeds=list(flatten(seeds))
+        seeds=list(flatten(seeds)),
+        kappa=kappa
     )
 
