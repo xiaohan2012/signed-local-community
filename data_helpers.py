@@ -69,7 +69,7 @@ def make_polarized_graphs_fewer_parameters(
         nc, nn, k, eta, verbose=0
 ):
     """
-    nc: size of polarized community
+    nc: size of polarized community or list of community size pairs
     nn: number of irrelevant numbers
     k: number of polarized community pairs
     eta: noise level
@@ -91,8 +91,16 @@ def make_polarized_graphs_fewer_parameters(
     def _aux():
         assert eta >= 0
         assert eta <= 1
-        
-        comm_sizes = [(nc, nc) for i in range(k)]
+
+        if isinstance(nc, int):
+            comm_sizes = [(nc, nc) for i in range(k)]
+        else:
+            assert isinstance(nc, list)
+            for pair in nc:
+                assert len(pair) == 2
+
+            comm_sizes = nc
+            
         inside_edge_proba = 1-eta/2
         ind = inside_edge_proba
         inr = (eta / 2) / ind
