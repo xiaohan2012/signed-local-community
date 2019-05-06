@@ -3,7 +3,7 @@ import random
 import pandas as pd
 import networkx as nx
 
-from helpers import sample_seeds, noise_level, get_theoretical_kappa
+from helpers import sample_seeds, noise_level, get_theoretical_kappa, sbr
 from data_helpers import make_polarized_graphs_fewer_parameters
 from exp_helpers import run_pipeline
 from joblib import Parallel, delayed
@@ -30,6 +30,11 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa_info, seed_size, n
         res['seed_size'] = seed_size
         res['edge_noise_level'] = nl
         res['run_id'] = run_id
+        res['ground_truth'] = true_groupings[target_comm]
+        res['ground_truth_beta'] = sbr(
+            nx.adj_matrix(g, weight='sign'),
+            true_groupings[target_comm][0], true_groupings[target_comm][1]
+        )
         return res
     except RuntimeError:
         return dict(
@@ -40,19 +45,25 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa_info, seed_size, n
         )
 
 kappa_info = dict(
-    use_suggested_kappa=True,
+    use_suggested_kappa=False,
     kappa_default=0.8
 )
 
 
-n_graphs = 10
-n_reps = 60
+DEBUG = False
 
 nc, nn = 10, 0
 k = 6
 eta = 0.2
 
-seed_size_list = np.arange(1, nc)
+if DEBUG:
+    n_graphs = 1
+    n_reps = 8
+    seed_size_list = np.arange(1, 3)
+else:
+    n_graphs = 10
+    n_reps = 60
+    seed_size_list = np.arange(1, nc)
 
 
 if __name__ == "__main__":
