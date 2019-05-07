@@ -329,7 +329,7 @@ def sweep_on_x_fast(g, x, return_details=False, verbose=0):
     ts = np.sort(np.abs(x))[::-1]
     best_t = ts[best_idx]
 
-    ret = (C1, C2, C, best_t, best_beta, ts, beta_array)
+    ret = (C1, C2, C, best_t, best_beta, ts[::-1], beta_array[::-1])
 
     if verbose > 0:
         print('pos_order', pos_order)

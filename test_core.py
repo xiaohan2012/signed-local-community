@@ -172,5 +172,5 @@ def test_sweeping_consistency_on_random_graphs(n_rep):
     assert exp_best_sbr == act_best_sbr
     # print(exp_sbr_list)
     # print(act_sbr_list[::-1])
-    assert np.isclose(exp_ts, act_ts[::-1]).all()
-    assert np.isclose(exp_sbr_list, act_sbr_list[::-1]).all()
+    assert np.isclose(exp_ts, act_ts).all()
+    assert np.isclose(exp_sbr_list, act_sbr_list).all()
