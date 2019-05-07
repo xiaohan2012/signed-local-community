@@ -22,7 +22,7 @@ from helpers import (
 )
 
 
-def query_graph(g, seeds, kappa=0.25, solver='cg', verbose=0):
+def query_graph(g, seeds, kappa=0.25, solver='cg', max_iter=30, verbose=0):
     """wrapper from different solvers"""
     assert solver in {'sp', 'sdp', 'cg'}
     assert kappa > 0, 'kappa should be non-negative'
@@ -30,13 +30,15 @@ def query_graph(g, seeds, kappa=0.25, solver='cg', verbose=0):
     args = (g, seeds)
     kwargs = dict(kappa=kappa, verbose=verbose)
     if solver == 'sp':
-        return query_graph_using_sparse_linear_solver(*args, **kwargs, solver='sp')
+        return query_graph_using_sparse_linear_solver(*args, **kwargs, solver='sp', max_iter=max_iter)
     elif solver == 'cg':
         n_attempts = 0
         while True and n_attempts <= 5:
             try:
                 n_attempts += 1
-                return query_graph_using_sparse_linear_solver(*args, **kwargs, solver='cg')
+                return query_graph_using_sparse_linear_solver(
+                    *args, **kwargs, solver='cg', max_iter=max_iter
+                )
             except RuntimeError:
                 continue
         raise RuntimeError('cg error and attempted 5 times')
@@ -77,7 +79,7 @@ def query_graph_using_dense_matrix(g, seeds, kappa=0.25, verbose=0):
     return x_opt, opt_val
 
 
-def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, solver='cg', tol=1e-3, verbose=0):
+def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, solver='cg', max_iter=40, tol=1e-3, verbose=0):
     """
     more scalable approach by solving a sparse linear system
     
@@ -108,7 +110,7 @@ def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, solver='cg', to
 
     b = D @ s
     n_steps = 0
-    while True:
+    while n_steps <= max_iter:
         n_steps += 1
         alpha = (ub + lb) / 2
         A = L - alpha * D
