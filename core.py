@@ -6,8 +6,10 @@ from scipy.sparse import diags, issparse
 from scipy.sparse.linalg import eigs, spsolve, cg
 from numpy import linalg as LA
 
-
-import cvxpy as cp
+try:
+    import cvxpy as cp
+except:
+    pass
 
 from helpers import (
     signed_laplacian,

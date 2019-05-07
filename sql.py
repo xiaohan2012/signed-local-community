@@ -31,8 +31,7 @@ class TableCreation:
 
         time_elapsed           REAL
     );
-    CREATE INDEX IF NOT EXISTS {schema}_{table_name}_method ON {schema}.{table_name} (method);
-    CREATE INDEX IF NOT EXISTS {schema}_{table_name}_graph ON {schema}.{table_name} (graph_path);
+    CREATE INDEX IF NOT EXISTS {schema}_{table_name}_idx ON {schema}.{table_name} (graph_path, query, kappa, k);
     """.format(
         table_name=query_result_table,
         schema=schema
@@ -50,7 +49,7 @@ class TableCreation:
         key                    TEXT,
         value                  REAL
     );
-    CREATE INDEX IF NOT EXISTS {schema}_{table_name}_graph ON {schema}.{table_name}  (graph_path);
+    CREATE INDEX IF NOT EXISTS {schema}_{table_name}_idx ON {schema}.{table_name} (graph_path, query, kappa, k, key);
     """.format(
         table_name=eval_result_table,
         schema=schema
@@ -102,7 +101,7 @@ def record_exists(cursor, table, record):
     return cursor.fetchone() is not None
     
     
-def insert_record(cursor, schema, table, record):
+def insert_record(cursor, table, record):
     # convert complex type to pickle
     for k, v in record.items():
         if isinstance(v, dict):
@@ -118,7 +117,7 @@ def insert_record(cursor, schema, table, record):
     VALUES
         ({placeholders})
     """.format(
-        schema=schema,
+        schema=TableCreation.schema,
         table_name=table,
         fields=', '.join(record.keys()),
         placeholders=', '.join(['%s'] * len(record))

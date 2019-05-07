@@ -79,7 +79,7 @@ if __name__ == '__main__':
             show_progress=args.show_progress
         )
 
-    time_elapsed = time.time() - stime
+        time_elapsed = time.time() - stime
     print("community detection done")
 
     ans = OrderedDict()
