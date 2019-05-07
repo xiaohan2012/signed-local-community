@@ -120,3 +120,5 @@ logs/
 graphs/
 flycheck_*
 dumps/
+slurm*.out
+cmds/*
