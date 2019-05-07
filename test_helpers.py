@@ -4,19 +4,7 @@ import networkx as nx
 
 from scipy.sparse import diags, issparse
 from helpers import purity, sbr, prepare_seed_vector_sparse, sample_seeds
-
-
-@pytest.fixture
-def test_graph():
-    """http://193.166.24.212/local-polarization-figs/test_graphs/toy.png"""
-    g = nx.Graph()
-    nodes = range(5)
-    g.add_nodes_from(nodes)
-    edges = [(0, 1, 1), (1, 2, 1), (0, 2, -1), (0, 3, 1), (2, 3, -1), (3, 4, 1)]
-    for u, v, s in edges:
-            g.add_edge(u, v, sign=s)
-        
-    return g
+from test_fixtures import toy_graph as test_graph
 
 
 def test_purity(test_graph):

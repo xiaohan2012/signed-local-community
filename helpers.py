@@ -511,7 +511,7 @@ def signed_conductance_by_sweeping(A, order):
 def conductance_by_sweeping(A, order):
     """return n conductance scores
     where the ith entry considers the conductance of the subgraph of nodes order_0...order_i"""
-    B = A[order, :][:, order]  # permuate the matrix
+    B = A[order, :][:, order]  # permute the matrix
     B_lower = sp.tril(B)
     B_sums = flatten(B.sum(axis=1))
     volumes = np.cumsum(B_sums)
@@ -703,6 +703,9 @@ def sbr(A, S1, S2, verbose=0, return_details=False):
     A: adj matrix
     """
     S = list(set(S1) | set(S2))
+    if verbose > 0:
+        print('S1', S1)
+        print('S2', S2)
     neg_degree_inside = ((A[S1, :][:, S1] < 0).sum() + (A[S2, :][:, S2] < 0).sum())
     pos_degree_between = (A[S1, :][:, S2] > 0).sum() * 2
     vol_inside = scipy.absolute(A[S, :][:, S]).sum()
@@ -755,7 +758,7 @@ def sbr_by_threshold(g, x, t):
     
     S1 = np.nonzero(x <= -t)[0]
     S2 = np.nonzero(x >= t)[0]
-    return sbr(A, S1, S2)
+    return sbr(A, S1, S2, verbose=0)
 
 
 def get_theoretical_kappa(S, seeds, A):
@@ -778,3 +781,45 @@ def sample_seeds(true_comms, true_groupings, target_comm=None, k=1):
     v2 = np.random.permutation(true_groupings[target_comm][1])[:k]
     seeds = [v2, v1]
     return seeds, target_comm
+
+
+def pos_nbrs(g, nn):
+    """common neighbours count as multiple times"""
+    if isinstance(nn, int):
+        nn = [nn]
+    nbrs = [
+        i
+        for n in nn
+        for i in g[n]
+        if g[n][i]['sign'] > 0 and i not in nn
+    ]
+    return nbrs
+
+
+def neg_nbrs(g, nn):
+    """common neighbours count as multiple times"""
+    if isinstance(nn, int):
+        nn = [nn]
+    nbrs = [
+        i
+        for n in nn
+        for i in g[n]
+        if g[n][i]['sign'] < 0 and i not in nn
+    ]
+    return nbrs
+
+
+def num_pos_edges(g):
+    return sum(1 for u, v in g.edges() if g[u][v]['sign'] > 0)
+
+
+def num_neg_edges(g):
+    return sum(1 for u, v in g.edges() if g[u][v]['sign'] < 0)
+
+
+def get_v1(g):
+    """return the bottom-most eigen vector"""
+    A = nx.adjacency_matrix(g, weight='sign')
+    L = signed_normalized_laplacian(A)
+    eig_val, eig_vec = eigs(L, k=1, which='SM')
+    return np.real(flatten(eig_vec))

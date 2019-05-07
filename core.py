@@ -1,5 +1,6 @@
 import numpy as np
 import networkx as nx
+from scipy import sparse as sp
 from tqdm import tqdm
 from scipy.sparse import diags, issparse
 from scipy.sparse.linalg import eigs, spsolve, cg
@@ -16,7 +17,8 @@ from helpers import (
     degree_diag,
     is_rank_one,
     sbr_by_threshold,
-    flatten
+    flatten,
+    neg_adj, pos_adj
 )
 
 
@@ -155,7 +157,7 @@ def sweep_on_x(g, x, top_k=-1, verbose=0):
     x: the node score vector
     top_k: the number of threshold to consider, -1 to consider all
     """
-    ts = sorted(np.abs(x))[2:]  # avoid very small threshold
+    ts = np.sort(np.abs(x))  # avoid very small threshold
     if top_k > 0:
         if verbose > 0:
             print('sweep on top {}'.format(top_k))
@@ -177,3 +179,195 @@ def sweep_on_x(g, x, top_k=-1, verbose=0):
         print('comm2:', c2)
         
     return c1, c2, C, best_t, best_sbr, ts, sbr_list
+
+
+def _add_by_order(seq1, seq2, order, x, verbose=0):
+    """
+    subroutine to be used by sweep_on_x_fast
+
+    Given:
+    
+    seq1: values (can be pos/neg cut/internal-degree) ordered by x at each threshold
+    seq2: values ordered by -x at each threshold
+    order: node orders by |x|
+    
+    all parameters have equal length, n (number of nodes in graph)
+    given some positive threshold t, denote the set of nodes above t as V1(t) and below -t as V2(t),
+    we want to calcualte val1(V1(t)) + val2(V2(t)) at all thresholds t,
+    where val1(V1(t)) means \sum_{v \in V1(t)} val1(v) and val2(V2(t)) means similarly
+    
+    Return:
+    val1(V1(t)) + val2(V2(t)) at all thresholds t: length = n
+    """
+    res = np.ones(seq1.shape)
+    nodes1, nodes2 = set(np.nonzero(x > 0)[0]), set(np.nonzero(x < 0)[0])
+    i, j, k = -1, -1, -1
+    for n in order:
+        if n in nodes1:
+            i += 1
+            if verbose > 0:
+                print('-> set 1: i=', i)
+        if n in nodes2:
+            j += 1
+            if verbose > 0:
+                print('-> set 2: j=', j)
+        k += 1
+        if verbose > 0:
+            print('current position: ', k)
+        val1 = (seq1[i] if i >= 0 else 0)
+        val2 = (seq2[j] if j >= 0 else 0)
+        res[k] = val1 + val2
+        if verbose > 0:
+            print('res[{}]={}'.format(k, res[k]))
+    return res
+
+    
+def sweep_on_x_fast(g, x, return_details=False, verbose=0):
+    """
+    sweep on x in one go (no iteration on thresholds)
+
+    """
+    A = nx.adj_matrix(g, weight='sign')
+    pos_A, neg_A = pos_adj(A), neg_adj(A)
+
+    # calculate volume
+    abs_order = np.argsort(np.abs(x))[::-1]
+    # print('abs_order', abs_order)
+    pos_A_by_abs = pos_A[abs_order, :][:, abs_order]
+    neg_A_by_abs = neg_A[abs_order, :][:, abs_order]
+
+    pos_vol_by_abs = np.cumsum(flatten(pos_A_by_abs.sum(axis=1)))
+    neg_vol_by_abs = np.cumsum(flatten(neg_A_by_abs.sum(axis=1)))
+    vol_by_abs = pos_vol_by_abs + neg_vol_by_abs
+
+    # print('pos_vol_by_abs', pos_vol_by_abs)
+    # print('neg_vol_by_abs', neg_vol_by_abs)
+    # print('vol_by_abs', vol_by_abs)
+
+    ##### calculate the cut by abs(x)
+    # = cut(V1 \cup V2, complement of V1 \cup V2)
+
+    pos_A_by_abs_lower = sp.tril(pos_A_by_abs)
+    neg_A_by_abs_lower = sp.tril(neg_A_by_abs)
+    pos_cut_by_abs = pos_vol_by_abs - np.cumsum(2*flatten(pos_A_by_abs_lower.sum(axis=1)))
+    neg_cut_by_abs = neg_vol_by_abs - np.cumsum(2*flatten(neg_A_by_abs_lower.sum(axis=1)))
+    cut_by_abs = pos_cut_by_abs + neg_cut_by_abs
+    # print('abs_order', abs_order)
+    # print('pos_cut_by_abs', pos_cut_by_abs)
+    # print('neg_cut_by_abs', neg_cut_by_abs)
+    # print('cut_by_abs', cut_by_abs)
+    # print('neg_cut', neg_cut)
+
+    ##### calculate negative/positive degree **inside**
+    # node order by x from high to low
+    pos_order = np.argsort(np.maximum(x, 0))[::-1]
+
+    # node order by -x from high to low
+    neg_order = np.argsort(np.maximum(-x, 0))[::-1]
+    # print('pos order', pos_order)
+    # print('neg order', neg_order)
+
+    # pos nodes on top
+    neg_A_1 = neg_A[pos_order, :][:, pos_order]
+    neg_A_lower_1 = sp.tril(neg_A_1)
+    neg_at_k_1 = flatten(2 * neg_A_lower_1.sum(axis=1))
+    neg_inside_1 = np.cumsum(neg_at_k_1)
+
+    # neg nodes on top
+    neg_A_2 = neg_A[neg_order, :][:, neg_order]
+    neg_A_lower_2 = sp.tril(neg_A_2)
+    neg_at_k_2 = flatten(2 * neg_A_lower_2.sum(axis=1))
+    neg_inside_2 = np.cumsum(neg_at_k_2)
+
+    # print('neg_inside_1', neg_inside_1)
+    # print('neg_inside_2', neg_inside_2)
+    
+    pos_A_1 = pos_A[pos_order, :][:, pos_order]
+    pos_A_lower_1 = sp.tril(pos_A_1)
+    pos_at_k_1 = flatten(2 * pos_A_lower_1.sum(axis=1))
+    pos_inside_1 = np.cumsum(pos_at_k_1)
+
+    pos_A_2 = pos_A[neg_order, :][:, neg_order]
+    pos_A_lower_2 = sp.tril(pos_A_2)
+    pos_at_k_2 = flatten(2 * pos_A_lower_2.sum(axis=1))
+    pos_inside_2 = np.cumsum(pos_at_k_2)
+
+    # print('pos order', pos_order)
+    # print('neg order', neg_order)
+
+    # print('pos_at_k_1', flatten(pos_at_k_1))
+    # print('pos_at_k_2', flatten(pos_at_k_2))
+    # print('pos_inside_1', pos_inside_1)
+    # print('pos_inside_2', pos_inside_2)
+
+    ######## positive cut on V1 and V2
+    pos_vol_1 = np.cumsum(flatten(pos_A_1.sum(axis=1)))
+    pos_vol_2 = np.cumsum(flatten(pos_A_2.sum(axis=1)))
+
+    pos_cut_1 = pos_vol_1 - pos_inside_1
+    pos_cut_2 = pos_vol_2 - pos_inside_2
+    # print('pos_cut_1', pos_cut_1)
+    # print('pos_cut_2', pos_cut_2)
+
+    ####### the elixir #######
+    ####### positive V1 and V2 in between #######
+    pos_cut_1_and_2 = _add_by_order(pos_cut_1, pos_cut_2, abs_order, x)
+    pos_between_1_2 = pos_cut_1_and_2 - pos_cut_by_abs
+
+    # count the negative inside V1 and V2 separately and then add up
+    neg_inside_1_2 = _add_by_order(neg_inside_1, neg_inside_2, abs_order, x)
+
+    beta_array = (pos_between_1_2 + neg_inside_1_2 + cut_by_abs) / vol_by_abs
+    # print('beta:', beta_array)
+    best_idx = np.argmin(beta_array)
+    best_beta = np.min(beta_array)
+    # print('best position: ', best_idx+1)
+    C = abs_order[:best_idx+1]
+    C1 = C[x[C] > 0]
+    C2 = C[x[C] < 0]
+
+    ts = np.sort(np.abs(x))[::-1]
+    best_t = ts[best_idx]
+
+    ret = (C1, C2, C, best_t, best_beta, ts, beta_array)
+
+    if verbose > 0:
+        print('pos_order', pos_order)
+        print('neg_order', neg_order)
+        print('abs_order', abs_order)
+        print('pos_vol_by_abs', pos_vol_by_abs)
+        print('neg_vol_by_abs', neg_vol_by_abs)
+        print('vol_by_abs', vol_by_abs)
+        print('pos_cut_by_abs', pos_cut_by_abs)
+        print('neg_cut_by_abs', neg_cut_by_abs)
+        print('neg_inside_1', neg_inside_1)
+        print('neg_inside_2', neg_inside_2)
+        print('pos_inside_1', pos_inside_1)
+        print('pos_inside_2', pos_inside_2)
+        print('pos_cut_1', pos_cut_1)
+        print('pos_cut_2', pos_cut_2)
+        print('pos_between_1_2', pos_between_1_2)
+        print('neg_inside_1_2', neg_inside_1_2)
+    if return_details:
+        details = dict(
+            pos_A=pos_A,
+            neg_A=neg_A,
+            pos_order=pos_order,
+            neg_order=neg_order,
+            abs_order=abs_order,
+            pos_vol_by_abs=pos_vol_by_abs,
+            neg_vol_by_abs=neg_vol_by_abs,
+            pos_cut_by_abs=pos_cut_by_abs,
+            neg_cut_by_abs=neg_cut_by_abs,
+            neg_inside_1=neg_inside_1,
+            neg_inside_2=neg_inside_2,
+            pos_inside_1=pos_inside_1,
+            pos_inside_2=pos_inside_2,
+            pos_cut_1=pos_cut_1,
+            pos_cut_2=pos_cut_2,
+            pos_between_1_2=pos_between_1_2,
+            neg_inside_1_2=neg_inside_1_2
+        )
+        return ret + (details, )
+    else:
+        return ret
