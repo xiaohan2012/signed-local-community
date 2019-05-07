@@ -133,23 +133,3 @@ def run_pipeline(
         seeds=list(flatten(seeds)),
         kappa=kappa
     )
-
-
-def query_given_seed(g, query, kappa=0.9, verbose=0):
-    x, obj_val = query_graph(g, [[query]], kappa=kappa, verbose=verbose)
-    rows = []
-    for k in (100, 200, 400, 800, 1600, 3200):
-        C1, C2, C, best_t, best_beta, ts, beta_array = sweep_on_x_fast(g, x, top_k=k)
-        rows.append(
-            dict(
-                query=query,
-                k=k,
-                C1=C1,
-                C2=C2,
-                best_t=best_t,
-                best_beta=best_beta,
-                ts=ts,
-                beta_array=beta_array
-            )
-        )
-    return rows
