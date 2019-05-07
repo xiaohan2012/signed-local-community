@@ -3,7 +3,7 @@ import json
 import numpy as np
 import pickle as pkl
 
-from const import DEBUG, DB_CONNECTION_STRING
+from const import DB_CONNECTION_STRING
 
 
 class TableCreation:
@@ -11,27 +11,26 @@ class TableCreation:
     configuration for the database-related stuff
     """
     
-    if DEBUG:
-        schema = 'signed_local_comm_dbg'
-    else:
-        schema = 'signed_local_comm'        
+    schema = 'local_polarization'
 
     query_result_table = 'query_result'
     query_result_table_creation = """
     CREATE TABLE IF NOT EXISTS {schema}.{table_name}
     (
-        id                     TEXT,
-
         graph_path             TEXT,
-        method                 TEXT,
-        query_node             INTEGER,
-        teleport_alpha         NUMERIC,
-        other_params           JSONB,
+        query                  INTEGER,
+        kappa                  NUMERIC,
+        k                      INTEGER,
 
-        community              BYTEA,
+        C1                     BYTEA,
+        C2                     BYTEA,
+        best_beta              REAL,
+        best_t                 REAL,
+        beta_array             BYTEA,
+        ts                     BYTEA,
+
         time_elapsed           REAL
     );
-    CREATE UNIQUE INDEX IF NOT EXISTS {schema}_{table_name}_idx ON {schema}.{table_name} (id);
     CREATE INDEX IF NOT EXISTS {schema}_{table_name}_method ON {schema}.{table_name} (method);
     CREATE INDEX IF NOT EXISTS {schema}_{table_name}_graph ON {schema}.{table_name} (graph_path);
     """.format(
@@ -43,19 +42,14 @@ class TableCreation:
     eval_result_table_creation = """
     CREATE TABLE IF NOT EXISTS {schema}.{table_name}
     (
-        id                     TEXT,
-
         graph_path             TEXT,
-        method                 TEXT,
-        query_node             INTEGER,
-        teleport_alpha         NUMERIC,
-        other_params           JSONB,
+        query                  INTEGER,
+        kappa                  NUMERIC,
+        k                      INTEGER,
 
         key                    TEXT,
         value                  REAL
     );
-    CREATE UNIQUE INDEX IF NOT EXISTS {schema}_{table_name}_idx ON {schema}.{table_name} (id, key);
-    CREATE INDEX IF NOT EXISTS {schema}_{table_name}_method ON {schema}.{table_name} (method);
     CREATE INDEX IF NOT EXISTS {schema}_{table_name}_graph ON {schema}.{table_name}  (graph_path);
     """.format(
         table_name=eval_result_table,
