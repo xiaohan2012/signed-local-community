@@ -2,7 +2,7 @@ import numpy as np
 import scipy
 import networkx as nx
 from matplotlib import pyplot as plt
-from core import query_graph, sweep_on_x
+from core import query_graph, sweep_on_x_fast
 from eval_helpers import evaluate_level_1, evaluate_level_2
 from helpers import (
     flatten,
@@ -30,7 +30,7 @@ def run_pipeline(
     n = g.number_of_nodes()
     # x_opt, opt_val = query_graph_using_dense_matrix(g, seeds, kappa=kappa, verbose=verbose)
     x_opt, opt_val = query_graph(g, seeds, kappa=kappa, verbose=verbose, solver='cg')
-    c1, c2, C, best_t, min_sbr, ts, sbr_list = sweep_on_x(g, x_opt, top_k=int(n/2), verbose=verbose)
+    c1, c2, C, best_t, min_sbr, ts, sbr_list = sweep_on_x_fast(g, x_opt, verbose=verbose)
 
     prec_L1, rec_L1, f1_L1 = evaluate_level_1(
         g.number_of_nodes(), C, true_comms[target_comm]
