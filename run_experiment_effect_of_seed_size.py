@@ -54,7 +54,7 @@ DEBUG = False
 
 nc, nn = 10, 0
 k = 6
-eta = 0.2
+eta = 0.05
 
 if DEBUG:
     n_graphs = 1
