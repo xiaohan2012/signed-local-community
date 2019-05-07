@@ -222,7 +222,7 @@ def _add_by_order(seq1, seq2, order, x, verbose=0):
     return res
 
     
-def sweep_on_x_fast(g, x, return_details=False, verbose=0):
+def sweep_on_x_fast(g, x, top_k=-1, return_details=False, verbose=0):
     """
     sweep on x in one go (no iteration on thresholds)
 
@@ -319,6 +319,13 @@ def sweep_on_x_fast(g, x, return_details=False, verbose=0):
 
     beta_array = (pos_between_1_2 + neg_inside_1_2 + cut_by_abs) / vol_by_abs
     # print('beta:', beta_array)
+    if top_k == -1:
+        top_k = beta_array.shape[0]
+
+    assert top_k >= 1
+    
+    beta_array = beta_array[:top_k]
+
     best_idx = np.argmin(beta_array)
     best_beta = np.min(beta_array)
     # print('best position: ', best_idx+1)
@@ -326,10 +333,10 @@ def sweep_on_x_fast(g, x, return_details=False, verbose=0):
     C1 = C[x[C] > 0]
     C2 = C[x[C] < 0]
 
-    ts = np.sort(np.abs(x))[::-1]
+    ts = np.sort(np.abs(x))[::-1][:top_k]
     best_t = ts[best_idx]
 
-    ret = (C1, C2, C, best_t, best_beta, ts[::-1], beta_array[::-1])
+    ret = (C1, C2, C, best_t, best_beta, ts, beta_array)
 
     if verbose > 0:
         print('pos_order', pos_order)

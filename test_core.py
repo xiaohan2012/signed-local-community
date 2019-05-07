@@ -49,7 +49,7 @@ def test_solver_consistency(rep_i, solver_pair):
     np.isclose(np.mean(ratio), 1.0, atol=0.1)
     
     
-def test_sweep_on_x_fast(polarized_graph):
+def test_sweep_on_x_fast_assertions(polarized_graph):
     g = polarized_graph
     
     x = get_v1(g)
@@ -129,6 +129,20 @@ def test_sweep_on_x_fast(polarized_graph):
     assert (neg_inside_1_2 == np.array(expected_neg_inside_1_2)).all()
 
 
+def test_sweep_on_x_fast_top_k(polarized_graph):
+    g = polarized_graph
+    
+    x = get_v1(g)
+    
+    C1, C2, C, best_t, best_beta, ts, beta_array = sweep_on_x_fast(
+        g, x, top_k=8
+    )
+
+    assert set(C) == set(range(8))
+    assert beta_array.shape == (8, )
+    assert ts.shape == (8, )
+
+
 @pytest.mark.parametrize('g', [toy_graph(), polarized_graph()])
 def test_sweeping_on_fixtures(g):
     x = get_v1(g)
@@ -172,5 +186,5 @@ def test_sweeping_consistency_on_random_graphs(n_rep):
     assert exp_best_sbr == act_best_sbr
     # print(exp_sbr_list)
     # print(act_sbr_list[::-1])
-    assert np.isclose(exp_ts, act_ts).all()
-    assert np.isclose(exp_sbr_list, act_sbr_list).all()
+    assert np.isclose(exp_ts, act_ts[::-1]).all()
+    assert np.isclose(exp_sbr_list, act_sbr_list[::-1]).all()
