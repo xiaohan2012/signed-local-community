@@ -26,5 +26,6 @@ for r in tqdm(cursor.fetchall()):
     r[9] = pkl.loads(r[9])
     rows.append(r)
 df = pd.DataFrame(rows, columns=cols)
-sub_df = df[['query', 'C1', 'C2', 'k', 'best_beta']]
+sub_df = df[['query', 'C1', 'C2', 'k', 'best_beta' ,'beta_array']]
+sub_df = sub_df[sub_df['k'] == 200]
 sub_df.to_pickle('outputs/{}.pkl'.format(graph))
