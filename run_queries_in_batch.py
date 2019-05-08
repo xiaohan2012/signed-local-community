@@ -8,8 +8,9 @@ from sql import init_db, record_exists, insert_record, TableCreation
 from core import query_graph, sweep_on_x_fast
 
 
-KS = (100, 200, 400, 800, 1600, 3200)
-KS = (200, )
+# KS = (100, 200, 400, 800, 1600, 3200)
+KS = (100, 200, 400, )
+# KS = (200, )
 
 
 def query_given_seed(g, query, kappa=0.9, ks=KS, verbose=0):
@@ -56,19 +57,18 @@ if __name__ == '__main__':
 
     g = nx.read_gpickle(args.graph_path)
 
-    if args.save_to_db:
-        conn, cursor = init_db(create_table=True)
-
     for q in tqdm(args.query_list):
         stime = time.time()
         rows = query_given_seed(g, q, kappa=args.kappa, verbose=args.verbose)
         time_elapsed = time.time() - stime
 
-        for row in rows:
-            row['graph_path'] = args.graph_path
-            row['time_elapsed'] = time_elapsed
+        if args.save_to_db:
+            conn, cursor = init_db(create_table=False)
+        
+            for row in rows:
+                row['graph_path'] = args.graph_path
+                row['time_elapsed'] = time_elapsed
 
-            if args.save_to_db:
                 filter_value = dict(
                     graph_path=args.graph_path,
                     kappa=row['kappa'],
@@ -79,11 +79,10 @@ if __name__ == '__main__':
                     insert_record(
                         cursor, TableCreation.query_result_table, row
                     )
+            conn.commit()
+            print('inserted to db')
+            conn.close()                        
+        else:
+            print(row)
 
-            else:
-                print(row)
 
-    if args.save_to_db:
-        conn.commit()
-        print('inserted to db')
-        conn.close()
