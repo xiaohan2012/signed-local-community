@@ -9,6 +9,7 @@ from core import query_graph, sweep_on_x_fast
 
 
 KS = (100, 200, 400, 800, 1600, 3200)
+KS = (200, )
 
 
 def query_given_seed(g, query, kappa=0.9, ks=KS, verbose=0):
@@ -49,7 +50,7 @@ if __name__ == '__main__':
                         help='show progress or not')
     parser.add_argument('-d', '--save_to_db',
                         action='store_true',
-                        help='save to db or not')    
+                        help='save to db or not')
 
     args = parser.parse_args()
 
@@ -64,19 +65,23 @@ if __name__ == '__main__':
         time_elapsed = time.time() - stime
 
         for row in rows:
+            row['graph_path'] = args.graph_path
+            row['time_elapsed'] = time_elapsed
+
             if args.save_to_db:
                 filter_value = dict(
                     graph_path=args.graph_path,
                     kappa=row['kappa'],
                     query=row['query'],
-                    k=row['k']                    
+                    k=row['k']
                 )
-                row['graph_path'] = args.graph_path
-                row['time_elapsed'] = time_elapsed
                 if not record_exists(cursor, TableCreation.query_result_table, filter_value):
                     insert_record(
                         cursor, TableCreation.query_result_table, row
                     )
+
+            else:
+                print(row)
 
     if args.save_to_db:
         conn.commit()
