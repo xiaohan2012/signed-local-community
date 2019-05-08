@@ -4,17 +4,16 @@ import networkx as nx
 import scipy.io as sio
 from helpers import pos_adj, neg_adj
 
-graph_name = 'epinions'
+graph_name = 'word'
 
 g = nx.read_gpickle('graphs/{}.pkl'.format(graph_name))
 
 
 adj = nx.adj_matrix(g, weight='sign')
-
 A, B = pos_adj(adj), neg_adj(adj)
 
-assert (A.data == 1).all()
-assert (B.data == 1).all()
+assert (A.data > 0).all()
+assert (B.data > 0).all()
 
 sio.savemat(
     'data/{}.mat'.format(graph_name),
