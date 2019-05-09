@@ -23,6 +23,7 @@ the following notebooks highlights the thought process and how the project has i
 - `signed-laplacian-eigen-value.ipynb`: demo on what the bottom-most eigen vector looks like on a toy graph (to understand better signed spectral theory in general)
 - `proof-of-concept.ipynb`: the very early one that demos how this method works for small toy graphs and some investigation on the effect of kappa
 - `experiment_on_synthetic_graphs.ipynb`: effect of different parameters on synetheic graphs
+- `tuning-kappa.ipynb`: trying to understand better the effect of `kappa` on synthetic graphs
 - `scalable-local-polarization.ipynb`: scalabel way to solve the linear equation (using conjugate gradient)
 - `fast_sweeping.ipynb`: efficient way to sweep on `x` (reduces time cost by orders of magnitudes)
 - `case-study-on-word-graph.ipynb`: manual checking the result on word graph + some visualization
