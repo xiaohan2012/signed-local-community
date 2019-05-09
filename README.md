@@ -16,3 +16,15 @@
 - effect of number of outlier nods: `run_experiment_effect_of_outlier_size.py`
 - effect of number of seed: `run_experiment_effect_of_seed_size.py`
 
+## jupyter notebooks along the process
+
+the following notebooks highlights the thought process and how the project has involved:
+
+- `signed-laplacian-eigen-value.ipynb`: demo on what the bottom-most eigen vector looks like on a toy graph (to understand better signed spectral theory in general)
+- `proof-of-concept.ipynb`: the very early one that demos how this method works for small toy graphs and some investigation on the effect of kappa
+- `experiment_on_synthetic_graphs.ipynb`: effect of different parameters on synetheic graphs
+- `scalable-local-polarization.ipynb`: scalabel way to solve the linear equation (using conjugate gradient)
+- `fast_sweeping.ipynb`: efficient way to sweep on `x` (reduces time cost by orders of magnitudes)
+- `case-study-on-word-graph.ipynb`: manual checking the result on word graph + some visualization
+- `FOCG-vs-Local.ipynb`: comparing [FOCG, KDD 2018](https://dl.acm.org/citation.cfm?id=2939672.2939855) with our method
+- `why-constraint-not-tight.ipynb`: for some nodes typically with small degrees, `alpha` tends very close to `lambda_1`, making the constraint not tight
