@@ -4,6 +4,7 @@ import string
 import datetime
 import hashlib
 import scipy
+import sys
 
 import pandas as pd
 import networkx as nx
@@ -831,5 +832,5 @@ def sample_nodes_by_log_of_degree(D, size):
     p = np.log2(deg.copy())
     p /= p.sum()
     sample_seeds = np.random.choice(np.arange(n), size=size, replace=False, p=p)
-    print('degree mean of samples', np.mean(deg[sample_seeds]))
+    sys.stderr.write('degree mean of samples: {}\n'.format(np.mean(deg[sample_seeds])))
     return sample_seeds

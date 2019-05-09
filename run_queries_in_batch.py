@@ -5,7 +5,7 @@ import time
 from tqdm import tqdm
 
 from sql import init_db, record_exists, insert_record, TableCreation
-from core import query_graph, sweep_on_x_fast
+from core import query_graph_using_sparse_linear_solver, sweep_on_x_fast
 
 
 # KS = (100, 200, 400, 800, 1600, 3200)
@@ -13,8 +13,18 @@ KS = (100, 200, 400, )
 # KS = (200, )
 
 
-def query_given_seed(g, query, kappa=0.9, ks=KS, verbose=0):
-    x, obj_val = query_graph(g, [[query]], kappa=kappa, verbose=verbose)
+def query_given_seed(
+        g,
+        query,
+        kappa=0.9,
+        ks=KS,
+        verbose=0,
+        **kwargs
+):
+    x, obj_val, runtime_info = query_graph_using_sparse_linear_solver(
+        g, [[query]], kappa=kappa, verbose=verbose,
+        **kwargs
+    )
     rows = []
     for k in ks:
         C1, C2, C, best_t, best_beta, ts, beta_array = sweep_on_x_fast(g, x, top_k=k)
@@ -28,7 +38,8 @@ def query_given_seed(g, query, kappa=0.9, ks=KS, verbose=0):
                 best_t=best_t,
                 best_beta=best_beta,
                 ts=ts,
-                beta_array=beta_array
+                beta_array=beta_array,
+                runtime_info=runtime_info
             )
         )
     return rows
@@ -59,11 +70,16 @@ if __name__ == '__main__':
 
     for q in tqdm(args.query_list):
         stime = time.time()
-        rows = query_given_seed(g, q, kappa=args.kappa, verbose=args.verbose)
+        rows = query_given_seed(
+            g, q, kappa=args.kappa, verbose=args.verbose,
+            ub=g.graph['lambda1'],
+            return_details=True,
+            max_iter=40
+        )
         time_elapsed = time.time() - stime
 
         if args.save_to_db:
-            conn, cursor = init_db(create_table=False)
+            conn, cursor = init_db(create_table=True)
         
             for row in rows:
                 row['graph_path'] = args.graph_path
@@ -83,6 +99,7 @@ if __name__ == '__main__':
             print('inserted to db')
             conn.close()
         else:
-            print(row)
+            for row in rows:            
+                print(row)
 
 
