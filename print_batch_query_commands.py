@@ -1,6 +1,7 @@
 import sys
 import numpy as np
 import networkx as nx
+from helpers import degree_diag, sample_nodes_by_log_of_degree
 
 np.random.seed(12345)
 
@@ -10,7 +11,7 @@ kappa = 0.9
 cmd = "python3 run_queries_in_batch.py -g {} -q {{}} -k {:.1f} -d".format(graph_path, kappa)
 
 g = nx.read_gpickle(graph_path)
-
+D = degree_diag(g)
 n_samples = 8000
 chunk_size = 50
 
@@ -18,8 +19,7 @@ sys.stderr.write('n_samples={} ({:.2f}% of all nodes in graph)\n'.format(
     n_samples, 100 * n_samples / g.number_of_nodes())
 )
 
-sample_queries = np.random.permutation(g.number_of_nodes())[:n_samples]
-
+sample_queries = sample_nodes_by_log_of_degree(D, n_samples)
 
 
 n_chunks = int((n_samples + chunk_size - 1) / chunk_size)

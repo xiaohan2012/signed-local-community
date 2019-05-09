@@ -24,7 +24,7 @@ from helpers import (
 )
 
 
-def query_graph(g, seeds, kappa=0.25, solver='cg', max_iter=30, verbose=0):
+def query_graph(g, seeds, kappa=0.25, solver='cg', max_iter=30, verbose=0, return_details=False):
     """wrapper from different solvers"""
     assert solver in {'sp', 'sdp', 'cg'}
     assert kappa > 0, 'kappa should be non-negative'
@@ -32,14 +32,16 @@ def query_graph(g, seeds, kappa=0.25, solver='cg', max_iter=30, verbose=0):
     args = (g, seeds)
     kwargs = dict(kappa=kappa, verbose=verbose)
     if solver == 'sp':
-        return query_graph_using_sparse_linear_solver(*args, **kwargs, solver='sp', max_iter=max_iter)
+        return query_graph_using_sparse_linear_solver(
+            *args, **kwargs, solver='sp', max_iter=max_iter, return_details=return_details
+        )
     elif solver == 'cg':
         n_attempts = 0
         while True and n_attempts <= 5:
             try:
                 n_attempts += 1
                 return query_graph_using_sparse_linear_solver(
-                    *args, **kwargs, solver='cg', max_iter=max_iter
+                    *args, **kwargs, solver='cg', max_iter=max_iter, return_details=return_details
                 )
             except RuntimeError:
                 continue
@@ -81,7 +83,16 @@ def query_graph_using_dense_matrix(g, seeds, kappa=0.25, verbose=0):
     return x_opt, opt_val
 
 
-def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, solver='cg', max_iter=40, tol=1e-3, verbose=0):
+def query_graph_using_sparse_linear_solver(
+        g, seeds,
+        kappa=0.25,
+        solver='cg',
+        max_iter=40,
+        tol=1e-3,
+        ub=None,
+        verbose=0,
+        return_details=False
+):
     """
     more scalable approach by solving a sparse linear system
     
@@ -102,19 +113,24 @@ def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, solver='cg', ma
     if verbose > 0:
         print('matrices loading done')
 
-    Ln = signed_normalized_laplacian(A)
     lb = - g.number_of_edges() * 2
-    lambda1 = eigs(Ln, k=1, which='SM')[0][0]  # the smallest eigen value
-    ub = np.real(lambda1)
-
-    if verbose > 0:
-        print('found lambda_1=', lambda1)
+    if ub is None:
+        Ln = signed_normalized_laplacian(A)
+        lambda1 = eigs(Ln, k=1, which='SM')[0][0]  # the smallest eigen value
+        ub = np.real(lambda1)
+        if verbose > 0:
+            print('found lambda_1=', lambda1)
+    else:
+        if verbose > 0:
+            print('using given ub={}'.format(ub))
+        assert ub >= 0, 'ub should be non-negative'
 
     b = D @ s
     n_steps = 0
+    converged = False
     while n_steps <= max_iter:
         n_steps += 1
-        alpha = (ub + lb) / 2
+        alpha = np.real((ub + lb) / 2)
         A = L - alpha * D
         # linear system solver
         if solver == 'cg':
@@ -134,13 +150,14 @@ def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, solver='cg', ma
 
         # assert np.isclose((y.T @ D @ y)[0, 0], 1), 'y not normalized w.r.t D'
 
-        gap = (np.sqrt(kappa) - y.T @ D @ s)[0, 0]
+        gap = np.real((np.sqrt(kappa) - y.T @ D @ s)[0, 0])
 
         if n_steps % 5 == 0 and verbose > 0:
             print('at iteration {} (alpha={:.5f})'.format(n_steps, alpha))
             print("residual: sqrt(kappa) - y' D s={}".format(gap))
 
         if gap > -tol and gap < 0:
+            converged = True
             if verbose > 0:
                 print("""terminates after {} iterations:
   - alpha={:.5f}
@@ -152,7 +169,20 @@ def query_graph_using_sparse_linear_solver(g, seeds, kappa=0.25, solver='cg', ma
         else:
             ub = alpha
     y = y.T  # make it row
-    return flatten(y), y @ L @ y.T
+    ret = flatten(y), y @ L @ y.T
+
+    if return_details:
+        details = dict(
+            gap=gap,
+            ub=ub,
+            lb=lb,
+            alpha=alpha,
+            converged=converged,
+            n_iters=n_steps
+        )
+        return ret + (details, )
+    else:
+        return ret
 
 
 def sweep_on_x(g, x, top_k=-1, verbose=0):

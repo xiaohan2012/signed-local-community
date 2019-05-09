@@ -81,7 +81,7 @@ if __name__ == '__main__':
                     )
             conn.commit()
             print('inserted to db')
-            conn.close()                        
+            conn.close()
         else:
             print(row)
 

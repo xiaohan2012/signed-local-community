@@ -822,4 +822,14 @@ def get_v1(g):
     A = nx.adjacency_matrix(g, weight='sign')
     L = signed_normalized_laplacian(A)
     eig_val, eig_vec = eigs(L, k=1, which='SM')
-    return np.real(flatten(eig_vec))
+    return np.real(eig_val[0]), np.real(flatten(eig_vec))
+
+
+def sample_nodes_by_log_of_degree(D, size):
+    n = D.shape[0]
+    deg = D.diagonal()
+    p = np.log2(deg.copy())
+    p /= p.sum()
+    sample_seeds = np.random.choice(np.arange(n), size=size, replace=False, p=p)
+    print('degree mean of samples', np.mean(deg[sample_seeds]))
+    return sample_seeds

@@ -52,7 +52,7 @@ def test_solver_consistency(rep_i, solver_pair):
 def test_sweep_on_x_fast_assertions(polarized_graph):
     g = polarized_graph
     
-    x = get_v1(g)
+    _, x = get_v1(g)
     
     C1, C2, C, best_t, best_beta, ts, beta_array, details = sweep_on_x_fast(
         g, x, return_details=True
@@ -132,7 +132,7 @@ def test_sweep_on_x_fast_assertions(polarized_graph):
 def test_sweep_on_x_fast_top_k(polarized_graph):
     g = polarized_graph
     
-    x = get_v1(g)
+    _, x = get_v1(g)
     
     C1, C2, C, best_t, best_beta, ts, beta_array = sweep_on_x_fast(
         g, x, top_k=8
@@ -145,7 +145,7 @@ def test_sweep_on_x_fast_top_k(polarized_graph):
 
 @pytest.mark.parametrize('g', [toy_graph(), polarized_graph()])
 def test_sweeping_on_fixtures(g):
-    x = get_v1(g)
+    _, x = get_v1(g)
 
     exp_c1, exp_c2, exp_C, exp_best_t, exp_best_sbr, exp_ts, exp_sbr_list = sweep_on_x(g, x)
     act_c1, act_c2, act_C, act_best_t, act_best_sbr, act_ts, act_sbr_list = sweep_on_x_fast(g, x)
@@ -172,7 +172,7 @@ def test_sweeping_consistency_on_random_graphs(n_rep):
     k = 2
     g, _, _ = make_polarized_graphs(k, [(size, size) for i in range(k)])
     
-    x = get_v1(g)
+    _, x = get_v1(g)
     exp_c1, exp_c2, exp_C, exp_best_t, exp_best_sbr, exp_ts, exp_sbr_list = sweep_on_x(g, x)
     act_c1, act_c2, act_C, act_best_t, act_best_sbr, act_ts, act_sbr_list = sweep_on_x_fast(g, x)
 
