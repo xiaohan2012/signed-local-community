@@ -29,7 +29,8 @@ class TableCreation:
         beta_array             BYTEA,
         ts                     BYTEA,
 
-        time_elapsed           REAL
+        time_elapsed           REAL,
+        runtime_info           BYTEA
     );
     CREATE INDEX IF NOT EXISTS {schema}_{table_name}_idx ON {schema}.{table_name} (graph_path, query, kappa, k);
     """.format(
