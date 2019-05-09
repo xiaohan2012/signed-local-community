@@ -29,3 +29,4 @@ the following notebooks highlights the thought process and how the project has i
 - `case-study-on-word-graph.ipynb`: manual checking the result on word graph + some visualization
 - `FOCG-vs-Local.ipynb`: comparing [FOCG, KDD 2018](https://dl.acm.org/citation.cfm?id=2939672.2939855) with our method
 - `why-constraint-not-tight.ipynb`: for some nodes typically with small degrees, `alpha` tends very close to `lambda_1`, making the constraint not tight
+- `explore-query-result-on-real-graphs.ipynb`: checking query result from real graphs (more  statistics and some viz)
