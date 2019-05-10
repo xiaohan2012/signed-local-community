@@ -834,3 +834,16 @@ def sample_nodes_by_log_of_degree(D, size):
     sample_seeds = np.random.choice(np.arange(n), size=size, replace=False, p=p)
     sys.stderr.write('degree mean of samples: {}\n'.format(np.mean(deg[sample_seeds])))
     return sample_seeds
+
+
+def extract_ijvmn(M, use_matlab=False):
+    """extract rows, columns, data, m and n of a sparse matrix M """
+    i, j = M.nonzero()
+    v = flatten(M[i, j])
+
+    if use_matlab:
+        # matlab is 1-indexed
+        i += 1
+        j += 1
+    m, n = M.shape
+    return i, j, v, m, n
