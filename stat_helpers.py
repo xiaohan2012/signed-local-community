@@ -53,11 +53,16 @@ def populate_fields(df, pos_A, neg_A):
 
     df['agreement'] = df[['C1', 'C2']].apply(lambda d: agreement(pos_A, neg_A, d['C1'], d['C2']), axis=1)
 
+    idx = (df['coh'] != 0) & (df['opp'] != 0)
+    if idx.sum() > 0:
+        print('filtering opp|coh=0 rows')
+        df = df[idx].reindex()
+
     assert (df['coh'] >= 0).all()
     assert (df['coh'] <= 1).all()
     assert (df['opp'] >= 0).all()
     assert (df['opp'] <= 1).all()
-    assert (df['ham'] >= 0).all()
+    assert (df['ham'] >= 0).all(), np.isnan(df['ham']).nonzero()
     assert (df['ham'] <= 1).all()
     assert (df['agreement'] >= 0).all()
     assert (df['agreement'] <= 1).all()
