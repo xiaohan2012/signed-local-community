@@ -1,4 +1,5 @@
 import numpy as np
+from helpers import sbr
 
 
 def avg_pos_deg(pos_A, nodes):
@@ -52,6 +53,8 @@ def populate_fields(df, pos_A, neg_A, make_assertion=True):
     df['ham'] = 2 * df['coh'] * df['opp'] / (df['coh'] + df['opp'])
 
     df['agreement'] = df[['C1', 'C2']].apply(lambda d: agreement(pos_A, neg_A, d['C1'], d['C2']), axis=1)
+    if 'beta' not in cols and 'best_beta' not in cols:
+        df['beta'] = df[['C1', 'C2']].apply(lambda d: sbr(pos_A - neg_A, d['C1'], d['C2']), axis=1)
 
     idx = (df['coh'] != 0) & (df['opp'] != 0)
 
