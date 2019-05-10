@@ -8,6 +8,14 @@
 - run a batch of queries on graph: `run_queries_in_batch.py`
 - print commands that each runs a batch of queries (for parallel computing): `print_batch_query_commands.py`
 
+### notes on Aalto Triton
+
+- run `python3 print_batch_query_commands.py {graph_name} > {cmds_path.txt}` to save the command list
+- edit `sbatch_run_queries_in_batch.sh`: make sure to update the following:
+  - `--array=1-{n}`, where `n` is the number of commands to run (use `wc -l {cmds_path.txt}`) to get that number
+  - `graph="{graph_name}"`: set the graph name accordingly
+  - in addition, number of cpus, memory requirement, max running time can be set
+- submit the job by `sbatch sbatch_run_queries_in_batch.sh`
 
 ## experiment on synthetic graphs
 
