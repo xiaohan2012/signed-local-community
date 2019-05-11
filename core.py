@@ -24,7 +24,7 @@ from helpers import (
 )
 
 
-def query_graph(g, seeds, kappa=0.25, solver='cg', max_iter=30, verbose=0, return_details=False):
+def query_graph(g, seeds, kappa=0.9, solver='cg', max_iter=30, verbose=0, return_details=False):
     """wrapper from different solvers"""
     assert solver in {'sp', 'sdp', 'cg'}
     assert kappa > 0, 'kappa should be non-negative'
@@ -53,7 +53,7 @@ def query_graph(g, seeds, kappa=0.25, solver='cg', max_iter=30, verbose=0, retur
     raise ValueError('unknown solver name', solver)
 
 
-def query_graph_using_dense_matrix(g, seeds, kappa=0.25, verbose=0):
+def query_graph_using_dense_matrix(g, seeds, kappa=0.9, verbose=0):
     n = g.number_of_nodes()
     L = signed_laplacian(g).A
     D = degree_diag(g).A
@@ -85,7 +85,7 @@ def query_graph_using_dense_matrix(g, seeds, kappa=0.25, verbose=0):
 
 def query_graph_using_sparse_linear_solver(
         g, seeds,
-        kappa=0.25,
+        kappa=0.9,
         solver='cg',
         max_iter=40,
         tol=1e-3,
