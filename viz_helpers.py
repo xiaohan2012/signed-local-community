@@ -6,8 +6,15 @@ from helpers import (
 )
 
 
-def draw_query_result(g, C1, C2, layout='pos', show_query=False, r=None, use_lcc=False):
-    assert layout in {'pos', 'spectral'}
+def draw_query_result(
+        g, C1, C2,
+        layout='pos',
+        show_query=False,
+        seeds1=None, seeds2=None,
+        C1_labels=None, C2_labels=None,
+        use_lcc=False
+):
+    assert layout in {'pos', 'spectral', 'spring'}
     subg = g.subgraph(list(C1) + list(C2))
     if use_lcc:
         print('use largest CC')
@@ -24,6 +31,8 @@ def draw_query_result(g, C1, C2, layout='pos', show_query=False, r=None, use_lcc
 
     if layout == 'pos':
         pos = pos_spring_layout(subg)
+    elif layout == 'spring':
+        pos = nx.fruchterman_reingold_layout(subg, weight='sign')
     else:
         pos = signed_layout(subg)
 
@@ -32,27 +41,43 @@ def draw_query_result(g, C1, C2, layout='pos', show_query=False, r=None, use_lcc
     styles = dict(
         node_size=40,
         linewidths=0,
-        alpha=0.9,
+        alpha=0.5,
     )
 
     nx.draw_networkx_nodes(
         subg, pos,
         nodelist=C1,
         node_shape='v',
-        node_color='orange',
+        node_color='cyan',
         **styles
     )
     nx.draw_networkx_nodes(
         subg, pos,
         nodelist=C2,
         node_shape='8',
-        node_color='black',
+        node_color='magenta',
         **styles
     )
-    if show_query:
-        nx.draw_networkx_nodes(subg, pos, nodelist=[mapping[r['query']]],
+
+    if C1_labels:
+        C1_labels = {mapping[i]: l for i, l in C1_labels.items()}
+        nx.draw_networkx_labels(subg, pos, nodelist=C1_labels.keys(), labels=C1_labels)
+
+    if C2_labels:
+        C2_labels = {mapping[i]: l for i, l in C2_labels.items()}
+        nx.draw_networkx_labels(subg, pos, nodelist=C2_labels.keys(), labels=C2_labels)
+
+    if seeds1:
+        nx.draw_networkx_nodes(subg, pos, nodelist=[mapping[s] for s in seeds1],
                                node_size=80, linewidths=0,
                                node_color='green',
-                               node_shape='s')
+                               node_shape='s',
+        )
+    if seeds2:
+        nx.draw_networkx_nodes(subg, pos, nodelist=[mapping[s] for s in seeds2],
+                               node_size=80, linewidths=0,
+                               node_color='blue',
+                               node_shape='s',
+        )
     draw_edges(subg, pos, ax=ax, width=1.0, alpha=0.5)
     return fig, ax
