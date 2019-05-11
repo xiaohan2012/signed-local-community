@@ -51,6 +51,8 @@ for i in range(fog_data['X_enumKOCG_cell'].shape[0]):
             if idx.sum() == 2:
                 fog_comms.append(r[:, idx])
 
+print('got {} entries'.format(len(fog_comms)))
+
 rows = []
 for comm in fog_comms:
     C1 = comm[:, 0].nonzero()[0]
@@ -65,7 +67,7 @@ for comm in fog_comms:
         rows.append(row)
 df = pd.DataFrame.from_records(rows)
 assert df.shape[0] > 0
-print('got {} entries'.format(df.shape[0]))
+print('excluding overlapping results, got {} entries'.format(df.shape[0]))
 
 df = populate_fields(df, pos_A, neg_A, make_assertion=False)
 
