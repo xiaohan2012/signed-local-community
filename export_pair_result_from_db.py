@@ -8,14 +8,14 @@ conn, cursor = init_db()
 graph = 'word'
 cursor.execute("""
     SELECT 
-        seed1, seed2, k, C1, C2, best_beta
+        seed1, seed2, k, C1, C2, best_beta as beta
     FROM local_polarization.query_result_seed_pair
     WHERE graph_path LIKE '%%{}%%'
 """.format(graph)
 )
 
 cols = (
-    'seed1', 'seed2', 'k', 'C1', 'C2', 'best_beta'
+    'seed1', 'seed2', 'k', 'C1', 'C2', 'beta'
 )
 rows = []
 for r in tqdm(cursor.fetchall()):
