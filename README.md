@@ -19,6 +19,15 @@ currently, two query modes are supported:
 
 - `export_single_seed_result_from_db.py|export_pair_result_from_db.py`
 
+## useful scripts
+
+- `augment_result.py`: augment our result by various graph statistics
+
+### for FOCG
+
+- `prepare_data_for_matlab.py`: convert graph to Matlab format for FOCG to use
+- `augment_focg_result.py`: augment FOCG result by various graph statistics
+
 ## experiment on synthetic graphs
 
 - effect of noise parameter: `run_experiment_effect_of_eta.py`

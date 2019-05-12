@@ -1,5 +1,5 @@
 """
-augment the our result by various statistics
+augment our result by various statistics
 
 
 exclude those that:
