@@ -9,18 +9,18 @@ a good seed pair (u, v) satisfy:
 
 the threshold are specified according to th  graph:
 
-- word|bitcoin: 5
+- word, bitcoin: 5
 - ref: 15
-- epinions|slashdot|wikiconflict: 20
+- epinions, slashdot, wikiconflict: 20
 
-the resulting number of pairs:
+the resulting number of pairs in each graph:
 
 - word: 8604
-- bitcoin: 8604
-- ref
-- epinions: 
+- bitcoin: 1323
+- ref: 9286
+- epinions: 36577
 - slashdot: 43373
-- wikiconflict: 
+- wikiconflict: 87971
 
 """
 import sys
