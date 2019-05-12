@@ -1,6 +1,8 @@
 import numpy as np
 import scipy
 import networkx as nx
+import warnings
+
 from matplotlib import pyplot as plt
 from core import query_graph, sweep_on_x_fast
 from eval_helpers import mean_avg_precision
@@ -10,7 +12,13 @@ from helpers import (
     signed_layout,
     draw_edges,
     sbr
-)    
+)
+
+
+def warn(*args, **kwargs):
+        pass
+
+warnings.warn = warn
 
 
 def run_pipeline(
