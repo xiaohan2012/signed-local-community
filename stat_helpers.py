@@ -34,6 +34,15 @@ def agreement(pos_A, neg_A, C1, C2):
     return 1 - (n_bad_pos + n_bad_neg) / n_total
 
 
+def pc(A, C1, C2):
+    """x \times A \times x' / (x \times x')"""
+    x = np.zeros(A.shape[0])
+    x[C1] = 1
+    x[C2] = -1
+    xT = x[:, None]
+    return x @ A @ xT / (x @ xT)
+
+
 def populate_fields(df, pos_A, neg_A, make_assertion=True):
     """use this!!!"""
     cols = df.columns
@@ -63,6 +72,9 @@ def populate_fields(df, pos_A, neg_A, make_assertion=True):
     if 'beta' not in cols and 'best_beta' not in cols:
         print('calculating beta')
         df['beta'] = df[['C1', 'C2']].apply(lambda d: sbr(pos_A - neg_A, d['C1'], d['C2']), axis=1)
+
+    print('calculating PC')
+    df['pc'] = df[['C1', 'C2']].apply(lambda d: pc(pos_A - neg_A, d['C1'], d['C2']), axis=1)
 
     idx = (df['coh'] != 0) & (df['opp'] != 0)
 
