@@ -847,3 +847,15 @@ def extract_ijvmn(M, use_matlab=False):
         j += 1
     m, n = M.shape
     return i, j, v, m, n
+
+
+def neg_graph(g):
+    A = nx.adj_matrix(g, weight='sign')
+    neg_A = neg_adj(A)
+    return nx.from_scipy_sparse_matrix(neg_A)
+
+
+def pos_graph(g):
+    A = nx.adj_matrix(g, weight='sign')
+    pos_A = pos_adj(A)
+    return nx.from_scipy_sparse_matrix(pos_A)
