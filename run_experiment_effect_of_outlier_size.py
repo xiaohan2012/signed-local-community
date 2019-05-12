@@ -38,14 +38,14 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, nn, nl, run_id):
 
 
 n_graphs = 10
-n_reps = 60
-kappa = 0.8
+n_reps = 32
 
-nc = 10
-k = 6
+nc = 20
+k = 8
 eta = 0.03
 
 nn_list = np.arange(0, nc*2*k + 1, 2*nc)
+kappa_list = [0.1, 0.3, 0.5, 0.7, 0.9]
 
 perf_list = []
 
@@ -55,11 +55,12 @@ for nn in tqdm(nn_list):
         nl = noise_level(g)
         print("nn=", nn)
         print('noisy edge ratio: ', nl)
-
-        perf_list += Parallel(n_jobs=8)(
-            delayed(run_one_for_parallel)(g, true_comms, true_groupings, kappa, nn, nl, i)
-            for i in range(n_reps)
-        )
+        for kappa in kappa_list:
+            print("kappa=", kappa)
+            perf_list += Parallel(n_jobs=8)(
+                delayed(run_one_for_parallel)(g, true_comms, true_groupings, kappa, nn, nl, i)
+                for i in range(n_reps)
+            )
 
 perf_df = pd.DataFrame.from_records(perf_list)
 perf_df.to_csv('outputs/effect_of_outlier_size.csv')
