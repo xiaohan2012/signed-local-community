@@ -21,7 +21,9 @@ from stat_helpers import populate_fields
 graph = sys.argv[1]
 if len(sys.argv) > 2:
     k = int(sys.argv[2])
+    print('restricting k={}'.format(k))
 else:
+    print('dropping k')
     k = None
 
 g = nx.read_gpickle('graphs/{}.pkl'.format(graph))
@@ -29,7 +31,6 @@ A = nx.adj_matrix(g, weight='sign')
 df = pd.read_pickle('outputs/{}_seed_pair.pkl'.format(graph))
 
 if k is not None:
-    print('filtering k=', k)
     df = df[df['k'] == k]
 print(df.shape[0], ' rows')
 pos_A, neg_A = pos_adj(A), neg_adj(A)
