@@ -11,7 +11,17 @@ the threshold are specified according to th  graph:
 
 - word|bitcoin: 5
 - ref: 15
-- epinions|slashdot/wikiconflict: 20
+- epinions|slashdot|wikiconflict: 20
+
+the resulting number of pairs:
+
+- word: 8604
+- bitcoin: 8604
+- ref
+- epinions: 
+- slashdot: 43373
+- wikiconflict: 
+
 """
 import sys
 import networkx as nx

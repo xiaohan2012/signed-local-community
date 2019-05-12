@@ -12,6 +12,9 @@ graph_path = 'graphs/{}.pkl'.format(graph_name)
 if graph_name in ('word', 'bitcoin'):
     n_samples = 1000
     chunk_size = 200
+if graph_name in ('ref', ):
+    n_samples = 2000
+    chunk_size = 100
 elif graph_name in ('slashdot', 'epinions'):
     n_samples = 4000
     chunk_size = 50

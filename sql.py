@@ -13,8 +13,8 @@ class TableCreation:
     
     schema = 'local_polarization'
 
-    query_result_table = 'query_result'
-    query_result_table_creation = """
+    single_seed_table = 'query_result_single_seed'
+    single_seed_table_creation = """
     CREATE TABLE IF NOT EXISTS {schema}.{table_name}
     (
         graph_path             TEXT,
@@ -34,27 +34,36 @@ class TableCreation:
     );
     CREATE INDEX IF NOT EXISTS {schema}_{table_name}_idx ON {schema}.{table_name} (graph_path, query, kappa, k);
     """.format(
-        table_name=query_result_table,
+        table_name=single_seed_table,
         schema=schema
     )
-    
-    eval_result_table = 'eval_result'
-    eval_result_table_creation = """
+
+    seed_pair_table = 'query_result_seed_pair'
+    seed_pair_table_creation = """
     CREATE TABLE IF NOT EXISTS {schema}.{table_name}
     (
         graph_path             TEXT,
-        query                  INTEGER,
+        seed1                  INTEGER,
+        seed2                  INTEGER,
         kappa                  NUMERIC,
         k                      INTEGER,
 
-        key                    TEXT,
-        value                  REAL
+        C1                     BYTEA,
+        C2                     BYTEA,
+        best_beta              REAL,
+        best_t                 REAL,
+        beta_array             BYTEA,
+        ts                     BYTEA,
+
+        time_elapsed           REAL,
+        runtime_info           BYTEA
     );
-    CREATE INDEX IF NOT EXISTS {schema}_{table_name}_idx ON {schema}.{table_name} (graph_path, query, kappa, k, key);
+    CREATE INDEX IF NOT EXISTS {schema}_{table_name}_idx ON {schema}.{table_name} (graph_path, seed1, seed2, kappa, k);
     """.format(
-        table_name=eval_result_table,
+        table_name=seed_pair_table,
         schema=schema
     )
+
 
 
 def init_db(debug=False, create_table=False):
@@ -68,14 +77,14 @@ def init_db(debug=False, create_table=False):
         """CREATE SCHEMA IF NOT EXISTS {}""".format(TableCreation.schema)
     )
     sqls_to_execute = (
-        TableCreation.query_result_table_creation,
-        TableCreation.eval_result_table_creation
+        TableCreation.seed_pair_table_creation,
+        TableCreation.single_seed_table_creation,
     )
     if create_table:
         for sql in sqls_to_execute:
             cursor.execute(sql)
         conn.commit()
-        print('execution SQL done')
+
     if debug:
         conn.set_trace_callback(print)
 
