@@ -6,6 +6,12 @@ a good seed pair (u, v) satisfy:
 
 - there is a negative edge between u and v
 - both u and v has at least {threshold} positive degree
+
+the threshold are specified according to th  graph:
+
+- word|bitcoin: 5
+- ref: 15
+- epinions|slashdot/wikiconflict: 20
 """
 import sys
 import networkx as nx
