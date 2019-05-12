@@ -1,6 +1,7 @@
 import numpy as np
 import random
 import pandas as pd
+import warnings
 
 from helpers import sample_seeds, noise_level
 from data_helpers import make_polarized_graphs_fewer_parameters
@@ -10,6 +11,8 @@ from tqdm import tqdm
 
 np.random.seed(12345)
 random.seed(12345)
+
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
 def run_one_for_parallel(g, true_comms, true_groupings, kappa, eta, nl, run_id):
