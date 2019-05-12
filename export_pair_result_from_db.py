@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 conn, cursor = init_db()
 
-graph = 'bitcoin'
+graph = 'word'
 cursor.execute("""
     SELECT 
         seed1, seed2, k, C1, C2, best_beta
