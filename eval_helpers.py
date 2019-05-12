@@ -1,12 +1,11 @@
 import numpy as np
 import networkx as nx
 
-from itertools import chain, combinations
 from collections import OrderedDict
 
-from sklearn.metrics import precision_recall_fscore_support
+from sklearn.metrics import precision_recall_fscore_support, precision_score
 
-from helpers import n_neg_edges, n_pos_edges, approx_diameter
+from helpers import n_neg_edges, n_pos_edges
 
 
 def frac_intra_neg_edges(subg, A):
@@ -142,4 +141,41 @@ def evaluate_level_2(n, c1, c2, C_true, groups):
     else:
         return ret2
 
+
+def mean_avg_precision(g, C1, C2, target_comm, true_groupings, verbose=0):
+    """
+    compute mean average precision on C1 (as label -1) and C2 (as label 1),
+    the rest of the nodes have label 0
+    """
+    n = g.number_of_nodes()
+    
+    assert len(C1) > 0
+    assert len(C2) > 0
+
+    pred_y = np.zeros(n)
+    pred_y[C1] = -1
+    pred_y[C2] = 1
+
+    true_y = np.zeros(pred_y.shape)
+    true_y[true_groupings[target_comm][0]] = -1
+    true_y[true_groupings[target_comm][1]] = 1
+
+    prec1 = precision_score(true_y, pred_y, average=None)
+    # reverse the assignment
+    prec2 = precision_score(true_y, -pred_y, average=None)
+
+    prec00, prec01 = prec1[0], prec1[2]
+    prec10, prec11 = prec2[0], prec2[2]
+
+    # one assigment dominates
+    assert (prec00 >= prec10 and prec01 >= prec11) or (prec00 < prec10 and prec01 < prec11)
+    
+    # take the best
+    prec0, prec1 = np.maximum(prec00, prec10), np.maximum(prec01, prec11)
+    if len(C1) + len(C2) >= n:
+        if verbose > 0:
+            print('prec1', prec1)
+            print('prec2', prec2)
+            print('MAP:', (prec0 + prec1) / 2)
+    return (prec0 + prec1) / 2
 

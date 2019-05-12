@@ -3,7 +3,7 @@ import scipy
 import networkx as nx
 from matplotlib import pyplot as plt
 from core import query_graph, sweep_on_x_fast
-from eval_helpers import evaluate_level_1, evaluate_level_2
+from eval_helpers import mean_avg_precision
 from helpers import (
     flatten,
     get_borderless_fig,
@@ -31,12 +31,8 @@ def run_pipeline(
     x_opt, opt_val = query_graph(g, seeds, kappa=kappa, verbose=verbose, solver='cg')
     c1, c2, C, best_t, min_sbr, ts, sbr_list = sweep_on_x_fast(g, x_opt, verbose=verbose)
 
-    prec_L1, rec_L1, f1_L1 = evaluate_level_1(
-        g.number_of_nodes(), C, true_comms[target_comm]
-    )[:-1]
-    prec_L2, rec_L2, f1_L2 = evaluate_level_2(
-        g.number_of_nodes(), c1, c2, C, true_groupings[target_comm]
-    )[:-1]
+    map_score = mean_avg_precision(g, c1, c2, target_comm, true_groupings)
+    assert map_score >= 0 and map_score <= 1
 
     # debugging stuff below
     if verbose > 1:
@@ -118,12 +114,7 @@ def run_pipeline(
         show_community_stats(c1, c2)
         
     return dict(
-        prec_L1=prec_L1,
-        rec_L1=rec_L1,
-        f1_L1=f1_L1,
-        prec_L2=prec_L2,
-        rec_L2=rec_L2,
-        f1_L2=f1_L2,
+        MAP=map_score,
         C_size=len(C),
         C1_size=len(c1),
         C2_size=len(c2),
