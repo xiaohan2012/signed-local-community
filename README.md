@@ -1,7 +1,10 @@
 # searching for local polarization
 
+# software dependency
 
-# Usage
+- posgres: used to store query results
+
+# how to use
 
 ## run query on graphs
 
@@ -12,14 +15,9 @@ currently, two query modes are supported:
 - query a seed pair (one node from each polarized side): run a batch of seed-pair queries on graph: `query_seed_pair_in_batch.py
   - save commands that query seed pairs: `python3 print_query_seed_pair_commands.py {graph} > cmds/{graph}_pairs.txt`
 
-### notes on Aalto Triton computation infrastructure
+## exporting query results
 
-- edit `sbatch_query_single_seed_in_batch.sh`  and make sure to update the following:
-  - `--array=1-{n}`, where `n` is the number of commands to run (use `wc -l {cmds_path.txt}`) to get that number
-  - `graph="{graph_name}"`: set the graph name accordingly
-  - in addition, number of cpus, memory requirement, max running time can be set
-- submit the job by `sbatch sbatch_run_queries_in_batch.sh
-- the same applies to the other query mode, corresponding to file `sbatch_query_pairs_in_batch.sh`
+- `export_single_seed_result_from_db.py|export_pair_result_from_db.py`
 
 ## experiment on synthetic graphs
 
@@ -28,7 +26,9 @@ currently, two query modes are supported:
 - effect of number of outlier nods: `run_experiment_effect_of_outlier_size.py`
 - effect of number of seed: `run_experiment_effect_of_seed_size.py`
 
-## jupyter notebooks along the process
+# reproducing the figures/tables in the submission
+
+# jupyter notebooks along the process
 
 the following notebooks highlights the thought process and how the project has involved:
 
@@ -45,3 +45,16 @@ the following notebooks highlights the thought process and how the project has i
 - `FOCG-vs-Local.ipynb`: comparing [FOCG, KDD 2018](https://dl.acm.org/citation.cfm?id=2939672.2939855) with our method
 - `dig-out-more-communities-on-word-graph.ipynb`: find out more polarized communities on "word" graph
 - `overlapping-community-demo`: demo on overlapping communities in "word" graph
+
+
+# misc
+
+### notes on sbatch
+
+- edit `sbatch_query_single_seed_in_batch.sh`  and make sure to update the following:
+  - `--array=1-{n}`, where `n` is the number of commands to run (use `wc -l {cmds_path.txt}`) to get that number
+  - `graph="{graph_name}"`: set the graph name accordingly
+  - in addition, number of cpus, memory requirement, max running time can be set
+- submit the job by `sbatch sbatch_run_queries_in_batch.sh
+- the same applies to the other query mode, corresponding to file `sbatch_query_pairs_in_batch.sh`
+
