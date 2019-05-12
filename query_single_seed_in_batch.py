@@ -91,9 +91,9 @@ if __name__ == '__main__':
                     query=row['query'],
                     k=row['k']
                 )
-                if not record_exists(cursor, TableCreation.query_result_table, filter_value):
+                if not record_exists(cursor, TableCreation.single_seed_table, filter_value):
                     insert_record(
-                        cursor, TableCreation.query_result_table, row
+                        cursor, TableCreation.single_seed_table, row
                     )
             conn.commit()
             print('inserted to db')

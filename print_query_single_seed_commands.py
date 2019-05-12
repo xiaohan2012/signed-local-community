@@ -12,7 +12,7 @@ graph_path = 'graphs/{}.pkl'.format(graph_name)
 if graph_name in ('word', 'bitcoin'):
     n_samples = 1000
     chunk_size = 200
-if graph_name in ('ref', ):
+elif graph_name in ('ref', ):
     n_samples = 2000
     chunk_size = 100
 elif graph_name in ('slashdot', 'epinions'):
@@ -27,7 +27,7 @@ else:
     
 kappa = 0.9
 
-cmd = "python3 run_queries_in_batch.py -g {} -q {{}} -k {:.1f} -d".format(graph_path, kappa)
+cmd = "python3 query_single_seed_in_batch.py -g {} -q {{}} -k {:.1f} -d".format(graph_path, kappa)
 
 g = nx.read_gpickle(graph_path)
 D = degree_diag(g)

@@ -5,17 +5,21 @@
 
 ## run query on graphs
 
-- run a batch of queries on graph: `run_queries_in_batch.py`
-- print commands that each runs a batch of queries (for parallel computing): `print_batch_query_commands.py`
+currently, two query modes are supported:
 
-### notes on Aalto Triton
+- query a single seed: run a batch of single-seed queries on graph: `query_single_seed_in_batch.py`
+  - save commands that query single seed (for parallel computing): `python3 print_query_single_seed_commands.py {graph} > cmds/{graph}.txt`
+- query a seed pair (one node from each polarized side): run a batch of seed-pair queries on graph: `query_seed_pair_in_batch.py
+  - save commands that query seed pairs: `python3 print_query_seed_pair_commands.py {graph} > cmds/{graph}_pairs.txt`
 
-- run `python3 print_batch_query_commands.py {graph_name} > {cmds_path.txt}` to save the command list
-- edit `sbatch_run_queries_in_batch.sh`: make sure to update the following:
+### notes on Aalto Triton computation infrastructure
+
+- edit `sbatch_query_single_seed_in_batch.sh`  and make sure to update the following:
   - `--array=1-{n}`, where `n` is the number of commands to run (use `wc -l {cmds_path.txt}`) to get that number
   - `graph="{graph_name}"`: set the graph name accordingly
   - in addition, number of cpus, memory requirement, max running time can be set
-- submit the job by `sbatch sbatch_run_queries_in_batch.sh`
+- submit the job by `sbatch sbatch_run_queries_in_batch.sh
+- the same applies to the other query mode, corresponding to file `sbatch_query_pairs_in_batch.sh`
 
 ## experiment on synthetic graphs
 

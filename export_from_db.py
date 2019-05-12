@@ -5,11 +5,11 @@ from tqdm import tqdm
 
 conn, cursor = init_db()
 
-graph = 'slashdot'
+graph = 'ref'
 cursor.execute("""
     SELECT 
         graph_path, query, kappa, k, C1, C2, best_beta, best_t, beta_array, ts, time_elapsed
-    FROM local_polarization.query_result
+    FROM local_polarization.query_result_single_seed
     WHERE graph_path LIKE '%%{}%%'
 """.format(graph)
 )
@@ -29,5 +29,5 @@ for r in tqdm(cursor.fetchall()):
     rows.append(r)
 df = pd.DataFrame(rows, columns=cols)
 sub_df = df[['query', 'C1', 'C2', 'k', 'best_beta', 'beta_array']]
-sub_df = sub_df[sub_df['k'] == 200]
+# sub_df = sub_df[sub_df['k'] == 200]
 sub_df.to_pickle('outputs/{}.pkl'.format(graph))
