@@ -49,7 +49,7 @@ the following notebooks highlights the thought process and how the project has i
 - `fast_sweeping.ipynb`: efficient way to sweep on `x` (reduces time cost by orders of magnitudes)
 - `case-study-on-word-graph.ipynb`: manual checking the result on word graph + some visualization
 - `why-constraint-not-tight.ipynb`: for some nodes typically with small degrees, `alpha` tends very close to `lambda_1`, making the constraint not tight
-- `explore-query-result-on-real-graphs.ipynb`: checking query result on real graphs (more  statistics and some viz)
+- `explore-seed-pair-query-result.ipynb`: checking query result on real graphs (some  statistics and viz)
 - `explore-fog-result-on-real-graphs.ipynb`: checking query result by [FOCG, KDD 2018](https://dl.acm.org/citation.cfm?id=2939672.2939855) on real graphs
 - `FOCG-vs-Local.ipynb`: comparing [FOCG, KDD 2018](https://dl.acm.org/citation.cfm?id=2939672.2939855) with our method
 - `dig-out-more-communities-on-word-graph.ipynb`: find out more polarized communities on "word" graph
