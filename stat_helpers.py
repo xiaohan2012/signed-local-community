@@ -91,6 +91,5 @@ def populate_fields(df, pos_A, neg_A, make_assertion=True):
         assert (df['ham'] <= 1).all()
         assert (df['agreement'] >= 0).all()
         assert (df['agreement'] <= 1).all()
-        assert (df['pc'] >= 0).all()
 
     return df
