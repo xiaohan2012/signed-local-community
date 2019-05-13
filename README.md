@@ -53,8 +53,8 @@ the following notebooks highlights the thought process and how the project has i
 - `explore-fog-result-on-real-graphs.ipynb`: checking query result by [FOCG, KDD 2018](https://dl.acm.org/citation.cfm?id=2939672.2939855) on real graphs
 - `FOCG-vs-Local.ipynb`: comparing [FOCG, KDD 2018](https://dl.acm.org/citation.cfm?id=2939672.2939855) with our method
 - `dig-out-more-communities-on-word-graph.ipynb`: find out more polarized communities on "word" graph
-- `overlapping-community-demo`: demo on overlapping communities in "word" graph
-
+- `case-study-overlapping-community`: demo on overlapping communities in "word" graph
+- `case-study-distrust-radiation.ipynb`: case study of distrust radiation
 
 # misc
 
