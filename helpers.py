@@ -128,12 +128,13 @@ def draw_nodes(g, pos, labels=None, ax=None):
 
 
 def draw_edges(g, pos, ax=None, draw_pos=True, draw_neg=True, **kwargs):
-    if draw_pos:
-        pos_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] > 0]
-        nx.draw_networkx_edges(g, pos, pos_edges, style='solid', edge_color='blue', ax=ax, **kwargs)
     if draw_neg:
         neg_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] < 0]
         nx.draw_networkx_edges(g, pos, neg_edges, style='dashed', edge_color='red', ax=ax, **kwargs)
+    
+    if draw_pos:
+        pos_edges = [(u, v) for u, v in g.edges() if g[u][v]['sign'] > 0]
+        nx.draw_networkx_edges(g, pos, pos_edges, style='solid', edge_color='blue', ax=ax, **kwargs)
 
 
 def show_result(g, pos, query, scores):

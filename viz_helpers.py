@@ -9,7 +9,6 @@ from helpers import (
 def draw_query_result(
         g, C1, C2,
         layout='pos',
-        show_query=False,
         seeds1=None, seeds2=None,
         C1_labels=None, C2_labels=None,
         use_lcc=False,
