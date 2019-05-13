@@ -34,6 +34,15 @@ def agreement(pos_A, neg_A, C1, C2):
     return 1 - (n_bad_pos + n_bad_neg) / n_total
 
 
+def pc(A, C1, C2):
+    """x \times A \times x' / (x \times x')"""
+    x = np.zeros(A.shape[0])
+    x[C1] = 1
+    x[C2] = -1
+    xT = x[:, None]
+    return (x @ A @ xT / (x @ xT))[0]
+
+
 def populate_fields(df, pos_A, neg_A, make_assertion=True):
     """use this!!!"""
     cols = df.columns
@@ -41,20 +50,31 @@ def populate_fields(df, pos_A, neg_A, make_assertion=True):
     for f in existing_fields:
         assert f in cols
 
+    print('calculating degree-related')
     df['posdeg1'] = df['C1'].apply(lambda v: avg_pos_deg(pos_A, v))
     df['posdeg2'] = df['C2'].apply(lambda v: avg_pos_deg(pos_A, v))
-    df['negdeg1'] = df['C1'].apply(lambda v: avg_pos_deg(neg_A, v))
-    df['negdeg2'] = df['C2'].apply(lambda v: avg_pos_deg(neg_A, v))
+    df['negdeg1'] = df['C1'].apply(lambda v: avg_neg_deg(neg_A, v))
+    df['negdeg2'] = df['C2'].apply(lambda v: avg_neg_deg(neg_A, v))
 
+    df['pos_avg'] = ((df['posdeg1'] * df['size1'] + df['posdeg1'] * df['size2'])
+                     / (df['size1'] + df['size2']))
+    
     df['max_posdeg'] = np.maximum(df['posdeg1'], df['posdeg2'])
 
+    print('calculating ham')
     df['coh'] = df[['C1', 'C2']].apply(lambda d: cohe(pos_A, d['C1'], d['C2']), axis=1)
     df['opp'] = df[['C1', 'C2']].apply(lambda d: oppo(neg_A, d['C1'], d['C2']), axis=1)
     df['ham'] = 2 * df['coh'] * df['opp'] / (df['coh'] + df['opp'])
 
+    print('calculating agreement')
     df['agreement'] = df[['C1', 'C2']].apply(lambda d: agreement(pos_A, neg_A, d['C1'], d['C2']), axis=1)
+
     if 'beta' not in cols and 'best_beta' not in cols:
+        print('calculating beta')
         df['beta'] = df[['C1', 'C2']].apply(lambda d: sbr(pos_A - neg_A, d['C1'], d['C2']), axis=1)
+
+    print('calculating PC')
+    df['pc'] = df[['C1', 'C2']].apply(lambda d: pc(pos_A - neg_A, d['C1'], d['C2']), axis=1)
 
     idx = (df['coh'] != 0) & (df['opp'] != 0)
 
@@ -71,5 +91,6 @@ def populate_fields(df, pos_A, neg_A, make_assertion=True):
         assert (df['ham'] <= 1).all()
         assert (df['agreement'] >= 0).all()
         assert (df['agreement'] <= 1).all()
+        assert (df['pc'] >= 0).all()
 
     return df
