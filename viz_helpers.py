@@ -12,7 +12,10 @@ def draw_query_result(
         show_query=False,
         seeds1=None, seeds2=None,
         C1_labels=None, C2_labels=None,
-        use_lcc=False
+        use_lcc=False,
+        label_x_offset=0,
+        label_y_offset=0,
+        label_font_size=16
 ):
     assert layout in {'pos', 'spectral', 'spring'}
     subg = g.subgraph(list(C1) + list(C2))
@@ -39,7 +42,7 @@ def draw_query_result(
     fig, ax = get_borderless_fig()
     # draw_nodes(subg, pos, ax=ax)
     styles = dict(
-        node_size=40,
+        node_size=100,
         linewidths=0,
         alpha=0.5,
     )
@@ -59,23 +62,30 @@ def draw_query_result(
         **styles
     )
 
+    label_pos = {k: (v[0]+label_x_offset, v[1]+label_y_offset) for k, v in pos.items()}
     if C1_labels:
         C1_labels = {mapping[i]: l for i, l in C1_labels.items()}
-        nx.draw_networkx_labels(subg, pos, nodelist=C1_labels.keys(), labels=C1_labels)
+        nx.draw_networkx_labels(
+            subg, label_pos, nodelist=C1_labels.keys(), labels=C1_labels,
+            font_size=label_font_size
+        )
 
     if C2_labels:
         C2_labels = {mapping[i]: l for i, l in C2_labels.items()}
-        nx.draw_networkx_labels(subg, pos, nodelist=C2_labels.keys(), labels=C2_labels)
+        nx.draw_networkx_labels(
+            subg, label_pos, nodelist=C2_labels.keys(), labels=C2_labels,
+            font_size=label_font_size
+        )
 
     if seeds1:
         nx.draw_networkx_nodes(subg, pos, nodelist=[mapping[s] for s in seeds1],
-                               node_size=80, linewidths=0,
+                               node_size=120, linewidths=0,
                                node_color='green',
                                node_shape='s',
         )
     if seeds2:
         nx.draw_networkx_nodes(subg, pos, nodelist=[mapping[s] for s in seeds2],
-                               node_size=80, linewidths=0,
+                               node_size=120, linewidths=0,
                                node_color='blue',
                                node_shape='s',
         )
