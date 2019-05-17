@@ -49,7 +49,7 @@ def draw_query_result(
     nx.draw_networkx_nodes(
         subg, pos,
         nodelist=C1,
-        node_shape='v',
+        node_shape='8',
         node_color='cyan',
         **styles
     )
