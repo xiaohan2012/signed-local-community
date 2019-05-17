@@ -55,6 +55,7 @@ the following notebooks highlights the thought process and how the project has i
 - `dig-out-more-communities-on-word-graph.ipynb`: find out more polarized communities on "word" graph
 - `case-study-overlapping-community`: demo on overlapping communities in "word" graph
 - `case-study-distrust-radiation.ipynb`: case study of distrust radiation
+- `intro-plot.ipynb`: plots of the motivational example
 
 # misc
 
