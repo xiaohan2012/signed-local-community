@@ -259,7 +259,9 @@ def _add_by_order(seq1, seq2, order, x, verbose=0):
 def sweep_on_x_fast(g, x, top_k=-1, return_details=False, verbose=0):
     """
     sweep on x in one go (no iteration on thresholds)
-
+    
+    returns:
+        C1, C2, C, best_t, best_beta, ts, beta_array
     """
     A = nx.adj_matrix(g, weight='sign')
     pos_A, neg_A = pos_adj(A), neg_adj(A)

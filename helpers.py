@@ -124,7 +124,8 @@ def signed_layout_geometric_mean(g):
 
 def draw_nodes(g, pos, labels=None, ax=None):
     nx.draw_networkx_nodes(g, pos, ax=ax)
-    nx.draw_networkx_labels(g, pos, labels=labels, ax=ax)
+    if labels:
+        nx.draw_networkx_labels(g, pos, labels=labels, ax=ax)
 
 
 def draw_edges(g, pos, ax=None, draw_pos=True, draw_neg=True, **kwargs):
