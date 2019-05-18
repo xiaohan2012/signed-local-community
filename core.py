@@ -90,6 +90,9 @@ def query_graph_using_sparse_linear_solver(
         max_iter=40,
         tol=1e-3,
         ub=None,
+        L=None,
+        A=None,
+        D=None,
         verbose=0,
         return_details=False
 ):
@@ -104,9 +107,12 @@ def query_graph_using_sparse_linear_solver(
     if solver == 'sp':
         print('WARNING: using "sp", note that "cg" is faster')
 
-    L = signed_laplacian(g)
-    A = nx.adj_matrix(g, weight='sign')
-    D = degree_diag(g)
+    if L is None:
+        L = signed_laplacian(g)
+    if A is None:
+        A = nx.adj_matrix(g, weight='sign')
+    if D is None:
+        D = degree_diag(g)
 
     s = prepare_seed_vector_sparse(seeds, D)
 
@@ -255,15 +261,17 @@ def _add_by_order(seq1, seq2, order, x, verbose=0):
             print('res[{}]={}'.format(k, res[k]))
     return res
 
-    
-def sweep_on_x_fast(g, x, top_k=-1, return_details=False, verbose=0):
+
+def sweep_on_x_fast(g, x, top_k=-1, A=None, return_details=False, verbose=0):
     """
     sweep on x in one go (no iteration on thresholds)
     
     returns:
         C1, C2, C, best_t, best_beta, ts, beta_array
     """
-    A = nx.adj_matrix(g, weight='sign')
+    if A is None:
+        A = nx.adj_matrix(g, weight='sign')
+
     pos_A, neg_A = pos_adj(A), neg_adj(A)
 
     # calculate volume
