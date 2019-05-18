@@ -35,6 +35,10 @@ currently, two query modes are supported:
 - effect of number of outlier nods: `run_experiment_effect_of_outlier_size.py`
 - effect of number of seed: `run_experiment_effect_of_seed_size.py`
 
+## scalabilitt evaluation
+
+- `scalability_evaluation.py`
+
 # reproducing the figures/tables in the submission
 
 # jupyter notebooks along the process
