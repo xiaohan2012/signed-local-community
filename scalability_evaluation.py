@@ -60,18 +60,12 @@ new_data = np.ones(n_new_edges, dtype=int)
 new_data[np.random.random(n_new_edges) < neg_frac] = -1
 
 
-# In[59]:
-
-
 final_row_idx = np.concatenate([row_idx, new_row_idx, new_col_idx])
 final_col_idx = np.concatenate([col_idx, new_col_idx, new_row_idx])
 final_data = np.concatenate([data, new_data, new_data])
 
 
-# # now, operate on the new graph
-
-# In[60]:
-
+# now, operate on the new graph
 
 A = sp.csr_matrix((final_data, (final_row_idx, final_col_idx)), shape=(target_size, target_size))
 
@@ -93,6 +87,7 @@ v1 = np.real(eig_val[0])
 
 print('lambda1', v1)
 
+# select good seed pairs
 neg_u, neg_v = (A < 0).nonzero()
 rand_idx = np.random.permutation(neg_u.shape[0])
 neg_u, neg_v = neg_u[rand_idx], neg_v[rand_idx]
