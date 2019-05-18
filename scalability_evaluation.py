@@ -68,6 +68,8 @@ final_data = np.concatenate([data, new_data, new_data])
 # now, operate on the new graph
 
 A = sp.csr_matrix((final_data, (final_row_idx, final_col_idx)), shape=(target_size, target_size))
+print('num. nodes (augmented graph)', A.shape[0])
+print('num. edges (augmented graph)', A.nnz / 2)
 
 deg = abs(A).sum(axis=0)
 
