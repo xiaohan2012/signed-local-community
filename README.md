@@ -45,7 +45,7 @@ the following notebooks highlights the thought process and how the project has i
 - `proof-of-concept.ipynb`: the very early one that demos how this method works for small toy graphs and some investigation on the effect of kappa
 - `experiment_on_synthetic_graphs.ipynb`: effect of different parameters on synetheic graphs
 - `tuning-kappa.ipynb`: trying to understand better the effect of `kappa` on synthetic graphs
-- `scalable-local-polarization.ipynb`: scalabel way to solve the linear equation (using conjugate gradient)
+- `binary-search-on-alpha.ipynb`: binary search on alpha plus conjugate gradient method to solve the program
 - `fast_sweeping.ipynb`: efficient way to sweep on `x` (reduces time cost by orders of magnitudes)
 - `case-study-on-word-graph.ipynb`: manual checking the result on word graph + some visualization
 - `why-constraint-not-tight.ipynb`: for some nodes typically with small degrees, `alpha` tends very close to `lambda_1`, making the constraint not tight
