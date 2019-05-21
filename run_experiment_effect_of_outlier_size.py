@@ -1,8 +1,9 @@
 import numpy as np
 import random
 import pandas as pd
+import networkx as nx
 
-from helpers import sample_seeds, noise_level
+from helpers import sample_seeds, noise_level, sbr
 from data_helpers import make_polarized_graphs_fewer_parameters
 from exp_helpers import run_pipeline
 from joblib import Parallel, delayed
@@ -16,6 +17,10 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, nn, nl, run_id):
     try:
         seeds, target_comm = sample_seeds(true_comms, true_groupings)
         res = run_pipeline(g, seeds, kappa, target_comm, true_comms, true_groupings, verbose=0)
+        res['ground_truth_beta'] = sbr(
+            nx.adj_matrix(g, weight='sign'),
+            true_groupings[target_comm][0], true_groupings[target_comm][1]
+        )
     except AssertionError as e:
         import pickle as pkl
         print('dumping result')
@@ -37,8 +42,14 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, nn, nl, run_id):
     return res
 
 
-n_graphs = 10
-n_reps = 32
+DEBUG = False
+
+if DEBUG:
+    n_graphs = 1
+    n_reps = 1
+else:
+    n_graphs = 10
+    n_reps = 32
 
 nc = 20
 k = 8

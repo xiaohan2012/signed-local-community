@@ -1,8 +1,9 @@
 import numpy as np
 import random
 import pandas as pd
+import networkx as nx
 
-from helpers import sample_seeds, noise_level
+from helpers import sample_seeds, noise_level, sbr
 from data_helpers import make_polarized_graphs_fewer_parameters
 from exp_helpers import run_pipeline
 from joblib import Parallel, delayed
@@ -20,6 +21,10 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, eta, nl, run_id):
     res['eta'] = eta
     res['noisy_edge_ratio'] = nl
     res['run_id'] = run_id
+    res['ground_truth_beta'] = sbr(
+        nx.adj_matrix(g, weight='sign'),
+        true_groupings[target_comm][0], true_groupings[target_comm][1]
+    )
     return res
 
 
