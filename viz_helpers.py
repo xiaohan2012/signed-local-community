@@ -66,14 +66,14 @@ def draw_query_result(
         C1_labels = {mapping[i]: l for i, l in C1_labels.items()}
         nx.draw_networkx_labels(
             subg, label_pos, nodelist=C1_labels.keys(), labels=C1_labels,
-            font_size=label_font_size
+            font_size=label_font_size,
         )
 
     if C2_labels:
         C2_labels = {mapping[i]: l for i, l in C2_labels.items()}
         nx.draw_networkx_labels(
             subg, label_pos, nodelist=C2_labels.keys(), labels=C2_labels,
-            font_size=label_font_size
+            font_size=label_font_size,
         )
 
     if seeds1:
