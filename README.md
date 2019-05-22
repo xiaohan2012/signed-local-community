@@ -1,12 +1,50 @@
 # searching for local polarization
 
 # software dependency
+## install python packages
 
-- posgres: used to store query results
+Make sure you have [conda](https://docs.conda.io/en/latest/) installed.
 
-# how to use
+Then run `conda env create -f environment.yml` to create the virtual environment.
 
-## run query on graphs
+Activate it by `conda activate polar`
+
+
+## install database (optional)
+
+We use [postgres](https://www.postgresql.org/) to store results of experiments that are 1) repeated many times and 2) relatively time-consuming.
+For example, results from seeding on real-world graphs are stored in database. 
+
+You don't need database if you only call the API in Python (`core.py`).
+However, if you want to reproduce the results in the paper, you need this.
+
+## testing
+
+run `pytest test*.py` (you might see very few errors e.g., usually 1  from `test_core.py` due to numerical instability)
+
+# API usage 
+
+a typical example of calling functions in Python is:
+
+```
+import networkx as nx
+from core import query_graph_using_sparse_linear_solver, sweep_on_x_fast
+# read the graph
+g = nx.read_gpickle('{path_of_graph}')
+
+# compute the optimal x vector
+x, obj_val = query_graph_using_sparse_linear_solver(g, [seeds1, seeds2], kappa=0.9, verbose=0, ub=g.graph['lambda1'])
+
+# sweep on x to find C1 and C2
+C1, C2, C, best_t, best_sbr, ts, sbr_list = sweep_on_x_fast(g, x, top_k=100)
+
+print('community 1', C1)
+print('community 2', C2)
+```
+
+# command line usage
+
+## run queries on graphs
 
 currently, two query modes are supported:
 
@@ -15,35 +53,68 @@ currently, two query modes are supported:
 - query a seed pair (one node from each polarized side): run a batch of seed-pair queries on graph: `query_seed_pair_in_batch.py
   - save commands that query seed pairs: `python3 print_query_seed_pair_commands.py {graph} > cmds/{graph}_pairs.txt`
 
-## exporting query results
+Note that the above two commands requires postgres being installed.
 
-- `export_single_seed_result_from_db.py|export_pair_result_from_db.py`
+## exporting results from database 
+
+use `export_single_seed_result_from_db.py|export_pair_result_from_db.py`
+
+The output is in `pandas.DataFrame` format. 
 
 ## useful scripts
 
 - `augment_result.py`: augment our result by various graph statistics
 
-### for FOCG
+### pre/post-processing scripts for [FOCG, KDD 2016](https://www.kdd.org/kdd2016/papers/files/rpp0799-chuA.pdf)
 
 - `prepare_data_for_matlab.py`: convert graph to Matlab format for FOCG to use
 - `augment_focg_result.py`: augment FOCG result by various graph statistics
 
-## experiment on synthetic graphs
 
-- effect of noise parameter: `run_experiment_effect_of_eta.py`
-- effect of correlation parameter: `run_experiment_effect_of_kappa.py`
-- effect of number of outlier nods: `run_experiment_effect_of_outlier_size.py`
-- effect of number of seed: `run_experiment_effect_of_seed_size.py`
+## scalability evaluation
 
-## scalabilitt evaluation
-
-- `scalability_evaluation.py`
+- run `scalability_evaluation.py`
 
 # reproducing the figures/tables in the submission
 
+## data pre-processing
+
+- run `preprocess_graph.py` (remember to change the variable `graph`)
+- or you can use the processed ones under `graphs/{graph}.pkl`
+
+## Figure 1: the motivation plot
+
+run `intro-plot.ipynb`
+
+## Table 1: graph statistics
+
+run `graph_stat_table.ipynb`
+
+## Figure 3: synthetic graph experiment 
+
+run the following (it takes ~1.5 hours on a 8-core machine in total):
+
+- effect of noise parameter: `run_experiment_effect_of_eta.py`
+- effect of number of outlier nods: `run_experiment_effect_of_outlier_size.py`
+- effect of number of seed: `run_experiment_effect_of_seed_size.py`
+
+then, make the plot using `experiment_on_synthetic_graphs.ipynb`
+
+## Figure 4: real graph experiment
+
+You need to have postgres installed in order to save the results. 
+
+Do the following for all graphs (word, bitcoin, epinions, etc):
+
+- run `python3 print_query_seed_pair_commands.py {graph_name} > {cmd_list}.txt` to get the list of execution commands
+  - `{cmd_list}.txt` will contain the list of commands to run to get the result
+- run `python3 export_pair_result_from_db.py` to export the data (remember to change the `graph` variable in the script)
+- run `python3 augment_pair_result.py {graph_name}` to add evaluation metric values
+- run `python3 augment_pair_result.py {graph_name}` to add evaluation metric values
+
 # jupyter notebooks along the process
 
-the following notebooks highlights the thought process and how the project has involved:
+the following notebooks are records of the thought process and how the project has involved:
 
 - `signed-laplacian-eigen-value.ipynb`: demo on what the bottom-most eigen vector looks like on a toy graph (to understand better signed spectral theory in general)
 - `proof-of-concept.ipynb`: the very early one that demos how this method works for small toy graphs and some investigation on the effect of kappa
