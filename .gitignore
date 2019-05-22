@@ -122,3 +122,4 @@ flycheck_*
 dumps/
 slurm*.out
 cmds/*
+*.zip
