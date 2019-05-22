@@ -104,15 +104,33 @@ then, make the plot using `experiment_on_synthetic_graphs.ipynb`
 
 You need to have postgres installed in order to save the results. 
 
+**run PolarSeeds**
+
 Do the following for all graphs (word, bitcoin, epinions, etc):
 
 - run `python3 print_query_seed_pair_commands.py {graph_name} > {cmd_list}.txt` to get the list of execution commands
   - `{cmd_list}.txt` will contain the list of commands to run to get the result
 - run `python3 export_pair_result_from_db.py` to export the data (remember to change the `graph` variable in the script)
 - run `python3 augment_pair_result.py {graph_name}` to add evaluation metric values
-- run `python3 augment_pair_result.py {graph_name}` to add evaluation metric values
 
-# jupyter notebooks along the process
+**run FOCG**
+
+- before runnin FOCG, preprocess the graphs so they're Matlab-compatible: run `prepare_data_for_matlab.py` (remember to update te `graph` variable)
+- check [this repository](https://github.com/xiaohan2012/KOCG.SIGKDD2016) and run the file `DemoRun.m` in Matlab
+  - make sure the input graphs from previou step are in the right paths
+  - copy the output `.mat` file under `outputs/focg-{graph_name}.mat`
+- run `python3 augment_focg_result.py {graph_name}` to add evaluation metric values
+
+**make the plot**
+
+run `FOCG-vs-PolarSeeds.ipynb` to make the plot
+
+# Figure 5: case studies
+
+- (a) and (b): run `case-study-overlapping-community.ipynb`
+- (c): run `case-study-distrust-radiation.ipynb`
+
+# jupyter notebooks along the way
 
 the following notebooks are records of the thought process and how the project has involved:
 
@@ -126,7 +144,7 @@ the following notebooks are records of the thought process and how the project h
 - `why-constraint-not-tight.ipynb`: for some nodes typically with small degrees, `alpha` tends very close to `lambda_1`, making the constraint not tight
 - `explore-seed-pair-query-result.ipynb`: checking query result on real graphs (some  statistics and viz)
 - `explore-fog-result-on-real-graphs.ipynb`: checking query result by [FOCG, KDD 2018](https://dl.acm.org/citation.cfm?id=2939672.2939855) on real graphs
-- `FOCG-vs-Local.ipynb`: comparing [FOCG, KDD 2018](https://dl.acm.org/citation.cfm?id=2939672.2939855) with our method
+- `FOCG-vs-PolarSeeds.ipynb`: comparing [FOCG, KDD 2018](https://dl.acm.org/citation.cfm?id=2939672.2939855) with our method
 - `dig-out-more-communities-on-word-graph.ipynb`: find out more polarized communities on "word" graph
 - `case-study-overlapping-community`: demo on overlapping communities in "word" graph
 - `case-study-distrust-radiation.ipynb`: case study of distrust radiation
