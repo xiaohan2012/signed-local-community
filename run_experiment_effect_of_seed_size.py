@@ -15,11 +15,14 @@ random.seed(12345)
 
 def run_one_for_parallel(g, true_comms, true_groupings, kappa, seed_size, nl, run_id):
     seeds, target_comm = sample_seeds(true_comms, true_groupings, k=seed_size)
-    res = run_pipeline(g, seeds, kappa, target_comm, true_comms, true_groupings, verbose=0)
+    res = run_pipeline(
+        g, seeds, kappa, target_comm, true_comms, true_groupings, verbose=0, return_details=True
+    )
     res['kappa'] = kappa
     res['seed_size'] = seed_size
     res['edge_noise_level'] = nl
     res['run_id'] = run_id
+    res['alpha'] = res['runtime_details']['alpha']
     res['ground_truth'] = true_groupings[target_comm]
     res['ground_truth_beta'] = sbr(
         nx.adj_matrix(g, weight='sign'),
@@ -27,7 +30,7 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, seed_size, nl, ru
     )
     return res
 
-DEBUG = False
+DEBUG = True
 
 nc, nn = 20, 0
 k = 8

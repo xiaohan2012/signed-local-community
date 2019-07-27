@@ -33,10 +33,14 @@ def run_pipeline(
         show_sweep_plot=False,  # show the sweep plot
         plot_returned_subgraph=False,  # plot the returned subgraph
         plot_true_community=False,  # plot the true p--community
+        return_details=False,
         verbose=0
 ):
     # x_opt, opt_val = query_graph_using_dense_matrix(g, seeds, kappa=kappa, verbose=verbose)
-    x_opt, opt_val = query_graph(g, seeds, kappa=kappa, verbose=verbose, solver='cg')
+    x_opt, opt_val, details = query_graph(
+            g, seeds, kappa=kappa, verbose=verbose, solver='cg',
+            return_details=return_details
+    )
     c1, c2, C, best_t, min_sbr, ts, sbr_list = sweep_on_x_fast(g, x_opt, verbose=verbose)
 
     map_score = mean_avg_precision(g, c1, c2, target_comm, true_groupings)
@@ -130,5 +134,6 @@ def run_pipeline(
         C2=c2,
         min_beta=min_sbr,
         seeds=list(flatten(seeds)),
-        kappa=kappa
+        kappa=kappa,
+        runtime_details=(return_details and details or None)
     )
