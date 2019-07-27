@@ -24,7 +24,7 @@ from helpers import (
 )
 
 
-def query_graph(g, seeds, kappa=0.9, solver='cg', max_iter=30, verbose=0, return_details=False):
+def query_graph(g, seeds, kappa=0.9, solver='cg', max_iter=30, tol=1e-3, verbose=0, return_details=False):
     """wrapper from different solvers"""
     assert solver in {'sp', 'sdp', 'cg'}
     assert kappa > 0, 'kappa should be non-negative'
@@ -41,7 +41,7 @@ def query_graph(g, seeds, kappa=0.9, solver='cg', max_iter=30, verbose=0, return
             try:
                 n_attempts += 1
                 return query_graph_using_sparse_linear_solver(
-                    *args, **kwargs, solver='cg', max_iter=max_iter, return_details=return_details
+                    *args, **kwargs, solver='cg', max_iter=max_iter, tol=tol, return_details=return_details
                 )
             except RuntimeError:
                 continue

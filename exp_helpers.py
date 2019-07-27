@@ -28,6 +28,8 @@ def run_pipeline(
         target_comm,
         true_comms,
         true_groupings,
+        max_iter=40,
+        tol=1e-3,
         # debugging swtiches
         check_bound=True,  # check if the approximation ratio holds
         show_sweep_plot=False,  # show the sweep plot
@@ -39,7 +41,9 @@ def run_pipeline(
     # x_opt, opt_val = query_graph_using_dense_matrix(g, seeds, kappa=kappa, verbose=verbose)
     x_opt, opt_val, details = query_graph(
             g, seeds, kappa=kappa, verbose=verbose, solver='cg',
-            return_details=return_details
+            return_details=return_details,
+            max_iter=max_iter,
+            tol=tol
     )
     c1, c2, C, best_t, min_sbr, ts, sbr_list = sweep_on_x_fast(g, x_opt, verbose=verbose)
 
