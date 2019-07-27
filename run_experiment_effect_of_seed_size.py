@@ -23,6 +23,7 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, seed_size, nl, ru
     res['edge_noise_level'] = nl
     res['run_id'] = run_id
     res['alpha'] = res['runtime_details']['alpha']
+    del res['runtime_details']
     res['ground_truth'] = true_groupings[target_comm]
     res['ground_truth_beta'] = sbr(
         nx.adj_matrix(g, weight='sign'),
@@ -30,7 +31,7 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, seed_size, nl, ru
     )
     return res
 
-DEBUG = True
+DEBUG = False
 
 nc, nn = 20, 0
 k = 8
@@ -45,7 +46,8 @@ else:
     n_reps = 60
     seed_size_list = np.arange(1, 11)
 
-kappa_list = [0.1, 0.3, 0.5, 0.7, 0.9]
+# kappa_list = [0.1, 0.3, 0.5, 0.7, 0.9]
+kappa_list = [0.1, 0.5, 0.9]
 
 if __name__ == "__main__":
     perf_list = []
@@ -68,6 +70,6 @@ if __name__ == "__main__":
 
     perf_df = pd.DataFrame.from_records(perf_list)
 
-    output_path = 'outputs/effect_of_seed_size.csv'
+    output_path = 'outputs/effect_of_seed_size{}.csv'.format(DEBUG and "_dbg" or "")
     print('saving to', output_path)
     perf_df.to_csv(output_path)
