@@ -17,7 +17,7 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, seed_size, nl, ru
     seeds, target_comm = sample_seeds(true_comms, true_groupings, k=seed_size)
     res = run_pipeline(
         g, seeds, kappa, target_comm, true_comms, true_groupings,
-        max_iter=99999,
+        max_iter=40,
         tol=1e-3,
         verbose=0, return_details=True
     )
@@ -27,6 +27,8 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, seed_size, nl, ru
     res['run_id'] = run_id
     res['alpha'] = res['runtime_details']['alpha']
     res['lambda1'] = float(np.real(res['runtime_details']['lambda1']))
+    res['converged'] = res['runtime_details']['converged']
+
     del res['runtime_details']
     res['ground_truth'] = true_groupings[target_comm]
     res['ground_truth_beta'] = sbr(
@@ -46,8 +48,10 @@ if DEBUG:
     n_reps = 8
     seed_size_list = np.arange(1, 3)
 else:
-    n_graphs = 10
-    n_reps = 60
+    # n_graphs = 10
+    # n_reps = 60
+    n_graphs = 8
+    n_reps = 8
     seed_size_list = np.arange(1, 11)
 
 # kappa_list = [0.1, 0.3, 0.5, 0.7, 0.9]
