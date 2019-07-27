@@ -23,6 +23,7 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, seed_size, nl, ru
     res['edge_noise_level'] = nl
     res['run_id'] = run_id
     res['alpha'] = res['runtime_details']['alpha']
+    res['lambda1'] = res['runtime_details']['lambda1']
     del res['runtime_details']
     res['ground_truth'] = true_groupings[target_comm]
     res['ground_truth_beta'] = sbr(
@@ -31,7 +32,7 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, seed_size, nl, ru
     )
     return res
 
-DEBUG = False
+DEBUG = True
 
 nc, nn = 20, 0
 k = 8

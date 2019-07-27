@@ -184,7 +184,8 @@ def query_graph_using_sparse_linear_solver(
             lb=lb,
             alpha=alpha,
             converged=converged,
-            n_iters=n_steps
+            n_iters=n_steps,
+            lambda1=lambda1
         )
         return ret + (details, )
     else:
