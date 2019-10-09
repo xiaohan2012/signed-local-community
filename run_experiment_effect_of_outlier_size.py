@@ -16,7 +16,7 @@ random.seed(12345)
 def run_one_for_parallel(g, true_comms, true_groupings, kappa, nn, nl, run_id):
     try:
         seeds, target_comm = sample_seeds(true_comms, true_groupings)
-        res = run_pipeline(g, seeds, kappa, target_comm, true_comms, true_groupings, verbose=0)
+        res = run_pipeline(g, seeds, kappa, target_comm, true_comms, true_groupings, verbose=0, return_details=True)
         res['ground_truth_beta'] = sbr(
             nx.adj_matrix(g, weight='sign'),
             true_groupings[target_comm][0], true_groupings[target_comm][1]

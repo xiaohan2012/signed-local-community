@@ -128,12 +128,16 @@ def run_pipeline(
         print('stats of predicted p-community:')
         print('predicted community size=', len(c1) + len(c2))
         show_community_stats(c1, c2)
-        
+
+    deg = flatten(nx.adjacency_matrix(g).sum(axis=0))
+
     return dict(
         MAP=map_score,
         C_size=len(C),
         C1_size=len(c1),
         C2_size=len(c2),
+        C1_vol=deg[c1].sum(),
+        C2_vol=deg[c2].sum(),
         C1=c1,
         C2=c2,
         min_beta=min_sbr,
