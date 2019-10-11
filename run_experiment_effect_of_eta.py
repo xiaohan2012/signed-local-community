@@ -16,7 +16,7 @@ random.seed(12345)
 def run_one_for_parallel(g, true_comms, true_groupings, kappa, eta, nl, run_id):
     seeds, target_comm = sample_seeds(true_comms, true_groupings)
     res = run_pipeline(
-        g, seeds, kappa, target_comm, true_comms, true_groupings, 
+        g, seeds, kappa, target_comm, true_comms, true_groupings,
         verbose=0,
         return_details=True
     )
@@ -34,7 +34,7 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, eta, nl, run_id):
 
 DEBUG = False
 
-kappa_list = [0.1, 0.3, 0.5, 0.7, 0.9]
+kappa_list = [0.1, 0.5, 0.9, 0.95, 0.99]
 nc, nn = 20, 0
 k = 8
 

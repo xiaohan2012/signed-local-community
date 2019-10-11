@@ -55,7 +55,7 @@ else:
     seed_size_list = np.arange(1, 11)
 
 # kappa_list = [0.1, 0.3, 0.5, 0.7, 0.9]
-kappa_list = [0.1, 0.5, 0.9]
+kappa_list = [0.1, 0.5, 0.9, 0.95, 0.99]
 
 if __name__ == "__main__":
     perf_list = []
