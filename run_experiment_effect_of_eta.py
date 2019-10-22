@@ -34,7 +34,7 @@ def run_one_for_parallel(g, true_comms, true_groupings, kappa, eta, nl, run_id):
 
 DEBUG = False
 
-kappa_list = [0.1, 0.5, 0.9, 0.95, 0.99]
+kappa_list = [0.1, 0.5, 0.7, 0.8, 0.9]
 nc, nn = 20, 0
 k = 8
 
