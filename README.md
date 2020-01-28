@@ -1,4 +1,8 @@
-# searching for local polarization
+# Searching for polarization in signed graphs: a local spectral approach, WebConf 2020
+
+# cite this paper
+
+To appear soon.
 
 # software dependency
 ## install python packages
@@ -12,7 +16,7 @@ Activate it by `conda activate polar`
 
 ## install database (optional)
 
-We use [postgres](https://www.postgresql.org/) to store results of experiments that are 1) repeated many times and 2) relatively time-consuming.
+We use [postgres](https://www.postgresql.org/) to store results of experiments that are 1) repeated many times and 2) relatively time-consuming to run.
 For example, results from seeding on real-world graphs are stored in database. 
 
 You don't need database if you only call the API in Python (`core.py`).
@@ -42,7 +46,7 @@ print('community 1', C1)
 print('community 2', C2)
 ```
 
-# command line usage
+# Command line usage
 
 ## run queries on graphs
 
@@ -130,7 +134,7 @@ run `FOCG-vs-PolarSeeds.ipynb` to make the plot
 - (a) and (b): run `case-study-overlapping-community.ipynb`
 - (c): run `case-study-distrust-radiation.ipynb`
 
-# jupyter notebooks along the way
+# Jupyter notebooks along the way
 
 the following notebooks are records of the thought process and how the project has involved:
 
@@ -150,9 +154,9 @@ the following notebooks are records of the thought process and how the project h
 - `case-study-distrust-radiation.ipynb`: case study of distrust radiation
 - `intro-plot.ipynb`: plots of the motivational example
 
-# misc
+# Misc
 
-### notes on sbatch
+### notes on sbatch ([Aalto Triton](https://scicomp.aalto.fi/triton/) ulitity script)
 
 - edit `sbatch_query_single_seed_in_batch.sh`  and make sure to update the following:
   - `--array=1-{n}`, where `n` is the number of commands to run (use `wc -l {cmds_path.txt}`) to get that number
