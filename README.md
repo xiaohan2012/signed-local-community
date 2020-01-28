@@ -1,5 +1,7 @@
 # Searching for polarization in signed graphs: a local spectral approach, WebConf 2020
 
+[Arxiv version](https://arxiv.org/pdf/2001.09410.pdf)
+
 # Cite this paper
 
 To appear soon.
@@ -79,7 +81,7 @@ The output is in `pandas.DataFrame` format.
 
 - run `scalability_evaluation.py`
 
-# reproducing the figures/tables in the submission
+# Reproducing the figures/tables in the submission
 
 ## data pre-processing
 
@@ -90,11 +92,11 @@ The output is in `pandas.DataFrame` format.
 
 run `intro-plot.ipynb`
 
-## Table 1: graph statistics
+## Table 2: graph statistics
 
 run `graph_stat_table.ipynb`
 
-## Figure 3: synthetic graph experiment 
+## Figure 4: synthetic graph experiment 
 
 run the following (it takes ~1.5 hours on a 8-core machine in total):
 
@@ -104,7 +106,7 @@ run the following (it takes ~1.5 hours on a 8-core machine in total):
 
 then, make the plot using `experiment_on_synthetic_graphs.ipynb`
 
-## Figure 4: real graph experiment
+## Figure 5: real graph experiment
 
 You need to have postgres installed in order to save the results. 
 
@@ -129,7 +131,7 @@ Do the following for all graphs (word, bitcoin, epinions, etc):
 
 run `FOCG-vs-PolarSeeds.ipynb` to make the plot
 
-# Figure 5: case studies
+# Figure 6: case studies
 
 - (a) and (b): run `case-study-overlapping-community.ipynb`
 - (c): run `case-study-distrust-radiation.ipynb`
