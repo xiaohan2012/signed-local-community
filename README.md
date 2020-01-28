@@ -4,7 +4,7 @@
 
 To appear soon.
 
-# software dependency
+# Software dependency
 ## install python packages
 
 Make sure you have [conda](https://docs.conda.io/en/latest/) installed.
