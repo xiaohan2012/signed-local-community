@@ -1,6 +1,6 @@
 # Searching for polarization in signed graphs: a local spectral approach, WebConf 2020
 
-# cite this paper
+# Cite this paper
 
 To appear soon.
 
@@ -14,7 +14,7 @@ Then run `conda env create -f environment.yml` to create the virtual environment
 Activate it by `conda activate polar`
 
 
-## install database (optional)
+## Install database (optional)
 
 We use [postgres](https://www.postgresql.org/) to store results of experiments that are 1) repeated many times and 2) relatively time-consuming to run.
 For example, results from seeding on real-world graphs are stored in database. 
