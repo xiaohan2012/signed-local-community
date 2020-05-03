@@ -4,7 +4,16 @@
 
 # Cite this paper
 
-To appear soon.
+```
+@inproceedings{xiao2020searching,
+  title={Searching for polarization in signed graphs: a local spectral approach},
+  author={Xiao, Han and Ordozgoiti, Bruno and Gionis, Aristides},
+  booktitle={Proceedings of The Web Conference 2020},
+  pages={362--372},
+  year={2020}
+}
+```
+	  
 
 # Software dependency
 ## install python packages
