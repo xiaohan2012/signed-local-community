@@ -4,7 +4,7 @@
 
 # Cite this paper
 
-```
+```bibtex
 @inproceedings{xiao2020searching,
   title={Searching for polarization in signed graphs: a local spectral approach},
   author={Xiao, Han and Ordozgoiti, Bruno and Gionis, Aristides},
