@@ -41,7 +41,7 @@ run `pytest test*.py` (you might see very few errors e.g., usually 1  from `test
 
 a typical example of calling functions in Python is:
 
-```
+```python
 import networkx as nx
 from core import query_graph_using_sparse_linear_solver, sweep_on_x_fast
 # read the graph
