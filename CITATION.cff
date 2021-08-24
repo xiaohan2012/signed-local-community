@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Xiao
+    given-names: Han
+  - family-names: Ordozgoiti
+    given-names: Bruno
+  - family-names: Gionis
+    given-names: Aristides
+title: "Searching for polarization in signed graphs: a local spectral approach"
+version: 0.0.1
+doi: 10.1145/3366423.3380121
+date-released: 2020-05-01
