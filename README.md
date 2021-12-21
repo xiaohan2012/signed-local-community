@@ -1,19 +1,7 @@
 # Searching for polarization in signed graphs: a local spectral approach, WebConf 2020
 
-[Arxiv version](https://arxiv.org/pdf/2001.09410.pdf)
+See the paper ([Arxiv version](https://arxiv.org/pdf/2001.09410.pdf))  
 
-# Cite this paper
-
-```bibtex
-@inproceedings{xiao2020searching,
-  title={Searching for polarization in signed graphs: a local spectral approach},
-  author={Xiao, Han and Ordozgoiti, Bruno and Gionis, Aristides},
-  booktitle={Proceedings of The Web Conference 2020},
-  pages={362--372},
-  year={2020}
-}
-```
-	  
 
 # Software dependency
 ## install python packages
@@ -176,3 +164,15 @@ the following notebooks are records of the thought process and how the project h
 - submit the job by `sbatch sbatch_run_queries_in_batch.sh
 - the same applies to the other query mode, corresponding to file `sbatch_query_pairs_in_batch.sh`
 
+# To cite this paper
+
+```bibtex
+@inproceedings{xiao2020searching,
+  title={Searching for polarization in signed graphs: a local spectral approach},
+  author={Xiao, Han and Ordozgoiti, Bruno and Gionis, Aristides},
+  booktitle={Proceedings of The Web Conference 2020},
+  pages={362--372},
+  year={2020}
+}
+```
+	  
