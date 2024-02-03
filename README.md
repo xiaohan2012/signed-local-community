@@ -135,7 +135,7 @@ run `FOCG-vs-PolarSeeds.ipynb` to make the plot
 
 # Jupyter notebooks along the way
 
-the following notebooks are records of the thought process and how the project has involved:
+the following notebooks are records of the thought process and how the project has evolved:
 
 - `signed-laplacian-eigen-value.ipynb`: demo on what the bottom-most eigen vector looks like on a toy graph (to understand better signed spectral theory in general)
 - `proof-of-concept.ipynb`: the very early one that demos how this method works for small toy graphs and some investigation on the effect of kappa
